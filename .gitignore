@@ -1,0 +1,12 @@
+/_swap/*
+/_undo/*
+/.netrwhist
+/autoload/*
+/plugged/*
+/localPlugged
+/plugin/eclim.vim
+/eclim
+!.keep
+/*.mp3
+/spell
+/help/vimdoc-ja

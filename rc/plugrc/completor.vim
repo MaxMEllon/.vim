@@ -1,0 +1,6 @@
+let g:completor_node_binary = '/Users/maxmellon/.nodeenv/shims/node'
+let g:completor_clang_binary = '/usr/bin/clang'
+let g:completor_css_omni_trigger       = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
+let g:completor_ruby_omni_trigger      = '[^. *\t]\.\w*\|\h\w*::'
+let g:completor_php_omni_trigger       = '\w+|[^. \t]->\w*|\w+::\w*'
+let g:completor_javascrip_omni_trigger = '\%(\h\w*\|[^. \t]\.\w*\)'

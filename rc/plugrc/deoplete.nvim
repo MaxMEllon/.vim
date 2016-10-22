@@ -1,0 +1,57 @@
+let g:deoplete#enable_at_startup = 1
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
+" inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
+
+imap <silent><C-k> <C-r>=deoplete#mappings#close_popup()<CR>
+imap <silent><CR> <C-r>=<SID>my_cr_function()<CR>
+
+function! s:my_cr_function() abort
+  if pumvisible()
+    return deoplete#mappings#close_popup()
+  else
+    return "\<CR>"
+  endif
+endfunction
+
+call deoplete#custom#set('_', 'converters', [
+      \ 'converter_remove_paren',
+      \ 'converter_remove_overlap',
+      \ 'converter_truncate_abbr',
+      \ 'converter_truncate_menu',
+      \ 'converter_auto_delimiter',
+      \ ])
+
+" call deoplete#custom#set('buffer', 'min_pattern_length', 9999)
+
+let g:deoplete#keyword_patterns = {}
+let g:deoplete#keyword_patterns._ = '[a-zA-Z_]\k*\(?'
+let g:deoplete#omni#input_patterns = {}
+
+let g:monster#completion#rcodetools#backend = "async_rct_complete"
+
+let g:deoplete#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+let g:deoplete#omni#input_patterns.java = '[^. *\t]\.\w*'
+let g:deoplete#omni#input_patterns.swift = '[^. *\t]\.\w*'
+let g:deoplete#omni#input_patterns.javascript = '[^. *\t]\.\w*'
+let g:deoplete#omni#input_patterns.cs = '[^.]\.\%(\u\{2,}\)\?'
+let g:deoplete#omni#input_patterns.php =
+      \ '\w+|[^. \t]->\w*|\w+::\w*'
+
+
+let g:deoplete#enable_camel_case = 1
+let g:deoplete#auto_complete_start_length = 2
+
+let g:deoplete#ignore_sources = {'_': ['tag']}
+
+let g:tern_request_timeout = 1
+let g:tern_show_signature_in_pum = 0
+let g:tern#command = ['tern']
+" let g:tern#arguments = ["--persistent"]
+
+Autocmd BufEnter * set completeopt-=preview
