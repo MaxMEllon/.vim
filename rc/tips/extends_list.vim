@@ -1,4 +1,5 @@
 " See: http://d.hatena.ne.jp/osyo-manga/20110801/1312205483
+" TODO: replace to vital.vim
 
 let s:algorithms = { "__list" : [] }
 
