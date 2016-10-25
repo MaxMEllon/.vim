@@ -244,8 +244,10 @@ function! s:toggle_options()
   for s:command in s:toggle_commands
     execute s:command
   endfor
-  ToggleOpt list
 endfunction
+
+call AddToggleCommand('setlocal list!')
+call AddToggleCommand('setlocal foldenable!')
 
 command! MyToggle call s:toggle_options()
 
