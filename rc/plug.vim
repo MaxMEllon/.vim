@@ -77,7 +77,11 @@ endfunction
 
 function! s:config_load(plugname, realpath)
   let s:fuzzy_plugname = substitute(a:plugname, '\.vim$', '', 'g')
-  let s:loaded = g:plug.is_loaded(a:plugname) || g:plug.is_loaded(s:fuzzy_plugname)
+  if g:env.win
+    let s:loaded = g:plug.is_installed(a:plugname) || g:plug.is_installed(a:fuzzy_plugname)
+  else
+    let s:loaded = g:plug.is_loaded(a:plugname) || g:plug.is_loaded(s:fuzzy_plugname)
+  endif
   if s:loaded == g:true
     execute 'source ' . a:realpath
   endif

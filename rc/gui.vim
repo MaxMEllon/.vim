@@ -15,7 +15,11 @@ set guioptions-=e
 set imdisable
 set laststatus=2
 
-let &guifont = 'Ubuntu Mono:h14'
-let &guifontwide = 'Ubuntu Mono:h14'
+if g:env.win
+  Autocmd VimEnter * let &guifont = 'Ricty_for_Powerline:h14'
+else
+  Autocmd VimEnter * let &guifont = 'Ubuntu Mono:h14'
+  Autocmd VimEnter * let &guifontwide = 'Ubuntu Mono:h14'
+endif
 
 Autocmd VimEnter * set lines=60 | set columns=120
