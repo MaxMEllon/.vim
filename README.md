@@ -30,7 +30,9 @@ Installation
 Update
 ---
 
-  - TODO
+  - `make update`
+
+<p align="right"><a href="#top">:arrow_heading_up:</a></p>
 
 UnInstallation
 ---
