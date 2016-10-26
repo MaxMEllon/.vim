@@ -23,7 +23,7 @@ Features
 Installation
 ---
 
-  - TODO
+  - `make install`
 
 <p align="right"><a href="#top">:arrow_heading_up:</a></p>
 
@@ -31,6 +31,11 @@ Update
 ---
 
   - TODO
+
+UnInstallation
+---
+
+  - `make clean`
 
 <p align="right"><a href="#top">:arrow_heading_up:</a></p>
 
