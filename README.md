@@ -7,6 +7,8 @@
   |
   <b><a href="#updating">Updating</a></b>
   |
+  <b><a href="#uninstallation">UnInstallation</a></b>
+  |
   <b><a href="#license">License</a></b>
 </p>
 
@@ -23,11 +25,16 @@ Features
 Installation
 ---
 
-  - `make install`
+  - remote install
+    - `curl https://raw.githubusercontent.com/MaxMEllon/.vim/master/installer | bash`
+
+  - local install
+
+    - `make install`
 
 <p align="right"><a href="#top">:arrow_heading_up:</a></p>
 
-Update
+Updating
 ---
 
   - `make update`
