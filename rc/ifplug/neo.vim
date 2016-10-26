@@ -27,33 +27,6 @@ Plug 'osyo-manga/vim-over'
 Plug 'osyo-manga/vim-anzu'
 Plug 'haya14busa/vim-operator-flashy'
 
-" Plugin for javascript {{{1
-" javascript stntax
-Plug 'pangloss/vim-javascript'
-LocalPlug 'vim-jsx-pretty'
-Plug 'othree/es.next.syntax.vim'
-Plug 'othree/javascript-libraries-syntax.vim'
-
-" javascript doc
-Plug 'heavenshell/vim-jsdoc'
-
-" javascript utility
-Plug 'samuelsimoes/vim-jsx-utils'
-Plug 'moll/vim-node'
-
-" altjs
-Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
-Plug 'kchmck/vim-coffee-script', {'for' : 'coffee'}
-Plug 'mtscout6/vim-cjsx', {'for' : 'coffee'}
-
-" other
-Plug 'rhysd/npm-debug-log.vim'
-Plug 'elzr/vim-json', {'for' : 'json'}
-" }}}
+MyLoad 'rc/ifplug/javascript'
+MyLoad 'rc/ifplug/css'
 "
-" Plugin for css {{{
-Plug 'wavded/vim-stylus', {'for' : 'stylus'}
-Plug 'groenewege/vim-less', {'for' : 'less'}
-Plug 'AtsushiM/sass-compile.vim', {'for' : 'sass'}
-Plug 'ap/vim-css-color'
-" }}}
