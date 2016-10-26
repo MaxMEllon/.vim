@@ -40,17 +40,17 @@ if g:env.cui == g:true | MyLoad 'cui' | endif
 if g:env.gui == g:true | MyLoad 'gui' | endif
 if g:env.neo == g:true | MyLoad 'neo' | endif
 
-MyLoad 'tips/extends_list'
-
+MyLoad 'mapping'
+MyLoad 'plug'
 MyLoad 'command'
 MyLoad 'filetype'
 MyLoad 'indent'
-MyLoad 'mapping'
 MyLoad 'menu'
 MyLoad 'event'
 MyLoad 'abbrev'
-MyLoad 'plug'
 MyLoad 'statusline'
+
+PlugConfigAutoLoad
 
 filetype plugin indent on
 syntax on

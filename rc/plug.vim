@@ -1,5 +1,5 @@
 function! s:get_plugin_directory()
-  return has('nvim') == g:false ? '~/.vim/plugged' : '~/.config/nvim/plugged'
+  return g:env.neo ? '~/.config/nvim/plugged' : '~/.vim/plugged'
 endfunction
 
 let g:plug = {
@@ -185,8 +185,6 @@ if g:plug.ready()
 
   let s:V = vital#of('vital')
   let s:L = s:V.import('Data.List')
-
-  PlugConfigAutoLoad
 
   finish
 
