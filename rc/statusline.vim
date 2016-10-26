@@ -29,17 +29,17 @@ function! s:GetHighlight(hi)
   return s:hl
 endfunction
 
-let g:branch = ''
+let s:branch = ''
 function! GetBranch()
-  if !empty(g:branch) | return g:branch | endif
+  if !empty(s:branch) | return s:branch | endif
   let s:is_repo = system('git rev-parse --is-inside-work-tree')
   if s:is_repo =~# 'true'
     let s:branch = system('git branch | grep "*" | tr -d "*" | tr -d " "')
-    let g:branch = substitute(s:branch, '\n', '', 'g')
+    let s:branch = substitute(s:branch, '\n', '', 'g')
   else
-    let g:branch = 'X'
+    let s:branch = 'X'
   endif
-  return g:branch
+  return s:branch
 endfunction
 
 

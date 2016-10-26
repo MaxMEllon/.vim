@@ -87,7 +87,8 @@ endfunction
 
 function! g:plug.config_load(...)
   let s:sepaleter = g:env.win ? '\\' : '/'
-  let s:plugname = AsList(split(a:1, s:sepaleter)).last()
+  let s:pathlist = split(a:1, s:sepaleter)
+  let s:plugname = s:pathlist[s:L.find_last_index(s:pathlist, '!empty(v:val)')]
   call s:config_load(s:plugname, a:1)
 endfunction
 
@@ -176,34 +177,38 @@ if g:plug.ready()
   Plug 'tpope/vim-fugitive'
   Plug 'tyru/capture.vim', {'on' : 'Capture'}
   Plug 'tyru/caw.vim'
+  Plug 'vim-jp/vital.vim'
 
   call plug#end()
 
   let g:plug.plugs = get(g:, 'plugs', {})
 
+  let s:V = vital#of('vital')
+  let s:L = s:V.import('Data.List')
+
   PlugConfigAutoLoad
+
+  finish
 
 endif
 
 " Automatic install the vim-plug {{{
-if !g:plug.ready()
-  function! g:plug.init()
-    let s:cmd = printf('curl -fLo %s --create-dirs %s', self.plug, self.url)
-    let s:sym = system(s:cmd)
-    if v:shell_error
-      return Error('g:plug.init: error occured')
-    endif
+function! g:plug.init()
+  let s:cmd = printf('curl -fLo %s --create-dirs %s', self.plug, self.url)
+  let s:sym = system(s:cmd)
+  if v:shell_error
+    return Error('g:plug.init: error occured')
+  endif
 
-    if has('gui_running')
-      silent! !vim
-      quit!
-    endif
-  endfunction
+  if has('gui_running')
+    silent! !vim
+    quit!
+  endif
+endfunction
 
-  command! PlugInit call g:plug.init()
+command! PlugInit call g:plug.init()
 
-  PlugInit
-endif
+PlugInit
 " }}}
 
 " __END__ {{{1

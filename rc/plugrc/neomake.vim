@@ -9,7 +9,7 @@ let g:neomake_ruby_enabled_makers = ['rubocop']
 
 let g:neomake_javascript_eslint_marker = {
       \   'exe': 'eslint_d',
-      \   'args': ['-f', 'compact'],
+      \   'args': ['-f', 'compact', '--fix'],
       \   'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
       \   '%W%f: line %l\, col %c\, Warning - %m'
       \ }

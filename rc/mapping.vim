@@ -236,6 +236,7 @@ nnoremap ZQ <Nop>
 nnoremap <F1> <Nop>
 
 let s:toggle_commands = []
+
 function! AddToggleCommand(command)
   call add(s:toggle_commands, a:command)
 endfunction
@@ -246,6 +247,7 @@ function! s:toggle_options()
   endfor
 endfunction
 
+" ここでは，<opt>? を set したくないので ToggleOpt は使わない
 call AddToggleCommand('setlocal list!')
 call AddToggleCommand('setlocal foldenable!')
 

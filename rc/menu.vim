@@ -17,7 +17,7 @@ try
     highlight link ClPmenuThumb PmenuThumb
   endfunction
 catch
-  set wildmenu " cmdline補完
+  set wildmenu
   set wildmode =longest:full,full
 endtry
 set wildignore =*.o,*.obj,*~
