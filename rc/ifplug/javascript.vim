@@ -1,8 +1,8 @@
 " javascript stntax
 Plug 'pangloss/vim-javascript'
-LocalPlug 'vim-jsx-pretty'
 Plug 'othree/es.next.syntax.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
+LocalPlug 'vim-jsx-pretty'
 
 " javascript doc
 Plug 'heavenshell/vim-jsdoc'
