@@ -90,7 +90,7 @@ function! s:config_load(plugname, realpath)
 endfunction
 
 function! g:plug.config_load(...)
-  let s:sepaleter = g:env.win ? '\\' : '/'
+  let s:sepaleter = g:env.win ? '\' : '/'
   let s:pathlist = split(a:1, s:sepaleter)
   let s:plugname = s:pathlist[s:L.find_last_index(s:pathlist, '!empty(v:val)')]
   call s:config_load(s:plugname, a:1)
@@ -187,8 +187,7 @@ if g:plug.ready()
 
   let g:plug.plugs = get(g:, 'plugs', {})
 
-  let s:V = vital#of('vital')
-  let s:L = s:V.import('Data.List')
+  let s:L = vital#vital#import('Data.List')
 
   finish
 
