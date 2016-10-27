@@ -1,4 +1,9 @@
-<div name="top" />
+<div name="top" align="center">
+  <img
+    src="https://raw.githubusercontent.com/MaxMEllon/demos/master/vimrc.jpg"
+    alt="logo images"
+  />
+</div>
 
 <p align="center">
   <b><a href="#features">Features</a></b>
