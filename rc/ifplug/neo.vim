@@ -27,6 +27,6 @@ Plug 'osyo-manga/vim-over'
 Plug 'osyo-manga/vim-anzu'
 Plug 'haya14busa/vim-operator-flashy'
 
-MyLoad 'rc/ifplug/javascript'
-MyLoad 'rc/ifplug/css'
+MyLoad 'ifplug/javascript'
+MyLoad 'ifplug/css'
 "
