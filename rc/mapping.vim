@@ -26,8 +26,8 @@ noremap <Esc>}  ]}
 " See: http://qiita.com/itmammoth/items/312246b4b7688875d023
 nnoremap <C-n> "zdd"zp
 vnoremap <C-p> "zx<Up>"zP`[V`]
-vnoremap <C-n> "zx"zp`[V`]
 nnoremap <C-p> "zdd<Up>"zP
+vnoremap <C-n> "zx"zp`[V`]
 
 noremap! OA <Up>
 noremap! OB <Down>
@@ -60,8 +60,6 @@ for s:n in range(1, 9)
   execute 'nnoremap <silent> g' . s:n ':<C-u>tabnext' . s:n . '<CR>'
 endfor
 
-" inoremap <expr> j getline('.')[col('.') - 2] ==# 'j' ? "\<BS>\<ESC>`^" : 'j'
-" cnoremap <expr> j getcmdline()[getcmdpos() - 2] ==# 'j' ? "\<BS>\<ESC>`^" : 'j'
 inoremap jj <Esc>`^
 cnoremap jj <Esc>`^
 inoremap <silent> <Esc>  <Esc>`^
@@ -94,25 +92,7 @@ inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-m> <CR>
 
-function! s:indent_braces()
-  let s:nowletter = getline(".")[col(".")-1]
-  let s:beforeletter = getline(".")[col(".")-2]
-  if s:nowletter == "}" && s:beforeletter == "{" ||
-        \ s:nowletter == "]" && s:beforeletter == "["
-    let s:res = "\<C-]>\n\t\n\<UP>\<RIGHT>\<ESC>\A"
-  elseif s:beforeletter == ' '
-    let s:res = "\<C-]>\n\<ESC>\:RemoveWhiteSpace\n\ii\<ESC>==xa"
-  else
-    if pumvisible()
-      let s:res = "\<ESC>a"
-    else
-      let s:res = "\<C-]>\n"
-    endif
-  endif
-  return s:res
-endfunction
-
-inoremap <silent> <expr> <CR> <SID>indent_braces()
+inoremap <silent> <expr> <CR> maxmellon#indent_braces()
 
 inoremap <C-v> <C-o>:set paste<CR><C-r>*<C-o>:set nopaste<CR>
 vnoremap <C-c> "+y
@@ -142,30 +122,14 @@ noremap - <C-x>
 vnoremap <C-a> <C-a>gv
 vnoremap <C-x> <C-x>gv
 
-function! s:RemoveWhiteSpace()
-  let l:save_cursor = getpos(".")
-  silent! execute ':%s/\s\+$//e'
-  call setpos('.', l:save_cursor)
-endfunction
-command! -range=% RemoveWhiteSpace call <SID>RemoveWhiteSpace()
-
-if !IsWindows()
-  function! s:load_help()
-    if isdirectory(expand('~/.vim/help/vimdoc-ja/doc'))
-      helptags ~/.vim/help/vimdoc-ja/doc
-      set runtimepath+=~/.vim/help/vimdoc-ja
-      set helplang=ja
-    endif
-  endfunction
-  command! MyLoadHelp :call s:load_help()
-  AutocmdFT help MyLoadHelp
-  nnoremap <silent> ,h :<C-u>MyLoadHelp<CR> :<C-u>help <C-r><C-w><CR>
+if !g:env.win
+  nnoremap <silent> ,h :<C-u>call maxmellon#load_help()<CR> :<C-u>help <C-r><C-w><CR>
 else
   nnoremap <silent> ,h :<C-u>help <C-r><C-w><CR>
 endif
 
-nnoremap <silent> ,x :RemoveWhiteSpace<CR>
-vnoremap <silent> ,x :RemoveWhiteSpace<CR>:
+nnoremap <silent> ,x :<C-u>call maxmellon#remove_whitespace()<CR>
+vnoremap <silent> ,x :<C-u>call maxmellon#remove_whitespace()<CR>
 nnoremap <silent> ,z :<C-u>%s/　/  /g<CR>
 vnoremap <silent> ,z :<C-u>%s/　/  /g<CR>
 nnoremap ,p :ToggleOpt paste<CR>
@@ -186,9 +150,6 @@ vnoremap : ;
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 cnoremap <expr> j getcmdline()[getcmdpos()-2] ==# 'j' ? "\<BS>\<C-c>" : 'j'
-nnoremap <SID>(command-line-enter) q:
-xnoremap <SID>(command-line-enter) q:
-nnoremap <SID>(command-line-norange) q:<C-u>
 
 nnoremap / q/
 nnoremap ? q?
@@ -254,4 +215,3 @@ call AddToggleCommand('setlocal foldenable!')
 command! MyToggle call s:toggle_options()
 
 nnoremap <F9> :MyToggle<CR>
-

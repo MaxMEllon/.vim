@@ -1,7 +1,7 @@
 /_swap/*
 /_undo/*
 /.netrwhist
-/autoload/*
+/autoload/plug.vim
 /plugged/*
 /localPlugged
 /plugin/eclim.vim
