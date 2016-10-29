@@ -10,3 +10,6 @@ highlight EasyMotionShade  ctermbg=none ctermfg=blue
 highlight EasyMotionTarget2First ctermbg=none ctermfg=red
 highlight EasyMotionTarget2Second ctermbg=none ctermfg=lightred
 highlight EasyMotionMoveHL ctermbg=green ctermfg=black
+
+inoremap <silent> <expr> <CR> maxmellon#indent_braces()
+

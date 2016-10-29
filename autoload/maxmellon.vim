@@ -5,7 +5,7 @@ function! maxmellon#indent_braces()
         \ s:nowletter == "]" && s:beforeletter == "["
     let s:res = "\<C-]>\n\t\n\<UP>\<RIGHT>\<ESC>\A"
   elseif s:beforeletter == ' '
-    let s:res = "\<C-]>\n\<ESC>\:RemoveWhiteSpace\n\ii\<ESC>==xa"
+    let s:res = "\<C-]>\n\<ESC>\:call maxmellon#remove_whitespace()\n\ii\<ESC>==xa"
   else
     if pumvisible()
       let s:res = "\<ESC>a"

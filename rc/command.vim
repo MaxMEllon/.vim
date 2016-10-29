@@ -19,12 +19,17 @@ if executable('shiba')
 endif
 
 " See: https://github.com/MaxMEllon/.dotfiles/blob/master/bin/google
-if executable('google')
-  command! -nargs=? Google :call system("google " . expand(<f-args>) . ' &>/dev/null 2>&1 &')
-  nnoremap ,g :Google <C-r><C-a><CR>
-endif
+function! s:opener(...)
+  if executable('google')
+    call system("google " . expand(a:1) . ' &>/dev/null 2>&1 &')
+  endif
+endfunction
 
-if executable('opener')
-  command! -nargs=? Opener :call system("opener " . expand(<f-args>) . ' &>/dev/null 2>&1 &')
-  nnoremap ,o :Opener <C-r><C-a><CR>
-endif
+function s:google(...)
+  if executable('opener')
+    call system("opener " . expand(a:1) . ' &>/dev/null 2>&1 &')
+  endif
+endfunction
+
+command! -nargs=? Google :call s:opener(<f-args>)
+command! -nargs=? Opener :call s:google(<f-args>)

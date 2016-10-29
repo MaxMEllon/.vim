@@ -92,8 +92,6 @@ inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-m> <CR>
 
-inoremap <silent> <expr> <CR> maxmellon#indent_braces()
-
 inoremap <C-v> <C-o>:set paste<CR><C-r>*<C-o>:set nopaste<CR>
 vnoremap <C-c> "+y
 if has('nvim')
@@ -101,13 +99,12 @@ if has('nvim')
   vnoremap <D-C> "+y
 endif
 
-inoremap , ,<Space>
 
 inoremap . <C-]>.
 inoremap : :<C-]>
 inoremap <Space> <C-]><Space>
 
-inoremap <S-Tab> <C-Tab-v>
+inoremap <S-Tab> <C-v><C-i>
 
 nnoremap <expr> 0
       \ col('.') ==# 1 ? '^' : '0'
@@ -128,12 +125,14 @@ else
   nnoremap <silent> ,h :<C-u>help <C-r><C-w><CR>
 endif
 
+inoremap , ,<Space>
 nnoremap <silent> ,x :<C-u>call maxmellon#remove_whitespace()<CR>
 vnoremap <silent> ,x :<C-u>call maxmellon#remove_whitespace()<CR>
 nnoremap <silent> ,z :<C-u>%s/　/  /g<CR>
 vnoremap <silent> ,z :<C-u>%s/　/  /g<CR>
+nnoremap ,o :Opener <C-r><C-a><CR>
+nnoremap ,g :Google <C-r><C-a><CR>
 nnoremap ,p :ToggleOpt paste<CR>
-
 nnoremap <C-c> :ToggleOpt list<CR>
 
 nnoremap sub :%s/<C-r><C-w>//gc<Left><Left><Left>
