@@ -53,6 +53,21 @@ UnInstallation
 
 <p align="right"><a href="#top">:arrow_heading_up:</a></p>
 
+Tips
+---
+
+- count up rc files.
+
+```bash
+$ git ls-files | grep vim | wc -l
+```
+
+- count up LOC
+
+```bash
+$ wc -l `git ls-files | grep vim` | tail -n 1
+```
+
 LICENSE
 ---
 
