@@ -17,7 +17,6 @@ nnoremap [[ [[zz
 nnoremap [] []zz
 nnoremap ][ ][zz
 nnoremap <C-j> }zz
-nnoremap <C-k> {zz
 noremap <Esc>(  [(
 noremap <Esc>)  ])
 noremap <Esc>{  [{
@@ -66,6 +65,7 @@ inoremap <silent> <Esc>  <Esc>`^
 inoremap <silent> <C-[>  <Esc>`^
 inoremap <C-c> <Esc>`^
 inoremap <C-j> j
+cnoremap <C-j> j
 
 nnoremap <silent> gp o<ESC>p^
 nnoremap <silent> gP O<ESC>P^
