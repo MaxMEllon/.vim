@@ -7,3 +7,5 @@ execute 'cd $HOME/.vim'
 execute 'git pull origin master'
 
 execute 'cat $HOME/.vim/.vimrc > $HOME/.config/nvim/init.vim'
+
+execute 'git submodule foreach git pull origin master'
