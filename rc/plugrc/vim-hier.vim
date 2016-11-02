@@ -1,1 +1,3 @@
-Autocmd * BufEnter nnoremap <silent><C-l> :<C-u>nohlsearch | HierClear<CR><ESC>
+command! ClearHighLight call maxmellon#hier#clear()
+
+nnoremap <silent><C-l> :ClearHighLight<CR>
