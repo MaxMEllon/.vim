@@ -1,3 +1,11 @@
+cd %:h
+
+let g:maxmellon_define_my_color = get(g:, 'maxmellon_define_my_color', g:false)
+
+if g:maxmellon_define_my_color == g:true
+  finish
+endif
+
 highlight MyGlashy ctermbg=48 term=bold,reverse guibg=#00FF00
 highlight MyBrightest ctermfg=11cterm=bold gui=underline
 highlight FoldColumn ctermfg=67 ctermbg=none guifg=#465457
@@ -10,3 +18,5 @@ highlight EasyMotionShade  ctermbg=none ctermfg=blue
 highlight EasyMotionTarget2First ctermbg=none ctermfg=red
 highlight EasyMotionTarget2Second ctermbg=none ctermfg=lightred
 highlight EasyMotionMoveHL ctermbg=green ctermfg=black
+
+let g:maxmellon_define_my_color = g:true

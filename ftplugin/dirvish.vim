@@ -8,3 +8,5 @@ command! -nargs=* Rm call maxmellon#dirvish#rm(<f-args>)
 
 nnoremap <buffer> mv :Mv <C-r><C-a> <C-r><C-a>
 nnoremap <buffer> rm :Rm <C-r><C-a>
+
+lcd %:h

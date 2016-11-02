@@ -28,3 +28,4 @@ function! maxmellon#dirvish#rm(...) abort
   endfor
   edit %
 endfunction
+

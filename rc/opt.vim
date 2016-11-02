@@ -1,7 +1,7 @@
 set autoread
 set autowrite
-set backspace      =indent,eol,start
 set background     =dark
+set backspace      =indent,eol,start
 set cmdheight      =1
 set cmdwinheight   =5
 set completeopt    =menuone,longest,preview
