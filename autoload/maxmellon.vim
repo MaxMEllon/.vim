@@ -37,7 +37,7 @@ function! maxmellon#opener(...)
   endif
 endfunction
 
-function mexmellon#google(...)
+function maxmellon#google(...)
   if executable('opener')
     call system("opener " . expand(a:1) . ' &>/dev/null 2>&1 &')
   endif
