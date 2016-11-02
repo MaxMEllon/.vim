@@ -137,17 +137,19 @@ if g:plug.ready()
   " Plug 'kana/vim-altr'
   " Plug 'kana/vim-operator-replace'
   " Plug 'kana/vim-textobj-function'
+  " Plug 'kana/vim-smartinput'
+
 
   Plug 'AndrewRadev/switch.vim'
   Plug 'LeafCage/foldCC.vim'
   Plug 'LeafCage/yankround.vim'
-  Plug 'MaxMEllon/molokai'
   Plug 'Shougo/neomru.vim'
   Plug 'Shougo/unite-outline'
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/vimproc.vim', {'do' : 'make'}
   Plug 'Yggdroot/indentLine'
   Plug 'basyura/unite-rails'
+  Plug 'cohama/lexima.vim'
   Plug 'easymotion/vim-easymotion'
   Plug 'easymotion/vim-easymotion'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
@@ -160,7 +162,6 @@ if g:plug.ready()
   Plug 'kana/vim-fakeclip'
   Plug 'kana/vim-niceblock'
   Plug 'kana/vim-operator-user'
-  Plug 'kana/vim-smartinput'
   Plug 'kana/vim-textobj-line'
   Plug 'kana/vim-textobj-user'
   Plug 'kshenoy/vim-signature'
@@ -182,7 +183,6 @@ if g:plug.ready()
   Plug 'tyru/capture.vim', {'on' : 'Capture'}
   Plug 'tyru/caw.vim'
   Plug 'vim-jp/vital.vim'
-
   call plug#end()
 
   let g:plug.plugs = get(g:, 'plugs', {})

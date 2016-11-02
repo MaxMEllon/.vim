@@ -125,6 +125,8 @@ else
   nnoremap <silent> ,h :<C-u>help <C-r><C-w><CR>
 endif
 
+inoremap <silent> <expr> <CR> maxmellon#indent_braces()
+
 inoremap , ,<Space>
 nnoremap <silent> ,x :<C-u>call maxmellon#remove_whitespace()<CR>
 vnoremap <silent> ,x :<C-u>call maxmellon#remove_whitespace()<CR>
