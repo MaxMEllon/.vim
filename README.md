@@ -68,6 +68,8 @@ $ git ls-files | grep vim | wc -l
 $ wc -l `git ls-files | grep vim` | tail -n 1
 ```
 
+<p align="right"><a href="#top">:arrow_heading_up:</a></p>
+
 LICENSE
 ---
 
