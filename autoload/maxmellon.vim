@@ -29,3 +29,17 @@ function! maxmellon#load_help()
     set helplang=ja
   endif
 endfunction
+
+" See: https://github.com/MaxMEllon/.dotfiles/blob/master/bin/google
+function! maxmellon#opener(...)
+  if executable('google')
+    call system("google " . expand(a:1) . ' &>/dev/null 2>&1 &')
+  endif
+endfunction
+
+function mexmellon#google(...)
+  if executable('opener')
+    call system("opener " . expand(a:1) . ' &>/dev/null 2>&1 &')
+  endif
+endfunction
+

@@ -7,6 +7,7 @@ command! -nargs=* Abbr call s:cnoreabbrev_wrap(<f-args>)
 let s:abbrs = [
       \   {'type': 'i', 'before' : 'tihs',      'after' : 'this'},
       \   {'type': 'i', 'before' : 'edn',       'after' : 'end'},
+      \   {'type': 'i', 'before' : 'adn',       'after' : 'and'},
       \   {'type': 'i', 'before' : 'REact',     'after' : 'React'},
       \   {'type': 'i', 'before' : '):',        'after' : ');'},
       \   {'type': 'i', 'before' : 'initalize', 'after' : 'initialize'},
