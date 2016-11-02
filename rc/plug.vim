@@ -139,7 +139,6 @@ if g:plug.ready()
   " Plug 'kana/vim-textobj-function'
   " Plug 'kana/vim-smartinput'
 
-
   Plug 'AndrewRadev/switch.vim'
   Plug 'LeafCage/foldCC.vim'
   Plug 'LeafCage/yankround.vim'
@@ -157,7 +156,7 @@ if g:plug.ready()
   Plug 'iyuuya/unite-rails-fat'
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
-  Plug 'junegunn/vim-easy-align', {'on' : 'EasyAlign'}
+  Plug 'junegunn/vim-easy-align'
   Plug 'justinmk/vim-dirvish'
   Plug 'kana/vim-fakeclip'
   Plug 'kana/vim-niceblock'
