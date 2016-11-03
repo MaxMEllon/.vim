@@ -29,3 +29,13 @@ function! maxmellon#dirvish#rm(...) abort
   edit %
 endfunction
 
+function! maxmellon#dirvish#cdgitroot() abort
+  call maxmellon#cdgitroot#exec()
+  redir => s:output
+  pwd
+  redir END
+  if &filetype ==# 'dirvish'
+    let s:output = substitute(s:output, '\n', '', 'g')
+    execute 'edit ' . s:output
+  endif
+endfunction

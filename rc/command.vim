@@ -11,3 +11,4 @@ endif
 
 command! -nargs=? Google call maxmellon#opener(<f-args>)
 command! -nargs=? Opener call maxmellon#google(<f-args>)
+command! -nargs=? Cdu call maxmellon#cdgitroot#exec()

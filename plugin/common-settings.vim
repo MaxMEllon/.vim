@@ -1,5 +1,3 @@
-cd %:h
-
 let g:maxmellon_define_my_color = get(g:, 'maxmellon_define_my_color', g:false)
 
 if g:maxmellon_define_my_color == g:true
