@@ -132,25 +132,28 @@ if g:plug.ready()
   if g:env.cui == g:true | MyLoad 'ifplug/cui' | endif
   if g:env.win == g:true | MyLoad 'ifplug/win' | endif
 
+  " Plug 'Shougo/neomru.vim'
+  " Plug 'Shougo/unite-outline'
   " Plug 'The-NERD-tree'
   " Plug 'jistr/vim-nerdtree-tabs'
   " Plug 'kana/vim-altr'
+  " Plug 'kana/vim-fakeclip'
   " Plug 'kana/vim-operator-replace'
-  " Plug 'kana/vim-textobj-function'
   " Plug 'kana/vim-smartinput'
+  " Plug 'kana/vim-textobj-function'
+  " Plug 'lambdalisue/vim-gita', {'on' : 'Gita'}
+  " Plug 'lambdalisue/vim-manpager'
+  " Plug 'mbbill/undotree'
   " Plug 'tpope/vim-fugitive'
 
   Plug 'AndrewRadev/switch.vim'
   Plug 'LeafCage/foldCC.vim'
   Plug 'LeafCage/yankround.vim'
-  Plug 'Shougo/neomru.vim'
-  Plug 'Shougo/unite-outline'
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/vimproc.vim', {'do' : 'make'}
   Plug 'Yggdroot/indentLine'
   Plug 'basyura/unite-rails'
   Plug 'cohama/lexima.vim'
-  Plug 'easymotion/vim-easymotion'
   Plug 'easymotion/vim-easymotion'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
   Plug 'haya14busa/incsearch.vim'
@@ -159,18 +162,14 @@ if g:plug.ready()
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/vim-easy-align'
   Plug 'justinmk/vim-dirvish'
-  Plug 'kana/vim-fakeclip'
   Plug 'kana/vim-niceblock'
   Plug 'kana/vim-operator-user'
   Plug 'kana/vim-textobj-line'
   Plug 'kana/vim-textobj-user'
   Plug 'kshenoy/vim-signature'
-  Plug 'lambdalisue/vim-gita', {'on' : 'Gita'}
-  Plug 'lambdalisue/vim-manpager'
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on' : 'Gist'}
   Plug 'mattn/webapi-vim'
-  Plug 'mbbill/undotree'
   Plug 'mhinz/vim-signify'
   Plug 'mhinz/vim-startify'
   Plug 'osyo-manga/unite-quickfix'
