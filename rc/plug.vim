@@ -138,6 +138,7 @@ if g:plug.ready()
   " Plug 'kana/vim-operator-replace'
   " Plug 'kana/vim-textobj-function'
   " Plug 'kana/vim-smartinput'
+  " Plug 'tpope/vim-fugitive'
 
   Plug 'AndrewRadev/switch.vim'
   Plug 'LeafCage/foldCC.vim'
@@ -178,10 +179,10 @@ if g:plug.ready()
   Plug 'rhysd/committia.vim'
   Plug 'surround.vim'
   Plug 'tpope/vim-dispatch'
-  Plug 'tpope/vim-fugitive'
   Plug 'tyru/capture.vim', {'on' : 'Capture'}
   Plug 'tyru/caw.vim'
   Plug 'vim-jp/vital.vim'
+
   call plug#end()
 
   let g:plug.plugs = get(g:, 'plugs', {})
