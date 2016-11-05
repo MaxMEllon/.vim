@@ -161,7 +161,7 @@ if g:plug.ready()
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/vim-easy-align'
-  Plug 'justinmk/vim-dirvish'
+  Plug 'MaxMEllon/vim-dirvish'
   Plug 'kana/vim-niceblock'
   Plug 'kana/vim-operator-user'
   Plug 'kana/vim-textobj-line'

@@ -30,11 +30,10 @@ function! s:GetHighlight(hi)
 endfunction
 
 let s:branch = ''
+Autocmd WinEnter * let s:branch = ''
 function! GetBranch()
   if !empty(s:branch) | return s:branch | endif
-  redir => s:current_dir
-  pwd
-  redir END
+  redir => s:current_dir | pwd | redir END
   let s:current_dir = substitute(s:current_dir, '[\r\n]', '', 'g')
   execute 'cd ' . expand('%:h')
   let s:is_repo = system('git rev-parse --is-inside-work-tree')
