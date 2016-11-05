@@ -17,10 +17,6 @@ nnoremap [[ [[zz
 nnoremap [] []zz
 nnoremap ][ ][zz
 nnoremap <C-j> }zz
-noremap <Esc>(  [(
-noremap <Esc>)  ])
-noremap <Esc>{  [{
-noremap <Esc>}  ]}
 
 " See: http://qiita.com/itmammoth/items/312246b4b7688875d023
 nnoremap <C-n> "zdd"zp
@@ -76,11 +72,6 @@ for s:k in range(1, 9)
   execute 'nnoremap <Leader>' . s:k ':<C-u>e #' . s:k . '<CR>'
 endfor
 
-nnoremap > >>
-nnoremap < <<
-xnoremap > >gv
-xnoremap < <gv
-
 inoremap <C-a> <Home>
 inoremap <C-u> <ESC>^c$
 inoremap <C-e> <End>
@@ -94,11 +85,11 @@ inoremap <C-m> <CR>
 
 inoremap <C-v> <C-o>:set paste<CR><C-r>*<C-o>:set nopaste<CR>
 vnoremap <C-c> "+y
-if has('nvim')
+
+if g:env.neo
   inoremap <D-V> <C-o>:set paste<CR><C-r>*<C-o>:set nopaste<CR>
   vnoremap <D-C> "+y
 endif
-
 
 inoremap . <C-]>.
 inoremap : :<C-]>
@@ -182,7 +173,7 @@ endfunction
 nnoremap <silent><C-l> :<C-u>nohlsearch<CR><ESC>
 nnoremap <silent> <C-i> <C-I>
 
-if !has('nvim')
+if !g:env.neo
   nnoremap <F4> :<C-u>cnext<CR>
   nnoremap <F5> :<C-u>cprevious<CR>
 endif
