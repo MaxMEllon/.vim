@@ -14,37 +14,9 @@ let g:quickrun_config['watchdogs_checker/_'] = {
       \   'hook/qfstatusline_update/enable_exit' : 1,
       \   'hook/qfstatusline_update/priority_exit' : 4,
       \ }
-let g:watchdogs_check_BufWritePost_enable_on_wq = 0
-let g:quickrun_config['watchdogs_checker/clang++'] = {
-      \   'command': 'clang++',
-      \   'exec':    '%c %o -Wall -Wextra -std=c++1y -stdlib=libc++ -fsyntax-only %s:p',
-      \ }
-let g:quickrun_config['watchdogs_checker/g++'] = {
-      \   'command': 'g++',
-      \   'exec':    '%c %o -Wall -Wextra -std=c++11 -fsyntax-only %s:p',
-      \ }
-let g:quickrun_config['cpp/watchdogs_checker'] = {
-      \   'type': 'watchdogs_checker/g++',
-      \ }
-if executable('sass')
-  let g:quickrun_config['watchdogs_checker/sass'] = {
-        \   'command':     'sass',
-        \   'exec':        '%c %o --check --compass --trace --no-cache %s:p',
-        \   'errorformat': '%f:%l:%m\ (Sass::SyntaxError),%-G%.%#',
-        \ }
-  let g:quickrun_config['sass/watchdogs_checker'] = {
-        \   'type': 'watchdogs_checker/sass',
-        \ }
 
-  let g:quickrun_config['watchdogs_checker/scss'] = {
-        \   'command': 'sass',
-        \   'exec': '%c %o --check --compass --trace --no-cache %s:p',
-        \   'errorformat': '%f:%l:%m\ (Sass::SyntaxError),%-G%.%#',
-        \ }
-  let g:quickrun_config['scss/watchdogs_checker'] = {
-        \   'type': 'watchdogs_checker/scss',
-        \ }
-endif
+let g:watchdogs_check_BufWritePost_enable_on_wq = 0
+
 if executable('eslint_d')
   let g:quickrun_config['javascript/watchdogs_checker'] = {
         \   'type' : 'watchdogs_checker/eslint',
@@ -60,31 +32,7 @@ if executable('eslint_d')
         \            '%-G%.%#',
         \ }
 endif
-if executable('rubocop')
-  let g:quickrun_config['ruby/watchdogs_checker'] = {
-        \   "type" : "watchdogs_checker/rubocop"
-        \ }
-endif
-if executable('slimrb')
-  let g:quickrun_config['watchdogs_checker/slim'] = {
-        \   'command': 'slimrb',
-        \   'exec':    '%c %o > /dev/null %s:p',
-        \   'errorformat': '(Slim::Parser::SyntaxError)',
-        \ }
-  let g:quickrun_config['slim/watchdogs_checker'] = {
-        \   'type': 'watchdogs_checker/slim',
-        \ }
-end
-if executable('elixir')
-  let g:quickrun_config['watchdogs_checker/elixir'] = {
-        \   'command'     : 'elixir',
-        \   'exec'        : '%c %s',
-        \   'errorformat' : '**\ (%.%#Error)\ %f:%l:\ %m, %-G%.%#',
-        \ }
-  let g:quickrun_config['elixir/watchdogs_checker'] = {
-        \     'type'      : "watchdogs_checker/elixir",
-        \}
-end
+
 let g:watchdogs_check_BufWritePost_enable = 1
 let g:watchdogs_check_BufWritePost_enables = {
       \ 'c'              : 0,

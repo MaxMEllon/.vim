@@ -23,13 +23,11 @@ let s:MyFileTypes = [
       \   {'file' : '.jsx',      'type' : 'javascript'},
       \   {'file' : '.less',     'type' : 'less'},
       \   {'file' : '.nvim',     'type' : 'vim'},
-      \   {'file' : '.react.js', 'type' : 'javascript'},
       \   {'file' : '.sass',     'type' : 'sass'},
       \   {'file' : '.scss',     'type' : 'scss'},
       \   {'file' : '.slim',     'type' : 'slim'},
       \   {'file' : '.toml',     'type' : 'toml'},
       \   {'file' : '.zsh',      'type' : 'zsh'},
-      \   {'file' : '_spec.rb',  'type' : 'ruby'},
       \ ]
 
 for s:e in s:MyFileTypes
