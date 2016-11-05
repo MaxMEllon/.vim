@@ -32,6 +32,11 @@ endfunction
 let s:branch = ''
 function! GetBranch()
   if !empty(s:branch) | return s:branch | endif
+  redir => s:current_dir
+  pwd
+  redir END
+  let s:current_dir = substitute(s:current_dir, '[\r\n]', '', 'g')
+  execute 'cd ' . expand('%:h')
   let s:is_repo = system('git rev-parse --is-inside-work-tree')
   if s:is_repo =~# 'true'
     let s:branch = system('git branch | grep "*" | tr -d "*" | tr -d " "')
@@ -39,6 +44,7 @@ function! GetBranch()
   else
     let s:branch = 'X'
   endif
+  execute 'cd ' . s:current_dir
   return s:branch
 endfunction
 
@@ -69,22 +75,14 @@ endfunction
 
 " left
 set statusline=\ %n\               " buffer number
-set statusline+=\|                 " |
 set statusline+=%w                 " Preview flag
-set statusline+=\|                 " |
 set statusline+=%m                 " Modify flag
-set statusline+=\|                 " |
 set statusline+=%<%t               " filename
-set statusline+=\|                 " |
 set statusline+=%r                 " Readonly flag
-set statusline+=\|                 " |
-set statusline+=%{GetBranch()}     " Branch name
-set statusline+=\|                 " |
+set statusline+=\ %{GetBranch()}     " Branch name
 " right                            " |
 set statusline+=%=                 " separator
 set statusline+=%{MyNeomake()}\ \  " Error counts
-set statusline+=\|                 " |
 set statusline+=%y                 " filetype
-set statusline+=\|                 " |
 set statusline+=\ %l\ /\ %L\       " location
 
