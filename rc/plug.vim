@@ -78,6 +78,7 @@ endfunction
 function! s:config_load(plugname, realpath)
   let s:fuzzy_plugname = substitute(a:plugname, '\.vim$', '', 'g')
   if g:env.win
+    " FIXME: なぜかwindowsでis_loadedがすべてg:falseになるので後で調査
     let s:loaded = g:plug.is_installed(a:plugname) || g:plug.is_installed(a:fuzzy_plugname)
   else
     let s:loaded = g:plug.is_loaded(a:plugname) || g:plug.is_loaded(s:fuzzy_plugname)

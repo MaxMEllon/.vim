@@ -39,7 +39,7 @@ function! GetBranch()
   let s:is_repo = system('git rev-parse --is-inside-work-tree')
   if s:is_repo =~# 'true'
     let s:branch = system('git branch | grep "*" | tr -d "*" | tr -d " "')
-    let s:branch = substitute(s:branch, '\n', '', 'g')
+    let s:branch = substitute(s:branch, '[\r\n]', '', 'g')
   else
     let s:branch = 'X'
   endif
