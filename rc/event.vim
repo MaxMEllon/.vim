@@ -24,3 +24,5 @@ if has('nvim')
   Autocmd BufRead,BufEnter * if &buftype ==# 'terminal'
         \| setlocal nolist | startinsert | endif
 endif
+
+Autocmd BufRead,BufEnter * let g:branch = ''
