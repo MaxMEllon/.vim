@@ -12,3 +12,4 @@ Plug 'miyakogi/vim-quickrun-job'
 
 MyLoad 'ifplug/javascript'
 MyLoad 'ifplug/css'
+MyLoad 'ifplug/rails'

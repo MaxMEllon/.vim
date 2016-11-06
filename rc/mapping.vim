@@ -104,9 +104,8 @@ nnoremap <C-e> $
 
 nnoremap _ :<C-u>sp .<CR>
 nnoremap <bar> :<C-u>vsp .<CR>
+nnoremap - :<C-u>e .<CR>
 
-noremap + <C-a>
-noremap - <C-x>
 vnoremap <C-a> <C-a>gv
 vnoremap <C-x> <C-x>gv
 
