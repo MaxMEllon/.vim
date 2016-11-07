@@ -1,5 +1,3 @@
-let g:hi_insert = 'highlight StatusLine ctermfg=red ctermbg=yellow cterm=NONE guifg=red guibg=yellow'
-let g:hi_normal = 'highlight StatusLine ctermfg=white ctermbg=blue cterm=NONE guifg=white guibg=blue'
 if has('syntax') && !has('gui_running')
   augroup InsertHook
     autocmd!
@@ -14,23 +12,13 @@ let s:slhlcmd = ''
 function! s:StatusLine(mode)
   if has('gui_running') | return | endif
   if a:mode == 'Enter'
-    silent exec g:hi_insert
+    highlight StatusLine ctermfg=red ctermbg=yellow cterm=NONE guifg=red guibg=yellow
   else
-    silent exec g:hi_normal
+    highlight StatusLine ctermfg=white ctermbg=blue cterm=NONE guifg=white guibg=blue
   endif
 endfunction
 
-function! s:GetHighlight(hi)
-  redir => s:hl
-  exec 'highlight ' . a:hi
-  redir END
-  let s:hl = substitute(s:hl, '[\r\n]', '', 'g')
-  let s:hl = substitute(s:hl, 'xxx', '', '')
-  return s:hl
-endfunction
-
 let s:branch = ''
-Autocmd WinEnter * let s:branch = ''
 function! GetBranch()
   if !empty(s:branch) | return s:branch | endif
   redir => s:current_dir | pwd | redir END
@@ -46,7 +34,6 @@ function! GetBranch()
   execute 'cd ' . s:current_dir
   return s:branch
 endfunction
-
 
 function! MyNeomake()
   if !exists('*neomake#statusline#LoclistCounts')
@@ -67,7 +54,6 @@ function! MyNeomake()
   if s:total == 0
     return ''
   endif
-
 
   return 'Errors : ' . s:total
 endfunction
