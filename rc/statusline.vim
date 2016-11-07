@@ -59,7 +59,7 @@ set statusline+=%m                              " Modify flag
 set statusline+=%<%t                            " filename
 set statusline+=%r                              " Readonly flag
 set statusline+=\ %{maxmellon#git#branch#get()} " Branch name
-                                                " right                            " |
+
 set statusline+=%=                              " separator
 set statusline+=%{MyNeomake()}\ \               " Error counts
 set statusline+=%y                              " filetype
