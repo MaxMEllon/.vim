@@ -38,7 +38,7 @@ let g:watchdogs_check_BufWritePost_enables = {
       \ 'c'              : 0,
       \ 'cpp'            : 0,
       \ 'python'         : 0,
-      \ 'vim'            : 0,
+      \ 'vim'            : 1,
       \ 'php'            : 0,
       \ 'ruby'           : 0,
       \ 'slim'           : 0,
