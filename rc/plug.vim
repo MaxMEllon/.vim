@@ -99,7 +99,7 @@ endfunction
 
 " Example:
 " :PlugConfig 'caw.vim'
-command! -nargs=* -bar PlugConfig call g:plug.config_load(<f-args>)
+command! -nargs=* -bar PlugConfig call s:config_load(<f-args>)
 
 function! g:plug.config_auto_load()
   let s:rcs = split(expand('~/.vim/rc/plugrc/*'), "\n")
