@@ -31,11 +31,8 @@ endfunction
 
 function! maxmellon#dirvish#cdgitroot() abort
   call maxmellon#cdgitroot#exec()
-  redir => s:output
-  pwd
-  redir END
+  let s:output = maxmellon#pwd#get()
   if &filetype ==# 'dirvish'
-    let s:output = substitute(s:output, '[\r\n]', '', 'g')
     execute 'edit ' . s:output
   endif
 endfunction
