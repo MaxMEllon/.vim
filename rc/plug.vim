@@ -137,6 +137,8 @@ if g:plug.ready()
   " Plug 'Shougo/unite-outline'
   " Plug 'The-NERD-tree'
   " Plug 'jistr/vim-nerdtree-tabs'
+  " Plug 'junegunn/fzf'
+  " Plug 'junegunn/fzf.vim'
   " Plug 'kana/vim-altr'
   " Plug 'kana/vim-fakeclip'
   " Plug 'kana/vim-operator-replace'
@@ -158,8 +160,6 @@ if g:plug.ready()
   Plug 'easymotion/vim-easymotion'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
   Plug 'haya14busa/incsearch.vim'
-  Plug 'junegunn/fzf'
-  Plug 'junegunn/fzf.vim'
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
   Plug 'kana/vim-operator-user'
@@ -180,6 +180,7 @@ if g:plug.ready()
   Plug 'tyru/capture.vim', {'on' : 'Capture'}
   Plug 'tyru/caw.vim'
   Plug 'vim-jp/vital.vim'
+  Plug 'yuku-t/unite-git'
 
   call plug#end()
 
