@@ -125,7 +125,6 @@ vnoremap <silent> ,z :<C-u>%s/　/  /g<CR>
 nnoremap ,o :Opener <C-r><C-a><CR>
 nnoremap ,g :Google <C-r><C-a><CR>
 nnoremap ,p :ToggleOpt paste<CR>
-nnoremap <C-c> :ToggleOpt list<CR>
 
 nnoremap sub :%s/<C-r><C-w>//gc<Left><Left><Left>
 xnoremap s :<C-u>'<,'>s///gc<Left><Left><Left><Left><Left>
