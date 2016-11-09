@@ -11,7 +11,7 @@ nnoremap <buffer> mv :Mv <C-r><C-a> <C-r><C-a>
 nnoremap <buffer> rm :Rm <C-r><C-a>
 nnoremap <buffer> to :Touch<Space>
 nnoremap <buffer> mk :Mkdir<Space>
-nnoremap <buffer> cdu :Cdu<Space>
+nnoremap <buffer> cdu :Cdu<CR>
 
 lcd %:h
 let g:branch = ''

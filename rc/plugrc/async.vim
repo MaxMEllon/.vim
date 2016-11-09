@@ -11,7 +11,7 @@ function! s:eslint_fixer() abort
   let s:rootdir = maxmellon#cdgitroot#get()
   execute 'cd ' . s:rootdir
   if !filereadable('.eslintrc')
-    call g:env.debug(s:err1 . ' ' . s:eslintrc)
+    call g:env.debug(s:err1 . ' ' . s:rootdir . '.eslintrc')
     return
   endif
 
