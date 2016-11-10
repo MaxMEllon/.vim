@@ -176,6 +176,7 @@ if g:plug.ready()
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/committia.vim'
   Plug 'surround.vim'
+  Plug 'terryma/vim-multiple-cursors'
   Plug 'tpope/vim-dispatch'
   Plug 'tyru/capture.vim', {'on' : 'Capture'}
   Plug 'tyru/caw.vim'
