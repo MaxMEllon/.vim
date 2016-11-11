@@ -43,7 +43,7 @@ set nobackup
 set directory=~/.vim/_swap
 set backupdir=~/.vim/_swap
 
-set grepprg=git\ grep\ -I\ --line-number
+set grepprg=hw\ --no-group\ --no-color
 
 if !isdirectory(expand('~/.vim/_swap'))
   call mkdir($HOME.'/.vim/_swap', 'p')
