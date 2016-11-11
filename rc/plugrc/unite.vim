@@ -1,1 +1,1 @@
-command! Ggrep Unite grep/git -no-quit 
+" command! Ggrep Unite grep/git:. -no-quit 

@@ -14,3 +14,6 @@ command! -nargs=? Opener call maxmellon#google(<f-args>)
 command! -nargs=? Cdu call maxmellon#cdgitroot#exec()
 
 command! SyntaxInfo call maxmellon#syntax_info()
+
+command! -nargs=? Ggrep call maxmellon#grep#gitgrep(<f-args>)
+command! -nargs=? Hgrep call maxmellon#grep#hw(<f-args>)

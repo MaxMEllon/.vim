@@ -19,14 +19,14 @@ function! s:StatusLine(mode)
 endfunction
 
 " left
-set statusline=\ %n\                               " buffer number
-set statusline+=%w                                 " Preview flag
-set statusline+=%m                                 " Modify flag
-set statusline+=%<%t                               " filename
-set statusline+=%r                                 " Readonly flag
-set statusline+=\ %{maxmellon#git#branch#get()}    " Branch name
+set statusline=\ %n\ "
+set statusline+=%w
+set statusline+=%m
+set statusline+=%<%t
+set statusline+=%r
+set statusline+=\ %{maxmellon#git#branch#get()}
 
-set statusline+=%=                                 " separator
-set statusline+=%{maxmellon#error#statusline()}\ \ " Error counts
-set statusline+=%y                                 " filetype
-set statusline+=\ %l\ /\ %L\                       " location
+set statusline+=%=
+set statusline+=%y
+set statusline+=\ %l\ /\ %L\ "
+set statusline+=%#ErrorMsg#%{maxmellon#error#statusline()}"

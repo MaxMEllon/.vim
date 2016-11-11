@@ -15,8 +15,8 @@ let s:abbrs = [
       \   {'type': 'c', 'before' : 'cdu',       'after' : 'Cdu'},
       \   {'type': 'c', 'before' : 'unite',     'after' : 'Unite'},
       \   {'type': 'c', 'before' : 'tig',       'after' : 'Tig'},
-      \   {'type': 'c', 'before' : 'ag',        'after' : 'Ags'},
       \   {'type': 'c', 'before' : 'ggrep',     'after' : 'Ggrep'},
+      \   {'type': 'c', 'before' : 'hgrep',     'after' : 'Hgrep'},
       \   {'type': 'c', 'before' : 'gist',      'after' : 'Gist'},
       \ ]
 

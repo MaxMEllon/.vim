@@ -9,6 +9,7 @@ set cscopetag
 set display        =lastline
 set fillchars      =vert:\|,fold:\-
 set history        =100
+set hlsearch
 set laststatus     =2
 set lazyredraw
 set linespace      =0
@@ -41,6 +42,9 @@ set noswapfile
 set nobackup
 set directory=~/.vim/_swap
 set backupdir=~/.vim/_swap
+
+set grepprg=git\ grep\ -I\ --line-number
+
 if !isdirectory(expand('~/.vim/_swap'))
   call mkdir($HOME.'/.vim/_swap', 'p')
 endif

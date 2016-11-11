@@ -19,5 +19,5 @@ function! maxmellon#error#statusline()
   if s:count == 0
     return ''
   endif
-  return 'Errors : ' . s:count
+  return ' Errors : ' . s:count . ' '
 endfunction
