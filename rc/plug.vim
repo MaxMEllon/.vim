@@ -136,6 +136,7 @@ if g:plug.ready()
   " Plug 'Shougo/neomru.vim'
   " Plug 'Shougo/unite-outline'
   " Plug 'The-NERD-tree'
+  " Plug 'haya14busa/incsearch-migemo.vim'
   " Plug 'jistr/vim-nerdtree-tabs'
   " Plug 'junegunn/fzf'
   " Plug 'junegunn/fzf.vim'

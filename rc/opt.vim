@@ -56,6 +56,6 @@ set undodir   =~/.vim/_undo
 set undofile
 set undolevels=200
 
-if (exists('+colorcolumn'))
+if exists('+colorcolumn')
   set colorcolumn=80,100
 endif

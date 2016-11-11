@@ -9,6 +9,7 @@ endif
 Plug 'osyo-manga/vim-watchdogs'
 Plug 'thinca/vim-quickrun'
 Plug 'miyakogi/vim-quickrun-job'
+Plug 'haya14busa/vim-operator-flashy'
 
 MyLoad 'ifplug/javascript'
 MyLoad 'ifplug/css'

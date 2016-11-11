@@ -28,5 +28,5 @@ set statusline+=\ %{maxmellon#git#branch#get()}
 
 set statusline+=%=
 set statusline+=%y
-set statusline+=\ %l\ /\ %L\ "
+" set statusline+=\ %l\ /\ %L\ "
 set statusline+=%#ErrorMsg#%{maxmellon#error#statusline()}"
