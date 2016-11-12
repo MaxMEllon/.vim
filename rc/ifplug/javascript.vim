@@ -1,4 +1,4 @@
-" javascript stntax
+" javascript syntax
 Plug 'pangloss/vim-javascript'
 Plug 'othree/es.next.syntax.vim'
 Plug 'othree/javascript-libraries-syntax.vim'

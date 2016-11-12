@@ -10,10 +10,6 @@ if $VIM_DEBUG == 1 && has('vim_starting') && has('reltime')
   augroup END
 endif
 
-" for load plugin
-filetype plugin indent off
-
-autocmd!
 augroup MyVimrc
   autocmd!
 augroup END
@@ -36,9 +32,9 @@ MyLoad 'env'
 MyLoad 'encode'
 MyLoad 'opt'
 
-if g:env.cui == g:true | MyLoad 'cui' | endif
-if g:env.gui == g:true | MyLoad 'gui' | endif
-if g:env.neo == g:true | MyLoad 'neo' | endif
+if g:env.cui | MyLoad 'cui' | endif
+if g:env.gui | MyLoad 'gui' | endif
+if g:env.neo | MyLoad 'neo' | endif
 
 MyLoad 'mapping'
 MyLoad 'plug'

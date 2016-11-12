@@ -1,15 +1,15 @@
-nnoremap <silent> j  gj
-nnoremap <silent> gj j
-nnoremap <silent> k  gk
-nnoremap <silent> gk k
-nnoremap <silent> $  g$
-nnoremap <silent> g$ $
-vnoremap <silent> j  gj
-vnoremap <silent> gj j
-vnoremap <silent> k  gk
-vnoremap <silent> gk k
-vnoremap <silent> $  g$
-vnoremap <silent> g$ $
+nnoremap j  gj
+nnoremap gj j
+nnoremap k  gk
+nnoremap gk k
+nnoremap $  g$
+nnoremap g$ $
+vnoremap j  gj
+vnoremap gj j
+vnoremap k  gk
+vnoremap gk k
+vnoremap $  g$
+vnoremap g$ $
 nnoremap } }zz
 nnoremap { {zz
 nnoremap ]] ]]zz

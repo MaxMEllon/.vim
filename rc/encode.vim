@@ -78,14 +78,14 @@ if has('kaoriya')
 endif
 
 " When do not include Japanese, use encoding for fileencoding.
-function! g:ReCheck_FENC() "{{{
+function! ReCheck_FENC() "{{{
   let is_multi_byte = search("[^\x01-\x7e]", 'n', 100, 100)
   if &fileencoding =~# 'iso-2022-jp' && !is_multi_byte
     let &fileencoding = &encoding
   endif
 endfunction"}}}
 
-Autocmd BufReadPost * call g:ReCheck_FENC()
+Autocmd BufReadPost * call ReCheck_FENC()
 
 " Default fileformat.
 set fileformat=unix

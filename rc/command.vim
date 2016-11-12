@@ -10,6 +10,7 @@ if executable('shiba')
 endif
 
 command! SyntaxInfo call maxmellon#syntax_info()
+command! RTP call maxmellon#runtimepath#show()
 
 command! -nargs=? Google call maxmellon#opener(<f-args>)
 command! -nargs=? Opener call maxmellon#google(<f-args>)
@@ -19,4 +20,5 @@ command! -nargs=? Cd call maxmellon#cd#exec(<f-args>)
 
 command! -nargs=? Ggrep call maxmellon#grep#gitgrep(<f-args>)
 command! -nargs=? Hgrep call maxmellon#grep#hw(<f-args>)
+
 

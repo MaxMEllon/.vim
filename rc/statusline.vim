@@ -10,7 +10,6 @@ endif
 let s:slhlcmd = ''
 
 function! s:StatusLine(mode)
-  if has('gui_running') | return | endif
   if a:mode == 'Enter'
     highlight StatusLine ctermfg=red ctermbg=yellow cterm=NONE guifg=red guibg=yellow
   else

@@ -14,7 +14,7 @@ if IsMac()
 endif
 
 if has('vim_starting')  && has('vertsplit')
-  function! g:EnableVsplitMode()
+  function! EnableVsplitMode()
     " enable origin mode and left/right margins
     let &t_CS = "y"
     let &t_ti = &t_ti . "\e[?6;69h"
