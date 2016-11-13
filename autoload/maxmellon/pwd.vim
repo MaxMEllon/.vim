@@ -1,9 +1,9 @@
 function! s:base()
-  redir => s:dir
+  redir => l:dir
   pwd
   redir END
-  let s:dir = substitute(s:dir, '[\r\n]', '', 'g')
-  return s:dir
+  let l:dir = substitute(l:dir, '[\r\n]', '', 'g')
+  return l:dir
 endfunction
 
 function! maxmellon#pwd#get()

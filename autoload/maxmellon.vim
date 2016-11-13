@@ -1,19 +1,19 @@
 function! maxmellon#indent_braces()
-  let s:nowletter = getline(".")[col(".")-1]
-  let s:beforeletter = getline(".")[col(".")-2]
-  if s:nowletter == "}" && s:beforeletter == "{" ||
-        \ s:nowletter == "]" && s:beforeletter == "["
-    let s:res = "\<C-]>\n\t\n\<UP>\<RIGHT>\<ESC>\A"
-  elseif s:beforeletter == ' '
-    let s:res = "\<C-]>\n\<ESC>\:call maxmellon#remove_whitespace()\n\ii\<ESC>==xa"
+  let l:nowletter = getline(".")[col(".")-1]
+  let l:beforeletter = getline(".")[col(".")-2]
+  if l:nowletter == "}" && l:beforeletter == "{" ||
+        \ l:nowletter == "]" && l:beforeletter == "["
+    let l:res = "\<C-]>\n\t\n\<UP>\<RIGHT>\<ESC>\A"
+  elseif l:beforeletter == ' '
+    let l:res = "\<C-]>\n\<ESC>\:call maxmellon#remove_whitespace()\n\ii\<ESC>==xa"
   else
     if pumvisible()
-      let s:res = "\<ESC>a"
+      let l:res = "\<ESC>a"
     else
-      let s:res = "\<C-]>\n"
+      let l:res = "\<C-]>\n"
     endif
   endif
-  return s:res
+  return l:res
 endfunction
 
 function! maxmellon#remove_whitespace()
@@ -24,8 +24,6 @@ endfunction
 
 function! maxmellon#load_help()
   if isdirectory(expand('~/.vim/help/vimdoc-ja/doc'))
-    helptags ~/.vim/help/vimdoc-ja/doc
-    set runtimepath+=~/.vim/help/vimdoc-ja
     set helplang=ja
   endif
 endfunction
@@ -44,41 +42,41 @@ function maxmellon#google(...)
 endfunction
 
 function! s:get_syn_id(transparent)
-  let s:synid = synID(line("."), col("."), 1)
+  let l:synid = synID(line("."), col("."), 1)
   if a:transparent
     return synIDtrans(s:synid)
   else
-    return s:synid
+    return l:synid
   endif
 endfunction
 
 function! s:get_syn_attr(synid)
-  let s:name = synIDattr(a:synid, "name")
-  let s:ctermfg = synIDattr(a:synid, "fg", "cterm")
-  let s:ctermbg = synIDattr(a:synid, "bg", "cterm")
-  let s:guifg = synIDattr(a:synid, "fg", "gui")
-  let s:guibg = synIDattr(a:synid, "bg", "gui")
+  let l:name = synIDattr(a:synid, "name")
+  let l:ctermfg = synIDattr(a:synid, "fg", "cterm")
+  let l:ctermbg = synIDattr(a:synid, "bg", "cterm")
+  let l:guifg = synIDattr(a:synid, "fg", "gui")
+  let l:guibg = synIDattr(a:synid, "bg", "gui")
   return {
-        \ "name": s:name,
-        \ "ctermfg": s:ctermfg,
-        \ "ctermbg": s:ctermbg,
-        \ "guifg": s:guifg,
-        \ "guibg": s:guibg}
+        \ "name":    l:name,
+        \ "ctermfg": l:ctermfg,
+        \ "ctermbg": l:ctermbg,
+        \ "guifg":   l:guifg,
+        \ "guibg":   l:guibg}
 endfunction
 
 function maxmellon#syntax_info()
-  let s:baseSyn = s:get_syn_attr(s:get_syn_id(0))
-  echo "name: " . s:baseSyn.name .
-        \ " ctermfg: " . s:baseSyn.ctermfg .
-        \ " ctermbg: " . s:baseSyn.ctermbg .
-        \ " guifg: " . s:baseSyn.guifg .
-        \ " guibg: " . s:baseSyn.guibg
-  let s:linkedSyn = s:get_syn_attr(s:get_syn_id(1))
+  let l:baseSyn = s:get_syn_attr(s:get_syn_id(0))
+  echo "name: "       .l:baseSyn.name .
+        \ " ctermfg: ".l:baseSyn.ctermfg .
+        \ " ctermbg: ".l:baseSyn.ctermbg .
+        \ " guifg: "  .l:baseSyn.guifg .
+        \ " guibg: "  .l:baseSyn.guibg
+  let l:linkedSyn = s:get_syn_attr(s:get_syn_id(1))
   echo "link to"
-  echo "name: " . s:linkedSyn.name .
-        \ " ctermfg: " . s:linkedSyn.ctermfg .
-        \ " ctermbg: " . s:linkedSyn.ctermbg .
-        \ " guifg: " . s:linkedSyn.guifg .
-        \ " guibg: " . s:linkedSyn.guibg
+  echo "name: "       .l:linkedSyn.name .
+        \ " ctermfg: ".l:linkedSyn.ctermfg .
+        \ " ctermbg: ".l:linkedSyn.ctermbg .
+        \ " guifg: "  .l:linkedSyn.guifg .
+        \ " guibg: "  .l:linkedSyn.guibg
 endfunction
 

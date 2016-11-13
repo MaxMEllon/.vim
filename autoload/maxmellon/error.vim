@@ -1,23 +1,23 @@
 function! maxmellon#error#counts()
   if exists('*neomake#statusline#LoclistCounts')
-    let s:total = 0
-    for s:v in values(neomake#statusline#LoclistCounts())
-      let s:total += s:v
+    let l:total = 0
+    for l:v in values(neomake#statusline#LoclistCounts())
+      let l:total += l:v
     endfor
-    for s:v in items(neomake#statusline#QflistCounts())
-      let s:total += s:v
+    for l:v in items(neomake#statusline#QflistCounts())
+      let l:total += l:v
     endfor
   else
-    let s:total = len(getqflist())
+    let l:total = len(getqflist())
   endif
 
-  return s:total
+  return l:total
 endfunction
 
 function! maxmellon#error#statusline()
-  let s:count = maxmellon#error#counts()
-  if s:count == 0
+  let l:count = maxmellon#error#counts()
+  if l:count == 0
     return ''
   endif
-  return ' Errors : ' . s:count . ' '
+  return ' Errors : ' . l:count . ' '
 endfunction
