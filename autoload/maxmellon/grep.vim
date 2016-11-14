@@ -11,3 +11,10 @@ function! maxmellon#grep#hw(query)
   execute 'grep ' . a:query
   let &grepprg = l:current_grep
 endfunction
+
+function! maxmellon#grep#jvgrep(query)
+  let l:current_grep = &grepprg
+  setlocal grepprg=jvgrep
+  execute 'grep ' . a:query ' ./*'
+  let &grepprg = l:current_grep
+endfunction

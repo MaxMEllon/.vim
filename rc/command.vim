@@ -18,7 +18,6 @@ command! -nargs=? Opener call maxmellon#google(<f-args>)
 command! -nargs=? Cdu call maxmellon#cdgitroot#exec()
 command! -nargs=? Cd call maxmellon#cd#exec(<f-args>)
 
-command! -nargs=? Ggrep call maxmellon#grep#gitgrep(<f-args>)
-command! -nargs=? Hgrep call maxmellon#grep#hw(<f-args>)
-
-
+command! -nargs=? Ggrep  call maxmellon#grep#gitgrep(<f-args>)
+command! -nargs=? Hgrep  call maxmellon#grep#hw(<f-args>)
+command! -nargs=? Jvgrep call maxmellon#grep#jvgrep(<f-args>)
