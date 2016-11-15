@@ -32,13 +32,13 @@ endfunction
 " @commanddoc set tab indent width to current buffer
 " @args {Number}  : indent width
 command! -bar -nargs=1 TabIndent
-      \ call s:set_tab_width(<args>, s:false)
+      \ call s:set_tab_width(<args>, g:false)
 
 " :SpaceIndent
 " @commanddoc set space indent width to current buffer
 " @args {Number}  : indent width
 command! -bar -nargs=1 SpaceIndent
-      \ call s:set_tab_width(<args>, s:true)
+      \ call s:set_tab_width(<args>, g:true)
 
 function! s:set_indent(...)
   execute 'AutocmdIndentFT ' . a:1 'call s:set_tab_width(' . a:2 . ',' . a:3 . ')'

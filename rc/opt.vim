@@ -14,7 +14,7 @@ set laststatus     =2
 set lazyredraw
 set linespace      =0
 set list
-set listchars      =eol:$,tab:>-
+set listchars      =eol:$,tab:>\ "
 set matchpairs    +=<:>
 set matchtime      =1
 set maxmem         =500000
