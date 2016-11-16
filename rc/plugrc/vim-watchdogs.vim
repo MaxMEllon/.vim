@@ -1,6 +1,6 @@
 let g:quickrun_config = get(g:, 'quickrun_config', {})
 let g:quickrun_config['watchdogs_checker/_'] = {
-      \   'runner' : 'vimproc',
+      \   'runner' : 'job',
       \   'runner/vimproc/sleep' : 10,
       \   'runner/vimproc/updatetime' : 500,
       \   'outputter/buffer/split' : '',
@@ -33,6 +33,12 @@ if executable('eslint_d')
         \ }
 endif
 
+if executable('rubocop')
+  let g:quickrun_config['ruby/watchdogs_checker'] = {
+        \   "type" : "watchdogs_checker/rubocop"
+        \ }
+endif
+
 let g:watchdogs_check_BufWritePost_enable = 1
 let g:watchdogs_check_BufWritePost_enables = {
       \ 'c'              : 0,
@@ -40,7 +46,7 @@ let g:watchdogs_check_BufWritePost_enables = {
       \ 'python'         : 0,
       \ 'vim'            : 0,
       \ 'php'            : 0,
-      \ 'ruby'           : 0,
+      \ 'ruby'           : 1,
       \ 'slim'           : 0,
       \ 'java'           : 0,
       \ 'sass'           : 0,

@@ -11,6 +11,7 @@ Plug 'thinca/vim-quickrun'
 Plug 'miyakogi/vim-quickrun-job'
 Plug 'haya14busa/vim-operator-flashy'
 Plug 'MaxMEllon/vim-tmng'
+Plug 'cohama/lexima.vim'
 
 MyLoad 'ifplug/javascript'
 MyLoad 'ifplug/css'

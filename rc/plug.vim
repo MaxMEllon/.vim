@@ -143,7 +143,6 @@ if g:plug.ready()
   " Plug 'kana/vim-altr'
   " Plug 'kana/vim-fakeclip'
   " Plug 'kana/vim-operator-replace'
-  " Plug 'kana/vim-smartinput'
   " Plug 'kana/vim-textobj-function'
   " Plug 'lambdalisue/vim-gita', {'on' : 'Gita'}
   " Plug 'lambdalisue/vim-manpager'
@@ -157,7 +156,6 @@ if g:plug.ready()
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/vimproc.vim', {'do' : 'make'}
   Plug 'Yggdroot/indentLine'
-  Plug 'cohama/lexima.vim'
   Plug 'easymotion/vim-easymotion'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
   Plug 'haya14busa/incsearch.vim'
