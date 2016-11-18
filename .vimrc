@@ -51,10 +51,6 @@ PlugConfigAutoLoad
 filetype plugin indent on
 syntax on
 
-if g:env.gui == g:true
-  colorscheme molokai
-else
-  colorscheme default
-endif
+colorscheme default
 
 set secure

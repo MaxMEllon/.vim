@@ -46,7 +46,7 @@ endfunction
 function! s:get_syn_id(transparent)
   let l:synid = synID(line("."), col("."), 1)
   if a:transparent
-    return synIDtrans(s:synid)
+    return synIDtrans(l:synid)
   else
     return l:synid
   endif

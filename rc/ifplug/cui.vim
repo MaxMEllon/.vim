@@ -13,6 +13,8 @@ Plug 'haya14busa/vim-operator-flashy'
 Plug 'MaxMEllon/vim-tmng'
 Plug 'cohama/lexima.vim'
 
+Plug 'MaxMEllon/molokai'
+
 MyLoad 'ifplug/javascript'
 MyLoad 'ifplug/css'
 MyLoad 'ifplug/rails'

@@ -29,6 +29,13 @@ function! maxmellon#dirvish#rm(...) abort
   edit %
 endfunction
 
+function! maxmellon#dirvish#cp(...) abort
+  if len(a:000) != 2 | return | endif
+  execute 'cd ' . expand('%')
+  call system('cp ' . a:1 . ' ' . a:2)
+  edit %
+endfunction
+
 function! maxmellon#dirvish#cdgitroot() abort
   call maxmellon#cdgitroot#exec()
   let s:output = maxmellon#pwd#get()
