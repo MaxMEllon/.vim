@@ -14,6 +14,7 @@ Plug 'MaxMEllon/vim-tmng'
 Plug 'cohama/lexima.vim'
 
 Plug 'MaxMEllon/molokai'
+Plug 'nobarudo/tender.vim'
 
 MyLoad 'ifplug/javascript'
 MyLoad 'ifplug/css'
