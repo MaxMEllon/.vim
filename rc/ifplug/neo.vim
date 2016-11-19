@@ -26,6 +26,8 @@ Plug 'osyo-manga/vim-over'
 " view
 Plug 'osyo-manga/vim-anzu'
 Plug 'haya14busa/vim-operator-flashy'
+Plug 'nobarudo/tender.vim'
+Plug 'MaxMEllon/molokai'
 
 Plug 'slim-template/vim-slim'
 

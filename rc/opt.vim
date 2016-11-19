@@ -40,22 +40,23 @@ set whichwrap      =b,s,h,l,<,>,[,]
 
 set noswapfile
 set nobackup
-set directory=~/.vim/_swap
-set backupdir=~/.vim/_swap
+set directory      =~/.vim/_swap
+set backupdir      =~/.vim/_undo
 
-set grepprg=hw\ --no-group\ --no-color
+set grepprg        =hw\ --no-group\ --no-color
+
+set undodir        =~/.vim/_undo
+set undofile
+set undolevels     =200
+
+if exists('+colorcolumn')
+  set colorcolumn  =80,100
+endif
 
 if !isdirectory(expand('~/.vim/_swap'))
-  call mkdir($HOME.'/.vim/_swap', 'p')
+  call mkdir(expand('~/.vim/_swap'), 'p')
 endif
 
 if !isdirectory(expand('~/.vim/_undo'))
-  call mkdir($HOME.'/.vim/_undo', 'p')
-endif
-set undodir   =~/.vim/_undo
-set undofile
-set undolevels=200
-
-if exists('+colorcolumn')
-  set colorcolumn=80,100
+  call mkdir(expand('~/.vim/_undo'), 'p')
 endif

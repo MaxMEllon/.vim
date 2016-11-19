@@ -67,5 +67,5 @@ let s:MyIndentConfigs = [
       \ ]
 
 for s:e in s:MyIndentConfigs
-  execute 'IndentFT ' . s:e['type'] . ' ' . s:e['width'] . ' ' s:e['is_space']
+  call s:set_indent(s:e['type'], s:e['width'], s:e['is_space'])
 endfor

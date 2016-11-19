@@ -1,7 +1,7 @@
-function! s:cnoreabbrev_wrap(...)
+function! s:noreabbrev_wrap(...)
   execute a:1 . 'abbrev ' . a:2 . ' ' . a:3
 endfunction
-command! -nargs=* Abbr call s:cnoreabbrev_wrap(<f-args>)
+command! -nargs=* Abbr call s:noreabbrev_wrap(<f-args>)
 " }}}
 
 let s:abbrs = [
@@ -22,5 +22,5 @@ let s:abbrs = [
       \ ]
 
 for s:e in s:abbrs
-  execute 'Abbr ' . s:e['type'] . ' ' . s:e['before'] ' ' . s:e['after']
+  call s:noreabbrev_wrap(s:e['type'], s:e['before'], s:e['after'])
 endfor
