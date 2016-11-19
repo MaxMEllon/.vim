@@ -1,5 +1,5 @@
-let &rtp = expand('~/.vim/') . ', '
-      \  . expand('~/.vim/after/') . ', ' . &rtp
+let &rtp = expand('~/.vim/') . ',' . &rtp
+      \  . expand('~/.vim/after/')
 
 runtime! plugin/python_setup.vim
 

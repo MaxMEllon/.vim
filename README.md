@@ -68,6 +68,12 @@ $ git ls-files | grep vim | wc -l
 $ wc -l `git ls-files | grep vim` | tail -n 1
 ```
 
+- lint
+
+```
+$ vint --color --style `git ls-files | grep vim`
+```
+
 <p align="right"><a href="#top">:arrow_heading_up:</a></p>
 
 LICENSE

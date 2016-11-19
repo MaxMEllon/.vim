@@ -1,19 +1,19 @@
 function! maxmellon#indent_braces()
-  let s:nowletter = getline(".")[col(".")-1]
-  let s:beforeletter = getline(".")[col(".")-2]
-  if s:nowletter == "}" && s:beforeletter == "{" ||
-        \ s:nowletter == "]" && s:beforeletter == "["
-    let s:res = "\<C-]>\n\t\n\<UP>\<RIGHT>\<ESC>\A"
-  elseif s:beforeletter == ' '
-    let s:res = "\<C-]>\n\<ESC>\:call maxmellon#remove_whitespace()\n\ii\<ESC>==xa"
+  let l:nowletter = getline(".")[col(".")-1]
+  let l:beforeletter = getline(".")[col(".")-2]
+  if l:nowletter == "}" && l:beforeletter == "{" ||
+        \ l:nowletter == "]" && l:beforeletter == "["
+    let l:res = "\<C-]>\n\t\n\<UP>\<RIGHT>\<ESC>\A"
+  elseif l:beforeletter == ' '
+    let l:res = "\<C-]>\n\<ESC>\:call maxmellon#remove_whitespace()\n\ii\<ESC>==xa"
   else
     if pumvisible()
-      let s:res = "\<ESC>a"
+      let l:res = "\<ESC>a"
     else
-      let s:res = "\<C-]>\n"
+      let l:res = "\<C-]>\n"
     endif
   endif
-  return s:res
+  return l:res
 endfunction
 
 function! maxmellon#remove_whitespace()
@@ -41,5 +41,44 @@ function maxmellon#google(...)
   if executable('opener')
     call system("opener " . expand(a:1) . ' &>/dev/null 2>&1 &')
   endif
+endfunction
+
+function! s:get_syn_id(transparent)
+  let l:synid = synID(line("."), col("."), 1)
+  if a:transparent
+    return synIDtrans(l:synid)
+  else
+    return l:synid
+  endif
+endfunction
+
+function! s:get_syn_attr(synid)
+  let l:name = synIDattr(a:synid, "name")
+  let l:ctermfg = synIDattr(a:synid, "fg", "cterm")
+  let l:ctermbg = synIDattr(a:synid, "bg", "cterm")
+  let l:guifg = synIDattr(a:synid, "fg", "gui")
+  let l:guibg = synIDattr(a:synid, "bg", "gui")
+  return {
+        \ "name":    l:name,
+        \ "ctermfg": l:ctermfg,
+        \ "ctermbg": l:ctermbg,
+        \ "guifg":   l:guifg,
+        \ "guibg":   l:guibg}
+endfunction
+
+function maxmellon#syntax_info()
+  let l:baseSyn = s:get_syn_attr(s:get_syn_id(0))
+  echo "name: "       .l:baseSyn.name .
+        \ " ctermfg: ".l:baseSyn.ctermfg .
+        \ " ctermbg: ".l:baseSyn.ctermbg .
+        \ " guifg: "  .l:baseSyn.guifg .
+        \ " guibg: "  .l:baseSyn.guibg
+  let l:linkedSyn = s:get_syn_attr(s:get_syn_id(1))
+  echo "link to"
+  echo "name: "       .l:linkedSyn.name .
+        \ " ctermfg: ".l:linkedSyn.ctermfg .
+        \ " ctermbg: ".l:linkedSyn.ctermbg .
+        \ " guifg: "  .l:linkedSyn.guifg .
+        \ " guibg: "  .l:linkedSyn.guibg
 endfunction
 

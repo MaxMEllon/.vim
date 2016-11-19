@@ -6,6 +6,8 @@ Plug 'thinca/vim-quickrun'
 Plug 'osyo-manga/vim-over'
 Plug 'osyo-manga/vim-anzu'
 
+Plug 'kana/vim-smartinput'
+
 Plug 'unite-rails'
 Plug 'unite-rails-fat'
 

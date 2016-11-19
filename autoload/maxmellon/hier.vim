@@ -1,5 +1,5 @@
 function! maxmellon#hier#clear()
-  setlocal nohlsearch
+  nohlsearch
   call setqflist([])
   cclose
   HierClear

@@ -3,39 +3,43 @@
 
 function! maxmellon#dirvish#touch(filename) abort
   execute 'cd ' . expand('%')
-  execute '!touch ' . a:filename
+  call system('touch ' . a:filename)
   edit %
 endfunction
 
 function! maxmellon#dirvish#mkdir(filename) abort
   execute 'cd ' . expand('%')
-  execute '!mkdir ' . a:filename
+  call system('mkdir ' . a:filename)
   edit %
 endfunction
 
 function! maxmellon#dirvish#mv(...) abort
   if len(a:000) != 2 | return | endif
   execute 'cd ' . expand('%')
-  execute '!mv ' . a:1 . ' ' . a:2
+  call system('mv ' . a:1 . ' ' . a:2)
   edit %
 endfunction
 
 function! maxmellon#dirvish#rm(...) abort
   if len(a:000) == 0 | return | endif
   execute 'cd ' . expand('%')
-  for s:file in a:000
-    execute '!rm ' . s:file
+  for file in a:000
+    call system('rm ' . file)
   endfor
+  edit %
+endfunction
+
+function! maxmellon#dirvish#cp(...) abort
+  if len(a:000) != 2 | return | endif
+  execute 'cd ' . expand('%')
+  call system('cp ' . a:1 . ' ' . a:2)
   edit %
 endfunction
 
 function! maxmellon#dirvish#cdgitroot() abort
   call maxmellon#cdgitroot#exec()
-  redir => s:output
-  pwd
-  redir END
+  let s:output = maxmellon#pwd#get()
   if &filetype ==# 'dirvish'
-    let s:output = substitute(s:output, '[\r\n]', '', 'g')
     execute 'edit ' . s:output
   endif
 endfunction

@@ -1,28 +1,28 @@
-nnoremap <silent> j  gj
-nnoremap <silent> gj j
-nnoremap <silent> k  gk
-nnoremap <silent> gk k
-nnoremap <silent> $  g$
-nnoremap <silent> g$ $
-vnoremap <silent> j  gj
-vnoremap <silent> gj j
-vnoremap <silent> k  gk
-vnoremap <silent> gk k
-vnoremap <silent> $  g$
-vnoremap <silent> g$ $
+nnoremap j  gj
+nnoremap gj j
+nnoremap k  gk
+nnoremap gk k
+nnoremap $  g$
+nnoremap g$ $
+vnoremap j  gj
+vnoremap gj j
+vnoremap k  gk
+vnoremap gk k
+vnoremap $  g$
+vnoremap g$ $
 nnoremap } }zz
 nnoremap { {zz
 nnoremap ]] ]]zz
 nnoremap [[ [[zz
 nnoremap [] []zz
 nnoremap ][ ][zz
-nnoremap <C-j> }zz
 
 " See: http://qiita.com/itmammoth/items/312246b4b7688875d023
-nnoremap <C-n> "zdd"zp
+" nnoremap <C-n> "zdd"zp
+" nnoremap <C-p> "zdd<Up>"zP
 vnoremap <C-p> "zx<Up>"zP`[V`]
-nnoremap <C-p> "zdd<Up>"zP
 vnoremap <C-n> "zx"zp`[V`]
+vnoremap <C-j> <ESC>
 
 noremap! OA <Up>
 noremap! OB <Down>
@@ -104,9 +104,8 @@ nnoremap <C-e> $
 
 nnoremap _ :<C-u>sp .<CR>
 nnoremap <bar> :<C-u>vsp .<CR>
+nnoremap - :<C-u>e .<CR>
 
-noremap + <C-a>
-noremap - <C-x>
 vnoremap <C-a> <C-a>gv
 vnoremap <C-x> <C-x>gv
 
@@ -152,22 +151,6 @@ cnoremap <C-d> <Del>
 cnoremap <C-k> <End><C-u>
 
 cnoremap <CR> <C-]><CR>
-
-augroup CmdWindow
-  autocmd!
-  autocmd CmdwinEnter * call s:init_cmdwin()
-augroup END
-
-function! s:init_cmdwin()
-  nnoremap <silent><buffer>q :<C-u>q<CR>
-  nnoremap <silent><buffer><CR> A<CR>
-  inoremap <buffer><silent> <Tab> <C-d>
-  inoremap <buffer><expr><CR> pumvisible() ? "\<C-y>\<CR>" : "\<CR>"
-  inoremap <buffer><expr><C-h> pumvisible() ? "\<C-y>\<C-h>" : "\<C-h>"
-  inoremap <buffer><expr><BS> pumvisible() ? "\<C-y>\<C-h>" : "\<C-h>"
-  inoremap <buffer><expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-  startinsert!
-endfunction
 
 nnoremap <silent><C-l> :<C-u>nohlsearch<CR><ESC>
 nnoremap <silent> <C-i> <C-I>

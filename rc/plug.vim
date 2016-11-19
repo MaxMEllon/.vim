@@ -76,25 +76,25 @@ endfunction
 " }}}
 
 function! s:config_load(plugname, realpath)
-  let s:fuzzy_plugname = substitute(a:plugname, '\.vim$', '', 'g')
+  let l:fuzzy_plugname = substitute(a:plugname, '\.vim$', '', 'g')
   if g:env.win
     " FIXME: なぜかwindowsでis_loadedがすべてg:falseになるので後で調査
-    let s:loaded = g:plug.is_installed(a:plugname) || g:plug.is_installed(a:fuzzy_plugname)
+    let l:loaded = g:plug.is_installed(a:plugname) || g:plug.is_installed(a:fuzzy_plugname)
   else
-    let s:loaded = g:plug.is_loaded(a:plugname) || g:plug.is_loaded(s:fuzzy_plugname)
+    let l:loaded = g:plug.is_loaded(a:plugname) || g:plug.is_loaded(l:fuzzy_plugname)
   endif
-  if s:loaded == g:true
+  if l:loaded == g:true
     execute 'source ' . a:realpath
   endif
-  let s:mes = "[Debug] PlugConfig:\t" . a:plugname . ":" . s:loaded
-  call g:env.debug(s:mes)
+  let l:mes = '[Debug] PlugConfig:\t' . a:plugname . ':' . l:loaded
+  call g:env.debug(l:mes)
 endfunction
 
 function! g:plug.config_load(...)
-  let s:sepaleter = g:env.win ? '\' : '/'
-  let s:pathlist = split(a:1, s:sepaleter)
-  let s:plugname = s:pathlist[s:L.find_last_index(s:pathlist, '!empty(v:val)')]
-  call s:config_load(s:plugname, a:1)
+  let l:sepaleter = g:env.win ? '\' : '/'
+  let l:pathlist = split(a:1, l:sepaleter)
+  let l:plugname = l:pathlist[s:L.find_last_index(l:pathlist, '!empty(v:val)')]
+  call s:config_load(l:plugname, a:1)
 endfunction
 
 " Example:
@@ -102,9 +102,9 @@ endfunction
 command! -nargs=* -bar PlugConfig call s:config_load(<f-args>)
 
 function! g:plug.config_auto_load()
-  let s:rcs = split(expand('~/.vim/rc/plugrc/*'), "\n")
-  for s:rc in s:rcs
-    call g:plug.config_load(s:rc)
+  let l:rcs = split(expand('~/.vim/rc/plugrc/*'), "\n")
+  for l:rc in l:rcs
+    call g:plug.config_load(l:rc)
   endfor
 endfunction
 
@@ -136,11 +136,13 @@ if g:plug.ready()
   " Plug 'Shougo/neomru.vim'
   " Plug 'Shougo/unite-outline'
   " Plug 'The-NERD-tree'
+  " Plug 'haya14busa/incsearch-migemo.vim'
   " Plug 'jistr/vim-nerdtree-tabs'
+  " Plug 'junegunn/fzf'
+  " Plug 'junegunn/fzf.vim'
   " Plug 'kana/vim-altr'
   " Plug 'kana/vim-fakeclip'
   " Plug 'kana/vim-operator-replace'
-  " Plug 'kana/vim-smartinput'
   " Plug 'kana/vim-textobj-function'
   " Plug 'lambdalisue/vim-gita', {'on' : 'Gita'}
   " Plug 'lambdalisue/vim-manpager'
@@ -150,19 +152,15 @@ if g:plug.ready()
   Plug 'AndrewRadev/switch.vim'
   Plug 'LeafCage/foldCC.vim'
   Plug 'LeafCage/yankround.vim'
+  Plug 'MaxMEllon/vim-dirvish'
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/vimproc.vim', {'do' : 'make'}
   Plug 'Yggdroot/indentLine'
-  Plug 'basyura/unite-rails'
-  Plug 'cohama/lexima.vim'
   Plug 'easymotion/vim-easymotion'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
   Plug 'haya14busa/incsearch.vim'
-  Plug 'iyuuya/unite-rails-fat'
-  Plug 'junegunn/fzf'
-  Plug 'junegunn/fzf.vim'
+  Plug 'haya14busa/vim-open-googletranslate'
   Plug 'junegunn/vim-easy-align'
-  Plug 'MaxMEllon/vim-dirvish'
   Plug 'kana/vim-niceblock'
   Plug 'kana/vim-operator-user'
   Plug 'kana/vim-textobj-line'
@@ -178,10 +176,12 @@ if g:plug.ready()
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/committia.vim'
   Plug 'surround.vim'
+  Plug 'terryma/vim-multiple-cursors'
   Plug 'tpope/vim-dispatch'
   Plug 'tyru/capture.vim', {'on' : 'Capture'}
   Plug 'tyru/caw.vim'
   Plug 'vim-jp/vital.vim'
+  Plug 'yuku-t/unite-git'
 
   call plug#end()
 

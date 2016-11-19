@@ -1,4 +1,4 @@
-try
+if has('clpum')
   set wildmode=popup
   set wildmenu
   set clpumheight=20
@@ -16,10 +16,10 @@ try
     highlight link ClPmenuSel PmenuSel
     highlight link ClPmenuThumb PmenuThumb
   endfunction
-catch
+else
   set wildmenu
   set wildmode =longest:full,full
-endtry
+endif
 set wildignore =*.o,*.obj,*~
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*

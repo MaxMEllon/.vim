@@ -9,11 +9,12 @@ set cscopetag
 set display        =lastline
 set fillchars      =vert:\|,fold:\-
 set history        =100
+set hlsearch
 set laststatus     =2
 set lazyredraw
 set linespace      =0
 set list
-set listchars      =eol:$,tab:>-
+set listchars      =eol:$,tab:>\ "
 set matchpairs    +=<:>
 set matchtime      =1
 set maxmem         =500000
@@ -39,19 +40,23 @@ set whichwrap      =b,s,h,l,<,>,[,]
 
 set noswapfile
 set nobackup
-set directory=~/.vim/_swap
-set backupdir=~/.vim/_swap
+set directory      =~/.vim/_swap
+set backupdir      =~/.vim/_undo
+
+set grepprg        =hw\ --no-group\ --no-color
+
+set undodir        =~/.vim/_undo
+set undofile
+set undolevels     =200
+
+if exists('+colorcolumn')
+  set colorcolumn  =80,100
+endif
+
 if !isdirectory(expand('~/.vim/_swap'))
-  call mkdir($HOME.'/.vim/_swap', 'p')
+  call mkdir(expand('~/.vim/_swap'), 'p')
 endif
 
 if !isdirectory(expand('~/.vim/_undo'))
-  call mkdir($HOME.'/.vim/_undo', 'p')
-endif
-set undodir   =~/.vim/_undo
-set undofile
-set undolevels=200
-
-if (exists('+colorcolumn'))
-  set colorcolumn=80,100
+  call mkdir(expand('~/.vim/_undo'), 'p')
 endif
