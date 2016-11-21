@@ -1,4 +1,3 @@
-
 augroup MyFileType
   autocmd!
 augroup END
@@ -31,5 +30,5 @@ let s:MyFileTypes = [
       \ ]
 
 for s:e in s:MyFileTypes
-  execute 'SetFileType ' . s:e['file'] . ' ' . s:e['type']
+  call s:set_filetype(s:e['file'], s:e['type'])
 endfor
