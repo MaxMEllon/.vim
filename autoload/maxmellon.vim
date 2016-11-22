@@ -53,11 +53,11 @@ function! s:get_syn_id(transparent)
 endfunction
 
 function! s:get_syn_attr(synid)
-  let l:name = synIDattr(a:synid, "name")
+  let l:name    = synIDattr(a:synid, "name")
   let l:ctermfg = synIDattr(a:synid, "fg", "cterm")
   let l:ctermbg = synIDattr(a:synid, "bg", "cterm")
-  let l:guifg = synIDattr(a:synid, "fg", "gui")
-  let l:guibg = synIDattr(a:synid, "bg", "gui")
+  let l:guifg   = synIDattr(a:synid, "fg", "gui")
+  let l:guibg   = synIDattr(a:synid, "bg", "gui")
   return {
         \ "name":    l:name,
         \ "ctermfg": l:ctermfg,
@@ -68,17 +68,17 @@ endfunction
 
 function maxmellon#syntax_info()
   let l:baseSyn = s:get_syn_attr(s:get_syn_id(0))
-  echo "name: "       .l:baseSyn.name .
-        \ " ctermfg: ".l:baseSyn.ctermfg .
-        \ " ctermbg: ".l:baseSyn.ctermbg .
-        \ " guifg: "  .l:baseSyn.guifg .
-        \ " guibg: "  .l:baseSyn.guibg
+  echo "name: "        . l:baseSyn.name .
+        \ " ctermfg: " . l:baseSyn.ctermfg .
+        \ " ctermbg: " . l:baseSyn.ctermbg .
+        \ " guifg: "   . l:baseSyn.guifg .
+        \ " guibg: "   . l:baseSyn.guibg
   let l:linkedSyn = s:get_syn_attr(s:get_syn_id(1))
   echo "link to"
-  echo "name: "       .l:linkedSyn.name .
-        \ " ctermfg: ".l:linkedSyn.ctermfg .
-        \ " ctermbg: ".l:linkedSyn.ctermbg .
-        \ " guifg: "  .l:linkedSyn.guifg .
-        \ " guibg: "  .l:linkedSyn.guibg
+  echo "name: "        . l:linkedSyn.name .
+        \ " ctermfg: " . l:linkedSyn.ctermfg .
+        \ " ctermbg: " . l:linkedSyn.ctermbg .
+        \ " guifg: "   . l:linkedSyn.guifg .
+        \ " guibg: "   . l:linkedSyn.guibg
 endfunction
 

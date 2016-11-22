@@ -1,6 +1,6 @@
-if has('job') && has('lambda') && has('python')
+if g:env.vim8 && g:env.python
   Plug 'maralla/completor.vim'
-elseif has('lua')
+elseif g:env.lua
   Plug 'Shougo/neocomplete.vim'
 else
   Plug 'Shougo/neocomplecache.vim'
@@ -11,8 +11,8 @@ Plug 'thinca/vim-quickrun'
 Plug 'miyakogi/vim-quickrun-job'
 Plug 'haya14busa/vim-operator-flashy'
 Plug 'MaxMEllon/vim-tmng'
-Plug 'cohama/lexima.vim'
 
 MyLoad 'ifplug/javascript'
 MyLoad 'ifplug/css'
 MyLoad 'ifplug/rails'
+MyLoad 'ifplug/html'

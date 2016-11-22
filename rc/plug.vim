@@ -114,16 +114,15 @@ function! s:maxmellon_plug(...) abort
   if !isdirectory(expand('~/.vim/localPlugged'))
     call mkdir($HOME . '/.vim/localPlugged')
   endif
-  let plugin = '~/.vim/localPlugged/' . a:1
+  let l:plugin = '~/.vim/localPlugged/' . a:1
   if isdirectory(expand(plugin))
-    Plug plugin
+    Plug l:plugin
   endif
-  unlet plugin
 endfunction
 
 " :MyPlug
 " @args {String} plugin directory name
-command! -nargs=* LocalPlug call s:maxmellon_plug(<args>)
+command! -nargs=* MyPlug call s:maxmellon_plug(<args>)
 
 if g:plug.ready()
   call plug#begin(g:plug.base)
@@ -156,6 +155,7 @@ if g:plug.ready()
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/vimproc.vim', {'do' : 'make'}
   Plug 'Yggdroot/indentLine'
+  Plug 'cohama/lexima.vim'
   Plug 'easymotion/vim-easymotion'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
   Plug 'haya14busa/incsearch.vim'

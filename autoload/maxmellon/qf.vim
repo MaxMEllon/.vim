@@ -1,4 +1,4 @@
-function! maxmellon#error#counts()
+function! maxmellon#qf#counts()
   let l:total = 0
   if exists('*neomake#statusline#LoclistCounts')
     for l:v in values(neomake#statusline#LoclistCounts())
@@ -19,10 +19,10 @@ function! maxmellon#error#counts()
   return l:total
 endfunction
 
-function! maxmellon#error#statusline()
-  let l:count = maxmellon#error#counts()
+function! maxmellon#qf#statusline()
+  let l:count = maxmellon#qf#counts()
   if l:count == 0
     return ''
   endif
-  return ' Errors : ' . l:count . ' '
+  return ' QuickFix : ' . l:count . ' '
 endfunction
