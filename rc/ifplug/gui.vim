@@ -9,9 +9,9 @@ Plug 'osyo-manga/vim-anzu'
 Plug 'unite-rails'
 Plug 'unite-rails-fat'
 
-if has('job') && has('lambda')
+if g:env.vim8 && g:env.python
   Plug 'maralla/completor.vim'
-elseif has('lua')
+elseif g:env.lua
   Plug 'Shougo/neocomplete.vim'
 else
   Plug 'Shougo/neocomplecache.vim'

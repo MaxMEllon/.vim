@@ -201,7 +201,7 @@ function! g:plug.init()
     return Error('g:plug.init: error occured')
   endif
 
-  if has('gui_running')
+  if g:env.gui
     silent! !vim
     quit!
   endif
