@@ -15,7 +15,5 @@ nnoremap <buffer> mk :Mkdir<Space>
 nnoremap <buffer> cp :Cp <C-r><C-a> <C-r><C-a>
 nnoremap <buffer> cdu :Cdu<CR>
 
-vnoremap <buffer> rm :call maxmellon#dirvish#rm()
-
 lcd %:h
 let g:branch = ''
