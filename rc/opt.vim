@@ -6,6 +6,7 @@ set cmdheight      =1
 set cmdwinheight   =5
 set completeopt    =menuone,longest,preview
 set cscopetag
+set cursorline
 set display        =lastline
 set fillchars      =vert:\|,fold:\-
 set history        =100
@@ -29,7 +30,7 @@ set pastetoggle    =<F11>
 set pumheight      =30
 set report         =1
 set ruler
-set scrolloff      =10
+set scrolloff      =100
 set showmatch
 set splitbelow
 set splitright

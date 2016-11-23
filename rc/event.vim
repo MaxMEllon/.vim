@@ -8,11 +8,6 @@ AutocmdFT html inoremap <silent> <buffer> </ </<C-x><C-o>
 
 AutocmdFT sass,scss,css,stylus setlocal iskeyword+=-
 
-Autocmd BufNewFile,BufRead,VimEnter,WinEnter,ColorScheme
-      \ * highlight ZenkakuSpaces term=underline guibg=Blue ctermbg=Blue
-Autocmd BufNewFile,BufRead,VimEnter,WinEnter
-      \ * syntax match ZenkakuSpaces containedin=ALL /　/
-
 Autocmd InsertLeave * set nopaste
 
 Autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -20,7 +15,7 @@ Autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
 
 Autocmd QuickFixCmdPost make,*grep* cwindow
 
-if has('nvim')
+if g:env.neo
   Autocmd BufRead,BufEnter * if &buftype ==# 'terminal'
         \| setlocal nolist | startinsert | endif
 endif

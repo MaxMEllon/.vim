@@ -21,3 +21,8 @@ command! -nargs=? Cd call maxmellon#cd#exec(<f-args>)
 command! -nargs=? Ggrep  call maxmellon#grep#gitgrep(<f-args>)
 command! -nargs=? Hgrep  call maxmellon#grep#hw(<f-args>)
 command! -nargs=? Jvgrep call maxmellon#grep#jvgrep(<f-args>)
+
+" autocmd wrapper
+augroup MyVimrc | autocmd! | augroup END
+command! -nargs=* Autocmd autocmd MyVimrc <args>
+command! -nargs=* AutocmdFT autocmd MyVimrc FileType <args>

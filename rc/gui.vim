@@ -12,7 +12,7 @@ set guioptions-=T
 set guioptions-=C
 set guioptions-=b
 set guioptions-=e
-set imdisable
+" set imdisable
 set laststatus=2
 
 if g:env.win

@@ -17,4 +17,17 @@ highlight EasyMotionTarget2First ctermbg=none ctermfg=red
 highlight EasyMotionTarget2Second ctermbg=none ctermfg=lightred
 highlight EasyMotionMoveHL ctermbg=green ctermfg=black
 
+highlight VisualNOS  ctermbg=21
+highlight Visual     ctermbg=21
+highlight SpellBad   ctermbg=52
+highlight SpellCap   ctermbg=17
+highlight SpellLocal ctermbg=17
+
+highlight StatusLineVimType  ctermbg=52 ctermfg=white
+highlight StatusLineFileType ctermbg=19 ctermfg=white
+highlight StatusLineBranch   ctermbg=23 ctermfg=white
+
+highlight ZenkakuSpaces term=underline guibg=Blue ctermbg=Blue
+syntax match ZenkakuSpaces containedin=ALL /　/
+
 let g:maxmellon_define_my_color = g:true

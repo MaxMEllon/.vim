@@ -18,14 +18,15 @@ function! s:StatusLine(mode)
 endfunction
 
 " left
-set statusline=\ %n\ "
-set statusline+=%w
-set statusline+=%m
-set statusline+=%<%t
-set statusline+=%r
-set statusline+=\ %{maxmellon#git#branch#get()}
-
+set statusline       =\ "
+set statusline+=%n\ \|\ "
+set statusline+=%m\ \|\ "
+set statusline+=%t\ \|\ "
+set statusline+=%r\ \|\ "
+set statusline+=%{maxmellon#paste#statusline()}\ \|"
+" right
 set statusline+=%=
-set statusline+=%y
-" set statusline+=\ %l\ /\ %L\ "
-set statusline+=%#ErrorMsg#%{maxmellon#error#statusline()}"
+set statusline+=%#StatusLineBranch#\ %{maxmellon#git#branch#get()}\ %#StatusLine#
+set statusline+=%#StatusLineFileType#\ %y\ "
+set statusline+=%#StatusLineVimType#\ %{maxmellon#vimtype#statusline()}\ "
+set statusline+=%#ErrorMsg#%{maxmellon#qf#statusline()}"

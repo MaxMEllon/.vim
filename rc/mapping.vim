@@ -10,8 +10,8 @@ vnoremap k  gk
 vnoremap gk k
 vnoremap $  g$
 vnoremap g$ $
-nnoremap } }zz
-nnoremap { {zz
+nnoremap }  }zz
+nnoremap {  {zz
 nnoremap ]] ]]zz
 nnoremap [[ [[zz
 nnoremap [] []zz
@@ -28,26 +28,26 @@ noremap! OA <Up>
 noremap! OB <Down>
 noremap! OC <Right>
 noremap! OD <Left>
-noremap! A <Up>
-noremap! B <Down>
-noremap! C <Right>
-noremap! D <Left>
+noremap! A  <Up>
+noremap! B  <Down>
+noremap! C  <Right>
+noremap! D  <Left>
 
 nnoremap <Right> <C-w>>
-nnoremap <Down> <C-w>-
-nnoremap <Left> <C-w><
-nnoremap <Up> <C-w>+
+nnoremap <Down>  <C-w>-
+nnoremap <Left>  <C-w><
+nnoremap <Up>    <C-w>+
 
-nnoremap ge :<C-u>tabedit<Space>.<CR>
-nnoremap <silent> gc :<C-u>tablast <bar> tabnew<CR>
-nnoremap <silent> gn :<C-u>tabnew<CR>
-nnoremap <silent> gx :<C-u>tabclose<CR>
-nnoremap <silent> gn :<C-u>tabnext<CR>
-nnoremap <silent> <F3>   :<C-u>tabnext<CR>
-nnoremap <silent> gp :<C-u>tabprevious<CR>
-nnoremap <silent> <F2>   :<C-u>tabprevious<CR>
+nnoremap ge            :<C-u>tabedit<Space>.<CR>
+nnoremap <silent> gc   :<C-u>tablast <bar> tabnew<CR>
+nnoremap <silent> gn   :<C-u>tabnew<CR>
+nnoremap <silent> gx   :<C-u>tabclose<CR>
+nnoremap <silent> gn   :<C-u>tabnext<CR>
+nnoremap <silent> <F3> :<C-u>tabnext<CR>
+nnoremap <silent> gp   :<C-u>tabprevious<CR>
+nnoremap <silent> <F2> :<C-u>tabprevious<CR>
 
-inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><Tab>   pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-Tab> pumvisible() ? "\<C-n>" : "\<S-TAB>"
 
 " tab jump
@@ -91,8 +91,12 @@ if g:env.neo
   vnoremap <D-C> "+y
 endif
 
-inoremap . <C-]>.
-inoremap : :<C-]>
+" Auto fix to type.
+inoremap .       <C-]>.
+inoremap <CR>    <C-]><CR>
+inoremap <Space> <C-]><Space>
+inoremap :       :<C-]>
+
 inoremap <Space> <C-]><Space>
 
 inoremap <S-Tab> <C-v><C-i>
@@ -102,9 +106,12 @@ nnoremap <expr> 0
 nnoremap <C-h> ^
 nnoremap <C-e> $
 
-nnoremap _ :<C-u>sp .<CR>
+" quick split window
+nnoremap _     :<C-u>sp .<CR>
 nnoremap <bar> :<C-u>vsp .<CR>
-nnoremap - :<C-u>e .<CR>
+
+" quick open directory
+nnoremap -     :<C-u>e %:h<CR>
 
 vnoremap <C-a> <C-a>gv
 vnoremap <C-x> <C-x>gv
@@ -122,6 +129,7 @@ nnoremap <silent> ,x :<C-u>call maxmellon#remove_whitespace()<CR>
 vnoremap <silent> ,x :<C-u>call maxmellon#remove_whitespace()<CR>
 nnoremap <silent> ,z :<C-u>%s/　/  /g<CR>
 vnoremap <silent> ,z :<C-u>%s/　/  /g<CR>
+
 nnoremap ,o :Opener <C-r><C-a><CR>
 nnoremap ,g :Google <C-r><C-a><CR>
 nnoremap ,p :ToggleOpt paste<CR>
@@ -163,8 +171,8 @@ endif
 nnoremap Y y$
 nnoremap <silent> <Leader>b :ls<CR>:b
 
-nnoremap M m
-nnoremap Q q
+nnoremap M  m
+nnoremap Q  q
 nnoremap K  <Nop>
 nnoremap ZZ <Nop>
 nnoremap ZQ <Nop>
