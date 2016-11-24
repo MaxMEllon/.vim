@@ -152,6 +152,7 @@ if g:plug.ready()
   Plug 'LeafCage/foldCC.vim'
   Plug 'LeafCage/yankround.vim'
   Plug 'MaxMEllon/vim-dirvish'
+  Plug 'MaxMEllon/vim-tmng'
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/vimproc.vim', {'do' : 'make'}
   Plug 'Yggdroot/indentLine'

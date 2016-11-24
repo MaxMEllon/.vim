@@ -1,4 +1,5 @@
 set autoread
+set ambiwidth=double
 set autowrite
 set background     =dark
 set backspace      =indent,eol,start
@@ -15,7 +16,7 @@ set laststatus     =2
 set lazyredraw
 set linespace      =0
 set list
-set listchars      =eol:$,tab:>\ "
+set listchars      =eol:$,tab:>\ ,trail:_
 set matchpairs    +=<:>
 set matchtime      =1
 set maxmem         =500000

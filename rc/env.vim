@@ -69,7 +69,6 @@ let g:env.win    = IsWindows()
 let g:env.mac    = IsMac()
 let g:env.linux  = IsLinux()
 let g:env.vim8   = has('patch-8.0.0039') && has('job') && has('lambda')
-let g:env.python = has('python')
 let g:env.lua    = has('lua')
 let g:env.clpum  = has('clpum')
 
