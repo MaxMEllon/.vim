@@ -152,6 +152,7 @@ if g:plug.ready()
   Plug 'LeafCage/foldCC.vim'
   Plug 'LeafCage/yankround.vim'
   Plug 'MaxMEllon/vim-dirvish'
+  Plug 'MaxMEllon/vim-tmng'
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/vimproc.vim', {'do' : 'make'}
   Plug 'Yggdroot/indentLine'
@@ -160,9 +161,11 @@ if g:plug.ready()
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/vim-open-googletranslate'
+  Plug 'haya14busa/vim-textobj-function-syntax'
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
   Plug 'kana/vim-operator-user'
+  Plug 'kana/vim-textobj-function'
   Plug 'kana/vim-textobj-line'
   Plug 'kana/vim-textobj-user'
   Plug 'kshenoy/vim-signature'
@@ -201,7 +204,7 @@ function! g:plug.init()
     return Error('g:plug.init: error occured')
   endif
 
-  if has('gui_running')
+  if g:env.gui
     silent! !vim
     quit!
   endif

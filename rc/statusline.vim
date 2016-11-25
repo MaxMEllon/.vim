@@ -1,11 +1,9 @@
-if has('syntax') && !has('gui_running')
-  augroup InsertHook
-    autocmd!
-    autocmd VimEnter * call s:StatusLine('Init')
-    autocmd InsertEnter * call s:StatusLine('Enter')
-    autocmd InsertLeave * call s:StatusLine('Leave')
-  augroup END
-endif
+augroup InsertHook
+  autocmd!
+  autocmd VimEnter * call s:StatusLine('Init')
+  autocmd InsertEnter * call s:StatusLine('Enter')
+  autocmd InsertLeave * call s:StatusLine('Leave')
+augroup END
 
 let s:slhlcmd = ''
 

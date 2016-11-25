@@ -20,7 +20,7 @@ function! maxmellon#dirvish#mv(...) abort
   edit %
 endfunction
 
-function! maxmellon#dirvish#rm(...) range
+function! maxmellon#dirvish#rm(...) abort
   if len(a:000) == 0 | return | endif
   execute 'cd ' . expand('%')
   for file in a:000

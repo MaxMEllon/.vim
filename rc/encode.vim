@@ -8,7 +8,7 @@ if has('vim_starting')
 endif
 
 " Setting of terminal encoding."{{{
-if !has('gui_running')
+if !g:env.gui
   if &term ==# 'win32' &&
         \ (v:version < 703 || (v:version == 703 && has('patch814')))
     " Setting when use the non-GUI Japanese console.

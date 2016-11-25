@@ -2,7 +2,8 @@
 let g:false = 0
 let g:true = !g:false
 
-let s:is_windows = has('win32') || has('win64') " || has('win16') win16 deplecated
+let s:is_windows = has('win32') || has('win64')
+    " \ || has('win16') win16 deplecated Engrave history here
 let s:is_cygwin = has('win32unix')
 let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
       \ && $HOME !=# expand('~'.$USER)
@@ -68,6 +69,6 @@ let g:env.win    = IsWindows()
 let g:env.mac    = IsMac()
 let g:env.linux  = IsLinux()
 let g:env.vim8   = has('patch-8.0.0039') && has('job') && has('lambda')
-let g:env.python = has('python')
 let g:env.lua    = has('lua')
+let g:env.clpum  = has('clpum')
 

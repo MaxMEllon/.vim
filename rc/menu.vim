@@ -1,4 +1,4 @@
-if has('clpum')
+if g:env.clpum
   set wildmode=popup
   set wildmenu
   set clpumheight=20
