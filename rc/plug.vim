@@ -161,9 +161,11 @@ if g:plug.ready()
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/vim-open-googletranslate'
+  Plug 'haya14busa/vim-textobj-function-syntax'
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
   Plug 'kana/vim-operator-user'
+  Plug 'kana/vim-textobj-function'
   Plug 'kana/vim-textobj-line'
   Plug 'kana/vim-textobj-user'
   Plug 'kshenoy/vim-signature'
