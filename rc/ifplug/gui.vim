@@ -6,9 +6,6 @@ Plug 'thinca/vim-quickrun'
 Plug 'osyo-manga/vim-over'
 Plug 'osyo-manga/vim-anzu'
 
-Plug 'unite-rails'
-Plug 'unite-rails-fat'
-
 if g:env.vim8 && has('python')
   Plug 'maralla/completor.vim'
 elseif g:env.lua
@@ -19,4 +16,5 @@ endif
 
 Plug 'itchyny/lightline.vim'
 
-MyLoad 'ifplug/javascript'
+MyLoad 'plugbox/javascript'
+MyLoad 'plugbox/rails'

@@ -15,22 +15,14 @@ Plug 'kassio/neoterm'
 Plug 'neomake/neomake'
 Plug 'thinca/vim-quickrun'
 
-" rails
-Plug 'unite-rails'
-Plug 'unite-rails-fat'
-
 " text edit
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'osyo-manga/vim-over'
+" Plug 'osyo-manga/vim-over'
 
 " view
 Plug 'osyo-manga/vim-anzu'
-Plug 'haya14busa/vim-operator-flashy'
 Plug 'nobarudo/tender.vim'
 Plug 'MaxMEllon/molokai'
 
-Plug 'slim-template/vim-slim'
-
-MyLoad 'ifplug/javascript'
-MyLoad 'ifplug/css'
-"
+MyLoad 'plugbox/javascript'
+MyLoad 'plugbox/css'

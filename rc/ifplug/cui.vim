@@ -6,13 +6,8 @@ else
   Plug 'Shougo/neocomplecache.vim'
 endif
 
-Plug 'osyo-manga/vim-watchdogs'
-Plug 'thinca/vim-quickrun'
-Plug 'miyakogi/vim-quickrun-job'
-Plug 'haya14busa/vim-operator-flashy'
-Plug 'MaxMEllon/vim-tmng'
-
-MyLoad 'ifplug/javascript'
-MyLoad 'ifplug/css'
-MyLoad 'ifplug/rails'
-MyLoad 'ifplug/html'
+MyLoad 'plugbox/javascript'
+MyLoad 'plugbox/css'
+MyLoad 'plugbox/rails'
+MyLoad 'plugbox/html'
+MyLoad 'plugbox/quickrun'
