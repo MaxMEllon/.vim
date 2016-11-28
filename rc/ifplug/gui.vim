@@ -9,7 +9,7 @@ Plug 'osyo-manga/vim-anzu'
 Plug 'unite-rails'
 Plug 'unite-rails-fat'
 
-if g:env.vim8 && g:env.python
+if g:env.vim8 && has('python')
   Plug 'maralla/completor.vim'
 elseif g:env.lua
   Plug 'Shougo/neocomplete.vim'
@@ -18,3 +18,5 @@ else
 endif
 
 Plug 'itchyny/lightline.vim'
+
+MyLoad 'ifplug/javascript'

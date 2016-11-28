@@ -1,4 +1,5 @@
 function! maxmellon#grep#gitgrep(query)
+  call maxmellon#cdgitroot#exec()
   let l:current_grep = &grepprg
   setlocal grepprg=git\ grep\ -I\ --line-number
   execute 'grep ' . a:query

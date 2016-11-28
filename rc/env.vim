@@ -6,8 +6,8 @@ let s:is_windows = has('win32') || has('win64')
     " \ || has('win16') win16 deplecated Engrave history here
 let s:is_cygwin = has('win32unix')
 let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
-      \ && $HOME !=# expand('~'.$USER)
-      \ && $HOME ==# expand('~'.$SUDO_USER)
+      \ && $HOME !=# expand('~' . $USER)
+      \ && $HOME ==# expand('~' . $SUDO_USER)
 
 " IsWindows()
 " @return {Number} 1 or 0
@@ -47,7 +47,6 @@ function! s:is_cvim()
   endif
 endfunction
 
-
 function! s:is_gvim()
   if has('gui_running')
     return g:true
@@ -71,4 +70,3 @@ let g:env.linux  = IsLinux()
 let g:env.vim8   = has('patch-8.0.0039') && has('job') && has('lambda')
 let g:env.lua    = has('lua')
 let g:env.clpum  = has('clpum')
-
