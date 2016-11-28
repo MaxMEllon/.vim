@@ -14,7 +14,7 @@ let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
 function! IsWindows()
   return s:is_windows
 endfunction
-" 
+"
 
 " IsMac()
 " @return {Number} 1 or 0
