@@ -14,7 +14,6 @@ let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
 function! IsWindows()
   return s:is_windows
 endfunction
-"
 
 " IsMac()
 " @return {Number} 1 or 0
@@ -61,12 +60,12 @@ function! g:env.debug(string)
   endif
 endfunction
 
-let g:env.neo    = s:is_nvim()
-let g:env.cui    = s:is_cvim()
-let g:env.gui    = s:is_gvim()
-let g:env.win    = IsWindows()
-let g:env.mac    = IsMac()
-let g:env.linux  = IsLinux()
-let g:env.vim8   = has('patch-8.0.0039') && has('job') && has('lambda')
-let g:env.lua    = has('lua')
-let g:env.clpum  = has('clpum')
+let g:env.neo   = s:is_nvim()
+let g:env.cui   = s:is_cvim()
+let g:env.gui   = s:is_gvim()
+let g:env.win   = IsWindows()
+let g:env.mac   = IsMac()
+let g:env.linux = IsLinux()
+let g:env.vim8  = has('patch-8.0.0039') && has('job') && has('lambda')
+let g:env.lua   = has('lua')
+let g:env.clpum = has('clpum')
