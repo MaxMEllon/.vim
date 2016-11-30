@@ -1,14 +1,17 @@
+let s:type = ''
+
 function! s:base()
+  if !empty(s:type) | return s:type | endif
   if has('nvim')
-    let type = 'neo'
+    let s:type = 'neo'
   elseif has('gui_running')
-    let type = 'gui'
+    let s:type = 'gui'
   elseif has('clpum')
-    let type = 'clpum'
-  else 
-    let type = 'cui'
+    let s:type = 'clpum'
+  else
+    let s:type = 'cui'
   endif
-  return type
+  return s:type
 endfunction
 
 function! maxmellon#vimtype#get()
