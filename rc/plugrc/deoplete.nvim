@@ -50,8 +50,8 @@ let g:deoplete#auto_complete_start_length = 2
 let g:deoplete#ignore_sources = {'_': ['tag']}
 
 let g:tern_request_timeout = 1
-let g:tern_show_signature_in_pum = 0
+let g:tern_show_signature_in_pum = '0'
 let g:tern#command = ['tern']
-" let g:tern#arguments = ["--persistent"]
+let g:tern#arguments = ["--persistent"]
 
 Autocmd BufEnter * set completeopt-=preview

@@ -1,15 +1,17 @@
+set ambiwidth      =double
 set autoread
-set ambiwidth=double
 set autowrite
 set background     =dark
 set backspace      =indent,eol,start
 set cmdheight      =1
 set cmdwinheight   =5
+set colorcolumn    =80,100
 set completeopt    =menuone,longest,preview
 set cscopetag
 set cursorline
 set display        =lastline
 set fillchars      =vert:\|,fold:\-
+set grepprg        =hw\ --no-group\ --no-color
 set history        =100
 set hlsearch
 set laststatus     =2
@@ -40,23 +42,21 @@ set textwidth      =0
 set virtualedit    =block
 set whichwrap      =b,s,h,l,<,>,[,]
 
-set noswapfile
-set nobackup
+set swapfile
 set directory      =~/.vim/_swap
-set backupdir      =~/.vim/_undo
 
-set grepprg        =hw\ --no-group\ --no-color
+set backup
+set backupdir      =~/.vim/_back
 
+set undolevels     =200
 set undodir        =~/.vim/_undo
 set undofile
-set undolevels     =200
-
-if exists('+colorcolumn')
-  set colorcolumn  =80,100
-endif
 
 if !isdirectory(expand('~/.vim/_swap'))
   call mkdir(expand('~/.vim/_swap'), 'p')
+endif
+if !isdirectory(expand('~/.vim/_back'))
+  call mkdir(expand('~/.vim/_back'), 'p')
 endif
 
 if !isdirectory(expand('~/.vim/_undo'))

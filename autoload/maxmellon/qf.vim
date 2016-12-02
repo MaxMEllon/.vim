@@ -24,5 +24,5 @@ function! maxmellon#qf#statusline()
   if l:count == 0
     return ''
   endif
-  return ' QuickFix : ' . l:count . ' '
+  return ' Qf : ' . l:count . ' '
 endfunction

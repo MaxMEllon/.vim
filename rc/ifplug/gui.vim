@@ -6,15 +6,13 @@ Plug 'thinca/vim-quickrun'
 Plug 'osyo-manga/vim-over'
 Plug 'osyo-manga/vim-anzu'
 
-Plug 'unite-rails'
-Plug 'unite-rails-fat'
-
-if g:env.vim8 && g:env.python
-  Plug 'maralla/completor.vim'
-elseif g:env.lua
+if g:env.lua
   Plug 'Shougo/neocomplete.vim'
 else
   Plug 'Shougo/neocomplecache.vim'
 endif
 
 Plug 'itchyny/lightline.vim'
+
+MyLoad 'plugbox/javascript'
+MyLoad 'plugbox/rails'

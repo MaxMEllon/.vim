@@ -81,4 +81,3 @@ function maxmellon#syntax_info()
         \ " guifg: "   . l:linkedSyn.guifg .
         \ " guibg: "   . l:linkedSyn.guibg
 endfunction
-
