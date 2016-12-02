@@ -6,7 +6,7 @@ Plug 'thinca/vim-quickrun'
 Plug 'osyo-manga/vim-over'
 Plug 'osyo-manga/vim-anzu'
 
-elseif g:env.lua
+if g:env.lua
   Plug 'Shougo/neocomplete.vim'
 else
   Plug 'Shougo/neocomplecache.vim'
