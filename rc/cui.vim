@@ -19,4 +19,5 @@ endif
 set ttyfast
 set t_Co     =256
 set ttyscroll=20000
-set vb t_vb  =
+set t_vb     =
+set novisualbell

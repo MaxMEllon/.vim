@@ -1,7 +1,7 @@
-nnoremap ,ja call JSXEncloseReturn()<CR>
-nnoremap ,ji call JSXEncloseReturn()<CR>
-nnoremap ,je call JSXEncloseReturn()<CR>
-nnoremap ,jc call JSXEncloseReturn()<CR>
-nnoremap ,js call JSXEncloseReturn()<CR>
+nnoremap ,ja :call JSXEncloseReturn()<CR>
+nnoremap ,ji :call JSXEachAttributeInLine()<CR>
+nnoremap ,je :call JSXExtractPartialPrompt()<CR>
+nnoremap ,jc :call JSXChangeTagPrompt()<CR>
+nnoremap ,js :call JSXSelectTag()<CR>
 
 command! ReactUtilsMappings :map ,j
