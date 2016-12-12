@@ -4,5 +4,8 @@ install:
 update:
 	-bash ./etc/update.sh
 
-clean: 
+clean:
 	-bash ./etc/clean.sh
+
+debug:
+	-bash ./etc/debug.sh

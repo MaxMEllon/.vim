@@ -2,7 +2,6 @@ function! s:noreabbrev_wrap(...)
   execute a:1 . 'abbrev ' . a:2 . ' ' . a:3
 endfunction
 command! -nargs=* Abbr call s:noreabbrev_wrap(<f-args>)
-" }}}
 
 let s:abbrs = [
       \   {'type': 'i', 'before': 'tihs',      'after' : 'this'},
