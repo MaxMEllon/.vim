@@ -86,7 +86,7 @@ function! s:config_load(plugname, realpath)
   if l:loaded == g:true
     execute 'source ' . a:realpath
   endif
-  let l:mes = '[Debug] PlugConfig:\t' . a:plugname . ':' . l:loaded
+  let l:mes = "[Debug] PlugConfig:\t" . a:plugname . ':' . l:loaded
   call g:env.debug(l:mes)
 endfunction
 
@@ -115,7 +115,7 @@ function! s:maxmellon_plug(...) abort
     call mkdir($HOME . '/.vim/localPlugged')
   endif
   let l:plugin = '~/.vim/localPlugged/' . a:1
-  if isdirectory(expand(plugin))
+  if isdirectory(expand(l:plugin))
     Plug l:plugin
   endif
 endfunction
@@ -173,8 +173,8 @@ endif
 
 " Automatic install the vim-plug {{{
 function! g:plug.init()
-  let s:cmd = printf('curl -fLo %s --create-dirs %s', self.plug, self.url)
-  let s:sym = system(s:cmd)
+  let cmd = printf('curl -fLo %s --create-dirs %s', self.plug, self.url)
+  let sym = system(s:cmd)
   if v:shell_error
     return Error('g:plug.init: error occured')
   endif

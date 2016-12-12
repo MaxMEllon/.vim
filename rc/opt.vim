@@ -10,7 +10,7 @@ set completeopt    =menuone,longest,preview
 set cscopetag
 set cursorline
 set display        =lastline
-set fillchars      =vert:\|,fold:\-
+set fillchars      =vert:\ ,fold:\ ,stlnc:\.
 set grepprg        =hw\ --no-group\ --no-color
 set history        =100
 set hlsearch
@@ -51,6 +51,10 @@ set backupdir      =~/.vim/_back
 set undolevels     =200
 set undodir        =~/.vim/_undo
 set undofile
+
+if executable('hw')
+  set grepprg=hw\ --no-group\ --no-color
+endif
 
 if !isdirectory(expand('~/.vim/_swap'))
   call mkdir(expand('~/.vim/_swap'), 'p')

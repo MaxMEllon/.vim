@@ -7,7 +7,6 @@ function! maxmellon#git#branch#get() abort
     let g:branch = 'X'
     return g:branch
   endif
-  execute 'cd ' . expand('%:h')
   if maxmellon#git#repo#is_inside()
     let g:branch = system('git branch | grep "*" | tr -d "*" | tr -d " "')
     let g:branch = substitute(g:branch, '[\r\n]', '', 'g')
