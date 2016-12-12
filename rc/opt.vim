@@ -11,6 +11,7 @@ set cscopetag
 set cursorline
 set display        =lastline
 set fillchars      =vert:\ ,fold:\ ,stlnc:\.
+set grepprg        =hw\ --no-group\ --no-color
 set history        =100
 set hlsearch
 set laststatus     =2
