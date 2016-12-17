@@ -21,6 +21,12 @@ command! -nargs=? Cd call maxmellon#cd#exec(<f-args>)
 command! -nargs=? Ggrep  call maxmellon#grep#gitgrep(<f-args>)
 command! -nargs=? Hgrep  call maxmellon#grep#hw(<f-args>)
 command! -nargs=? Jvgrep call maxmellon#grep#jvgrep(<f-args>)
+command! -nargs=? Grep silent grep! <f-args>
+command! -nargs=? G silent grep! <f-args>
+
+command! Ls call maxmellon#ls#show()
+command! LsOpen call maxmellon#fzy#lsopen()
+nnoremap <Space>f :<C-u>LsOpen<CR>
 
 augroup MyVimrc
  autocmd!
