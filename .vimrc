@@ -24,6 +24,7 @@ MyLoad 'event'
 MyLoad 'abbrev'
 MyLoad 'cmdwin'
 MyLoad 'statusline'
+MyLoad 'tabline'
 
 PlugConfigAutoLoad
 

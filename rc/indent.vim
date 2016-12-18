@@ -64,6 +64,7 @@ let s:MyIndentConfigs = [
       \   {'type': 'javascript', 'width': '2', 'is_space': g:true},
       \   {'type': 'ruby',       'width': '2', 'is_space': g:true},
       \   {'type': 'gitconfig',  'width': '2', 'is_space': g:false},
+      \   {'type': 'haskell',    'width': '4', 'is_space': g:true},
       \ ]
 
 for s:e in s:MyIndentConfigs

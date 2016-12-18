@@ -10,7 +10,7 @@ set completeopt    =menuone,longest,preview
 set cscopetag
 set cursorline
 set display        =lastline
-set fillchars      =vert:\ ,fold:\ ,stlnc:\.
+set fillchars      =vert:\ ,fold:\ ,stlnc:\ ,diff:-
 set grepprg        =hw\ --no-group\ --no-color
 set history        =100
 set hlsearch

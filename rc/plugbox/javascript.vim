@@ -2,7 +2,7 @@
 Plug 'pangloss/vim-javascript'
 " Plug 'othree/yajs.vim'
 Plug 'othree/es.next.syntax.vim'
-Plug 'othree/javascript-libraries-syntax.vim'
+" Plug 'othree/javascript-libraries-syntax.vim'
 " Plug 'mxw/vim-jsx'
 MyPlug 'vim-jsx-pretty'
 
@@ -10,7 +10,7 @@ MyPlug 'vim-jsx-pretty'
 Plug 'heavenshell/vim-jsdoc'
 
 " javascript utility
-Plug 'samuelsimoes/vim-jsx-utils'
+Plug 'samuelsimoes/vim-jsx-utils', {'for' : 'javascript'}
 Plug 'moll/vim-node'
 
 " altjs
@@ -21,3 +21,5 @@ Plug 'mtscout6/vim-cjsx', {'for' : 'coffee'}
 " other
 Plug 'rhysd/npm-debug-log.vim'
 Plug 'elzr/vim-json', {'for' : 'json'}
+
+Lazy '*.js,*.jsx', 'javascript'

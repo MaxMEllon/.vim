@@ -4,6 +4,7 @@ function! maxmellon#grep#gitgrep(query)
   setlocal grepprg=git\ grep\ -I\ --line-number
   execute 'silent grep! ' . a:query
   let &grepprg = l:current_grep
+  redraw!
 endfunction
 
 function! maxmellon#grep#hw(query)
@@ -11,6 +12,7 @@ function! maxmellon#grep#hw(query)
   setlocal grepprg=hw\ --no-group\ --no-color
   execute 'silent grep! ' . a:query
   let &grepprg = l:current_grep
+  redraw!
 endfunction
 
 function! maxmellon#grep#jvgrep(query)
@@ -18,4 +20,5 @@ function! maxmellon#grep#jvgrep(query)
   setlocal grepprg=jvgrep
   execute 'silent grep! ' . a:query ' ./*'
   let &grepprg = l:current_grep
+  redraw!
 endfunction

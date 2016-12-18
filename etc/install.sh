@@ -12,4 +12,4 @@ execute 'cat $HOME/.vim/.vimrc > $HOME/.config/nvim/init.vim'
 
 execute 'mkdir -p $HOME/.vim/help'
 
-execute 'git submodules init'
+execute 'git submodule init'

@@ -29,6 +29,7 @@ if !g:env.gui
   highlight StatusLineBranch   ctermfg=white ctermbg=23
   highlight StatusLineFileType ctermfg=white ctermbg=19
   highlight StatusLineVimType  ctermfg=white ctermbg=52
+  highlight TabLinePwd         ctermfg=gray  ctermbg=52
   highlight Visual                           ctermbg=21
   highlight VisualNOS                        ctermbg=21
   " listchars

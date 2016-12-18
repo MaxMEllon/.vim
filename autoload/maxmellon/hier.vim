@@ -3,4 +3,6 @@ function! maxmellon#hier#clear()
   call setqflist([])
   cclose
   HierClear
+  redraw!
+  redrawstatus!
 endfunction

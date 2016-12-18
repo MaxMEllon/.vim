@@ -15,12 +15,19 @@ command! RTP call maxmellon#runtimepath#show()
 command! -nargs=? Google call maxmellon#opener(<f-args>)
 command! -nargs=? Opener call maxmellon#google(<f-args>)
 
-command! -nargs=? Cdu call maxmellon#cdgitroot#exec()
-command! -nargs=? Cd call maxmellon#cd#exec(<f-args>)
+command! -nargs=? Cdu    call maxmellon#cdgitroot#exec()
+command! -nargs=? Cd     call maxmellon#cd#exec(<f-args>)
 
 command! -nargs=? Ggrep  call maxmellon#grep#gitgrep(<f-args>)
 command! -nargs=? Hgrep  call maxmellon#grep#hw(<f-args>)
 command! -nargs=? Jvgrep call maxmellon#grep#jvgrep(<f-args>)
+command! -nargs=? Grep   silent grep! <f-args> | redraw!
+command! -nargs=? G      silent grep! <f-args> | redraw!
+
+command! Ls         call maxmellon#ls#show()
+command! LsOpen     call maxmellon#fzy#lsopen()
+command! GHQ        call maxmellon#fzy#ghq_list()
+command! GitLsFiles call maxmellon#fzy#git_ls_files()
 
 augroup MyVimrc
  autocmd!
