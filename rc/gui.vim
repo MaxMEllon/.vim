@@ -14,6 +14,7 @@ set guioptions-=b
 set guioptions-=e
 " set imdisable
 set laststatus=2
+set cursorline
 
 if g:env.win
   Autocmd VimEnter * let &guifont = 'Ricty_for_Powerline:h14'

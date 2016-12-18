@@ -1,3 +1,3 @@
 Plug 'osyo-manga/vim-watchdogs'
 Plug 'thinca/vim-quickrun'
-Plug 'miyakogi/vim-quickrun-job'
+" Plug 'miyakogi/vim-quickrun-job'

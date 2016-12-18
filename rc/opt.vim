@@ -8,7 +8,6 @@ set cmdwinheight   =5
 set colorcolumn    =80,100
 set completeopt    =menuone,longest,preview
 set cscopetag
-set cursorline
 set display        =lastline
 set fillchars      =vert:\ ,fold:\ ,stlnc:\ ,diff:-
 set grepprg        =hw\ --no-group\ --no-color
