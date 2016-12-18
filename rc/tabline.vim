@@ -33,7 +33,13 @@ function! MakeTabLine()
   let titles = map(range(1, tabpagenr('$')), 's:tabpage_label(v:val)')
   let sep = ''
   let tabpages = join(titles, sep) . sep . '%#TabLineFill#%T'
-  let info = '%#TabLinePwd#% ' . maxmellon#pwd#get() .' %#TabLine#%'
+  let pwd = maxmellon#pwd#get()
+  let splitted = split(pwd, '/')
+  let len = len(splitted)
+  if len > 3
+    let pwd = splitted[len - 3] . '/' . splitted[len - 2] . '/' . splitted[len - 1]
+  endif
+  let info = '%#TabLinePwd#% ' . pwd .' %#TabLine#%'
   return tabpages . '%=' . info
 endfunction
 
