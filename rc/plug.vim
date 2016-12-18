@@ -149,9 +149,19 @@ endfunction
 
 command! -nargs=* Lazy call g:plug.lazy(<args>)
 
+function! g:plug.load_plug_box(...)
+  let base = expand('~/.vim/rc/plugbox')
+  let cmd = printf('source %s/%s.vim', base, a:1)
+  execute cmd
+endfunction
+
+command! -nargs=* PlugBox call g:plug.load_plug_box(<args>)
+
 if g:plug.ready()
   call plug#begin(g:plug.base)
 
+  " Plug 'osyo-manga/unite-quickfix'
+  " Plug 'tyru/capture.vim', {'on' : 'Capture'}
   Plug 'AndrewRadev/switch.vim'
   Plug 'LeafCage/foldCC.vim'
   Plug 'LeafCage/yankround.vim'
@@ -169,22 +179,20 @@ if g:plug.ready()
   Plug 'mattn/emmet-vim'
   Plug 'mhinz/vim-signify'
   Plug 'mhinz/vim-startify'
-  Plug 'osyo-manga/unite-quickfix'
   Plug 'pocke/vim-hier'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/committia.vim'
   Plug 'surround.vim'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'tpope/vim-dispatch'
-  Plug 'tyru/capture.vim', {'on' : 'Capture'}
   Plug 'tyru/caw.vim'
 
-  MyLoad 'plugbox/c'
-  MyLoad 'plugbox/unite'
-  MyLoad 'plugbox/web'
-  MyLoad 'plugbox/operator'
-  MyLoad 'plugbox/textobj'
-  MyLoad 'plugbox/platform'
+  PlugBox 'c'
+  PlugBox 'operator'
+  PlugBox 'textobj'
+  PlugBox 'unite'
+  PlugBox 'webapi'
+  PlugBox 'platform'
 
   call plug#end()
 
