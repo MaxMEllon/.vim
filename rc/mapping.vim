@@ -130,6 +130,9 @@ vnoremap <silent> ,x :<C-u>call maxmellon#remove_whitespace()<CR>
 nnoremap <silent> ,z :<C-u>%s/　/  /g<CR>
 vnoremap <silent> ,z :<C-u>%s/　/  /g<CR>
 
+nnoremap <Space>f :<C-u>LsOpen<CR>
+nnoremap <Space>g :<C-u>GitLsFiles<CR>
+
 nnoremap ,o :Opener <C-r><C-a><CR>
 nnoremap ,g :Google <C-r><C-a><CR>
 nnoremap ,p :ToggleOpt paste<CR>

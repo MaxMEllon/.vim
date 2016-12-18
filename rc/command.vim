@@ -26,7 +26,8 @@ command! -nargs=? G silent grep! <f-args>
 
 command! Ls call maxmellon#ls#show()
 command! LsOpen call maxmellon#fzy#lsopen()
-nnoremap <Space>f :<C-u>LsOpen<CR>
+command! GitLsFiles call maxmellon#fzy#git_ls_files()
+command! GHQ call maxmellon#fzy#ghq_list()
 
 augroup MyVimrc
  autocmd!

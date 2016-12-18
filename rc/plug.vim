@@ -155,6 +155,8 @@ if g:plug.ready()
   Plug 'tyru/caw.vim'
   Plug 'vim-jp/vital.vim'
 
+  Plug 'vim-jp/vim-cpp'
+
   MyLoad 'plugbox/unite'
   MyLoad 'plugbox/web'
   MyLoad 'plugbox/operator'
