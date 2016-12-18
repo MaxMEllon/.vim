@@ -4,4 +4,4 @@ if executable('clang')
   Plug 'justmao945/vim-clang', {'for' : ['c', 'cpp']}
 endif
 
-Autocmd BufRead,BufEnter *.c,*.cpp,*.cc,*.h call maxmellon#lazy#c#load()
+Lazy '*.c,*.cpp,*.cc,*.h', 'c'

@@ -75,10 +75,10 @@ endfunction
 "
 " }}}
 
-"" {{{
-" @args a:1, plugname, プラグイン名
-" @args a:2, realpath, プラグインの設定の絶対パス
-" @atgs a:3, is_force, 強制的に読み込むかどうか
+"" s:config_load() {{{
+" @args {String} a:1, plugname, プラグイン名
+" @args {String} a:2, realpath, プラグインの設定の絶対パス
+" @atgs {Boolean(Number 0 or 1)} a:3, is_force, 強制的に読み込むかどうか
 " }}}
 function! s:config_load(...)
   let l:fuzzy_plugname = substitute(a:1, '\.vim$', '', 'g')
@@ -139,6 +139,16 @@ endfunction
 " @args {String} plugin directory name
 command! -nargs=* MyPlug call s:maxmellon_plug(<args>)
 
+augroup PlugConfig
+  autocmd!
+augroup END
+
+function! g:plug.lazy(...)
+  execute 'autocmd PlugConfig BufRead,BufEnter ' . a:1 . ' call maxmellon#lazy#' . a:2 . '#load()'
+endfunction
+
+command! -nargs=* Lazy call g:plug.lazy(<args>)
+
 if g:plug.ready()
   call plug#begin(g:plug.base)
 
@@ -168,7 +178,6 @@ if g:plug.ready()
   Plug 'tpope/vim-dispatch'
   Plug 'tyru/capture.vim', {'on' : 'Capture'}
   Plug 'tyru/caw.vim'
-  Plug 'vim-jp/vital.vim'
 
   MyLoad 'plugbox/c'
   MyLoad 'plugbox/unite'

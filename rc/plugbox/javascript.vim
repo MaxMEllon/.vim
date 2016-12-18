@@ -22,4 +22,4 @@ Plug 'mtscout6/vim-cjsx', {'for' : 'coffee'}
 Plug 'rhysd/npm-debug-log.vim'
 Plug 'elzr/vim-json', {'for' : 'json'}
 
-Autocmd BufRead,BufEnter *.js,*.jsx call maxmellon#lazy#javascript#load()
+Lazy '*.js,*.jsx', 'javascript'
