@@ -75,36 +75,51 @@ endfunction
 "
 " }}}
 
-function! s:config_load(plugname, realpath)
-  let l:fuzzy_plugname = substitute(a:plugname, '\.vim$', '', 'g')
-  if g:env.win
-    " FIXME: なぜかwindowsでis_loadedがすべてg:falseになるので後で調査
-    let l:loaded = g:plug.is_installed(a:plugname) || g:plug.is_installed(a:fuzzy_plugname)
+"" {{{
+" @args a:1, plugname, プラグイン名
+" @args a:2, realpath, プラグインの設定の絶対パス
+" @atgs a:3, is_force, 強制的に読み込むかどうか
+" }}}
+function! s:config_load(...)
+  let l:fuzzy_plugname = substitute(a:1, '\.vim$', '', 'g')
+  let l:is_force = get(a:, '3', g:false)
+  if l:is_force == g:true
+    let l:loaded = g:true
   else
-    let l:loaded = g:plug.is_loaded(a:plugname) || g:plug.is_loaded(l:fuzzy_plugname)
+    let l:loaded = g:env.win
+          \ ? g:plug.is_installed(a:1) || g:plug.is_installed(l:fuzzy_plugname)
+          \ : g:plug.is_loaded(a:1) || g:plug.is_loaded(l:fuzzy_plugname)
   endif
   if l:loaded == g:true
-    execute 'source ' . a:realpath
+    execute 'source ' . a:2
   endif
-  let l:mes = "[Debug] PlugConfig:\t" . a:plugname . ':' . l:loaded
+  let l:mes = "[Debug] PlugConfig:\t" . a:1 . ':' . l:loaded
   call g:env.debug(l:mes)
-endfunction
-
-function! g:plug.config_load(...)
-  let l:sepaleter = g:env.win ? '\' : '/'
-  let l:pathlist = split(a:1, l:sepaleter)
-  let l:plugname = l:pathlist[s:L.find_last_index(l:pathlist, '!empty(v:val)')]
-  call s:config_load(l:plugname, a:1)
 endfunction
 
 " Example:
 " :PlugConfig 'caw.vim'
-command! -nargs=* -bar PlugConfig call s:config_load(<f-args>)
+" :PlugConfigForce 'caw.vim'
+command! -nargs=* -bar PlugConfig call g:plug.config_load(<args>, g:false)
+command! -nargs=* -bar PlugConfigForce call g:plug.config_load(<args>, g:true)
+
+function! g:plug.config_load(...)
+  let l:sepaleter = g:env.win ? '\' : '/'
+  let l:pathlist = split(a:1, l:sepaleter)
+  let l:len = len(l:pathlist)
+  if l:len == 1
+    let l:realpath = expand('~/.vim/rc/plugrc') . '/' . a:1 . '.vim'
+  else
+    let l:realpath = a:1
+  endif
+  let l:plugname = l:pathlist[len - 1]
+  call s:config_load(l:plugname, l:realpath, a:2)
+endfunction
 
 function! g:plug.config_auto_load()
   let l:rcs = split(expand('~/.vim/rc/plugrc/*'), "\n")
   for l:rc in l:rcs
-    call g:plug.config_load(l:rc)
+    call g:plug.config_load(l:rc, g:false)
   endfor
 endfunction
 
@@ -155,8 +170,7 @@ if g:plug.ready()
   Plug 'tyru/caw.vim'
   Plug 'vim-jp/vital.vim'
 
-  Plug 'vim-jp/vim-cpp'
-
+  MyLoad 'plugbox/c'
   MyLoad 'plugbox/unite'
   MyLoad 'plugbox/web'
   MyLoad 'plugbox/operator'
@@ -166,8 +180,6 @@ if g:plug.ready()
   call plug#end()
 
   let g:plug.plugs = get(g:, 'plugs', {})
-
-  let s:L = vital#vital#import('Data.List')
 
   finish
 
