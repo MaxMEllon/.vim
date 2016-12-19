@@ -155,7 +155,7 @@ function! g:plug.load_plug_box(...)
   execute cmd
 endfunction
 
-command! -nargs=* PlugBox call g:plug.load_plug_box(<args>)
+command! -nargs=* -bar PlugBox call g:plug.load_plug_box(<args>)
 
 if g:plug.ready()
   call plug#begin(g:plug.base)
@@ -163,12 +163,14 @@ if g:plug.ready()
   " Plug 'osyo-manga/unite-quickfix'
   " Plug 'pocke/vim-hier'
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
+  Plug 'AndrewRadev/splitjoin.vim'
   Plug 'AndrewRadev/switch.vim'
   Plug 'LeafCage/foldCC.vim'
   Plug 'LeafCage/yankround.vim'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'MaxMEllon/vim-hier'
   Plug 'MaxMEllon/vim-tmng'
+  Plug 'Shougo/vimproc.vim'
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
   Plug 'easymotion/vim-easymotion'
@@ -189,11 +191,16 @@ if g:plug.ready()
   Plug 'tyru/caw.vim'
 
   PlugBox 'c'
+  PlugBox 'css'
+  PlugBox 'elixir'
+  PlugBox 'html'
+  PlugBox 'javascript'
   PlugBox 'operator'
-  PlugBox 'textobj'
-  PlugBox 'unite'
-  PlugBox 'webapi'
   PlugBox 'platform'
+  PlugBox 'ruby'
+  PlugBox 'textobj'
+  PlugBox 'unite' | PlugBox 'rails'
+  PlugBox 'webapi'
 
   call plug#end()
 

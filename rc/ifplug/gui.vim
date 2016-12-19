@@ -1,5 +1,4 @@
 Plug 'MaxMEllon/molokai'
-Plug 'MaxMEllon/vim-tmng'
 Plug 'haya14busa/vim-operator-flashy'
 Plug 'osyo-manga/shabadou.vim'
 Plug 'thinca/vim-quickrun'
@@ -13,6 +12,3 @@ else
 endif
 
 Plug 'itchyny/lightline.vim'
-
-MyLoad 'plugbox/javascript'
-MyLoad 'plugbox/rails'

@@ -6,9 +6,4 @@ else
   Plug 'Shougo/neocomplecache.vim'
 endif
 
-MyLoad 'plugbox/javascript'
-MyLoad 'plugbox/css'
-MyLoad 'plugbox/rails'
-MyLoad 'plugbox/html'
-MyLoad 'plugbox/quickrun'
-MyLoad 'plugbox/elixir'
+PlugBox 'quickrun'
