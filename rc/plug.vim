@@ -161,6 +161,7 @@ if g:plug.ready()
   call plug#begin(g:plug.base)
 
   " Plug 'kshenoy/vim-signature'
+  " Plug 'mhinz/vim-signify'
   " Plug 'mhinz/vim-startify'
   " Plug 'osyo-manga/unite-quickfix'
   " Plug 'pocke/vim-hier'
@@ -184,7 +185,6 @@ if g:plug.ready()
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
   Plug 'mattn/emmet-vim'
-  Plug 'mhinz/vim-signify'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/committia.vim'
   Plug 'surround.vim'

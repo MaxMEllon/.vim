@@ -33,7 +33,7 @@ set pastetoggle    =<F11>
 set pumheight      =30
 set report         =1
 set ruler
-set scrolloff      =100
+set scrolloff      =5
 set showmatch
 set splitbelow
 set splitright
