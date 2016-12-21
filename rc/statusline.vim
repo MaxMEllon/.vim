@@ -17,13 +17,13 @@ endfunction
 
 "=============================================================================="
 " ┌ buffer id                          separate                               "
-" ｜  ┌ is modify?                         |               Quickfix count ┐  "
-" ｜  ｜         ┌  filename               |            vim type ┐       ｜  "
-" ↓  ↓         ↓                         |                     ↓       ↓  "
-" 1 | [+] | statusline.vim | [RO] | PASTE |     develop  [vim]  [clpum]  Qf: 1 "
-"                             ↑      ↑    |     ↑      ↑                   "
-"                  read only? ┘      ｜    |     ｜      └filetype           "
-"                          set paste? ┘    |     └  branch name              "
+" ｜  ┌ is modify?                         :               Quickfix count ┐  "
+" ｜  ｜         ┌  filename               :            vim type ┐       ｜  "
+" ↓  ↓         ↓                         :                     ↓       ↓  "
+" 1 | [+] | statusline.vim | [RO] | PASTE | :   develop  [vim]  [clpum]  Qf: 1 "
+"                             ↑      ↑    :     ↑      ↑                   "
+"                  read only? ┘      ｜    :     ｜      └filetype           "
+"                          set paste? ┘    :     └  branch name              "
 "=============================================================================="
 
 " left

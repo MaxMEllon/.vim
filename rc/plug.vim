@@ -160,8 +160,12 @@ command! -nargs=* -bar PlugBox call g:plug.load_plug_box(<args>)
 if g:plug.ready()
   call plug#begin(g:plug.base)
 
+  " Plug 'kshenoy/vim-signature'
+  " Plug 'mhinz/vim-startify'
   " Plug 'osyo-manga/unite-quickfix'
   " Plug 'pocke/vim-hier'
+  " Plug 'terryma/vim-multiple-cursors'
+  " Plug 'tpope/vim-dispatch'
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'AndrewRadev/switch.vim'
@@ -179,15 +183,12 @@ if g:plug.ready()
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
-  Plug 'kshenoy/vim-signature'
   Plug 'mattn/emmet-vim'
   Plug 'mhinz/vim-signify'
-  Plug 'mhinz/vim-startify'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/committia.vim'
   Plug 'surround.vim'
-  Plug 'terryma/vim-multiple-cursors'
-  Plug 'tpope/vim-dispatch'
+  Plug 't9md/vim-textmanip'
   Plug 'tyru/caw.vim'
 
   PlugBox 'c'
