@@ -231,4 +231,4 @@ PlugInit
 " }}}
 
 " __END__ {{{1
-" vim:fdm=marker expandtab fdc=3:
+" vim:fdm=marker expandtab:
