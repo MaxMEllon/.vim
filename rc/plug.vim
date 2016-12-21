@@ -149,14 +149,33 @@ endfunction
 
 command! -nargs=* Lazy call g:plug.lazy(<args>)
 
+function! g:plug.load_plug_box(...)
+  let base = expand('~/.vim/rc/plugbox')
+  let cmd = printf('source %s/%s.vim', base, a:1)
+  execute cmd
+endfunction
+
+command! -nargs=* -bar PlugBox call g:plug.load_plug_box(<args>)
+
 if g:plug.ready()
   call plug#begin(g:plug.base)
 
+  " Plug 'kshenoy/vim-signature'
+  " Plug 'mhinz/vim-signify'
+  " Plug 'mhinz/vim-startify'
+  " Plug 'osyo-manga/unite-quickfix'
+  " Plug 'pocke/vim-hier'
+  " Plug 'terryma/vim-multiple-cursors'
+  " Plug 'tpope/vim-dispatch'
+  " Plug 'tyru/capture.vim', {'on' : 'Capture'}
+  Plug 'AndrewRadev/splitjoin.vim'
   Plug 'AndrewRadev/switch.vim'
   Plug 'LeafCage/foldCC.vim'
   Plug 'LeafCage/yankround.vim'
   Plug 'MaxMEllon/vim-dirvish'
+  Plug 'MaxMEllon/vim-hier'
   Plug 'MaxMEllon/vim-tmng'
+  Plug 'Shougo/vimproc.vim'
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
   Plug 'easymotion/vim-easymotion'
@@ -165,26 +184,24 @@ if g:plug.ready()
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
-  Plug 'kshenoy/vim-signature'
   Plug 'mattn/emmet-vim'
-  Plug 'mhinz/vim-signify'
-  Plug 'mhinz/vim-startify'
-  Plug 'osyo-manga/unite-quickfix'
-  Plug 'pocke/vim-hier'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/committia.vim'
   Plug 'surround.vim'
-  Plug 'terryma/vim-multiple-cursors'
-  Plug 'tpope/vim-dispatch'
-  Plug 'tyru/capture.vim', {'on' : 'Capture'}
+  Plug 't9md/vim-textmanip'
   Plug 'tyru/caw.vim'
 
-  MyLoad 'plugbox/c'
-  MyLoad 'plugbox/unite'
-  MyLoad 'plugbox/web'
-  MyLoad 'plugbox/operator'
-  MyLoad 'plugbox/textobj'
-  MyLoad 'plugbox/platform'
+  PlugBox 'c'
+  PlugBox 'css'
+  PlugBox 'elixir'
+  PlugBox 'html'
+  PlugBox 'javascript'
+  PlugBox 'operator'
+  PlugBox 'platform'
+  PlugBox 'ruby'
+  PlugBox 'textobj'
+  PlugBox 'unite' | PlugBox 'rails'
+  PlugBox 'webapi'
 
   call plug#end()
 
@@ -214,4 +231,4 @@ PlugInit
 " }}}
 
 " __END__ {{{1
-" vim:fdm=marker expandtab fdc=3:
+" vim:fdm=marker expandtab:

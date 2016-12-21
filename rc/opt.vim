@@ -8,9 +8,9 @@ set cmdwinheight   =5
 set colorcolumn    =80,100
 set completeopt    =menuone,longest,preview
 set cscopetag
-set cursorline
 set display        =lastline
 set fillchars      =vert:\ ,fold:\ ,stlnc:\ ,diff:-
+set foldcolumn     =0
 set grepprg        =hw\ --no-group\ --no-color
 set history        =100
 set hlsearch
@@ -33,7 +33,7 @@ set pastetoggle    =<F11>
 set pumheight      =30
 set report         =1
 set ruler
-set scrolloff      =100
+set scrolloff      =5
 set showmatch
 set splitbelow
 set splitright

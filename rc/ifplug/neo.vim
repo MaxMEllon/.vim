@@ -10,19 +10,16 @@ Plug 'landaire/deoplete-swift'
 
 " terminal
 Plug 'kassio/neoterm'
+Plug 'Shougo/deol.nvim'
 
 " runner
 Plug 'neomake/neomake'
 Plug 'thinca/vim-quickrun'
 
 " text edit
-Plug 'AndrewRadev/splitjoin.vim'
 " Plug 'osyo-manga/vim-over'
 
 " view
 Plug 'osyo-manga/vim-anzu'
 Plug 'nobarudo/tender.vim'
 Plug 'MaxMEllon/molokai'
-
-MyLoad 'plugbox/javascript'
-MyLoad 'plugbox/css'

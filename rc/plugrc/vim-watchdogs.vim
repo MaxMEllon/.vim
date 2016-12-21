@@ -1,10 +1,12 @@
 let g:quickrun_config = get(g:, 'quickrun_config', {})
 let g:quickrun_config['watchdogs_checker/_'] = {
-      \   'runner' : 'job',
+      \   'runner' : g:env.vim8 ? 'job' : 'vimproc',
+      \   'outputter' : 'loclist',
       \   'runner/vimproc/sleep' : 10,
       \   'runner/vimproc/updatetime' : 500,
       \   'outputter/buffer/split' : '',
       \   'outputter/quickfix/open_cmd' : "",
+      \   'outputter/loclist/open_cmd' : "",
       \   'hook/echo/enable' : 0,
       \   'hook/echo/output_success': '> No Errors Found.',
       \   'hook/back_window/enable' : 1,

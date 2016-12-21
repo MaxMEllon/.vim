@@ -22,3 +22,11 @@ function! maxmellon#grep#jvgrep(query)
   let &grepprg = l:current_grep
   redraw!
 endfunction
+
+function! maxmellon#grep#grep(query)
+  let l:current_grep = &grepprg
+  setlocal grepprg=grep\ -rnIH\ --exclude-dir=.svn\ --exclude-dir=.git
+  execute 'silent grep! ' . a:query . ' *'
+  let &grepprg = l:current_grep
+  redraw!
+endfunction

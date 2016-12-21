@@ -19,11 +19,10 @@ highlight EasyMotionMoveHL        ctermbg=green ctermfg=black
 if !g:env.gui
   highlight ColorColumn                      ctermbg=240
   highlight Comment            ctermfg=244
-  highlight FoldColumn         ctermfg=67    ctermbg=none guifg=#465457
-  highlight Folded             ctermfg=67    ctermbg=16   guifg=#465457 guibg=#000000
+  highlight FoldColumn         ctermfg=67    ctermbg=none
+  highlight Folded             ctermfg=67    ctermbg=16
   highlight LineNr                           ctermbg=none
-  highlight Normal                           ctermbg=none guifg=#F8F8F2 guibg=#272822
-  highlight SpecialKey         ctermfg=235
+  highlight Normal                           ctermbg=none
   highlight SpellBad                         ctermbg=52
   highlight SpellCap                         ctermbg=17
   highlight StatusLineBranch   ctermfg=white ctermbg=23
@@ -34,7 +33,7 @@ if !g:env.gui
   highlight VisualNOS                        ctermbg=21
   " listchars
   highlight NonText            ctermfg=blue
-  highlight SpecialKey         ctermfg=red
+  highlight SpecialKey         ctermfg=236
 endif
 
 highlight ZenkakuSpaces term=underline guibg=blue ctermbg=blue

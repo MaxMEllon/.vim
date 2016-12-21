@@ -1,7 +1,7 @@
 function! maxmellon#fzy#lsopen()
   try
     if executable('fzy')
-      let output = system('ls -la | sed -e "1,2d" | fzy')
+      let output = system('ls -1aF | sed -e "1,2d" | fzy')
     else
       echomsg 'Please install fzy'
     endif
@@ -10,8 +10,7 @@ function! maxmellon#fzy#lsopen()
   endtry
   redraw!
   if v:shell_error == 0 && !empty(output)
-    let filename = split(output, ' ')
-    exec 'edit ' . filename[len(filename) - 1]
+    exec 'edit ' . output
   endif
 endfunction
 
@@ -27,8 +26,7 @@ function! maxmellon#fzy#git_ls_files()
   endtry
   redraw!
   if v:shell_error == 0 && !empty(output)
-    let filename = split(output, ' ')
-    exec 'edit ' . filename[len(filename) - 1]
+    exec 'edit ' . output
   endif
 endfunction
 

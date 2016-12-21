@@ -3,7 +3,7 @@ command! -nargs=? ToggleOptGlobal call maxmellon#toggle#option(g:true, <q-args>)
 
 command! Date  :call setline('.', getline('.') . strftime('○ %Y.%m.%d (%a) %H:%M'))
 
-command! JSONFormat %!python -m json.tool
+command! JSONFormat %!jq '.'
 
 if executable('shiba')
   command! Shiba  :! shiba % &>/dev/null 2>&1 &
@@ -21,13 +21,14 @@ command! -nargs=? Cd     call maxmellon#cd#exec(<f-args>)
 command! -nargs=? Ggrep  call maxmellon#grep#gitgrep(<f-args>)
 command! -nargs=? Hgrep  call maxmellon#grep#hw(<f-args>)
 command! -nargs=? Jvgrep call maxmellon#grep#jvgrep(<f-args>)
-command! -nargs=? Grep   silent grep! <f-args> | redraw!
-command! -nargs=? G      silent grep! <f-args> | redraw!
+command! -nargs=? Grep   call maxmellon#grep#grep(<f-args>)
+command! -nargs=? G      call maxmellon#grep#grep(<f-args>)
 
 command! Ls         call maxmellon#ls#show()
 command! LsOpen     call maxmellon#fzy#lsopen()
 command! GHQ        call maxmellon#fzy#ghq_list()
 command! GitLsFiles call maxmellon#fzy#git_ls_files()
+command! Gdiff      call maxmellon#git#diff#open()
 
 augroup MyVimrc
  autocmd!
