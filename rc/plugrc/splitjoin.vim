@@ -1,3 +1,3 @@
-let g:splitjoin_join_mapping = ',j'
-let g:splitjoin_split_mapping = ',s'
+nnoremap ,j :<C-u>SplitjoinJoin<CR>
+nnoremap ,s :<C-ut>SplitjoinSplit<CR>
 

@@ -168,14 +168,12 @@ if g:plug.ready()
   " Plug 'terryma/vim-multiple-cursors'
   " Plug 'tpope/vim-dispatch'
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
-  Plug 'AndrewRadev/splitjoin.vim'
   Plug 'AndrewRadev/switch.vim'
   Plug 'LeafCage/foldCC.vim'
   Plug 'LeafCage/yankround.vim'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'MaxMEllon/vim-hier'
   Plug 'MaxMEllon/vim-tmng'
-  Plug 'Shougo/vimproc.vim'
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
   Plug 'easymotion/vim-easymotion'
@@ -184,12 +182,16 @@ if g:plug.ready()
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
-  Plug 'mattn/emmet-vim'
+  Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml']}
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/committia.vim'
   Plug 'surround.vim'
   Plug 't9md/vim-textmanip'
   Plug 'tyru/caw.vim'
+  Plug 'y0za/vim-reading-vimrc'
+  if g:env.vim8
+    Plug 'Shougo/vimproc.vim'
+  endif
 
   PlugBox 'c'
   PlugBox 'css'
