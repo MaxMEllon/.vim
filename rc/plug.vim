@@ -160,6 +160,7 @@ command! -nargs=* -bar PlugBox call g:plug.load_plug_box(<args>)
 if g:plug.ready()
   call plug#begin(g:plug.base)
 
+  " Plug 'LeafCage/yankround.vim'
   " Plug 'kshenoy/vim-signature'
   " Plug 'mhinz/vim-signify'
   " Plug 'mhinz/vim-startify'
@@ -170,7 +171,6 @@ if g:plug.ready()
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
   Plug 'AndrewRadev/switch.vim'
   Plug 'LeafCage/foldCC.vim'
-  Plug 'LeafCage/yankround.vim'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'MaxMEllon/vim-hier'
   Plug 'MaxMEllon/vim-tmng'
@@ -188,7 +188,7 @@ if g:plug.ready()
   Plug 'surround.vim'
   Plug 't9md/vim-textmanip'
   Plug 'tyru/caw.vim'
-  Plug 'y0za/vim-reading-vimrc'
+
   if g:env.vim8
     Plug 'Shougo/vimproc.vim'
   endif
@@ -203,6 +203,7 @@ if g:plug.ready()
   PlugBox 'ruby'
   PlugBox 'textobj'
   PlugBox 'unite' | PlugBox 'rails'
+  PlugBox 'vim'
   PlugBox 'webapi'
 
   call plug#end()

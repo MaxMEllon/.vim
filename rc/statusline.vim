@@ -10,8 +10,10 @@ let s:slhlcmd = ''
 function! s:StatusLine(mode)
   if a:mode == 'Enter'
     highlight StatusLine ctermfg=red ctermbg=yellow cterm=NONE guifg=red guibg=yellow
+    set statusline=\ %n\ \|\ %m\ \|\ %t\ \|\ %r\ \|\ %{maxmellon#paste#statusline()}
   else
     highlight StatusLine ctermfg=white ctermbg=blue cterm=NONE guifg=white guibg=blue
+    let &statusline = s:statusline
   endif
 endfunction
 
@@ -39,3 +41,5 @@ set statusline+=%#StatusLineBranch#\ %{maxmellon#git#branch#get()}\ %#StatusLine
 set statusline+=%#StatusLineFileType#\ %y\ "
 set statusline+=%#StatusLineVimType#\ %{maxmellon#vimtype#statusline()}\ "
 set statusline+=%#ErrorMsg#%{maxmellon#qf#statusline()}"
+
+let s:statusline = &statusline
