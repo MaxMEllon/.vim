@@ -8,4 +8,4 @@ if has('ruby')
   Plug 'todesking/ruby_hl_lvar.vim', {'for' : 'ruby'}
 endif
 
-Lazy '*.rb', 'ruby'
+Lazy 'ruby', 'ruby'

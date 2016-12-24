@@ -4,4 +4,4 @@ if executable('clang')
   Plug 'justmao945/vim-clang', {'for' : ['c', 'cpp']}
 endif
 
-Lazy '*.c,*.cpp,*.cc,*.h', 'c'
+Lazy 'c,cpp,h', 'c'

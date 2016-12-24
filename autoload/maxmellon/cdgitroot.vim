@@ -4,6 +4,11 @@ function s:base()
   return expand(l:gitroot)
 endfunction
 
+function! maxmellon#cdgitroot#force_exec()
+  let l:gitroot = s:base()
+  execute 'cd ' . l:gitroot
+endfunction
+
 function! maxmellon#cdgitroot#exec()
   if maxmellon#git#repo#is_inside()
     let l:gitroot = s:base()
