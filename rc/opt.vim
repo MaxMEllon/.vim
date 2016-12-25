@@ -14,7 +14,7 @@ set foldcolumn     =0
 set grepprg        =hw\ --no-group\ --no-color
 set history        =100
 set hlsearch
-set laststatus     =2
+set laststatus     =0
 set lazyredraw
 set linespace      =0
 set list
@@ -28,21 +28,22 @@ set modeline
 set modelines      =2
 set noequalalways
 set noshowcmd
+set noshowmatch
 set nrformats      =alpha,hex
 set pastetoggle    =<F11>
 set pumheight      =30
 set report         =1
 set ruler
 set scrolloff      =5
-set showmatch
+set showtabline    =0
 set splitbelow
 set splitright
-set synmaxcol      =140
+set synmaxcol      =200
 set textwidth      =0
 set virtualedit    =block
 set whichwrap      =b,s,h,l,<,>,[,]
 
-set swapfile
+set noswapfile
 set directory      =~/.vim/_swap
 
 set backup
