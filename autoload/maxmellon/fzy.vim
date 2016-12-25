@@ -35,6 +35,20 @@ function! maxmellon#fzy#git_ls_files()
   endif
 endfunction
 
+function! maxmellon#fzy#mru()
+  let tmp = tempname()
+  execute 'redir > ' . tmp
+  silent oldfiles
+  redir END
+  let cmd = 'cat ' . tmp . '| tail -n +2 |  tr -d '':'' | ' .
+        \   ' awk ''{printf("%4d %s\n", $1, $2)}'' '
+  let output = s:get_output(cmd)
+  if v:shell_error == 0 && !empty(output)
+    let mru_id = split(output, ' ')[0]
+    execute 'edit #<' . mru_id
+  endif
+endfunction
+
 function! maxmellon#fzy#buffer()
   let tmp = tempname()
   execute 'redir > ' . tmp

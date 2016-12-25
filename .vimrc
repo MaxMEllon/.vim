@@ -32,8 +32,6 @@ MyLoad 'cmdwin'
 MyLoad 'statusline'
 MyLoad 'tabline'
 
-PlugConfigAutoLoad
-
 filetype plugin indent on
 syntax on
 

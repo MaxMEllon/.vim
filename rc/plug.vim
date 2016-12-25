@@ -213,8 +213,9 @@ if g:plug.ready()
 
   let g:plug.plugs = get(g:, 'plugs', {})
 
-  finish
+  PlugConfigAutoLoad
 
+  finish
 endif
 
 " Automatic install the vim-plug {{{
