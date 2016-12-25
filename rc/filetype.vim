@@ -2,7 +2,7 @@ augroup MyFileType
   autocmd!
 augroup END
 
-command! -nargs=* AutocmdFileType autocmd MyFileType <args>
+command! -nargs=* AutocmdFileType autocmd filetypedetect <args>
 
 function! s:set_filetype(...)
   execute 'AutocmdFileType BufNewFile,BufRead' . ' *' . a:1 . ' setlocal filetype=' . a:2

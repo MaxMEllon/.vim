@@ -132,6 +132,7 @@ vnoremap <silent> ,z :<C-u>%s/　/  /g<CR>
 
 nnoremap <Space>f :<C-u>LsOpen<CR>
 nnoremap <Space>g :<C-u>GitLsFiles<CR>
+nnoremap <Space>b :<C-u>BufferList<CR>
 
 nnoremap ,o :Opener <C-r><C-a><CR>
 nnoremap ,g :Google <C-r><C-a><CR>

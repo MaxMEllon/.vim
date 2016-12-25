@@ -29,6 +29,7 @@ command! LsOpen     call maxmellon#fzy#lsopen()
 command! GHQ        call maxmellon#fzy#ghq_list()
 command! GitLsFiles call maxmellon#fzy#git_ls_files()
 command! Gdiff      call maxmellon#git#diff#open()
+command! BufferList call maxmellon#fzy#buffer()
 
 augroup MyVimrc
  autocmd!
