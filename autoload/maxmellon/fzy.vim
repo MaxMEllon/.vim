@@ -1,48 +1,54 @@
-function! maxmellon#fzy#lsopen()
+function! s:get_output(command)
+  if !executable('fzy')
+    echomsg 'Please Install fzy command'
+  endif
   try
-    if executable('fzy')
-      let output = system('ls -1aF | sed -e "1,2d" | fzy')
-    else
-      echomsg 'Please install fzy'
-    endif
+    let output = system(a:command . ' | fzy')
   catch /Vim:Interrupt/
-    " Swallow errors from ^C, allow redraw! below
   endtry
   redraw!
+  return output
+endfunction
+
+function! s:callback(vim_command, output)
+    execute a:vim_command . ' ' . a:output
+endfunction
+
+function! s:base(command, callback)
+  let output = s:get_output(a:command)
+  redraw!
   if v:shell_error == 0 && !empty(output)
-    exec 'edit ' . output
+    call s:callback(a:callback, output)
   endif
 endfunction
 
+function! maxmellon#fzy#lsopen()
+  call s:base('ls -1aF | sed -e "1,2d"', 'tabedit')
+endfunction
+
 function! maxmellon#fzy#git_ls_files()
-  try
-    if maxmellon#git#repo#is_inside()
-      let output = system('git ls-files | fzy')
-    else
-      echomsg 'current directory is not git repository.'
-    endif
-  catch /Vim:Interrupt/
-    " Swallow errors from ^C, allow redraw! below
-  endtry
-  redraw!
-  if v:shell_error == 0 && !empty(output)
-    exec 'edit ' . output
+  if maxmellon#git#repo#is_inside()
+    let pwd = maxmellon#pwd#get()
+    call maxmellon#cdgitroot#force_exec()
+    call s:base('git ls-files', 'tabedit')
+    execute 'cd ' . pwd
   endif
 endfunction
 
 function! maxmellon#fzy#ghq_list()
-  try
-    if executable('ghq')
-      let output = system('ghq list | fzy')
-    else
-      echomsg 'current directory is not git repository.'
-    endif
-  catch /Vim:Interrupt/
-    " Swallow errors from ^C, allow redraw! below
-  endtry
+  if executable('ghq')
+    let output = s:get_output('ghq list')
+  else
+    echomsg 'Please install ghq command'
+  endif
   redraw!
   if v:shell_error == 0 && !empty(output)
-    let repopath = $GHQ_ROOT . '/' . output
-    exec 'edit ' . repopath
+    if exists('$GHQ_ROOT')
+      let repopath = $GHQ_ROOT . '/' . output
+    else
+      let ghq_root = system('ghq root')
+      let repopath = substitute(ghq_root, '[\r\n]', '', 'g') . '/' . output
+    endif
+    exec 'tabedit ' . repopath
   endif
 endfunction

@@ -16,8 +16,10 @@ if has('vim_starting')  && has('vertsplit')
   let &t_RV .= "\e[?6;69h\e[1;3s\e[3;9H\e[6n\e[0;0s\e[?6;69l"
 endif
 
-set ttyfast
+if g:env.mac
+  set nottyfast
+endif
 set t_Co     =256
-set ttyscroll=20000
+set ttyscroll=200000
 set t_vb     =
 set novisualbell

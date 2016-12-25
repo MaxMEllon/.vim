@@ -20,6 +20,9 @@ function! s:set_tab_width(width, is_expand)
   let &l:tabstop = a:width
   let &l:shiftwidth = a:width
   let &l:softtabstop = a:width
+  if exists(':IndentLinesReset')
+    IndentLinesReset
+  endif
   if a:is_expand == g:true
     setlocal expandtab
   else

@@ -23,4 +23,4 @@ Plug 'mtscout6/vim-cjsx', {'for' : 'coffee'}
 Plug 'rhysd/npm-debug-log.vim'
 Plug 'elzr/vim-json', {'for' : 'json'}
 
-Lazy '*.js,*.jsx', 'javascript'
+Lazy 'javascript', 'javascript'

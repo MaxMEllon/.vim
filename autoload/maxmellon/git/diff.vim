@@ -4,6 +4,12 @@ function! maxmellon#git#diff#open() abort
     new ++edit
     setlocal filetype=diff noswapfile noautowrite
     1put! =diff
-    write! /tmp/Gdiff
+    if g:env.win
+      if isdirectory($TEMP)
+        execute 'write! ' . $TEMP . '\Gdiff'
+      endif
+    else
+      write! /tmp/Gdiff
+    endif
   endif
 endfunction

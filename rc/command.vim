@@ -1,12 +1,12 @@
 command! -nargs=? ToggleOpt call maxmellon#toggle#option(g:false, <q-args>)
 command! -nargs=? ToggleOptGlobal call maxmellon#toggle#option(g:true, <q-args>)
 
-command! Date  :call setline('.', getline('.') . strftime('○ %Y.%m.%d (%a) %H:%M'))
+command! Date :call setline('.', getline('.') . strftime('○ %Y.%m.%d (%a) %H:%M'))
 
 command! JSONFormat %!jq '.'
 
 if executable('shiba')
-  command! Shiba  :! shiba % &>/dev/null 2>&1 &
+  command! Shiba :silent call system('shiba ' . expand('%') . ' &>/dev/null 2>&1 &') | redraw!
 endif
 
 command! SyntaxInfo call maxmellon#syntax_info()

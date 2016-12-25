@@ -20,8 +20,8 @@ nnoremap ][ ][zz
 " See: http://qiita.com/itmammoth/items/312246b4b7688875d023
 " nnoremap <C-n> "zdd"zp
 " nnoremap <C-p> "zdd<Up>"zP
-vnoremap <C-p> "zx<Up>"zP`[V`]
-vnoremap <C-n> "zx"zp`[V`]
+" vnoremap <C-p> "zx<Up>"zP`[V`]
+" vnoremap <C-n> "zx"zp`[V`]
 vnoremap <C-j> <ESC>
 
 noremap! OA <Up>

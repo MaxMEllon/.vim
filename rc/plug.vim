@@ -3,10 +3,10 @@ function! s:get_plugin_directory()
 endfunction
 
 let g:plug = {
-            \  'plug': expand('~/.vim/autoload/plug.vim'),
-            \  'base': s:get_plugin_directory(),
-            \  'url': 'https://raw.github.com/junegunn/vim-plug/master/plug.vim',
-            \}
+      \  'plug': expand('~/.vim/autoload/plug.vim'),
+      \  'base': s:get_plugin_directory(),
+      \  'url': 'https://raw.github.com/junegunn/vim-plug/master/plug.vim',
+      \}
 
 " See:
 " https://github.com/b4b4r07/dotfiles/blob/master/.vim/scripts/plug.vim#L12-L14
@@ -75,11 +75,11 @@ endfunction
 "
 " }}}
 
-"" s:config_load() {{{
+" load config of plugin {{{
+" s:config_load()
 " @args {String} a:1, plugname, プラグイン名
 " @args {String} a:2, realpath, プラグインの設定の絶対パス
 " @atgs {Boolean(Number 0 or 1)} a:3, is_force, 強制的に読み込むかどうか
-" }}}
 function! s:config_load(...)
   let l:fuzzy_plugname = substitute(a:1, '\.vim$', '', 'g')
   let l:is_force = get(a:, '3', g:false)
@@ -124,7 +124,9 @@ function! g:plug.config_auto_load()
 endfunction
 
 command! PlugConfigAutoLoad call g:plug.config_auto_load()
+"}}}
 
+" local plugin command {{{
 function! s:maxmellon_plug(...) abort
   if !isdirectory(expand('~/.vim/localPlugged'))
     call mkdir($HOME . '/.vim/localPlugged')
@@ -134,7 +136,9 @@ function! s:maxmellon_plug(...) abort
     Plug l:plugin
   endif
 endfunction
+"}}}
 
+" Lazy load a config of plugin {{{
 " :MyPlug
 " @args {String} plugin directory name
 command! -nargs=* MyPlug call s:maxmellon_plug(<args>)
@@ -144,7 +148,7 @@ augroup PlugConfig
 augroup END
 
 function! g:plug.lazy(...)
-  execute 'autocmd PlugConfig BufRead,BufEnter ' . a:1 . ' call maxmellon#lazy#' . a:2 . '#load()'
+  execute 'autocmd PlugConfig FileType ' . a:1 . ' call maxmellon#lazy#' . a:2 . '#load()'
 endfunction
 
 command! -nargs=* Lazy call g:plug.lazy(<args>)
@@ -156,10 +160,13 @@ function! g:plug.load_plug_box(...)
 endfunction
 
 command! -nargs=* -bar PlugBox call g:plug.load_plug_box(<args>)
+" }}}
 
 if g:plug.ready()
   call plug#begin(g:plug.base)
 
+  " out {{{
+  " Plug 'LeafCage/yankround.vim'
   " Plug 'kshenoy/vim-signature'
   " Plug 'mhinz/vim-signify'
   " Plug 'mhinz/vim-startify'
@@ -168,14 +175,13 @@ if g:plug.ready()
   " Plug 'terryma/vim-multiple-cursors'
   " Plug 'tpope/vim-dispatch'
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
-  Plug 'AndrewRadev/splitjoin.vim'
+  " }}}
+
   Plug 'AndrewRadev/switch.vim'
   Plug 'LeafCage/foldCC.vim'
-  Plug 'LeafCage/yankround.vim'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'MaxMEllon/vim-hier'
   Plug 'MaxMEllon/vim-tmng'
-  Plug 'Shougo/vimproc.vim'
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
   Plug 'easymotion/vim-easymotion'
@@ -184,7 +190,7 @@ if g:plug.ready()
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
-  Plug 'mattn/emmet-vim'
+  Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml']}
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/committia.vim'
   Plug 'surround.vim'
@@ -201,6 +207,7 @@ if g:plug.ready()
   PlugBox 'ruby'
   PlugBox 'textobj'
   PlugBox 'unite' | PlugBox 'rails'
+  PlugBox 'vim'
   PlugBox 'webapi'
 
   call plug#end()
@@ -229,6 +236,3 @@ command! PlugInit call g:plug.init()
 
 PlugInit
 " }}}
-
-" __END__ {{{1
-" vim:fdm=marker expandtab:
