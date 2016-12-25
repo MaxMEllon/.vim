@@ -181,14 +181,13 @@ if g:plug.ready()
   Plug 'LeafCage/foldCC.vim'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'MaxMEllon/vim-hier'
-  Plug 'MaxMEllon/vim-tmng'
+  Plug 'MaxMEllon/vim-tmng', {'for' : 'tmng'}
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
   Plug 'easymotion/vim-easymotion'
-  Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/vim-asterisk'
-  Plug 'junegunn/vim-easy-align'
+  Plug 'junegunn/vim-easy-align', {'on' : 'EasyAlign'}
   Plug 'kana/vim-niceblock'
   Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml']}
   Plug 'prabirshrestha/async.vim'
