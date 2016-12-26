@@ -11,7 +11,6 @@ set cscopetag
 set display        =lastline
 set fillchars      =vert:\ ,fold:\ ,stlnc:\ ,diff:-
 set foldcolumn     =0
-set grepprg        =hw\ --no-group\ --no-color
 set history        =100
 set hlsearch
 set laststatus     =0
@@ -55,6 +54,10 @@ set undofile
 
 if executable('hw')
   set grepprg=hw\ --no-group\ --no-color
+elseif executable('jvgrep')
+  set grepprg=jvgrep
+else
+  set grepprg=grep\ -rnIH\ --exclude-dir=.svn\ --exclude-dir=.git
 endif
 
 if !isdirectory(expand('~/.vim/_swap'))

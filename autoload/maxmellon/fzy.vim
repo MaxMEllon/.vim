@@ -11,7 +11,7 @@ function! s:get_output(command)
 endfunction
 
 function! s:callback(vim_command, output)
-    execute a:vim_command . ' ' . a:output
+  execute a:vim_command . ' ' . a:output
 endfunction
 
 function! s:base(command, callback)
@@ -32,6 +32,34 @@ function! maxmellon#fzy#git_ls_files()
     call maxmellon#cdgitroot#force_exec()
     call s:base('git ls-files', 'tabedit')
     execute 'cd ' . pwd
+  endif
+endfunction
+
+function! maxmellon#fzy#mru()
+  let tmp = tempname()
+  execute 'redir > ' . tmp
+  silent oldfiles
+  redir END
+  let cmd = 'cat ' . tmp . '| tail -n +2 |  tr -d '':'' | ' .
+        \   ' awk ''{printf("%4d %s\n", $1, $2)}'' '
+  let output = s:get_output(cmd)
+  if v:shell_error == 0 && !empty(output)
+    let mru_id = split(output, ' ')[0]
+    execute 'edit #<' . mru_id
+  endif
+endfunction
+
+function! maxmellon#fzy#buffer()
+  let tmp = tempname()
+  execute 'redir > ' . tmp
+  silent ls
+  redir END
+  let cmd = 'cat ' . tmp  . '| tail -n +2 | ' .
+        \   ' awk ''{printf("%4d %s\n", $1, $(NF-2))}'' '
+  let output = s:get_output(cmd)
+  if v:shell_error == 0 && !empty(output)
+    let buffer_id = split(output, ' ')[0]
+    execute 'edit #' . buffer_id
   endif
 endfunction
 
