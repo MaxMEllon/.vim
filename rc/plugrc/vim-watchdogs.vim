@@ -43,7 +43,7 @@ endif
 
 let g:watchdogs_check_BufWritePost_enable = 1
 let g:watchdogs_check_BufWritePost_enables = {
-      \ 'c'              : 0,
+      \ 'c'              : 1,
       \ 'cpp'            : 0,
       \ 'python'         : 0,
       \ 'vim'            : 0,

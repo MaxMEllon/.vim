@@ -91,6 +91,10 @@ if g:env.neo
   vnoremap <D-C> "+y
 endif
 
+if g:env.gui
+  noremap <C-z> <Nop>
+endif
+
 " Auto fix to type.
 inoremap .       <C-]>.
 inoremap <CR>    <C-]><CR>
@@ -115,6 +119,7 @@ nnoremap -     :<C-u>e %:h<CR>
 
 vnoremap <C-a> <C-a>gv
 vnoremap <C-x> <C-x>gv
+vnoremap <silent> . :normal .<CR>
 
 if !g:env.win
   nnoremap <silent> ,h :<C-u>call maxmellon#load_help()<CR> :<C-u>help <C-r><C-w><CR>
