@@ -4,7 +4,8 @@ Plug 'pangloss/vim-javascript', {'for' : 'javascript' }
 " Plug 'othree/es.next.syntax.vim', {'for' : 'javascript' }
 " Plug 'othree/javascript-libraries-syntax.vim'
 " Plug 'mxw/vim-jsx'
-Plug 'MaxMEllon/vim-jsx-pretty', {'for' : 'javascript' }
+" Plug 'MaxMEllon/vim-jsx-pretty', {'for' : 'javascript' }
+MyPlug 'vim-jsx-pretty'
 Plug 'ternjs/tern_for_vim', {'do' : 'npm i', 'for' : 'javascript'}
 
 " javascript doc

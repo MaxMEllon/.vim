@@ -1,63 +1,63 @@
-set ambiwidth      =double
-set autoread
-set autowrite
-set background     =dark
-set backspace      =indent,eol,start
-set cmdheight      =1
-set cmdwinheight   =5
-set colorcolumn    =80,100
-set completeopt    =menuone,longest,preview
-set cscopetag
-set display        =lastline
-set fillchars      =vert:\ ,fold:\ ,stlnc:\ ,diff:-
-set foldcolumn     =0
-set history        =100
-set hlsearch
-set laststatus     =0
-set lazyredraw
-set linespace      =0
-set list
-set listchars      =eol:$,tab:>\ ,trail:_
-set matchpairs    +=<:>
-set matchtime      =1
-set maxmem         =500000
-set maxmempattern  =500000
-set maxmemtot      =1000000
-set modeline
-set modelines      =2
-set noequalalways
-set noshowcmd
-set noshowmatch
-set nrformats      =alpha,hex
-set pastetoggle    =<F11>
-set pumheight      =30
-set report         =1
-set ruler
-set scrolloff      =5
-set showtabline    =0
-set splitbelow
-set splitright
-set synmaxcol      =200
-set textwidth      =0
-set virtualedit    =block
-set whichwrap      =b,s,h,l,<,>,[,]
+setglobal ambiwidth      =double
+setglobal autoread
+setglobal autowrite
+setglobal background     =dark
+setglobal backspace      =indent,eol,start
+setglobal cmdheight      =1
+setglobal cmdwinheight   =5
+setglobal colorcolumn    =80,100
+setglobal completeopt    =menuone,longest,preview
+setglobal cscopetag
+setglobal display        =lastline
+setglobal fillchars      =vert:\ ,fold:\ ,stlnc:\ ,diff:-
+setglobal foldcolumn     =0
+setglobal history        =100
+setglobal hlsearch
+setglobal laststatus     =0
+setglobal lazyredraw
+setglobal linespace      =0
+setglobal list
+setglobal listchars      =eol:$,tab:>\ ,trail:_
+setglobal matchpairs    +=<:>
+setglobal matchtime      =1
+setglobal maxmem         =500000
+setglobal maxmempattern  =500000
+setglobal maxmemtot      =1000000
+setglobal modeline
+setglobal modelines      =2
+setglobal noequalalways
+setglobal noshowcmd
+setglobal noshowmatch
+setglobal nrformats      =alpha,hex
+setglobal pastetoggle    =<F11>
+setglobal pumheight      =30
+setglobal report         =1
+setglobal ruler
+setglobal scrolloff      =5
+setglobal showtabline    =0
+setglobal splitbelow
+setglobal splitright
+setglobal synmaxcol      =200
+setglobal textwidth      =0
+setglobal virtualedit    =block
+setglobal whichwrap      =b,s,h,l,<,>,[,]
 
-set noswapfile
-set directory      =~/.vim/_swap
+setglobal noswapfile
+setglobal directory      =~/.vim/_swap
 
-set backup
-set backupdir      =~/.vim/_back
+setglobal backup
+setglobal backupdir      =~/.vim/_back
 
-set undolevels     =200
-set undodir        =~/.vim/_undo
-set undofile
+setglobal undolevels     =200
+setglobal undodir        =~/.vim/_undo
+setglobal undofile
 
 if executable('hw')
-  set grepprg=hw\ --no-group\ --no-color
+  setglobal grepprg=hw\ --no-group\ --no-color
 elseif executable('jvgrep')
-  set grepprg=jvgrep
+  setglobal grepprg=jvgrep
 else
-  set grepprg=grep\ -rnIH\ --exclude-dir=.svn\ --exclude-dir=.git
+  setglobal grepprg=grep\ -rnIH\ --exclude-dir=.svn\ --exclude-dir=.git
 endif
 
 if !isdirectory(expand('~/.vim/_swap'))
