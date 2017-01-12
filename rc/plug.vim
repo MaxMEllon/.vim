@@ -189,7 +189,7 @@ if g:plug.ready()
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align', {'on' : 'EasyAlign'}
   Plug 'kana/vim-niceblock'
-  Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml']}
+  Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml', 'vue']}
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/committia.vim'
   Plug 'surround.vim'
