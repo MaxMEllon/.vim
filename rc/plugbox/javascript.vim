@@ -8,6 +8,7 @@ Plug 'pangloss/vim-javascript', {'for' : 'javascript' }
 MyPlug 'vim-jsx-pretty'
 " Plug 'posva/vim-vue'
 " Plug 'tao12345666333/vim-vue'
+Plug 'ternjs/tern_for_vim', {'do' : 'npm i', 'for' : 'javascript'}
 
 " javascript doc
 Plug 'heavenshell/vim-jsdoc', {'for' : 'javascript', 'on' : 'JsDoc'}

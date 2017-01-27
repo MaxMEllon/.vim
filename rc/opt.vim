@@ -6,6 +6,7 @@ setglobal background     =dark
 setglobal backspace      =indent,eol,start
 setglobal cmdheight      =1
 setglobal cmdwinheight   =5
+setglobal colorcolumn    =80,100
 setglobal completeopt    =menuone,longest,preview
 setglobal cscopetag
 setglobal display        =lastline
