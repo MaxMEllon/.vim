@@ -6,7 +6,7 @@ command! Date :call setline('.', getline('.') . strftime('○ %Y.%m.%d (%a) %H:%
 command! JSONFormat %!jq '.'
 
 if executable('shiba')
-  command! Shiba :silent call system('shiba ' . expand('%') . ' &>/dev/null 2>&1 &') | redraw!
+  command! Shiba :silent call jobproc#system('shiba ' . expand('%'))
 endif
 
 command! SyntaxInfo call maxmellon#syntax_info()

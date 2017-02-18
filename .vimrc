@@ -30,7 +30,8 @@ MyLoad 'event'
 MyLoad 'abbrev'
 MyLoad 'cmdwin'
 MyLoad 'statusline'
-MyLoad 'tabline'
+" MyLoad 'tabline'
+MyLoad 'misc'
 
 filetype plugin indent on
 syntax on

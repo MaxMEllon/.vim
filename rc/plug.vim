@@ -180,12 +180,11 @@ if g:plug.ready()
 
   Plug 'AndrewRadev/switch.vim'
   Plug 'LeafCage/foldCC.vim'
+  Plug 'MaxMEllon/jobproc'
   Plug 'MaxMEllon/vim-dirvish'
-  Plug 'cohama/vim-hier'
-  Plug 'MaxMEllon/vim-tmng', {'for' : 'tmng'}
   Plug 'Yggdroot/indentLine'
-  Plug 'aklt/plantuml-syntax'
   Plug 'cohama/lexima.vim'
+  Plug 'cohama/vim-hier'
   Plug 'easymotion/vim-easymotion'
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/vim-asterisk'
@@ -209,6 +208,7 @@ if g:plug.ready()
   PlugBox 'textobj'
   PlugBox 'unite' | PlugBox 'rails'
   PlugBox 'vim'
+  PlugBox 'etc_lang'
   PlugBox 'webapi'
 
   call plug#end()
