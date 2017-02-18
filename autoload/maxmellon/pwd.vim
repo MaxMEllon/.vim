@@ -2,7 +2,7 @@ function! s:base()
   redir => l:dir
   pwd
   redir END
-  let l:dir = substitute(l:dir, '[\r\n]', '', 'g')
+  let l:dir = substitute(l:dir, '[\r|\n]', '', 'g')
   return l:dir
 endfunction
 

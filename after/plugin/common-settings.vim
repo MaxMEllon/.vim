@@ -34,6 +34,8 @@ if !g:env.gui
   " listchars
   highlight NonText            ctermfg=blue
   highlight SpecialKey         ctermfg=236
+  " highlight Visual ctermbg=red ctermfg=red
+  " highlight VisualNOS ctermbg=red ctermfg=red
 endif
 
 highlight ZenkakuSpaces term=underline guibg=blue ctermbg=blue

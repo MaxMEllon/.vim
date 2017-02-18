@@ -27,6 +27,7 @@ let s:MyFileTypes = [
       \   {'file' : '.slim',     'type' : 'slim'},
       \   {'file' : '.toml',     'type' : 'toml'},
       \   {'file' : '.zsh',      'type' : 'zsh'},
+      \   {'file' : '.vue',      'type' : 'html'},
       \ ]
 
 for s:e in s:MyFileTypes

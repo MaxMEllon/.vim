@@ -1,6 +1,6 @@
 function s:base()
   let l:gitroot = system('git rev-parse --show-toplevel')
-  let l:gitroot = substitute(l:gitroot, '[\r\n\]', '', 'g')
+  let l:gitroot = substitute(l:gitroot, '[\r|\n]', '', 'g')
   return expand(l:gitroot)
 endfunction
 

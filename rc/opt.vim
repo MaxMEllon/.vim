@@ -1,3 +1,4 @@
+set colorcolumn    =80,100
 setglobal ambiwidth      =double
 setglobal autoread
 setglobal autowrite
@@ -42,15 +43,15 @@ setglobal textwidth      =0
 setglobal virtualedit    =block
 setglobal whichwrap      =b,s,h,l,<,>,[,]
 
-setglobal noswapfile
-setglobal directory      =~/.vim/_swap
+set noswapfile
+set directory      =~/.vim/_swap
 
-setglobal backup
-setglobal backupdir      =~/.vim/_back
+set backup
+set backupdir      =~/.vim/_back
 
-setglobal undolevels     =200
-setglobal undodir        =~/.vim/_undo
-setglobal undofile
+set undolevels     =200
+set undodir        =~/.vim/_undo
+set undofile
 
 if executable('hw')
   setglobal grepprg=hw\ --no-group\ --no-color

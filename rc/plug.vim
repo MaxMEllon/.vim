@@ -167,6 +167,7 @@ if g:plug.ready()
 
   " out {{{
   " Plug 'LeafCage/yankround.vim'
+  " Plug 'MaxMEllon/vim-hier'
   " Plug 'kshenoy/vim-signature'
   " Plug 'mhinz/vim-signify'
   " Plug 'mhinz/vim-startify'
@@ -180,16 +181,17 @@ if g:plug.ready()
   Plug 'AndrewRadev/switch.vim'
   Plug 'LeafCage/foldCC.vim'
   Plug 'MaxMEllon/vim-dirvish'
-  Plug 'MaxMEllon/vim-hier'
+  Plug 'cohama/vim-hier'
   Plug 'MaxMEllon/vim-tmng', {'for' : 'tmng'}
   Plug 'Yggdroot/indentLine'
+  Plug 'aklt/plantuml-syntax'
   Plug 'cohama/lexima.vim'
   Plug 'easymotion/vim-easymotion'
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/vim-asterisk'
-  Plug 'junegunn/vim-easy-align', {'on' : 'EasyAlign'}
+  Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
-  Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml']}
+  Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml', 'vue']}
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/committia.vim'
   Plug 'surround.vim'

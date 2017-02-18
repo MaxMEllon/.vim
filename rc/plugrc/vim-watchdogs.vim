@@ -50,7 +50,7 @@ let g:watchdogs_check_BufWritePost_enables = {
       \ 'php'            : 0,
       \ 'ruby'           : 1,
       \ 'slim'           : 0,
-      \ 'java'           : 0,
+      \ 'java'           : 1,
       \ 'sass'           : 0,
       \ 'javascript'     : 1,
       \ }
