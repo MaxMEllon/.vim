@@ -7,7 +7,7 @@ function! maxmellon#git#files#get() abort
   let pwd = maxmellon#pwd#get()
   call maxmellon#cdgitroot#force_exec()
   let raw = system('git ls-files')
-  let raw = substitute(raw, '[\r\n]', ',', 'g')
+  let raw = substitute(raw, '[\r|\n]', ',', 'g')
   let files = split(raw, ',')
   execute 'cd  ' . pwd
   return files

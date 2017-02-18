@@ -1,5 +1,5 @@
-" Plug 'osyo-manga/vim-monster', {'for' : 'ruby'}
 Plug 'vim-ruby/vim-ruby', {'for' : 'ruby'}
+" Plug 'osyo-manga/vim-monster', {'for' : 'ruby'}
 Plug 'AndrewRadev/splitjoin.vim', {
       \'for' : 'ruby',
       \'on': ['SplitjoinJoin', 'SplitjoinSplit']}

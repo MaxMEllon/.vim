@@ -75,7 +75,7 @@ function! maxmellon#fzy#ghq_list()
       let repopath = $GHQ_ROOT . '/' . output
     else
       let ghq_root = system('ghq root')
-      let repopath = substitute(ghq_root, '[\r\n]', '', 'g') . '/' . output
+      let repopath = substitute(ghq_root, '[\r|\n]', '', 'g') . '/' . output
     endif
     exec 'tabedit ' . repopath
   endif

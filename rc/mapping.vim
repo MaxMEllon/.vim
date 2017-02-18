@@ -47,15 +47,15 @@ nnoremap <silent> <F3> :<C-u>tabnext<CR>
 nnoremap <silent> gp   :<C-u>tabprevious<CR>
 nnoremap <silent> <F2> :<C-u>tabprevious<CR>
 
-inoremap <expr><Tab>   pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-Tab> pumvisible() ? "\<C-n>" : "\<S-TAB>"
+inoremap <expr><Tab>   pumvisible() ? "\<C-n>"   : "\<TAB>"
+inoremap <expr><S-Tab> pumvisible() ? "\<C-n>"   : "\<S-TAB>"
 
 " tab jump
 for s:n in range(1, 9)
   execute 'nnoremap <silent> g' . s:n ':<C-u>tabnext' . s:n . '<CR>'
 endfor
 
-inoremap jj <Esc>`^
+inoremap <expr>jj pumvisible() ? "\<C-y>\<Esc>`^`" : "\<Esc>`^"
 cnoremap jj <Esc>`^
 inoremap <silent> <Esc>  <Esc>`^
 inoremap <silent> <C-[>  <Esc>`^

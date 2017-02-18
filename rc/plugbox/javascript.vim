@@ -22,8 +22,8 @@ Plug 'ternjs/tern_for_vim', {'do' : 'npm i', 'for' : 'javascript'}
 
 " altjs
 Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
-Plug 'kchmck/vim-coffee-script', {'for' : 'coffee'}
-Plug 'mtscout6/vim-cjsx', {'for' : 'coffee'}
+Plug 'kchmck/vim-coffee-script'
+Plug 'mtscout6/vim-cjsx', {'for' : ['coffee', 'cjsx']}
 
 " other
 Plug 'rhysd/npm-debug-log.vim'
