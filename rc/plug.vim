@@ -8,7 +8,6 @@ let g:plug = {
       \  'url': 'https://raw.github.com/junegunn/vim-plug/master/plug.vim',
       \}
 
-" See:
 " https://github.com/b4b4r07/dotfiles/blob/master/.vim/scripts/plug.vim#L12-L14
 function! g:plug.ready()
   return filereadable(expand('~/.vim/autoload/plug.vim'))
@@ -196,6 +195,7 @@ if g:plug.ready()
   Plug 'surround.vim'
   Plug 't9md/vim-textmanip'
   Plug 'tyru/caw.vim'
+  Plug 'w0ng/vim-hybrid'
 
   PlugBox 'c'
   PlugBox 'css'

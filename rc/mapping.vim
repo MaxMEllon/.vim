@@ -60,8 +60,8 @@ cnoremap jj <Esc>`^
 inoremap <silent> <Esc>  <Esc>`^
 inoremap <silent> <C-[>  <Esc>`^
 inoremap <C-c> <Esc>`^
-inoremap <C-j><C-j> <ESC>`^
-cnoremap <C-j><C-j> <ESC>`^
+inoremap <C-j> <ESC>`^
+cnoremap <C-j> <ESC>`^
 
 nnoremap <silent> gp o<ESC>p^
 nnoremap <silent> gP O<ESC>P^
