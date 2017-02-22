@@ -200,15 +200,16 @@ if g:plug.ready()
   PlugBox 'c'
   PlugBox 'css'
   PlugBox 'elixir'
+  PlugBox 'etc_lang'
   PlugBox 'html'
   PlugBox 'javascript'
+  PlugBox 'mac'
   PlugBox 'operator'
   PlugBox 'platform'
   PlugBox 'ruby'
   PlugBox 'textobj'
-  PlugBox 'unite' | PlugBox 'rails'
   PlugBox 'vim'
-  PlugBox 'etc_lang'
+  PlugBox 'vim8'
   PlugBox 'webapi'
 
   call plug#end()

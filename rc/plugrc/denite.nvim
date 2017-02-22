@@ -1,0 +1,46 @@
+" hi deniteMatchedChar ctermfg=5 guifg=SlateBlue
+
+nnoremap <C-u><C-t> :<C-u>Denite filetype<CR>
+nnoremap <C-u><C-j> :<C-u>Denite line<CR>
+nnoremap <C-u><C-]> :<C-u>DeniteCursorWord grep<CR>
+nnoremap <C-u><C-u> :<C-u>Denite file_mru<CR>
+nnoremap <C-u><C-r> :<C-u>Denite -resume<CR>
+nnoremap <C-u><C-b> :<C-u>Denite buffer<CR>
+
+nnoremap <C-u>; :<C-u>Denite -resume -immediately -select=+1<CR>
+nnoremap <C-u>- :<C-u>Denite -resume -immediately -select=-1<CR>
+
+nnoremap ,rc :<C-u>Denite -path=`maxmellon#git#repo#root()`/app/controllers        file_rec<CR>
+nnoremap ,rd :<C-u>Denite -path=`maxmellon#git#repo#root()`/db                     file_rec<CR>
+nnoremap ,rh :<C-u>Denite -path=`maxmellon#git#repo#root()`/app/helpers            file_rec<CR>
+nnoremap ,ri :<C-u>Denite -path=`maxmellon#git#repo#root()`/config/initializers    file_rec<CR>
+nnoremap ,rj :<C-u>Denite -path=`maxmellon#git#repo#root()`/app/assets/javascripts file_rec<CR>
+nnoremap ,rm :<C-u>Denite -path=`maxmellon#git#repo#root()`/app/models             file_rec<CR>
+nnoremap ,rs :<C-u>Denite -path=`maxmellon#git#repo#root()`/app/assets/stylesheets file_rec<CR>
+nnoremap ,rt :<C-u>Denite -path=`maxmellon#git#repo#root()`/spec                   file_rec<CR>
+nnoremap ,rv :<C-u>Denite -path=`maxmellon#git#repo#root()`/app/views              file_rec<CR>
+nnoremap <Space>g :<C-u>Denite file_rec/git
+
+call denite#custom#option('default', 'prompt', '>')
+call denite#custom#alias('source', 'file_rec/git', 'file_rec')
+
+call denite#custom#var('file_rec/git', 'command', ['git', 'ls-files', '-co', '--exclude-standard'])
+call denite#custom#var('grep', 'command', ['hw'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', [])
+call denite#custom#var('grep', 'default_opts', ['--no-group', '--no-color'])
+
+call denite#custom#map('insert', "\<C-n>", '<denite:move_to_next_line>')
+call denite#custom#map('insert', "\<C-p>", '<denite:move_to_previous_line>')
+call denite#custom#map('insert', "\<C-f>", '<denite:scroll_page_forwards>')
+call denite#custom#map('insert', "\<C-u>", '<denite:scroll_window_upwards>')
+call denite#custom#map('insert', "\<C-b>", '<denite:scroll_page_backwards>')
+call denite#custom#map('insert', "\<C-d>", '<denite:scroll_window_downwards>')
+
+call denite#custom#filter('matcher_ignore_globs', 'ignore_globs',
+      \ [ '*~', '*.o', '*.exe', '*.bak',
+      \ '.DS_Store', '*.pyc', '*.sw[po]', '*.class', '*.keep', 
+      \ '.hg/', '.git/', '.bzr/', '.svn/',
+      \ 'node_modules/', 'bower_components/', 'tmp/', 'log/', 'vendor/ruby',
+      \ '.idea/', 'dist/',
+      \ 'tags', 'tags-*'])
