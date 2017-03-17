@@ -28,6 +28,15 @@ function! s:eslint_fixer() abort
 endfunction
 
 command! EslintAutoFix call s:eslint_fixer()
+
+function! s:esllint_disable_autofix() abort
+  augroup Eslint
+    autocmd!
+  augroup END
+endfunction
+
+command! EslintAutoFixDisable call s:esllint_disable_autofix()
+
 augroup Eslint
   autocmd!
   autocmd BufWritePost *.js EslintAutoFix

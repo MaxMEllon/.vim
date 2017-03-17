@@ -36,11 +36,4 @@ MyLoad 'misc'
 filetype plugin indent on
 syntax on
 
-" try
-"   set background=dark
-"   colorscheme hybrid
-" catch
-"   colorscheme default
-" endtry
-
 set secure

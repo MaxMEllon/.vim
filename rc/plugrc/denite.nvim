@@ -19,7 +19,7 @@ nnoremap ,rm :<C-u>Denite -path=`maxmellon#git#repo#root()`/app/models          
 nnoremap ,rs :<C-u>Denite -path=`maxmellon#git#repo#root()`/app/assets/stylesheets file_rec<CR>
 nnoremap ,rt :<C-u>Denite -path=`maxmellon#git#repo#root()`/spec                   file_rec<CR>
 nnoremap ,rv :<C-u>Denite -path=`maxmellon#git#repo#root()`/app/views              file_rec<CR>
-nnoremap <Space>g :<C-u>Denite file_rec/git
+nnoremap <Space>g :<C-u>Denite -path=`maxmellon#git#repo#root()`                   file_rec/git<CR>
 
 call denite#custom#option('default', 'prompt', '>')
 call denite#custom#alias('source', 'file_rec/git', 'file_rec')
