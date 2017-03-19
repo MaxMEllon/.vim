@@ -1,15 +1,5 @@
 " hi deniteMatchedChar ctermfg=5 guifg=SlateBlue
 
-nnoremap <C-u><C-t> :<C-u>Denite filetype<CR>
-nnoremap <C-u><C-j> :<C-u>Denite line<CR>
-nnoremap <C-u><C-]> :<C-u>DeniteCursorWord grep<CR>
-nnoremap <C-u><C-u> :<C-u>Denite file_mru<CR>
-nnoremap <C-u><C-r> :<C-u>Denite -resume<CR>
-nnoremap <C-u><C-b> :<C-u>Denite buffer<CR>
-
-nnoremap <C-u>; :<C-u>Denite -resume -immediately -select=+1<CR>
-nnoremap <C-u>- :<C-u>Denite -resume -immediately -select=-1<CR>
-
 nnoremap ,rc :<C-u>Denite -path=`maxmellon#git#repo#root()`/app/controllers        file_rec<CR>
 nnoremap ,rd :<C-u>Denite -path=`maxmellon#git#repo#root()`/db                     file_rec<CR>
 nnoremap ,rh :<C-u>Denite -path=`maxmellon#git#repo#root()`/app/helpers            file_rec<CR>
@@ -19,7 +9,10 @@ nnoremap ,rm :<C-u>Denite -path=`maxmellon#git#repo#root()`/app/models          
 nnoremap ,rs :<C-u>Denite -path=`maxmellon#git#repo#root()`/app/assets/stylesheets file_rec<CR>
 nnoremap ,rt :<C-u>Denite -path=`maxmellon#git#repo#root()`/spec                   file_rec<CR>
 nnoremap ,rv :<C-u>Denite -path=`maxmellon#git#repo#root()`/app/views              file_rec<CR>
-nnoremap <Space>g :<C-u>Denite -path=`maxmellon#git#repo#root()`                   file_rec/git<CR>
+
+nnoremap <Space>g :<C-u>Denite -path=`maxmellon#git#repo#root()` file_rec/git<CR>
+nnoremap <Space>b :<C-u>Denite buffer<CR>
+nnoremap <Space>m :<C-u>Denite file_mru<CR>
 
 call denite#custom#option('default', 'prompt', '>')
 call denite#custom#alias('source', 'file_rec/git', 'file_rec')

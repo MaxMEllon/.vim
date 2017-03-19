@@ -196,6 +196,7 @@ if g:plug.ready()
   Plug 't9md/vim-textmanip'
   Plug 'tyru/caw.vim'
   Plug 'w0ng/vim-hybrid'
+  Plug 'wakatime/vim-wakatime'
 
   PlugBox 'c'
   PlugBox 'css'
