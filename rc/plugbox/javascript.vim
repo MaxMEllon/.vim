@@ -16,6 +16,7 @@ Plug 'heavenshell/vim-jsdoc', {'for' : 'javascript', 'on' : 'JsDoc'}
 " javascript utility
 Plug 'samuelsimoes/vim-jsx-utils', {'for' : 'javascript'}
 Plug 'moll/vim-node', {'for' : 'javascript' }
+Plug 'Galooshi/vim-import-js', {'for' : 'javascript'}
 
 " omni func
 Plug 'ternjs/tern_for_vim', {'do' : 'npm i', 'for' : 'javascript'}
