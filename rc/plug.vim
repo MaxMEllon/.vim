@@ -187,6 +187,7 @@ if g:plug.ready()
   Plug 'easymotion/vim-easymotion'
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/vim-asterisk'
+  Plug 'itchyny/vim-highlighturl'
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
   Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml', 'vue']}
