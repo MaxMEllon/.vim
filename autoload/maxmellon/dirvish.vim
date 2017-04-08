@@ -24,7 +24,17 @@ function! maxmellon#dirvish#rm(...) abort
   if len(a:000) == 0 | return | endif
   execute 'cd ' . expand('%')
   for file in a:000
-    call system('rm ' . file)
+    let cmd = executable('gomi') ? 'gomi -s' : 'rm -r'
+    call system(cmd . ' ' . file)
+  endfor
+  edit %
+endfunction
+
+function! maxmellon#dirvish#rmdir(...) abort
+  if len(a:000) == 0 | return | endif
+  execute 'cd ' . expand('%')
+  for file in a:000
+    call system('rmdir ' . file)
   endfor
   edit %
 endfunction
