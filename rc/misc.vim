@@ -11,3 +11,23 @@ else
     autocmd InsertLeave * call jobproc#system(s:cmd)
   augroup END
 endif
+
+if !exists('+colorcolumn') | finish | endif
+
+function! s:DimInactiveWindows()
+  for i in range(1, tabpagewinnr(tabpagenr(), '$'))
+    let l:range = ""
+    if i != winnr()
+      let l:width=256 " max
+      let l:range = join(range(1, l:width), ',')
+    endif
+    call setwinvar(i, '&colorcolumn', l:range)
+  endfor
+endfunction
+
+augroup DimInactiveWindows
+  autocmd!
+  autocmd WinEnter * call s:DimInactiveWindows()
+  autocmd WinEnter * set cursorline
+  autocmd WinLeave * set nocursorline
+augroup END

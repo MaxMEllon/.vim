@@ -31,6 +31,7 @@ command! GitLsFiles call maxmellon#fzy#git_ls_files()
 command! Gdiff      call maxmellon#git#diff#open()
 command! BufferList call maxmellon#fzy#buffer()
 command! Mru        call maxmellon#fzy#mru()
+command! -bar Invert :let &background = (&background == 'light' ? 'dark' : 'light')
 
 augroup MyVimrc
  autocmd!

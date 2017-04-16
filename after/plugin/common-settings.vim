@@ -17,12 +17,12 @@ highlight EasyMotionMoveHL        ctermbg=green ctermfg=black
 
 " Overwrite default color scheme
 if !g:env.gui
-  highlight ColorColumn                      ctermbg=240
+  highlight ColorColumn                      ctermbg=17
   highlight Comment            ctermfg=244
   highlight FoldColumn         ctermfg=67    ctermbg=none
   highlight Folded             ctermfg=67    ctermbg=16
   highlight LineNr                           ctermbg=none
-  highlight Normal                           ctermbg=none
+  highlight Normal                           ctermbg=233
   highlight SpellBad                         ctermbg=52
   highlight SpellCap                         ctermbg=17
   highlight StatusLineBranch   ctermfg=white ctermbg=23
@@ -34,8 +34,6 @@ if !g:env.gui
   " listchars
   highlight NonText            ctermfg=blue
   highlight SpecialKey         ctermfg=236
-  " highlight Visual ctermbg=red ctermfg=red
-  " highlight VisualNOS ctermbg=red ctermfg=red
 endif
 
 highlight ZenkakuSpaces term=underline guibg=blue ctermbg=blue
