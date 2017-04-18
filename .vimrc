@@ -36,5 +36,4 @@ MyLoad 'misc'
 filetype plugin indent on
 syntax on
 
-set background=light
 set secure

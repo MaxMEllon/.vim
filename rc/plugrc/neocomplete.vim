@@ -44,6 +44,7 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y> neocomplete#close_popup()
+inoremap <expr><C-k> pumvisible() ? neocomplete#close_popup() : "\<C-k>"
 inoremap <expr><C-e> neocomplete#cancel_popup()
 
 let g:neocomplete#sources#omni#functions = get(g:,  'neocomplete#sources#omni#functions',  {})

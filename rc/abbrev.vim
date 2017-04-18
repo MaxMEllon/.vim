@@ -18,7 +18,6 @@ let s:abbrs = [
       \   {'type': 'c', 'before': 'gdiff',     'after' : 'Gdiff'},
       \   {'type': 'c', 'before': 'hgrep',     'after' : 'Hgrep'},
       \   {'type': 'c', 'before': 'gist',      'after' : 'Gist'},
-      \   {'type': 'c', 'before': 'cd',        'after' : 'Cd'},
       \ ]
 
 for s:e in s:abbrs

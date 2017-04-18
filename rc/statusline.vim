@@ -10,10 +10,8 @@ let s:slhlcmd = ''
 function! s:StatusLine(mode)
   if a:mode == 'Enter'
     highlight StatusLine ctermfg=red ctermbg=yellow cterm=NONE guifg=red guibg=yellow
-    set statusline=\ %n\ \|\ %m\ \|\ %t\ \|\ %r\ \|\ %{maxmellon#paste#statusline()}
   else
     highlight StatusLine ctermfg=white ctermbg=blue cterm=NONE guifg=white guibg=blue
-    let &statusline = s:statusline
   endif
 endfunction
 
