@@ -225,15 +225,17 @@ endif
 
 " Automatic install the vim-plug {{{
 function! g:plug.init()
-  let cmd = printf('curl -fLo %s --create-dirs %s', self.plug, self.url)
-  let sym = system(cmd)
-  if v:shell_error
-    return Error('g:plug.init: error occured')
-  endif
+  if executable('curl')
+    let cmd = printf('curl -fLo %s --create-dirs %s', self.plug, self.url)
+    let sym = system(cmd)
+    if v:shell_error
+      return Error('g:plug.init: error occured')
+    endif
 
-  if g:env.gui
-    silent! !vim
-    quit!
+    if g:env.gui
+      silent! !vim
+      quit!
+    endif
   endif
 endfunction
 

@@ -1,9 +1,6 @@
 setlocal foldmethod=marker
 setlocal foldmarker=/*,*/
 
-nnoremap <buffer> } }j
-nnoremap <buffer> { k{j
-
 highlight jsArrowFunction      ctermfg=197 cterm=bold guifg=#F92672 gui=bold
 highlight jsBrackets                       cterm=bold               gui=bold
 highlight jsClassBraces        ctermfg=197 cterm=bold guifg=#F92672 gui=bold
