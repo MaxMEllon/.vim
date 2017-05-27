@@ -6,6 +6,7 @@ Plug 'pangloss/vim-javascript', {'for' : 'javascript' }
 " Plug 'mxw/vim-jsx'
 " Plug 'MaxMEllon/vim-jsx-pretty', {'for' : 'javascript' }
 MyPlug 'vim-jsx-pretty'
+" Plug 'flowtype/vim-flow', {'for' : 'javascript'}
 " Plug 'posva/vim-vue'
 " Plug 'tao12345666333/vim-vue'
 Plug 'ternjs/tern_for_vim', {'do' : 'npm i', 'for' : 'javascript'}
