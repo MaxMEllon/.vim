@@ -1,47 +1,50 @@
-setglobal ambiwidth      =double
-setglobal autoread
-setglobal autowrite
-setglobal backspace      =indent,eol,start
-setglobal cmdheight      =1
-setglobal cmdwinheight   =5
-set       colorcolumn    =80,100
-setglobal completeopt    =menuone,longest,noselect
-setglobal cscopetag
-setglobal display        =lastline
-setglobal fillchars      =vert:\ ,fold:\ ,stlnc:\ ,diff:-
-setglobal foldcolumn     =0
-setglobal history        =100
-setglobal hlsearch
-setglobal laststatus     =0
-setglobal lazyredraw
-setglobal linespace      =0
-set       list
-setglobal listchars      =eol:$,tab:~\ ,trail:_
-set       incsearch
-setglobal matchpairs    +=<:>
-setglobal matchtime      =4
-setglobal maxmem         =500000
-setglobal maxmempattern  =500000
-setglobal maxmemtot      =1000000
-setglobal modeline
-setglobal modelines      =2
-setglobal noequalalways
-setglobal noshowcmd
-setglobal nrformats      =alpha,hex
-setglobal pastetoggle    =<F11>
-setglobal pumheight      =30
-setglobal report         =1
-setglobal redrawtime     =100
-setglobal ruler
-setglobal scrolloff      =5
-setglobal showmatch
-setglobal showtabline    =0
-setglobal splitbelow
-setglobal splitright
-setglobal synmaxcol      =200
-setglobal textwidth      =0
-setglobal virtualedit    =block
-setglobal whichwrap      =b,s,h,l,<,>,[,]
+set ambiwidth      =double
+set switchbuf      =useopen
+set autoread
+set autowrite
+set backspace      =indent,eol,start
+set cmdheight      =1
+set cmdwinheight   =5
+set colorcolumn    =80,100
+set completeopt    =menuone,longest,noselect
+set cscopetag
+set display        =lastline
+set fillchars      =vert:\ ,fold:\ ,stlnc:\ ,diff:-
+set foldcolumn     =0
+set helplang       =ja
+set history        =100
+set hlsearch
+set incsearch
+set laststatus     =0
+set lazyredraw
+set linespace      =0
+set list
+set listchars      =eol:$,tab:~\ ,trail:_
+set matchpairs    +=<:>
+set matchtime      =4
+set maxmem         =500000
+set maxmempattern  =500000
+set maxmemtot      =1000000
+set modeline
+set modelines      =2
+set noequalalways
+set noshowcmd
+set nrformats      =alpha,hex
+set pastetoggle    =<F11>
+set pumheight      =30
+set redrawtime     =100
+set report         =1
+set ruler
+set runtimepath   +=~/.vim/help/vimdoc-ja
+set scrolloff      =5
+set showmatch
+set showtabline    =0
+set splitbelow
+set splitright
+set synmaxcol      =200
+set textwidth      =0
+set virtualedit    =block
+set whichwrap      =b,s,h,l,<,>,[,]
 
 set noswapfile
 set directory      =~/.vim/_swap

@@ -22,14 +22,6 @@ function! maxmellon#remove_whitespace()
   call setpos('.', l:save_cursor)
 endfunction
 
-function! maxmellon#load_help()
-  if isdirectory(expand('~/.vim/help/vimdoc-ja/doc'))
-    helptags ~/.vim/help/vimdoc-ja/doc
-    set runtimepath+=~/.vim/help/vimdoc-ja
-    set helplang=ja
-  endif
-endfunction
-
 " See: https://github.com/MaxMEllon/.dotfiles/blob/master/bin/google
 function! maxmellon#opener(...)
   if executable('google')

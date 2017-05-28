@@ -56,12 +56,10 @@ for s:n in range(1, 9)
 endfor
 
 inoremap <expr>jj pumvisible() ? "\<C-y>\<Esc>`^`" : "\<Esc>`^"
-cnoremap jj <Esc>`^
 inoremap <silent> <Esc>  <Esc>`^
 inoremap <silent> <C-[>  <Esc>`^
 inoremap <C-c> <Esc>`^
 inoremap <C-j> <ESC>`^
-cnoremap <C-j> <ESC>`^
 
 nnoremap <silent> gp o<ESC>p^
 nnoremap <silent> gP O<ESC>P^
@@ -121,11 +119,7 @@ vnoremap <C-a> <C-a>gv
 vnoremap <C-x> <C-x>gv
 vnoremap <silent> . :normal .<CR>
 
-if !g:env.win
-  nnoremap <silent> ,h :<C-u>call maxmellon#load_help()<CR> :<C-u>help <C-r><C-w><CR>
-else
-  nnoremap <silent> ,h :<C-u>help <C-r><C-w><CR>
-endif
+nnoremap <silent> ,h :<C-u>help <C-r><C-w><CR>
 
 inoremap <silent> <expr> <CR> maxmellon#indent_braces()
 
@@ -155,20 +149,8 @@ vnoremap ; :
 nnoremap : ;
 vnoremap : ;
 
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
-cnoremap <expr> j getcmdline()[getcmdpos()-2] ==# 'j' ? "\<BS>\<C-c>" : 'j'
-
 nnoremap / q/
 nnoremap ? q?
-
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
-cnoremap <C-h> <BS>
-cnoremap <C-d> <Del>
-cnoremap <C-k> <End><C-u>
-
-cnoremap <CR> <C-]><CR>
 
 nnoremap <silent><C-l> :<C-u>nohlsearch<CR><ESC>
 nnoremap <silent> <C-i> <C-I>

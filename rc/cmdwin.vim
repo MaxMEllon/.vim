@@ -3,6 +3,17 @@ augroup CmdWindow
   autocmd CmdwinEnter * call s:init_cmdwin()
 augroup END
 
+cnoremap <C-j> <ESC>`^
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+cnoremap <expr> j getcmdline()[getcmdpos()-2] ==# 'j' ? "\<BS>\<C-c>" : 'j'
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-h> <BS>
+cnoremap <C-d> <Del>
+cnoremap <C-k> <End><C-u>
+cnoremap <CR> <C-]><CR>
+
 function! s:init_cmdwin()
   " setlocal nolist! number! relativenumber!
   nnoremap <silent><buffer>q :<C-u>q<CR>
