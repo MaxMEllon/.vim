@@ -3,7 +3,7 @@ augroup CmdWindow
   autocmd CmdwinEnter * call s:init_cmdwin()
 augroup END
 
-cnoremap <C-j> <ESC>`^
+" cnoremap <C-j> <ESC>`^
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 cnoremap <expr> j getcmdline()[getcmdpos()-2] ==# 'j' ? "\<BS>\<C-c>" : 'j'

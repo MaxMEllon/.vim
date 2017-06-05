@@ -7,7 +7,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'carlitux/deoplete-ternjs'
 Plug 'zchee/deoplete-clang'
 Plug 'landaire/deoplete-swift'
-
+Plug 'equalsraf/neovim-gui-shim'
 " terminal
 Plug 'kassio/neoterm'
 Plug 'Shougo/deol.nvim'

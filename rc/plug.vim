@@ -195,6 +195,7 @@ if g:plug.ready()
   Plug 'rhysd/committia.vim'
   Plug 'surround.vim'
   Plug 't9md/vim-textmanip'
+  Plug 'tmhedberg/matchit'
   Plug 'tyru/caw.vim'
   Plug 'w0ng/vim-hybrid'
   Plug 'wakatime/vim-wakatime'

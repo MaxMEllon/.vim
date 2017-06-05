@@ -1,17 +1,11 @@
-if exists('*jobproc#system')
-  if executable('keyboardSwitcher')
-    augroup SwitchIME
-      autocmd!
-      autocmd InsertLeave * call jobproc#system('keyboardSwitcher select ABC')
-    augroup END
-  elseif g:env.mac == g:true
-    let s:keycode_jis_eisuu = 102
-    let g:cmd = "osascript -e 'tell application \"System Events\" to key code " . s:keycode_jis_eisuu . "'"
-    augroup SwitchIME
-      autocmd!
-      autocmd InsertLeave * call jobproc#system(s:cmd)
-    augroup END
-  endif
+if executable('keyboardSwitcher')
+
+  command! IMEForceABC call async#job#start(['keyboardSwitcher', 'select', 'ABC'], {})
+
+  augroup SwitchIME
+    autocmd!
+    autocmd InsertLeave * call async#job#start(['keyboardSwitcher', 'select', 'ABC'], {})
+  augroup END
 endif
 
 if exists('+colorcolumn')
@@ -33,3 +27,9 @@ if exists('+colorcolumn')
     autocmd WinLeave * set nocursorline
   augroup END
 endif
+
+augroup matchit
+  autocmd!
+  autocmd FileType ruby let b:match_words =
+        \ '\<\(module\|class\|def\|begin\|do\|if\|unless\|case\)\>:\<\(elsif\|when\|rescue\)\>:\<\(else\|ensure\)\>:\<end\>'
+augroup END

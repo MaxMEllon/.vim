@@ -1,1 +1,1 @@
-vmap <Leader><CR> <Plug>(reading_vimrc-update_clipboard)
+xmap m <Plug>(reading_vimrc-update_clipboard)

@@ -20,7 +20,7 @@ set lazyredraw
 set linespace      =0
 set list
 set listchars      =eol:$,tab:~\ ,trail:_
-set matchpairs    +=<:>
+set matchpairs     =<:>,(:),[:],{:}
 set matchtime      =4
 set maxmem         =500000
 set maxmempattern  =500000

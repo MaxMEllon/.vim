@@ -22,7 +22,7 @@ nnoremap ][ ][zz
 " nnoremap <C-p> "zdd<Up>"zP
 " vnoremap <C-p> "zx<Up>"zP`[V`]
 " vnoremap <C-n> "zx"zp`[V`]
-vnoremap <C-j> <ESC>
+" vnoremap <C-j> <ESC>
 
 noremap! OA <Up>
 noremap! OB <Down>
@@ -37,6 +37,10 @@ nnoremap <Right> <C-w>>
 nnoremap <Down>  <C-w>-
 nnoremap <Left>  <C-w><
 nnoremap <Up>    <C-w>+
+
+nnoremap <silent> い i
+nnoremap <silent> あ a
+nnoremap <silent> お o
 
 nnoremap ge            :<C-u>tabedit<Space>.<CR>
 nnoremap <silent> gc   :<C-u>tablast <bar> tabnew<CR>
@@ -55,11 +59,11 @@ for s:n in range(1, 9)
   execute 'nnoremap <silent> g' . s:n ':<C-u>tabnext' . s:n . '<CR>'
 endfor
 
-inoremap <expr>jj pumvisible() ? "\<C-y>\<Esc>`^`" : "\<Esc>`^"
+" inoremap <expr>jj pumvisible() ? "\<C-y>\<Esc>`^`" : "\<Esc>`^"
 inoremap <silent> <Esc>  <Esc>`^
 inoremap <silent> <C-[>  <Esc>`^
 inoremap <C-c> <Esc>`^
-inoremap <C-j> <ESC>`^
+" inoremap <C-j> <ESC>`^
 
 nnoremap <silent> gp o<ESC>p^
 nnoremap <silent> gP O<ESC>P^

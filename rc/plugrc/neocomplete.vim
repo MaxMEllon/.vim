@@ -55,3 +55,6 @@ let g:neocomplete#sources#omni#functions.javascript = 'javascriptcomplete#Comple
 autocmd FileType css           setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType xml           setlocal omnifunc=xmlcomplete#CompleteTags
+if exists('*Verdin#omnifunc')
+  autocmd FileType vim           setlocal omnifunc=Verdin#omnifunc
+endif
