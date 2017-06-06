@@ -53,7 +53,7 @@ endfunction
 command! -nargs=* IndentFT call s:set_indent(<f-args>)
 
 let s:MyIndentConfigs = [
-      \   {'type': 'python',     'width': '4', 'is_space': g:false},
+      \   {'type': 'python',     'width': '4', 'is_space': g:true},
       \   {'type': 'java',       'width': '4', 'is_space': g:true},
       \   {'type': 'php',        'width': '4', 'is_space': g:false},
       \   {'type': 'make',       'width': '4', 'is_space': g:false},
