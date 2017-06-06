@@ -4,5 +4,5 @@ function! maxmellon#lazy#javascript#load()
   PlugConfigForce 'tern_for_vim'
   PlugConfigForce 'vim-jsdoc'
   PlugConfigForce 'emmet-vim'
-  PlugConfigForce 'vim-import-js'
+  " PlugConfigForce 'vim-import-js'
 endfunction

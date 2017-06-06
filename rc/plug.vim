@@ -166,6 +166,7 @@ if g:plug.ready()
 
   " out {{{
   " Plug 'LeafCage/yankround.vim'
+  " Plug 'MaxMEllon/jobproc'
   " Plug 'MaxMEllon/vim-hier'
   " Plug 'kshenoy/vim-signature'
   " Plug 'mhinz/vim-signify'
@@ -179,7 +180,6 @@ if g:plug.ready()
 
   Plug 'AndrewRadev/switch.vim'
   Plug 'LeafCage/foldCC.vim'
-  Plug 'MaxMEllon/jobproc'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
