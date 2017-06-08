@@ -20,6 +20,7 @@ if g:env.neo
         \| setlocal nolist | startinsert | endif
 endif
 
+Autocmd BufRead,BufEnter * setlocal nocursorline
 " for tern and vim-clang
 Autocmd VimEnter * set completeopt-=preview
 

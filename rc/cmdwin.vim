@@ -13,6 +13,7 @@ cnoremap <C-h> <BS>
 cnoremap <C-d> <Del>
 cnoremap <C-k> <End><C-u>
 cnoremap <CR> <C-]><CR>
+cnoremap w!! w !sudo tee > /dev/null %<CR> :e!<CR>
 
 function! s:init_cmdwin()
   " setlocal nolist! number! relativenumber!

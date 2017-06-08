@@ -43,6 +43,7 @@ function! maxmellon#fzy#mru()
   let cmd = 'cat ' . tmp . '| tail -n +2 |  tr -d '':'' | ' .
         \   ' awk ''{printf("%4d %s\n", $1, $2)}'' '
   let output = s:get_output(cmd)
+  redraw!
   if v:shell_error == 0 && !empty(output)
     let mru_id = split(output, ' ')[0]
     execute 'edit #<' . mru_id
@@ -57,6 +58,7 @@ function! maxmellon#fzy#buffer()
   let cmd = 'cat ' . tmp  . '| tail -n +2 | ' .
         \   ' awk ''{printf("%4d %s\n", $1, $(NF-2))}'' '
   let output = s:get_output(cmd)
+  redraw!
   if v:shell_error == 0 && !empty(output)
     let buffer_id = split(output, ' ')[0]
     execute 'edit #' . buffer_id

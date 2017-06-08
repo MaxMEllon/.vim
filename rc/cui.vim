@@ -20,6 +20,6 @@ if g:env.mac
   set nottyfast
 endif
 set t_Co     =256
-set ttyscroll=200000
+set ttyscroll=2000000
 set t_vb     =
 set novisualbell
