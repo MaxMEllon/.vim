@@ -14,8 +14,6 @@ nnoremap <buffer> mk :Mkdir<Space>
 nnoremap <buffer> cp :Cp <C-r><C-a> <C-r><C-a>
 nnoremap <buffer> cdu :Cdu<CR>
 
-set nocursorline
-
 try
   lcd %:h
 catch
