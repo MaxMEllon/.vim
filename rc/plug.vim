@@ -173,9 +173,11 @@ if g:plug.ready()
   " Plug 'mhinz/vim-startify'
   " Plug 'osyo-manga/unite-quickfix'
   " Plug 'pocke/vim-hier'
+  " Plug 'rhysd/committia.vim'
   " Plug 'terryma/vim-multiple-cursors'
   " Plug 'tpope/vim-dispatch'
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
+  " Plug 'w0ng/vim-hybrid'
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
@@ -192,12 +194,10 @@ if g:plug.ready()
   Plug 'kana/vim-niceblock'
   Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml', 'vue']}
   Plug 'prabirshrestha/async.vim'
-  Plug 'rhysd/committia.vim'
   Plug 'surround.vim'
   Plug 't9md/vim-textmanip'
   Plug 'tmhedberg/matchit'
   Plug 'tyru/caw.vim'
-  Plug 'w0ng/vim-hybrid'
   Plug 'wakatime/vim-wakatime'
 
   PlugBox 'c'
