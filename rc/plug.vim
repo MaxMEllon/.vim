@@ -204,6 +204,7 @@ if g:plug.ready()
   PlugBox 'css'
   PlugBox 'elixir'
   PlugBox 'etc_lang'
+  PlugBox 'haskell'
   PlugBox 'html'
   PlugBox 'javascript'
   PlugBox 'mac'

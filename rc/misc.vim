@@ -23,8 +23,6 @@ if exists('+colorcolumn')
   augroup DimInactiveWindows
     autocmd!
     autocmd WinEnter * call s:DimInactiveWindows()
-    autocmd WinEnter * set cursorline
-    autocmd WinLeave * set nocursorline
   augroup END
 endif
 
