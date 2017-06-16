@@ -1,11 +1,11 @@
 set ambiwidth      =double
-set switchbuf      =useopen
 set autoread
 set autowrite
 set backspace      =indent,eol,start
 set cmdheight      =1
 set cmdwinheight   =5
 set colorcolumn    =80,100
+set complete       =.,k,w,b,u,t,i
 set completeopt    =menuone,longest,noselect
 set cscopetag
 set display        =lastline
@@ -41,6 +41,7 @@ set showmatch
 set showtabline    =0
 set splitbelow
 set splitright
+set switchbuf      =useopen
 set synmaxcol      =200
 set textwidth      =0
 set virtualedit    =block
