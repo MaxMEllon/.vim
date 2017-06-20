@@ -192,7 +192,7 @@ if g:plug.ready()
   Plug 'itchyny/vim-highlighturl'
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
-  Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml', 'vue']}
+  Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml', 'vue', 'typescript']}
   Plug 'prabirshrestha/async.vim'
   Plug 'surround.vim'
   Plug 't9md/vim-textmanip'
