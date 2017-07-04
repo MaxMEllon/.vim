@@ -23,3 +23,5 @@ Plug 'thinca/vim-quickrun'
 Plug 'osyo-manga/vim-anzu'
 Plug 'nobarudo/tender.vim'
 Plug 'MaxMEllon/molokai'
+
+let g:deoplete#enable_at_startup = 1

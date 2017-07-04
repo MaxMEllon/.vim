@@ -194,7 +194,7 @@ if g:plug.ready()
   Plug 'kana/vim-niceblock'
   Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml', 'vue', 'typescript']}
   Plug 'prabirshrestha/async.vim'
-  Plug 'surround.vim'
+  Plug 'vim-scripts/surround.vim'
   Plug 't9md/vim-textmanip'
   Plug 'tmhedberg/matchit'
   Plug 'tyru/caw.vim'
@@ -210,6 +210,7 @@ if g:plug.ready()
   PlugBox 'mac'
   PlugBox 'operator'
   PlugBox 'platform'
+  PlugBox 'python'
   PlugBox 'ruby'
   PlugBox 'textobj'
   PlugBox 'vim'
