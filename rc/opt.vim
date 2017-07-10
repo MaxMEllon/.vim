@@ -57,6 +57,12 @@ set undolevels     =200
 set undodir        =~/.vim/_undo
 set undofile
 
+" fold
+set foldenable
+set foldmethod =marker
+set foldcolumn =0
+set foldlevel  =0
+
 if executable('hw')
   setglobal grepprg=hw\ --no-group\ --no-color
 elseif executable('jvgrep')

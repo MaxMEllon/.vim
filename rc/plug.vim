@@ -165,23 +165,27 @@ if g:plug.ready()
   call plug#begin(g:plug.base)
 
   " out {{{
+
+  " Plug 'LeafCage/foldCC.vim'
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
   " Plug 'MaxMEllon/vim-hier'
+  " Plug 'itchyny/vim-highlighturl'
   " Plug 'kshenoy/vim-signature'
   " Plug 'mhinz/vim-signify'
   " Plug 'mhinz/vim-startify'
   " Plug 'osyo-manga/unite-quickfix'
   " Plug 'pocke/vim-hier'
   " Plug 'rhysd/committia.vim'
+  " Plug 't9md/vim-textmanip'
   " Plug 'terryma/vim-multiple-cursors'
   " Plug 'tpope/vim-dispatch'
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
   " Plug 'w0ng/vim-hybrid'
+
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
-  Plug 'LeafCage/foldCC.vim'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
@@ -189,15 +193,13 @@ if g:plug.ready()
   Plug 'easymotion/vim-easymotion'
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/vim-asterisk'
-  Plug 'itchyny/vim-highlighturl'
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
   Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml', 'vue', 'typescript']}
   Plug 'prabirshrestha/async.vim'
-  Plug 'vim-scripts/surround.vim'
-  Plug 't9md/vim-textmanip'
   Plug 'tmhedberg/matchit'
   Plug 'tyru/caw.vim'
+  Plug 'vim-scripts/surround.vim'
   Plug 'wakatime/vim-wakatime'
 
   PlugBox 'c'
