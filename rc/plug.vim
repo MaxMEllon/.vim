@@ -191,7 +191,6 @@ if g:plug.ready()
   Plug 'cohama/lexima.vim'
   Plug 'cohama/vim-hier'
   Plug 'easymotion/vim-easymotion'
-  Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
@@ -209,14 +208,12 @@ if g:plug.ready()
   PlugBox 'haskell'
   PlugBox 'html'
   PlugBox 'javascript'
-  PlugBox 'mac'
   PlugBox 'operator'
   PlugBox 'platform'
   PlugBox 'python'
   PlugBox 'ruby'
   PlugBox 'textobj'
   PlugBox 'vim'
-  PlugBox 'vim8'
   PlugBox 'webapi'
 
   call plug#end()

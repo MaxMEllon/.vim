@@ -1,4 +1,4 @@
-Plug 'vim-jp/vim-cpp', {'for' : ['c', 'cpp']}
+" Plug 'vim-jp/vim-cpp', {'for' : ['c', 'cpp']}
 " Plug 'majutsushi/tagbar', {'for' : ['c', 'cpp']}
 if executable('clang')
   if g:env.neo
@@ -8,7 +8,7 @@ if executable('clang')
       let g:deoplete#sources#clang#clang_header = $CLANG_INCLUDE
     endif
   else
-    Plug 'justmao945/vim-clang', {'for' : ['c', 'cpp']}
+    " Plug 'justmao945/vim-clang', {'for' : ['c', 'cpp']}
   endif
 endif
 

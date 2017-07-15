@@ -9,31 +9,31 @@ if 0 | endif " for tiny vim
 function! s:myload(...)
   let s:filepath = expand('~/.vim/rc') . '/' . a:1 . '.vim'
   if filereadable(s:filepath)
-    if exists('$VIM_DEBUG') | echo "[Debug] MyLoad:\t\t" . s:filepath | endif
+    if exists('$VIM_DEBUG') | echo "[Debug] Source:\t\t" . s:filepath | endif
     execute 'source ' . s:filepath
   endif
 endfunction
 
-command! -nargs=+ -bar MyLoad call s:myload(<args>)
+command! -nargs=+ -bar Source call s:myload(<args>)
 
-MyLoad 'env'
-MyLoad 'command'
-MyLoad 'encode'
-MyLoad 'opt'
-MyLoad 'mapping'
-MyLoad 'platform'
-MyLoad 'plug'
-MyLoad 'filetype'
-MyLoad 'indent'
-MyLoad 'menu'
-MyLoad 'event'
-MyLoad 'abbrev'
-MyLoad 'cmdwin'
-MyLoad 'statusline'
-" MyLoad 'tabline'
-MyLoad 'misc'
+Source 'env'
+Source 'command'
+Source 'encode'
+Source 'opt'
+Source 'mapping'
+Source 'platform'
+Source 'plug'
+Source 'filetype'
+Source 'indent'
+Source 'menu'
+Source 'event'
+Source 'abbrev'
+Source 'cmdwin'
+Source 'statusline'
+" Source 'tabline'
+Source 'misc'
 
-set runtimepath+=~/.vim/after
+set runtimepath+=~/.vim/after/
 
 filetype plugin indent on
 syntax on

@@ -1,4 +1,12 @@
-if g:env.cui | MyLoad 'cui' | endif
-if g:env.gui | MyLoad 'gui' | endif
-if g:env.neo | MyLoad 'neo' | endif
-if g:env.mac | MyLoad 'mac' | endif
+if g:env.cui
+  Source 'cui'
+endif
+if g:env.gui
+  Source 'gui'
+endif
+if g:env.neo
+  Source 'neo'
+endif
+if g:env.mac
+  Source 'mac'
+endif
