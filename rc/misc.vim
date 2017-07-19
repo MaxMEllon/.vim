@@ -15,8 +15,10 @@ if exists('+colorcolumn')
       if i != winnr()
         let l:width = 256 " max
         let l:range = join(range(1, l:width), ',')
+        call setwinvar(i, '&colorcolumn', l:range)
+      else
+        call setwinvar(i, '&colorcolumn', '80,120')
       endif
-      call setwinvar(i, '&colorcolumn', l:range)
     endfor
   endfunction
 

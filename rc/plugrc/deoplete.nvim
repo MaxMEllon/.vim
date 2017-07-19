@@ -29,20 +29,13 @@ call deoplete#custom#set('_', 'converters', [
 
 " call deoplete#custom#set('buffer', 'min_pattern_length', 9999)
 
+let g:deoplete#omni#input_patterns = {}
+let g:deoplete#omni#input_patterns.ruby =
+		\ ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::']
+		let g:deoplete#omni#input_patterns.java = '[^. *\t]\.\w*'
+
 let g:deoplete#keyword_patterns = {}
 let g:deoplete#keyword_patterns._ = '[a-zA-Z_]\k*\(?'
-let g:deoplete#omni#input_patterns = {}
-
-let g:monster#completion#rcodetools#backend = "async_rct_complete"
-
-let g:deoplete#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-let g:deoplete#omni#input_patterns.java = '[^. *\t]\.\w*'
-let g:deoplete#omni#input_patterns.swift = '[^. *\t]\.\w*'
-let g:deoplete#omni#input_patterns.javascript = '[^. *\t]\.\w*'
-let g:deoplete#omni#input_patterns.cs = '[^.]\.\%(\u\{2,}\)\?'
-let g:deoplete#omni#input_patterns.php =
-      \ '\w+|[^. \t]->\w*|\w+::\w*'
-
 
 let g:deoplete#enable_camel_case = 1
 let g:deoplete#auto_complete_start_length = 2

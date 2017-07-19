@@ -166,7 +166,6 @@ if g:plug.ready()
 
   " out {{{
 
-  " Plug 'LeafCage/foldCC.vim'
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
   " Plug 'MaxMEllon/vim-hier'
@@ -186,6 +185,7 @@ if g:plug.ready()
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
+  Plug 'LeafCage/foldCC.vim'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
@@ -195,6 +195,8 @@ if g:plug.ready()
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
   Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml', 'vue', 'typescript']}
+  Plug 'mattn/vim-prompter'
+  Plug 'mattn/vim-fixedsearch'
   Plug 'prabirshrestha/async.vim'
   Plug 'tmhedberg/matchit'
   Plug 'tyru/caw.vim'

@@ -6,15 +6,15 @@ if 0 | endif " for tiny vim
 "         \| echomsg 'startuptime: ' . reltimestr(g:startuptime)
 " augroup END
 
-function! s:myload(...)
-  let s:filepath = expand('~/.vim/rc') . '/' . a:1 . '.vim'
-  if filereadable(s:filepath)
-    if exists('$VIM_DEBUG') | echo "[Debug] Source:\t\t" . s:filepath | endif
-    execute 'source ' . s:filepath
+function! s:source(...)
+  let filepath = expand('~/.vim/rc') . '/' . a:1 . '.vim'
+  if filereadable(filepath)
+    if exists('$VIM_DEBUG') | echo "[Debug] Source:\t\t" . filepath | endif
+    execute 'source ' . filepath
   endif
 endfunction
 
-command! -nargs=+ -bar Source call s:myload(<args>)
+command! -nargs=+ -bar Source call s:source(<args>)
 
 Source 'env'
 Source 'command'
