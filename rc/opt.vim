@@ -19,7 +19,7 @@ set laststatus     =0
 set lazyredraw
 set linespace      =0
 set list
-set listchars      =eol:$,tab:~\ ,trail:_
+set listchars      =eol:$,tab:~\ ,trail:_,precedes:<,extends:>,nbsp:%
 set matchpairs     =<:>,(:),[:],{:}
 set matchtime      =4
 set maxmem         =500000
@@ -32,7 +32,7 @@ set noshowcmd
 set nrformats      =alpha,hex
 set pastetoggle    =<F11>
 set pumheight      =30
-set redrawtime     =1000
+" set redrawtime     =100
 set report         =1
 set ruler
 set runtimepath   +=~/.vim/help/vimdoc-ja

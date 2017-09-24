@@ -1,4 +1,6 @@
-if g:env.vim8 && (has('python') || has('python3'))
+if g:env.mac && (has('python') || has('python3'))
+  Plug 'Valloric/YouCompleteMe'
+elseif g:env.vim8 && (has('python') || has('python3'))
   Plug 'maralla/completor.vim'
   Plug 'Shougo/neomru.vim'
   Plug 'Shougo/denite.nvim'

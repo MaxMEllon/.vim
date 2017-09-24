@@ -22,7 +22,7 @@ if !g:env.gui
   highlight FoldColumn            ctermfg=67    ctermbg=none
   highlight Folded                ctermfg=67    ctermbg=16
   highlight LineNr                              ctermbg=none
-  highlight Normal                              ctermbg=233
+  highlight Normal                              ctermbg=236
   highlight SpellBad                            ctermbg=52
   highlight SpellCap                            ctermbg=17
   highlight Search                              ctermbg=56

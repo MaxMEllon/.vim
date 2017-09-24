@@ -12,7 +12,7 @@ MyPlug 'vim-jsx-pretty'
 if g:env.neo
   Plug 'carlitux/deoplete-ternjs'
 else
-  Plug 'ternjs/tern_for_vim', {'do' : 'npm i', 'for' : 'javascript'}
+  " Plug 'ternjs/tern_for_vim', {'do' : 'npm i', 'for' : 'javascript'}
 endif
 
 " javascript doc
@@ -24,17 +24,17 @@ Plug 'moll/vim-node', {'for' : 'javascript' }
 " Plug 'Galooshi/vim-import-js', {'for' : 'javascript'}
 
 " omni func
-Plug 'ternjs/tern_for_vim', {'do' : 'npm i', 'for' : 'javascript'}
+" Plug 'ternjs/tern_for_vim', {'do' : 'npm i', 'for' : 'javascript'}
 
 " altjs
-Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
-Plug 'clausreinke/typescript-tools.vim', {'do': 'npm install -g', 'for': 'typescript'}
+" Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
+" Plug 'clausreinke/typescript-tools.vim', {'do': 'npm install -g', 'for': 'typescript'}
 
-Plug 'kchmck/vim-coffee-script'
-Plug 'mtscout6/vim-cjsx', {'for' : ['coffee', 'cjsx']}
+" Plug 'kchmck/vim-coffee-script'
+" Plug 'mtscout6/vim-cjsx', {'for' : ['coffee', 'cjsx']}
 
 " other
-Plug 'rhysd/npm-debug-log.vim'
+" Plug 'rhysd/npm-debug-log.vim'
 Plug 'elzr/vim-json', {'for' : 'json'}
 
 Lazy 'javascript', 'javascript'

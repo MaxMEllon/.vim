@@ -11,6 +11,7 @@ endif
 
 command! SyntaxInfo call maxmellon#syntax_info()
 command! RTP call maxmellon#runtimepath#show()
+command! Path call maxmellon#path#show()
 
 command! -nargs=? Google call maxmellon#opener(<f-args>)
 command! -nargs=? Opener call maxmellon#google(<f-args>)

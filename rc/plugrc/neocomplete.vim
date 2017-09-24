@@ -52,9 +52,15 @@ let g:neocomplete#sources#omni#functions = get(g:,  'neocomplete#sources#omni#fu
 let g:neocomplete#sources#omni#functions.javascript = 'javascriptcomplete#CompleteJS'
 
 " Enable omni completion.
-autocmd FileType css           setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType xml           setlocal omnifunc=xmlcomplete#CompleteTags
-if exists('*Verdin#omnifunc')
-  autocmd FileType vim           setlocal omnifunc=Verdin#omnifunc
-endif
+augroup NeoCon
+  autocmd FileType css           setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType xml           setlocal omnifunc=xmlcomplete#CompleteTags
+  if exists('*Verdin#omnifunc')
+    autocmd FileType vim setlocal omnifunc=Verdin#omnifunc
+  endif
+  if exists('*tern#Complete')
+    autocmd FileType javascript setlocal omnifunc=tern#Complete
+    let g:neocomplete#sources#omni#functions.javascript = 'tern#Complete'
+  endif
+augroup END
