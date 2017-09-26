@@ -172,6 +172,7 @@ if g:plug.ready()
   " Plug 'easymotion/vim-easymotion'
   " Plug 'itchyny/vim-highlighturl'
   " Plug 'kshenoy/vim-signature'
+  " Plug 'mattn/vim-fixedsearch' | Plug 'mattn/vim-prompter'
   " Plug 'mhinz/vim-signify'
   " Plug 'mhinz/vim-startify'
   " Plug 'osyo-manga/unite-quickfix'
@@ -194,9 +195,9 @@ if g:plug.ready()
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
+  Plug 'kristijanhusak/vim-hybrid-material'
   Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml', 'vue', 'typescript']}
   Plug 'mattn/httpstatus-vim'
-  Plug 'mattn/vim-fixedsearch' | Plug 'mattn/vim-prompter'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/clever-f.vim'
   Plug 'tmhedberg/matchit'
@@ -206,18 +207,19 @@ if g:plug.ready()
   Plug 'wakatime/vim-wakatime'
 
   " PlugBox 'c'
-  PlugBox 'css'
   " PlugBox 'elixir'
-  PlugBox 'etc_lang'
   " PlugBox 'haskell'
+  " PlugBox 'python'
+  " PlugBox 'vim'
+ 
+  PlugBox 'css'
+  PlugBox 'etc_lang'
   PlugBox 'html'
   PlugBox 'javascript'
   PlugBox 'operator'
   PlugBox 'platform'
-  " PlugBox 'python'
   PlugBox 'ruby'
   PlugBox 'textobj'
-  " PlugBox 'vim'
   PlugBox 'webapi'
 
   call plug#end()

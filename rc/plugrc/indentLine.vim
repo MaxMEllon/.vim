@@ -1,8 +1,8 @@
-let g:indentLine_color_term = 232
-let g:indentLine_color_tty_light = 16
-let g:indentLine_color_dark = 1
+let g:indentLine_color_term = 46
+let g:indentLine_color_tty_light = 46
+let g:indentLine_color_dark = 46
 let g:indentLine_bufNameExclude = ['NERD_tree.*']
-let g:indentLine_char = '|'
+let g:indentLine_char = "|"
 
 Autocmd BufEnter * IndentLinesReset
 

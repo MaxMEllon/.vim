@@ -7,3 +7,13 @@ let g:ale_fixers = {
       \       'prettier'
       \   ],
       \}
+
+augroup ALE_Highlight
+  autocmd VimEnter * highlight ALEError ctermbg=61
+  autocmd VimEnter * highlight ALEStyleError ctermbg=61
+  autocmd VimEnter * highlight ALEWarning ctermbg=54
+  autocmd VimEnter * highlight ALEStyleWarning ctermbg=54
+  autocmd VimEnter * highlight ALEInfo ctermbg=17
+augroup END
+
+call AddToggleCommand('ALEToggle')

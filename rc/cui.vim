@@ -1,5 +1,5 @@
-if has('vim_starting')  && has('vertsplit')
-  function! EnableVsplitMode()
+if !g:env.vim8 && has('vim_starting') && has('vertsplit')
+  function! s:enable_vsplit_mode()
     " enable origin mode and left/right margins
     let &t_CS = "y"
     let &t_ti = &t_ti . "\e[?6;69h"
@@ -12,14 +12,14 @@ if has('vim_starting')  && has('vertsplit')
   " new vim can't handle CPR with direct mapping
   " map <expr> ^[[3;3R g:EnableVsplitMode()
   set t_F9=^[[3;3R
-  map <expr> <t_F9> g:EnableVsplitMode()
+  map <expr> <t_F9> s:enable_vsplit_mode()
   let &t_RV .= "\e[?6;69h\e[1;3s\e[3;9H\e[6n\e[0;0s\e[?6;69l"
 endif
 
 if g:env.mac
   set nottyfast
 endif
-set t_Co     =256
-set ttyscroll=2000000
-set t_vb     =
+set t_Co         =256
+set ttyscroll    =2000000
+set t_vb         =
 set novisualbell

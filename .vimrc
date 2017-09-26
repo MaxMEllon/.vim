@@ -7,10 +7,12 @@ if 0 | endif " for tiny vim
 " augroup END
 
 function! s:source(...)
-  let filepath = expand('~/.vim/rc') . '/' . a:1 . '.vim'
-  if filereadable(filepath)
-    if exists('$VIM_DEBUG') | echo "[Debug] Source:\t\t" . filepath | endif
-    execute 'source ' . filepath
+  let l:filepath = expand('~/.vim/rc') . '/' . a:1 . '.vim'
+  if filereadable(l:filepath)
+    if exists('$VIM_DEBUG')
+      echo "[Debug] Source:\t\t" . l:filepath
+    endif
+    execute 'source ' . l:filepath
   endif
 endfunction
 
@@ -32,6 +34,12 @@ Source 'cmdwin'
 Source 'statusline'
 " Source 'tabline'
 Source 'misc'
+
+try
+  colorscheme hybrid_material
+catch
+  colorscheme default
+endtry
 
 filetype plugin indent on
 syntax on
