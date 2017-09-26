@@ -45,6 +45,7 @@ if !g:env.gui
 endif
 
 augroup TabSpace
+  autocmd!
   autocmd VimEnter * highlight default ZenkakuSpaces term=underline ctermbg=52
   autocmd VimEnter * call matchadd('ZenkakuSpaces', '　')
 

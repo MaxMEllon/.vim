@@ -9,6 +9,7 @@ let g:ale_fixers = {
       \}
 
 augroup ALE_Highlight
+  autocmd!
   autocmd VimEnter * highlight ALEError ctermbg=61
   autocmd VimEnter * highlight ALEStyleError ctermbg=61
   autocmd VimEnter * highlight ALEWarning ctermbg=54

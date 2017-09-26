@@ -53,6 +53,7 @@ let g:neocomplete#sources#omni#functions.javascript = 'javascriptcomplete#Comple
 
 " Enable omni completion.
 augroup NeoCon
+  autocmd!
   autocmd FileType css           setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType xml           setlocal omnifunc=xmlcomplete#CompleteTags
