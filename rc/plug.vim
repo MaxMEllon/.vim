@@ -192,6 +192,7 @@ if g:plug.ready()
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
   Plug 'cohama/vim-hier'
+  Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
@@ -211,7 +212,7 @@ if g:plug.ready()
   " PlugBox 'haskell'
   " PlugBox 'python'
   " PlugBox 'vim'
- 
+
   PlugBox 'css'
   PlugBox 'etc_lang'
   PlugBox 'html'

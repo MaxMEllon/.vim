@@ -5,13 +5,14 @@ Plug 'AndrewRadev/splitjoin.vim', {
 
 if g:env.neo
   Plug 'fishbullet/deoplete-ruby'
-  " Plug 'osyo-manga/vim-monster', {'for' : 'ruby'}
   " Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 endif
 
 if has('ruby') && !g:env.neo
   " Plug 'todesking/ruby_hl_lvar.vim', {'for' : 'ruby'}
 endif
+
+" Plug 'osyo-manga/vim-monster', {'for' : 'ruby'} | Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 Lazy 'ruby', 'ruby'
 

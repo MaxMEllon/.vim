@@ -1,3 +1,12 @@
+augroup EasyMotionColor
+  autocmd!
+  autocmd VimEnter * highlight EasyMotionTarget        ctermbg=none  ctermfg=green
+  autocmd VimEnter * highlight EasyMotionShade         ctermbg=none  ctermfg=blue
+  autocmd VimEnter * highlight EasyMotionTarget2First  ctermbg=none  ctermfg=red
+  autocmd VimEnter * highlight EasyMotionTarget2Second ctermbg=none  ctermfg=lightred
+  autocmd VimEnter * highlight EasyMotionMoveHL        ctermbg=green ctermfg=black
+augroup END
+
 " configure
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
