@@ -56,7 +56,8 @@ function! maxmellon#fzy#buffer()
   silent ls
   redir END
   let cmd = 'cat ' . tmp  . '| tail -n +2 | ' .
-        \   ' awk ''{printf("%4d %s\n", $1, $(NF-2))}'' '
+        \   ' awk -F ''"'' ''{printf("%2d %s\n", $1, $(NF-1))}'' ' .
+        \   ' | grep -v ''\[No Name\]'' '
   let output = s:get_output(cmd)
   redraw!
   if v:shell_error == 0 && !empty(output)
