@@ -30,7 +30,7 @@ highlight StatusLineFileType    ctermfg=white ctermbg=19
 highlight StatusLineVimType     ctermfg=white ctermbg=52
 highlight TabLinePwd            ctermfg=gray  ctermbg=52
 
-if g:colors_name ==# 'default'
+if !g:env.neo && g:colors_name ==# 'default'
   " Overwrite default color scheme
   if !g:env.gui
     highlight ColorColumn                       ctermbg=17

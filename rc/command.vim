@@ -9,9 +9,9 @@ if executable('shiba')
   command! Shiba :silent call async#job#start(['shiba', expand('%')], {})
 endif
 
-command! SyntaxInfo call maxmellon#syntax_info()
 command! RTP call maxmellon#runtimepath#show()
 command! Path call maxmellon#path#show()
+command! SyntaxInfo call maxmellon#syntax_info()
 
 command! -nargs=? Google call maxmellon#opener(<f-args>)
 command! -nargs=? Opener call maxmellon#google(<f-args>)
@@ -26,12 +26,12 @@ command! -nargs=? Grep   call maxmellon#grep#grep(<f-args>)
 command! -nargs=? G      call maxmellon#grep#grep(<f-args>)
 
 command! Ls         call maxmellon#ls#show()
-command! LsOpen     call maxmellon#fzy#lsopen()
-command! GHQ        call maxmellon#fzy#ghq_list()
-command! GitLsFiles call maxmellon#fzy#git_ls_files()
-command! Gdiff      call maxmellon#git#diff#open()
-command! BufferList call maxmellon#fzy#buffer()
 command! Mru        call maxmellon#fzy#mru()
+command! GHQ        call maxmellon#fzy#ghq_list()
+command! Gdiff      call maxmellon#git#diff#open()
+command! LsOpen     call maxmellon#fzy#lsopen()
+command! BufferList call maxmellon#fzy#buffer()
+command! GitLsFiles call maxmellon#fzy#git_ls_files()
 
 command! -bar Invert :let &background = (&background == 'light' ? 'dark' : 'light')
 

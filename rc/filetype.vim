@@ -18,3 +18,5 @@ BindFT slim     slim
 BindFT toml     toml
 BindFT zsh      zsh
 BindFT vue      html
+
+Autocmd BufRead,BufEnter *.json set conceallevel=0

@@ -35,6 +35,6 @@ Plug 'moll/vim-node', {'for' : 'javascript' }
 
 " other
 " Plug 'rhysd/npm-debug-log.vim'
-Plug 'elzr/vim-json', {'for' : 'json'}
+" Plug 'elzr/vim-json', {'for' : 'json'}
 
 Lazy 'javascript', 'javascript'
