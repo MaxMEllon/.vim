@@ -10,14 +10,14 @@ endif
 
 if exists('+colorcolumn')
   function! s:DimInactiveWindows()
-    for i in range(1, tabpagewinnr(tabpagenr(), '$'))
-      let l:range = ""
-      if i != winnr()
+    for l:i in range(1, tabpagewinnr(tabpagenr(), '$'))
+      let l:range = ''
+      if l:i != winnr()
         let l:width = 256 " max
         let l:range = join(range(1, l:width), ',')
-        call setwinvar(i, '&colorcolumn', l:range)
+        call setwinvar(l:i, '&colorcolumn', l:range)
       else
-        call setwinvar(i, '&colorcolumn', '80,120')
+        call setwinvar(l:i, '&colorcolumn', '80,120')
       endif
     endfor
   endfunction
@@ -28,7 +28,7 @@ if exists('+colorcolumn')
   augroup END
 endif
 
-augroup matchit
+augroup Matchit
   autocmd!
   autocmd FileType ruby let b:match_words =
         \ '\<\(module\|class\|def\|begin\|do\|if\|unless\|case\)\>:' .

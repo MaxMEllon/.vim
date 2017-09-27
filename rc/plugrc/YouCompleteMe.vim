@@ -1,7 +1,6 @@
 AutocmdFT javascript nnoremap ,gd :<C-u>YcmCompleter GetDoc<CR>
 AutocmdFT javascript nnoremap ,gt :<C-u>YcmCompleter GoTo<CR>
 Autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-Autocmd FileType ruby setlocal omnifunc=
 Autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 Autocmd BufEnter * set completeopt-=preview
 

@@ -63,6 +63,16 @@ set foldmethod =marker
 set foldcolumn =0
 set foldlevel  =0
 
+" tab
+set expandtab
+set shiftwidth  =2
+set tabstop     =2
+set softtabstop =2
+set autoindent
+set smartindent
+set cindent
+set smarttab
+
 if executable('hw')
   setglobal grepprg=hw\ --no-group\ --no-color
 elseif executable('jvgrep')

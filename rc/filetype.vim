@@ -1,35 +1,20 @@
-augroup MyFileType
-  autocmd!
-augroup END
+if &filetype ==# 'gitcommit' | finish | endif
 
-command! -nargs=* AutocmdFileType autocmd filetypedetect <args>
-
-function! s:set_filetype(...)
-  execute 'AutocmdFileType BufNewFile,BufRead' . ' *' . a:1 . ' setlocal filetype=' . a:2
-endfunction
-
-command! -nargs=* SetFileType call s:set_filetype(<f-args>)
-
-let s:MyFileTypes = [
-      \   {'file' : '.babelrc',  'type' : 'json'},
-      \   {'file' : '.cjsx',     'type' : 'coffee'},
-      \   {'file' : '.coffee',   'type' : 'coffee'},
-      \   {'file' : '.es6',      'type' : 'javascript'},
-      \   {'file' : '.eslintrc', 'type' : 'yaml'},
-      \   {'file' : '.ex',       'type' : 'elixir'},
-      \   {'file' : '.exs',      'type' : 'elixir'},
-      \   {'file' : '.fish',     'type' : 'fish'},
-      \   {'file' : '.jsx',      'type' : 'javascript'},
-      \   {'file' : '.less',     'type' : 'less'},
-      \   {'file' : '.nvim',     'type' : 'vim'},
-      \   {'file' : '.sass',     'type' : 'sass'},
-      \   {'file' : '.scss',     'type' : 'scss'},
-      \   {'file' : '.slim',     'type' : 'slim'},
-      \   {'file' : '.toml',     'type' : 'toml'},
-      \   {'file' : '.zsh',      'type' : 'zsh'},
-      \   {'file' : '.vue',      'type' : 'html'},
-      \ ]
-
-for s:e in s:MyFileTypes
-  call s:set_filetype(s:e['file'], s:e['type'])
-endfor
+BindFT babelrc  json
+BindFT cjsx     coffee
+BindFT coffee   coffee
+BindFT es6      javascript
+BindFT eslintrc yaml
+BindFT ex       elixir
+BindFT exs      elixir
+BindFT fish     fish
+BindFT jsx      javascript
+BindFT jsx      javascript
+BindFT less     less
+BindFT nvim     vim
+BindFT sass     sass
+BindFT scss     sass
+BindFT slim     slim
+BindFT toml     toml
+BindFT zsh      zsh
+BindFT vue      html

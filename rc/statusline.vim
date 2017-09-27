@@ -1,3 +1,7 @@
+scriptencoding utf-8
+
+if &filetype ==# 'gitcommit' | finish | endif
+
 augroup InsertHook
   autocmd!
   autocmd VimEnter * call s:StatusLine('Init')
@@ -5,15 +9,15 @@ augroup InsertHook
   autocmd InsertLeave * call s:StatusLine('Leave')
 augroup END
 
-let s:slhlcmd = ''
-
 function! s:StatusLine(mode)
-  if a:mode == 'Enter'
+  if a:mode ==# 'Enter'
     highlight StatusLine ctermfg=red ctermbg=yellow cterm=NONE guifg=red guibg=yellow
   else
     highlight StatusLine ctermfg=white ctermbg=blue cterm=NONE guifg=white guibg=blue
   endif
 endfunction
+
+let s:slhlcmd = ''
 
 "=============================================================================="
 " ┌ buffer id                          separate                               "

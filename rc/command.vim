@@ -32,6 +32,7 @@ command! GitLsFiles call maxmellon#fzy#git_ls_files()
 command! Gdiff      call maxmellon#git#diff#open()
 command! BufferList call maxmellon#fzy#buffer()
 command! Mru        call maxmellon#fzy#mru()
+
 command! -bar Invert :let &background = (&background == 'light' ? 'dark' : 'light')
 
 augroup MyVimrc
@@ -41,3 +42,13 @@ augroup END
 " autocmd wrapper
 command! -nargs=* Autocmd autocmd MyVimrc <args>
 command! -nargs=* AutocmdFT autocmd MyVimrc FileType <args>
+
+command! -bar -nargs=1 TabIndent
+      \ call maxmellon#indent#set_tab_width(<args>, g:false)
+
+command! -bar -nargs=1 SpaceIndent
+      \ call maxmellon#indent#set_tab_width(<args>, g:true)
+
+command! -nargs=* Abbr call maxmellon#abbrev#func(<f-args>)
+command! -nargs=* BindFT call maxmellon#filetype#set(<f-args>)
+command! -nargs=+ -bar Indent call maxmellon#indent#set(<args>)
