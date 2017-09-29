@@ -1,5 +1,3 @@
-if &filetype ==# 'gitcommit' | finish | endif
-
 BindFT babelrc  json
 BindFT cjsx     coffee
 BindFT coffee   coffee

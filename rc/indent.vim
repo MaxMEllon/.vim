@@ -1,5 +1,3 @@
-if &filetype ==# 'gitcommit' | finish | endif
-
 Indent 4, 'python'
 Indent 4, 'java'
 Indent 4, 'php', {'tab': g:true}

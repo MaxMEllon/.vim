@@ -1,7 +1,5 @@
 scriptencoding utf-8
 
-if &filetype ==# 'gitcommit' | finish | endif
-
 augroup InsertHook
   autocmd!
   autocmd VimEnter * call s:StatusLine('Init')
