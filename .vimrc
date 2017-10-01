@@ -31,7 +31,7 @@ Source 'menu'
 Source 'event'
 Source 'abbrev'
 Source 'cmdwin'
-Source 'statusline'
+" Source 'statusline'
 " Source 'tabline'
 Source 'misc'
 

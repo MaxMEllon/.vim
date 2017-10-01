@@ -24,3 +24,5 @@ endif
 Autocmd VimEnter * set completeopt-=preview
 
 Autocmd BufRead,BufEnter * let g:branch = ''
+
+Autocmd BufRead,BufEnter *.json set conceallevel=0
