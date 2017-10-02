@@ -29,7 +29,6 @@ Plug 'moll/vim-node', {'for' : 'javascript' }
 " altjs
 " Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
 " Plug 'clausreinke/typescript-tools.vim', {'do': 'npm install -g', 'for': 'typescript'}
-
 " Plug 'kchmck/vim-coffee-script'
 " Plug 'mtscout6/vim-cjsx', {'for' : ['coffee', 'cjsx']}
 

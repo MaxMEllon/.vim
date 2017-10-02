@@ -1,17 +1,6 @@
-if 0 | endif " for tiny vim
-
-" let g:startuptime = reltime()
-" augroup vimrc-startuptime
-"   autocmd! VimEnter * let g:startuptime = reltime(g:startuptime)
-"         \| echomsg 'startuptime: ' . reltimestr(g:startuptime)
-" augroup END
-
 function! s:source(...)
   let l:filepath = expand('~/.vim/rc') . '/' . a:1 . '.vim'
   if filereadable(l:filepath)
-    if exists('$VIM_DEBUG')
-      echo "[Debug] Source:\t\t" . l:filepath
-    endif
     execute 'source ' . l:filepath
   endif
 endfunction
