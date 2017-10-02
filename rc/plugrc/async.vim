@@ -35,12 +35,15 @@ function! s:esllint_disable_autofix() abort
   augroup END
 endfunction
 
-command! EslintAutoFixDisable call s:esllint_disable_autofix()
+function! s:eslint_enable_autofix() abort
+  augroup Eslint
+    autocmd!
+    autocmd BufWritePost *.js EslintAutoFix
+  augroup END
+endfunction
 
-augroup Eslint
-  autocmd!
-  autocmd BufWritePost *.js EslintAutoFix
-augroup END
+command! EslintAutoFixDisable call s:esllint_disable_autofix()
+command! EslintAutoFixEnable call s:eslint_enable_autofix()
 
 function! s:rubocop_fixer() abort
   if !maxmellon#git#repo#is_inside() | return | endif

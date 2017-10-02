@@ -8,6 +8,11 @@ let g:ale_fixers = {
       \   ],
       \}
 
+augroup ALE_Event
+  autocmd!
+  autocmd BufWritePost *.js ALEFix
+augroup END
+
 augroup ALE_Highlight
   autocmd!
   autocmd VimEnter * highlight ALEError ctermbg=61
@@ -16,5 +21,13 @@ augroup ALE_Highlight
   autocmd VimEnter * highlight ALEStyleWarning ctermbg=54
   autocmd VimEnter * highlight ALEInfo ctermbg=17
 augroup END
+
+function! s:ale_disable_autofix()
+  augroup ALE_Event
+    autocmd!
+  augroup END
+endfunction
+
+command! ALEDisableAutoFixJavaScript call s:ale_disable_autofix()
 
 call AddToggleCommand('ALEToggle')

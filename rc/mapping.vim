@@ -96,8 +96,6 @@ nnoremap <Space>m :<C-u>Mru<CR>
 nnoremap sub :%s/<C-r><C-w>//gc<Left><Left><Left>
 xnoremap s   :<C-u>'<,'>s///gc<Left><Left><Left><Left><Left>
 
-nnoremap :: q:
-
 nnoremap <silent><C-l> :<C-u>nohlsearch<CR><ESC>
 nnoremap <silent> <C-i> <C-I>
 
