@@ -19,13 +19,13 @@ function! maxmellon#indent#set_tab_width(width, is_expand)
 endfunction
 
 function! maxmellon#indent#set(...)
-  if len(a:0) == 3
+  if a:0 == 3
     let l:opt = a:3
   else
     let l:opt = {}
   endif
 
   let l:tab = !get(l:opt, 'tab', g:false)
-  autocmd MyIndent FileType a:2 call maxmellon#indent#set_tab_width(a:1, l:tab)
+  execute 'autocmd MyIndent FileType '.a:2.' call maxmellon#indent#set_tab_width('.a:1.','.l:tab.')'
 endfunction
 

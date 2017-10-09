@@ -166,6 +166,7 @@ if g:plug.ready()
 
   " out {{{
 
+  " Plug 'LeafCage/foldCC.vim'
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
   " Plug 'MaxMEllon/vim-hier'
@@ -187,7 +188,6 @@ if g:plug.ready()
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
-  Plug 'LeafCage/foldCC.vim'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
@@ -211,7 +211,7 @@ if g:plug.ready()
   " PlugBox 'elixir'
   " PlugBox 'haskell'
   " PlugBox 'python'
-  " PlugBox 'vim'
+  PlugBox 'vim'
 
   PlugBox 'css'
   PlugBox 'etc_lang'
