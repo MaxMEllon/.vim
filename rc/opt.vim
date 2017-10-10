@@ -31,8 +31,8 @@ set noequalalways
 set noshowcmd
 set nrformats      =alpha,hex
 set pastetoggle    =<F11>
-set pumheight      =30
-" set redrawtime     =100
+set pumheight      =40
+set redrawtime     =5000
 set report         =1
 set ruler
 set runtimepath   +=~/.vim/help/vimdoc-ja
@@ -42,7 +42,7 @@ set showtabline    =0
 set splitbelow
 set splitright
 set switchbuf      =useopen
-" set synmaxcol      =200
+set synmaxcol      =200
 set textwidth      =0
 set virtualedit    =block
 set whichwrap      =b,s,h,l,<,>,[,]
