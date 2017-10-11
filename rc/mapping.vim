@@ -58,8 +58,8 @@ inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-m> <CR>
 
-inoremap <C-v> <C-o>:set paste<CR><C-r>*<C-o>:set nopaste<CR>
-vnoremap <C-c> "+y
+" inoremap <C-v> <C-o>:set paste<CR><C-r>*<C-o>:set nopaste<CR>
+" vnoremap <C-c> "+y
 
 inoremap .       <C-]>.
 inoremap <CR>    <C-]><CR>

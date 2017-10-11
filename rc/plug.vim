@@ -217,6 +217,8 @@ if g:plug.ready()
   PlugBox 'etc_lang'
   PlugBox 'html'
   PlugBox 'javascript'
+  PlugBox 'plantuml'
+
   PlugBox 'operator'
   PlugBox 'platform'
   PlugBox 'ruby'

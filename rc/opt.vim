@@ -1,4 +1,4 @@
-set ambiwidth      =double
+set ambiwidth      =single
 set autoread
 set autowrite
 set backspace      =indent,eol,start

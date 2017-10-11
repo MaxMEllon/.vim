@@ -30,6 +30,11 @@ highlight StatusLineFileType    ctermfg=white ctermbg=19
 highlight StatusLineVimType     ctermfg=white ctermbg=52
 highlight TabLinePwd            ctermfg=gray  ctermbg=52
 
+highlight SpellBad              cterm=underline
+highlight SpellCap              cterm=underline
+highlight SpellLocal            cterm=underline
+highlight SpellRare             cterm=underline
+
 if !g:env.neo && g:colors_name ==# 'default'
   " Overwrite default color scheme
   if !g:env.gui
@@ -39,8 +44,6 @@ if !g:env.neo && g:colors_name ==# 'default'
     highlight Folded              ctermfg=67    ctermbg=16
     highlight LineNr                            ctermbg=none
     highlight Normal                            ctermbg=236
-    highlight SpellBad                          ctermbg=52
-    highlight SpellCap                          ctermbg=17
     highlight Search                            ctermbg=56
 
     " Visual

@@ -22,4 +22,8 @@ endif
 set t_Co         =256
 set ttyscroll    =2000000
 set t_vb         =
+set t_ZH         =[3m
+set t_ZR         =[23m
+set t_us         =[34;4m
+set t_ue         =[m
 set novisualbell
