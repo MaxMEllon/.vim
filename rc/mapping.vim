@@ -12,54 +12,14 @@ vnoremap $  g$
 vnoremap g$ $
 nnoremap }  }zz
 nnoremap {  {zz
-nnoremap ]] ]]zz
-nnoremap [[ [[zz
-nnoremap [] []zz
-nnoremap ][ ][zz
-
-noremap! OA <Up>
-noremap! OB <Down>
-noremap! OC <Right>
-noremap! OD <Left>
-noremap! A  <Up>
-noremap! B  <Down>
-noremap! C  <Right>
-noremap! D  <Left>
-
-nnoremap <Right> <C-w>>
-nnoremap <Down>  <C-w>-
-nnoremap <Left>  <C-w><
-nnoremap <Up>    <C-w>+
 
 nnoremap <silent> gc   :<C-u>tablast <bar> tabnew<CR>
 nnoremap <silent> <F3> :<C-u>tabnext<CR>
 nnoremap <silent> <F2> :<C-u>tabprevious<CR>
 
-inoremap <expr><Tab>   pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-Tab> pumvisible() ? "\<C-n>" : "\<S-TAB>"
-
 inoremap <silent> <Esc> <Esc>`^
 inoremap <silent> <C-[> <Esc>`^
 inoremap <silent> <C-c> <Esc>`^
-
-nnoremap <silent> gp o<ESC>p^
-nnoremap <silent> gP O<ESC>P^
-xnoremap <silent> gp o<ESC>p^
-xnoremap <silent> gP O<ESC>P^
-
-inoremap <C-a> <Home>
-inoremap <C-u> <ESC>^c$
-inoremap <C-e> <End>
-inoremap <C-h> <BS>
-inoremap <C-d> <Del>
-inoremap <C-p> <UP>
-inoremap <C-n> <Down>
-inoremap <C-f> <Right>
-inoremap <C-b> <Left>
-inoremap <C-m> <CR>
-
-" inoremap <C-v> <C-o>:set paste<CR><C-r>*<C-o>:set nopaste<CR>
-" vnoremap <C-c> "+y
 
 inoremap .       <C-]>.
 inoremap <CR>    <C-]><CR>
@@ -82,8 +42,6 @@ inoremap <silent> <expr> <CR> maxmellon#indent_braces()
 
 nnoremap <silent> ,h :<C-u>help <C-r><C-w><CR>
 
-inoremap , ,<Space>
-
 nnoremap <silent> ,x :<C-u>call maxmellon#remove_whitespace()<CR>
 nnoremap <silent> ,z :<C-u>%s/　/  /g<CR>
 nnoremap          ,p :ToggleOpt paste<CR>
@@ -94,13 +52,9 @@ nnoremap <Space>b :<C-u>BufferList<CR>
 nnoremap <Space>m :<C-u>Mru<CR>
 
 nnoremap sub :%s/<C-r><C-w>//gc<Left><Left><Left>
-xnoremap s   :<C-u>'<,'>s///gc<Left><Left><Left><Left><Left>
+xnoremap s :<C-u>'<,'>s///gc<Left><Left><Left><Left><Left>
 
 nnoremap <silent><C-l> :<C-u>nohlsearch<CR><ESC>
-nnoremap <silent> <C-i> <C-I>
-
-nnoremap <F4> :<C-u>cnext<CR>
-nnoremap <F5> :<C-u>cprevious<CR>
 
 nnoremap Y y$
 

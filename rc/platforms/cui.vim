@@ -27,4 +27,8 @@ set t_us         =[4m
 set t_ue         =[m
 " beep
 set t_vb         =
+set t_ku         =OA
+set t_kd         =OB
+set t_kr         =OC
+set t_kl         =OD
 set novisualbell
