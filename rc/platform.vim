@@ -1,12 +1,12 @@
 if g:env.cui
-  Source 'cui'
+  Source 'platforms/cui'
 endif
 if g:env.gui
-  Source 'gui'
+  Source 'platforms/gui'
 endif
 if g:env.neo
-  Source 'neo'
+  Source 'platforms/neo'
 endif
 if g:env.mac
-  Source 'mac'
+  Source 'platforms/mac'
 endif

@@ -93,7 +93,7 @@ function! s:config_load(...)
     execute 'source ' . a:2
   endif
   let l:mes = "[Debug] PlugConfig:\t" . a:1 . ':' . l:loaded
-  call g:env.debug(l:mes)
+  " call g:env.debug(l:mes)
 endfunction
 
 " Example:
@@ -184,6 +184,7 @@ if g:plug.ready()
   " Plug 'tpope/vim-dispatch'
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
   " Plug 'w0ng/vim-hybrid'
+  " Plug 'wakatime/vim-wakatime'
 
   " }}}
 
@@ -193,6 +194,7 @@ if g:plug.ready()
   Plug 'cohama/lexima.vim'
   Plug 'cohama/vim-hier'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
+  Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align'
   Plug 'kana/vim-niceblock'
@@ -205,7 +207,6 @@ if g:plug.ready()
   Plug 'tyru/caw.vim'
   Plug 'vim-scripts/surround.vim'
   Plug 'w0rp/ale'
-  Plug 'wakatime/vim-wakatime'
 
   " PlugBox 'c'
   " PlugBox 'elixir'
@@ -220,8 +221,8 @@ if g:plug.ready()
   PlugBox 'plantuml'
   PlugBox 'etc_lang'
 
+  PlugBox 'completion'
   PlugBox 'operator'
-  PlugBox 'platform'
   PlugBox 'textobj'
   PlugBox 'webapi'
 
