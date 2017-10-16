@@ -1,15 +1,15 @@
 nnoremap j  gj
-nnoremap gj j
 nnoremap k  gk
-nnoremap gk k
 nnoremap $  g$
-nnoremap g$ $
 vnoremap j  gj
-vnoremap gj j
 vnoremap k  gk
-vnoremap gk k
 vnoremap $  g$
-vnoremap g$ $
+" nnoremap gj j
+" nnoremap gk k
+" nnoremap g$ $
+" vnoremap gj j
+" vnoremap gk k
+" vnoremap g$ $
 nnoremap }  }zz
 nnoremap {  {zz
 
