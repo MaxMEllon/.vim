@@ -48,7 +48,6 @@ Source 'mapping'   " ~/.vim/rc/mapping.vim
 Source 'platform'  " ~/.vim/rc/platform.vim
 Source 'plug'      " ~/.vim/rc/plug.vim
 Source 'event'     " ~/.vim/rc/event.vim
-Source 'misc'      " ~/.vim/rc/misc.vim
 
 Abbr i tihs this
 Abbr i adn and
