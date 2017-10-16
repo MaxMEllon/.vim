@@ -67,7 +67,9 @@ Abbr c GGrep Ggrep
 Abbr c W w
 Abbr c Q q
 Abbr c WQ wq
+Abbr c WA wa
 Abbr c Wq wq
+Abbr c Wa wa
 
 Indent 4, 'python'
 Indent 4, 'java'
