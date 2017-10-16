@@ -189,6 +189,7 @@ if g:plug.ready()
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
+  Plug 'MaxMEllon/vim-active-window'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
