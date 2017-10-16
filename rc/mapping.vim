@@ -112,6 +112,16 @@ nnoremap ZQ <Nop>
 noremap <C-z> <Nop>
 nnoremap <F1> <Nop>
 
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-h> <BS>
+cnoremap <C-d> <Del>
+cnoremap <C-k> <End><C-u>
+cnoremap <CR> <C-]><CR>
+cnoremap w!! w !sudo tee > /dev/null %<CR> :e!<CR>
+
 let s:toggle_commands = []
 
 function! AddToggleCommand(command)

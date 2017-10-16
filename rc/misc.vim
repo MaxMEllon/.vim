@@ -1,7 +1,5 @@
 if executable('keyboardSwitcher')
-
   command! IMEForceABC call async#job#start(['keyboardSwitcher', 'select', 'ABC'], {})
-
   augroup SwitchIME
     autocmd!
     autocmd InsertLeave * call async#job#start(['keyboardSwitcher', 'select', 'ABC'], {})
@@ -28,9 +26,3 @@ if exists('+colorcolumn')
   augroup END
 endif
 
-augroup Matchit
-  autocmd!
-  autocmd FileType ruby let b:match_words =
-        \ '\<\(module\|class\|def\|begin\|do\|if\|unless\|case\)\>:' .
-        \ '\<\(elsif\|when\|rescue\)\>:\<\(else\|ensure\)\>:\<end\>'
-augroup END

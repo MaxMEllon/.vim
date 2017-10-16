@@ -26,3 +26,7 @@ Autocmd VimEnter * set completeopt-=preview
 Autocmd BufRead,BufEnter * let g:branch = ''
 
 Autocmd BufRead,BufEnter *.json set conceallevel=0
+
+Autocmd FileType ruby let b:match_words =
+      \ '\<\(module\|class\|def\|begin\|do\|if\|unless\|case\)\>:' .
+      \ '\<\(elsif\|when\|rescue\)\>:\<\(else\|ensure\)\>:\<end\>'

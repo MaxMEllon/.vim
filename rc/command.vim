@@ -15,10 +15,8 @@ command! SyntaxInfo call maxmellon#syntax_info()
 
 command! -nargs=? Google call maxmellon#opener(<f-args>)
 command! -nargs=? Opener call maxmellon#google(<f-args>)
-
 command! -nargs=? Cdu    call maxmellon#cdgitroot#exec()
 command! -nargs=? Cd     call maxmellon#cd#exec(<f-args>)
-
 command! -nargs=? Ggrep  call maxmellon#grep#gitgrep(<f-args>)
 command! -nargs=? Hgrep  call maxmellon#grep#hw(<f-args>)
 command! -nargs=? Jvgrep call maxmellon#grep#jvgrep(<f-args>)
@@ -52,3 +50,4 @@ command! -bar -nargs=1 SpaceIndent
 command! -nargs=* Abbr call maxmellon#abbrev#func(<f-args>)
 command! -nargs=* BindFT call maxmellon#filetype#set(<f-args>)
 command! -nargs=+ -bar Indent call maxmellon#indent#set(<args>)
+command! -nargs=1 ColorScheme call maxmellon#colorscheme#set(<args>)
