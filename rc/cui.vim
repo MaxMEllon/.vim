@@ -16,14 +16,15 @@ if !g:env.vim8 && has('vim_starting') && has('vertsplit')
   let &t_RV .= "\e[?6;69h\e[1;3s\e[3;9H\e[6n\e[0;0s\e[?6;69l"
 endif
 
-if g:env.mac
-  set nottyfast
-endif
-set t_Co         =256
+set ttyfast
 set ttyscroll    =2000000
-set t_vb         =
+set t_Co         =256
+" italic
 set t_ZH         =[3m
 set t_ZR         =[23m
-set t_us         =[34;4m
+" underline
+set t_us         =[4m
 set t_ue         =[m
+" beep
+set t_vb         =
 set novisualbell

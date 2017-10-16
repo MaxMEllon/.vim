@@ -211,17 +211,17 @@ if g:plug.ready()
   " PlugBox 'elixir'
   " PlugBox 'haskell'
   " PlugBox 'python'
-  PlugBox 'vim'
 
   PlugBox 'css'
-  PlugBox 'etc_lang'
+  PlugBox 'vim'
+  PlugBox 'ruby'
   PlugBox 'html'
   PlugBox 'javascript'
   PlugBox 'plantuml'
+  PlugBox 'etc_lang'
 
   PlugBox 'operator'
   PlugBox 'platform'
-  PlugBox 'ruby'
   PlugBox 'textobj'
   PlugBox 'webapi'
 

@@ -31,7 +31,7 @@ set noequalalways
 set noshowcmd
 set nrformats      =alpha,hex
 set pastetoggle    =<F11>
-set pumheight      =40
+set pumheight      =10
 set redrawtime     =5000
 set report         =1
 set ruler

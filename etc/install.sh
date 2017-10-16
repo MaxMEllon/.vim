@@ -13,3 +13,7 @@ execute 'cat $HOME/.vim/.nvimrc > $HOME/.config/nvim/init.vim'
 execute 'mkdir -p $HOME/.vim/help'
 
 execute 'git submodule init'
+
+if [[ ! -f ~/.vim/.ycm_extra_conf.py ]]; then
+  execute 'cp ~/.vim/.ycm_extra_conf.py.example ~/.vim/.ycm_extra_conf.py'
+fi
