@@ -191,6 +191,7 @@ if g:plug.ready()
   Plug 'AndrewRadev/switch.vim'
   Plug 'MaxMEllon/vim-active-window'
   Plug 'MaxMEllon/vim-dirvish'
+  Plug 'MaxMEllon/vim-tmng', {'for' : 'tmng'}
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
   Plug 'cohama/vim-hier'
@@ -201,6 +202,7 @@ if g:plug.ready()
   Plug 'kana/vim-niceblock'
   Plug 'kristijanhusak/vim-hybrid-material'
   Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml', 'vue', 'typescript']}
+  Plug 'mattn/gist-vim', {'on' : 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'mattn/httpstatus-vim'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/clever-f.vim'
@@ -220,12 +222,10 @@ if g:plug.ready()
   PlugBox 'html'
   PlugBox 'javascript'
   PlugBox 'plantuml'
-  PlugBox 'etc_lang'
 
   PlugBox 'completion'
   PlugBox 'operator'
   PlugBox 'textobj'
-  PlugBox 'webapi'
 
   call plug#end()
 
