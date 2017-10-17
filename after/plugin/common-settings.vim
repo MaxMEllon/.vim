@@ -1,5 +1,8 @@
 scriptencoding utf-8
 
+let s:true = maxmellon#bool#true()
+let s:false = maxmellon#bool#false()
+
 augroup TabSpace
   autocmd!
   autocmd BufEnter * highlight default ZenkakuSpaces term=underline ctermbg=52
@@ -12,13 +15,13 @@ augroup TabSpace
   autocmd BufEnter * call matchadd('TailSpaceCharacter', '\s\+$')
 augroup END
 
-let g:maxmellon_define_my_color = get(g:, 'maxmellon_define_my_color', g:false)
+let g:maxmellon_define_my_color = get(g:, 'maxmellon_define_my_color', s:false)
 
-if g:maxmellon_define_my_color == g:true
+if g:maxmellon_define_my_color == s:true
   finish
 endif
 
-let g:maxmellon_define_my_color = g:true
+let g:maxmellon_define_my_color = s:true
 
 " flasshy
 highlight MyGlashy              ctermbg=21    term=bold,reverse guibg=#00FF00

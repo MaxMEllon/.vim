@@ -1,5 +1,5 @@
 function! maxmellon#git#files#get() abort
-  if maxmellon#git#repo#is_inside() == g:false
+  if maxmellon#git#repo#is_inside() == maxmellon#bool#false()
     echomsg 'Current directory not a git repository'
     return
   endif
