@@ -38,9 +38,11 @@ highlight SpellCap              cterm=underline
 highlight SpellLocal            cterm=underline
 highlight SpellRare             cterm=underline
 
-if !g:env.neo && g:colors_name ==# 'default'
+let s:colors_name = get(g:, 'colors_name', 'default')
+
+if !maxmellon#vimtype#is_neo() &&  g:colors_name ==# 'default'
   " Overwrite default color scheme
-  if !g:env.gui
+  if !maxmellon#vimtype#is_gvim()
     highlight ColorColumn                       ctermbg=17
     highlight Comment             ctermfg=244
     highlight FoldColumn          ctermfg=67    ctermbg=none
