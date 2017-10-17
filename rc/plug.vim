@@ -191,6 +191,7 @@ if g:plug.ready()
   Plug 'AndrewRadev/switch.vim'
   Plug 'MaxMEllon/vim-active-window'
   Plug 'MaxMEllon/vim-dirvish'
+  Plug 'MaxMEllon/vim-fzy-commands'
   Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'MaxMEllon/vim-tmng', {'for' : 'tmng'}
   Plug 'Yggdroot/indentLine'
@@ -210,7 +211,6 @@ if g:plug.ready()
   Plug 'tyru/caw.vim'
   Plug 'vim-scripts/surround.vim'
   Plug 'w0rp/ale'
-
 
   " PlugBox 'c'
   " PlugBox 'elixir'
