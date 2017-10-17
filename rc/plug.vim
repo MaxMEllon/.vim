@@ -147,10 +147,10 @@ augroup PlugConfig
 augroup END
 
 function! g:plug.lazy(...)
-  execute 'autocmd PlugConfig FileType ' . a:1 . ' call maxmellon#lazy#' . a:2 . '#load()'
+  execute 'autocmd PlugConfig FileType ' . a:1 . ' call maxmellon#lazy#' . a:1 . '#load()'
 endfunction
 
-command! -nargs=* Lazy call g:plug.lazy(<args>)
+command! -nargs=1 Lazy call g:plug.lazy(<args>)
 
 function! g:plug.load_plug_box(...)
   let base = expand('~/.vim/rc/plugbox')

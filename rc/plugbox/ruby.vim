@@ -14,6 +14,6 @@ endif
 
 " Plug 'osyo-manga/vim-monster', {'for' : 'ruby'} | Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
-Lazy 'ruby', 'ruby'
+Lazy 'ruby'
 
 let g:monster#completion#rcodetools#backend = "async_rct_complete"
