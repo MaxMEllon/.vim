@@ -191,6 +191,7 @@ if g:plug.ready()
   Plug 'AndrewRadev/switch.vim'
   Plug 'MaxMEllon/vim-active-window'
   Plug 'MaxMEllon/vim-dirvish'
+  Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'MaxMEllon/vim-tmng', {'for' : 'tmng'}
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
@@ -199,17 +200,17 @@ if g:plug.ready()
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align'
-  Plug 'kana/vim-niceblock'
   Plug 'kristijanhusak/vim-hybrid-material'
-  Plug 'mattn/emmet-vim', {'for' : ['html', 'javascript', 'xml', 'vue', 'typescript']}
+  Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on' : 'Gist'} | Plug 'mattn/webapi-vim'
-  Plug 'mattn/httpstatus-vim'
+  Plug 'mattn/httpstatus-vim', {'on' : 'HttpStatus'}
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/clever-f.vim'
   Plug 'tmhedberg/matchit'
   Plug 'tyru/caw.vim'
   Plug 'vim-scripts/surround.vim'
   Plug 'w0rp/ale'
+
 
   " PlugBox 'c'
   " PlugBox 'elixir'

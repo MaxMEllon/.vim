@@ -65,6 +65,7 @@ Abbr c gist Gist
 Abbr c GGrep Ggrep
 Abbr c W w
 Abbr c Q q
+Abbr c Qa qa
 Abbr c WQ wq
 Abbr c WA wa
 Abbr c Wq wq
