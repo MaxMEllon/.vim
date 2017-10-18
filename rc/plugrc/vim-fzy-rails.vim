@@ -1,3 +1,8 @@
 nmap ,rc <Plug>(vim-fzy-rails_controllers)
 nmap ,rm <Plug>(vim-fzy-rails_models)
 nmap ,rv <Plug>(vim-fzy-rails_views)
+nmap ,rs <Plug>(vim-fzy-rails_serializers)
+nmap ,rd <Plug>(vim-fzy-rails_decorators)
+nmap ,rp <Plug>(vim-fzy-rails_packs)
+nmap ,rj <Plug>(vim-fzy-rails_javascripts)
+nmap ,rs <Plug>(vim-fzy-rails_stylesheets)

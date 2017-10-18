@@ -9,17 +9,17 @@ MyPlug 'vim-jsx-pretty'
 " Plug 'flowtype/vim-flow', {'for' : 'javascript'}
 " Plug 'posva/vim-vue'
 " Plug 'tao12345666333/vim-vue'
-if g:env.neo
-  Plug 'carlitux/deoplete-ternjs'
-else
-  " Plug 'ternjs/tern_for_vim', {'do' : 'npm i', 'for' : 'javascript'}
-endif
+" if g:env.neo
+"   Plug 'carlitux/deoplete-ternjs'
+" else
+"   Plug 'ternjs/tern_for_vim', {'do' : 'npm i', 'for' : 'javascript'}
+" endif
 
 " javascript doc
 Plug 'heavenshell/vim-jsdoc', {'for' : 'javascript', 'on' : 'JsDoc'}
 
 " javascript utility
-Plug 'samuelsimoes/vim-jsx-utils', {'for' : 'javascript'}
+" Plug 'samuelsimoes/vim-jsx-utils', {'for' : 'javascript'}
 Plug 'moll/vim-node', {'for' : 'javascript' }
 " Plug 'Galooshi/vim-import-js', {'for' : 'javascript'}
 

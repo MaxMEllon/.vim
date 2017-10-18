@@ -181,6 +181,7 @@ if g:plug.ready()
   " Plug 'rhysd/committia.vim'
   " Plug 't9md/vim-textmanip'
   " Plug 'terryma/vim-multiple-cursors'
+  " Plug 'tmhedberg/matchit'
   " Plug 'tpope/vim-dispatch'
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
   " Plug 'w0ng/vim-hybrid'
@@ -191,7 +192,7 @@ if g:plug.ready()
   Plug 'AndrewRadev/switch.vim'
   Plug 'MaxMEllon/vim-active-window'
   Plug 'MaxMEllon/vim-dirvish'
-  Plug 'MaxMEllon/vim-fzy-commands'
+  Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
   Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'MaxMEllon/vim-tmng', {'for' : 'tmng'}
   Plug 'Yggdroot/indentLine'
@@ -207,7 +208,6 @@ if g:plug.ready()
   Plug 'mattn/httpstatus-vim', {'on' : 'HttpStatus'}
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/clever-f.vim'
-  Plug 'tmhedberg/matchit'
   Plug 'tyru/caw.vim'
   Plug 'vim-scripts/surround.vim'
   Plug 'w0rp/ale'
@@ -233,6 +233,7 @@ if g:plug.ready()
   let g:plug.plugs = get(g:, 'plugs', {})
 
   PlugConfigAutoLoad
+  PlugConfigForce 'vim-fzy-commands'
 
   finish
 endif
