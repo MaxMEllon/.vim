@@ -1,3 +1,18 @@
 [submodule "help/vimdoc-ja"]
 	path = help/vimdoc-ja
 	url = https://github.com/vim-jp/vimdoc-ja
+[submodule "pack/test/opt/vital-power-assert"]
+	path = pack/test/opt/vital-power-assert
+	url = https://github.com/haya14busa/vital-power-assert
+[submodule "pack/test/opt/vital-safe-string"]
+	path = pack/test/opt/vital-safe-string
+	url = https://github.com/haya14busa/vital-safe-string
+[submodule "pack/test/opt/vital-vimlcompiler"]
+	path = pack/test/opt/vital-vimlcompiler
+	url = https://github.com/haya14busa/vital-vimlcompiler
+[submodule "pack/test/opt/vital.vim"]
+	path = pack/test/opt/vital.vim
+	url = https://github.com/vim-jp/vital.vim
+[submodule "pack/test/opt/vim-themis"]
+	path = pack/test/opt/vim-themis
+	url = https://github.com/thinca/vim-themis
