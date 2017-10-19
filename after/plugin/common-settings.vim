@@ -40,7 +40,7 @@ highlight SpellRare             cterm=underline
 
 let s:colors_name = get(g:, 'colors_name', 'default')
 
-if !maxmellon#vimtype#is_neo() &&  g:colors_name ==# 'default'
+if !maxmellon#vimtype#is_neo() &&  s:colors_name ==# 'default'
   " Overwrite default color scheme
   if !maxmellon#vimtype#is_gvim()
     highlight ColorColumn                       ctermbg=17

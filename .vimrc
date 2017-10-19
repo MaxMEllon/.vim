@@ -82,6 +82,9 @@ Indent 2, 'slim'
 Indent 2, 'fish'
 Indent 4, 'haskell'
 
+Suffix 'javascript', ['.jsx', '.json', '.sass', '.scss', '.css']
+Suffix 'vim', '.nvim'
+
 BindFT babelrc  json
 BindFT cjsx     coffee
 BindFT coffee   coffee

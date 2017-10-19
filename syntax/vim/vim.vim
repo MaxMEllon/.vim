@@ -1,5 +1,5 @@
 syntax match myVimCommand containedin=vimIsCommand
-  \ /\<\%(Source\|Autocmd\|AutocmdFT\|IndentFT\|Abbr\|BindFT\|Indent\)\>/
+  \ /\<\%(Source\|Autocmd\|AutocmdFT\|IndentFT\|Abbr\|BindFT\|Indent\|Suffix\)\>/
 
 syntax match vimPlugCommand containedin=vimIsCommand
   \ /\<\%(PlugConfigAutoLoad\|Plug\|MyPlug\|PlugBox\|Lazy\)\>/

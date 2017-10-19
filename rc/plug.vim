@@ -193,7 +193,7 @@ if g:plug.ready()
   Plug 'MaxMEllon/vim-active-window'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
-  Plug 'MaxMEllon/vim-fzy-rails'
+  " Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'MaxMEllon/vim-tmng', {'for' : 'tmng'}
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
@@ -216,6 +216,8 @@ if g:plug.ready()
   " PlugBox 'elixir'
   " PlugBox 'haskell'
   " PlugBox 'python'
+
+  MyPlug 'vim-fzy-rails'
 
   PlugBox 'css'
   PlugBox 'vim'
