@@ -54,12 +54,8 @@ Abbr i adn and
 Abbr i REact React
 Abbr i ): );
 Abbr i initalize initialize
-Abbr c fzf FZF
 Abbr c cdu Cdu
-Abbr c unite Unite
-Abbr c tig Tig
 Abbr c ggrep Ggrep
-Abbr c gdiff Gdiff
 Abbr c hgrep Hgrep
 Abbr c gist Gist
 Abbr c GGrep Ggrep
@@ -101,8 +97,9 @@ BindFT sass     sass
 BindFT scss     sass
 BindFT slim     slim
 BindFT toml     toml
-BindFT zsh      zsh
+BindFT vimspec  vimspec
 BindFT vue      html
+BindFT zsh      zsh
 
 ColorScheme 'hybrid_material'
 

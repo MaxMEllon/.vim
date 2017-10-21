@@ -170,6 +170,7 @@ if g:plug.ready()
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
   " Plug 'MaxMEllon/vim-hier'
+  " Plug 'cohama/vim-hier'
   " Plug 'easymotion/vim-easymotion'
   " Plug 'itchyny/vim-highlighturl'
   " Plug 'kshenoy/vim-signature'
@@ -193,21 +194,21 @@ if g:plug.ready()
   Plug 'MaxMEllon/vim-active-window'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
-  " Plug 'MaxMEllon/vim-fzy-rails'
+  Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'MaxMEllon/vim-tmng', {'for' : 'tmng'}
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
-  Plug 'cohama/vim-hier'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/vim-asterisk'
-  Plug 'junegunn/vim-easy-align'
+  Plug 'junegunn/vim-easy-align', {'on' : 'EasyAlign'}
   Plug 'kristijanhusak/vim-hybrid-material'
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on' : 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'mattn/httpstatus-vim', {'on' : 'HttpStatus'}
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/clever-f.vim'
+  Plug 'thinca/vim-themis', {'for' : 'vimspec'}
   Plug 'tyru/caw.vim'
   Plug 'vim-scripts/surround.vim'
   Plug 'w0rp/ale'
@@ -217,7 +218,8 @@ if g:plug.ready()
   " PlugBox 'haskell'
   " PlugBox 'python'
 
-  MyPlug 'vim-fzy-rails'
+  " for development
+  " MyPlug 'vim-fzy-rails'
 
   PlugBox 'css'
   PlugBox 'vim'
@@ -236,6 +238,7 @@ if g:plug.ready()
 
   PlugConfigAutoLoad
   PlugConfigForce 'vim-fzy-commands'
+  PlugConfigForce 'vim-easy-align'
 
   finish
 endif

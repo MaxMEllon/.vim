@@ -60,15 +60,15 @@ set undofile
 
 " fold
 set foldenable
-set foldmethod =marker
-set foldcolumn =0
-set foldlevel  =0
+set foldmethod     =marker
+set foldcolumn     =0
+set foldlevel      =0
 
 " tab
 set expandtab
-set shiftwidth  =2
-set tabstop     =2
-set softtabstop =2
+set shiftwidth     =2
+set tabstop        =2
+set softtabstop    =2
 set autoindent
 set smartindent
 set cindent
@@ -76,8 +76,8 @@ set smarttab
 
 " menu
 set wildmenu
-set wildmode =longest:full,full
-set wildignore =*.o,*.obj,*~
+set wildmode=longest:full,full
+set wildignore=*.o,*.obj,*~
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
