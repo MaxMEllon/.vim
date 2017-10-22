@@ -16,3 +16,9 @@
 [submodule "pack/test/opt/vim-themis"]
 	path = pack/test/opt/vim-themis
 	url = https://github.com/thinca/vim-themis
+[submodule "pack/test/opt/vim-benchmark"]
+	path = pack/test/opt/vim-benchmark
+	url = https://github.com/h1mesuke/vim-benchmark.git
+[submodule "pack/test/opt/underscore.vim"]
+	path = pack/test/opt/underscore.vim
+	url = https://github.com/haya14busa/underscore.vim.git
