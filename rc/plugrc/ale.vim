@@ -1,17 +1,27 @@
 let g:ale_linters = {
       \   'javascript': ['prettier', 'eslint'],
-      \   'jsx': ['prettier', 'eslint']
+      \   'jsx': ['prettier', 'eslint'],
+      \   'scss': [],
+      \   'sass': [],
+      \   'tmng': ['onion'],
       \}
 let g:ale_fixers = {
       \   'javascript': [
       \       'prettier'
       \   ],
+      \   'scss': [],
+      \   'sass': [],
       \}
 
-augroup ALE_Event
-  autocmd!
-  autocmd BufWritePost *.js ALEFix
-augroup END
+let g:ale_javascript_prettier_options = '-c ~/.prettierrc.yml'
+
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_sign_error = 'E'
+let g:ale_sign_style_error = 'X'
+let g:ale_sign_warning = 'W'
+let g:ale_sign_style_warning = 'W'
+let g:ale_sign_info = 'I'
 
 augroup ALE_Highlight
   autocmd!

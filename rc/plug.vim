@@ -172,13 +172,16 @@ if g:plug.ready()
   " Plug 'MaxMEllon/vim-hier'
   " Plug 'cohama/vim-hier'
   " Plug 'easymotion/vim-easymotion'
+  " Plug 'haya14busa/incsearch.vim'
   " Plug 'itchyny/vim-highlighturl'
   " Plug 'kshenoy/vim-signature'
+  " Plug 'mattn/httpstatus-vim', {'on' : 'HttpStatus'}
   " Plug 'mattn/vim-fixedsearch' | Plug 'mattn/vim-prompter'
   " Plug 'mhinz/vim-signify'
   " Plug 'mhinz/vim-startify'
   " Plug 'osyo-manga/unite-quickfix'
   " Plug 'pocke/vim-hier'
+  " Plug 'rhysd/clever-f.vim'
   " Plug 'rhysd/committia.vim'
   " Plug 't9md/vim-textmanip'
   " Plug 'terryma/vim-multiple-cursors'
@@ -199,18 +202,17 @@ if g:plug.ready()
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
-  Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align', {'on' : 'EasyAlign'}
   Plug 'kristijanhusak/vim-hybrid-material'
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on' : 'Gist'} | Plug 'mattn/webapi-vim'
-  Plug 'mattn/httpstatus-vim', {'on' : 'HttpStatus'}
   Plug 'prabirshrestha/async.vim'
-  Plug 'rhysd/clever-f.vim'
+  Plug 'rust-lang/rust.vim', {'for' : 'rust'}
   Plug 'thinca/vim-themis', {'for' : 'vimspec'}
   Plug 'tyru/caw.vim'
   Plug 'vim-scripts/surround.vim'
+  Plug 'fatih/vim-go', {'for' : 'go'}
   Plug 'w0rp/ale'
 
   " PlugBox 'c'

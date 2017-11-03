@@ -40,8 +40,8 @@ nnoremap -     :<C-u>e %:h<CR>
 
 inoremap <silent> <expr> <CR> maxmellon#indent_braces()
 
+nnoremap ' ,
 nnoremap <silent> ,h :<C-u>help <C-r><C-w><CR>
-
 nnoremap <silent> ,x :<C-u>call maxmellon#remove_whitespace()<CR>
 nnoremap <silent> ,z :<C-u>%s/　/  /g<CR>
 nnoremap          ,p :ToggleOpt paste<CR>
