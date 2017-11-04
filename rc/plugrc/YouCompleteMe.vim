@@ -8,9 +8,9 @@ Autocmd FileType javascript,c,cpp nnoremap <C-]> :<C-u>YcmCompleter GoTo<CR>
 let g:ycm_global_ycm_extra_conf = expand('~/.vim/') . '.ycm_extra_conf.py'
 
 let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_min_num_of_chars_for_completion = 3
-let g:ycm_min_num_identifier_candidate_chars = 3
-let g:ycm_auto_trigger = 99
+let g:ycm_min_num_of_chars_for_completion = 2
+let g:ycm_min_num_identifier_candidate_chars = 99
+let g:ycm_auto_trigger = 1
 
 let g:ycm_filetype_blacklist = {
       \ 'tagbar':   1,

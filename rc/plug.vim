@@ -202,17 +202,19 @@ if g:plug.ready()
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
+  Plug 'haya14busa/revital.vim'
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align', {'on' : 'EasyAlign'}
   Plug 'kristijanhusak/vim-hybrid-material'
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on' : 'Gist'} | Plug 'mattn/webapi-vim'
+  Plug 'osyo-manga/vital-coaster'
+  Plug 'osyo-manga/vital-gift'
   Plug 'prabirshrestha/async.vim'
-  Plug 'rust-lang/rust.vim', {'for' : 'rust'}
   Plug 'thinca/vim-themis', {'for' : 'vimspec'}
   Plug 'tyru/caw.vim'
+  Plug 'vim-jp/vital.vim'
   Plug 'vim-scripts/surround.vim'
-  Plug 'fatih/vim-go', {'for' : 'go'}
   Plug 'w0rp/ale'
 
   " PlugBox 'c'
@@ -222,6 +224,9 @@ if g:plug.ready()
 
   " for development
   " MyPlug 'vim-fzy-rails'
+
+  Plug 'fatih/vim-go', {'for' : 'go'}
+  Plug 'rust-lang/rust.vim', {'for' : 'rust'}
 
   PlugBox 'css'
   PlugBox 'vim'

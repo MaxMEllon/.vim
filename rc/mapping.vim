@@ -25,6 +25,7 @@ inoremap .       <C-]>.
 inoremap <CR>    <C-]><CR>
 inoremap <Space> <C-]><Space>
 inoremap :       :<C-]>
+inoremap <C-Space> <C-X><C-O>
 inoremap <S-Tab> <C-v><C-i>
 
 nnoremap <expr> 0
@@ -32,9 +33,6 @@ nnoremap <expr> 0
 
 nnoremap <C-h> ^
 nnoremap <C-e> $
-
-nnoremap _     :<C-u>sp .<CR>
-nnoremap <bar> :<C-u>vsp .<CR>
 
 nnoremap -     :<C-u>e %:h<CR>
 
@@ -63,7 +61,7 @@ nnoremap K  <Nop>
 vnoremap K  <Nop>
 nnoremap ZZ <Nop>
 nnoremap ZQ <Nop>
-noremap <C-z> <Nop>
+" noremap <C-z> <Nop>
 nnoremap <F1> <Nop>
 
 cnoremap <C-p> <Up>
