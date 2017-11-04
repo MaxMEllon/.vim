@@ -202,18 +202,14 @@ if g:plug.ready()
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
-  Plug 'haya14busa/revital.vim'
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align', {'on' : 'EasyAlign'}
   Plug 'kristijanhusak/vim-hybrid-material'
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on' : 'Gist'} | Plug 'mattn/webapi-vim'
-  Plug 'osyo-manga/vital-coaster'
-  Plug 'osyo-manga/vital-gift'
   Plug 'prabirshrestha/async.vim'
   Plug 'thinca/vim-themis', {'for' : 'vimspec'}
   Plug 'tyru/caw.vim'
-  Plug 'vim-jp/vital.vim'
   Plug 'vim-scripts/surround.vim'
   Plug 'w0rp/ale'
 
@@ -238,6 +234,7 @@ if g:plug.ready()
   PlugBox 'completion'
   PlugBox 'operator'
   PlugBox 'textobj'
+  PlugBox 'vital'
 
   call plug#end()
 
