@@ -198,7 +198,6 @@ if g:plug.ready()
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
   Plug 'MaxMEllon/vim-fzy-rails'
-  Plug 'MaxMEllon/vim-tmng', {'for' : 'tmng'}
   Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
@@ -209,6 +208,7 @@ if g:plug.ready()
   Plug 'mattn/gist-vim', {'on' : 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'prabirshrestha/async.vim'
   Plug 'thinca/vim-themis', {'for' : 'vimspec'}
+  Plug 'tpope/vim-repeat'
   Plug 'tyru/caw.vim'
   Plug 'vim-scripts/surround.vim'
   Plug 'w0rp/ale'
@@ -223,6 +223,8 @@ if g:plug.ready()
 
   Plug 'fatih/vim-go', {'for' : 'go'}
   Plug 'rust-lang/rust.vim', {'for' : 'rust'}
+
+  MyPlug 'vim-shiny'
 
   PlugBox 'css'
   PlugBox 'vim'
@@ -243,6 +245,7 @@ if g:plug.ready()
   PlugConfigAutoLoad
   PlugConfigForce 'vim-fzy-commands'
   PlugConfigForce 'vim-easy-align'
+  PlugConfigForce 'vim-shiny'
 
   finish
 endif

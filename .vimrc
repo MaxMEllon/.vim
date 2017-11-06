@@ -82,14 +82,13 @@ Suffix 'javascript', ['.jsx', '.json', '.sass', '.scss', '.css']
 Suffix 'vim', '.nvim'
 
 BindFT babelrc  json
-BindFT cjsx     coffee
 BindFT coffee   coffee
+BindFT cjsx     coffee
 BindFT es6      javascript
 BindFT eslintrc yaml
 BindFT ex       elixir
 BindFT exs      elixir
 BindFT fish     fish
-BindFT jsx      javascript
 BindFT jsx      javascript
 BindFT less     less
 BindFT nvim     vim

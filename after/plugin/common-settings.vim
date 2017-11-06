@@ -24,7 +24,6 @@ endif
 let g:maxmellon_define_my_color = s:true
 
 " flasshy
-highlight MyGlashy              ctermbg=21    term=bold,reverse guibg=#00FF00
 highlight MyBrightest           ctermfg=11    cterm=bold        gui=underline
 
 " My highlight group
@@ -38,6 +37,9 @@ highlight SpellCap              cterm=underline
 highlight SpellLocal            cterm=underline
 highlight SpellRare             cterm=underline
 
+    highlight FlashyPaste ctermbg=22
+    highlight FlashyUndo ctermbg=88
+
 let s:colors_name = get(g:, 'colors_name', 'default')
 
 if !maxmellon#vimtype#is_neo() &&  s:colors_name ==# 'default'
@@ -50,14 +52,15 @@ if !maxmellon#vimtype#is_neo() &&  s:colors_name ==# 'default'
     highlight LineNr                            ctermbg=none
     highlight Normal                            ctermbg=236
     highlight Search                            ctermbg=56
-
     " Visual
-    highlight Visual                            ctermbg=21
-    highlight VisualNOS                         ctermbg=21
+    highlight Visual                            ctermbg=22
+    highlight VisualNOS                         ctermbg=22
 
     " listchars
     highlight NonText             ctermfg=blue
     highlight SpecialKey          ctermfg=27
+    highlight FlashyPaste ctermbg=22
+    highlight FlashyUndo ctermbg=88
   endif
 endif
 

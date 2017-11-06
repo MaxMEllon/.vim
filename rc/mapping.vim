@@ -35,6 +35,8 @@ nnoremap <C-h> ^
 nnoremap <C-e> $
 
 nnoremap -     :<C-u>e %:h<CR>
+nnoremap <bar> :<C-u>vsp .<CR>
+nnoremap _     :<C-u>sp .<CR>
 
 inoremap <silent> <expr> <CR> maxmellon#indent_braces()
 
