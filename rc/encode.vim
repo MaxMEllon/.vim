@@ -27,7 +27,7 @@ if !g:env.gui
       set termencoding=  " same as 'encoding'
     endif
   endif
-elseif IsWindows()
+elseif g:env.win
   " For system.
   set termencoding=cp932
 endif

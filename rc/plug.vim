@@ -169,6 +169,7 @@ if g:plug.ready()
   " Plug 'LeafCage/foldCC.vim'
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
+  " Plug 'MaxMEllon/vim-active-window'
   " Plug 'MaxMEllon/vim-hier'
   " Plug 'cohama/vim-hier'
   " Plug 'easymotion/vim-easymotion'
@@ -188,13 +189,13 @@ if g:plug.ready()
   " Plug 'tmhedberg/matchit'
   " Plug 'tpope/vim-dispatch'
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
+  " Plug 'vim-scripts/surround.vim'
   " Plug 'w0ng/vim-hybrid'
   " Plug 'wakatime/vim-wakatime'
 
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
-  Plug 'MaxMEllon/vim-active-window'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
   Plug 'MaxMEllon/vim-fzy-rails'
@@ -204,13 +205,12 @@ if g:plug.ready()
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align', {'on' : 'EasyAlign'}
   Plug 'kristijanhusak/vim-hybrid-material'
+  Plug 'lambdalisue/gina.vim', {'on' : 'Gina'}
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on' : 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'prabirshrestha/async.vim'
   Plug 'thinca/vim-themis', {'for' : 'vimspec'}
-  Plug 'tpope/vim-repeat'
   Plug 'tyru/caw.vim'
-  Plug 'vim-scripts/surround.vim'
   Plug 'w0rp/ale'
 
   " PlugBox 'c'

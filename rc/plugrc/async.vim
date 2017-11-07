@@ -45,28 +45,28 @@
 " command! EslintAutoFixDisable call s:esllint_disable_autofix()
 " command! EslintAutoFixEnable call s:eslint_enable_autofix()
 "
-function! s:rubocop_fixer() abort
-  if !maxmellon#git#repo#is_inside() | return | endif
-  let s:rootdir = maxmellon#cdgitroot#get()
-  execute 'cd ' . s:rootdir
-  if !filereadable('.rubocop.yml')
-    call g:env.debug(s:err1 . ' ' . s:rootdir . '.rubocop.yml')
-    return
-  endif
-
-  if !executable('rubocop')
-    call g:env.debug(s:err2)
-  endif
-
-  let s:argv = ['bundle', 'exec', 'rubocop', '-a', expand('%')]
-
-  call async#job#start(s:argv, {
-        \ 'on_exit': function('s:lint_fix_callback')
-        \})
-endfunction
-
-command! RubocopAutoFix call s:rubocop_fixer()
-augroup Rubocop
-  autocmd!
-  autocmd BufLeave *.rb  RubocopAutoFix
-augroup END
+" function! s:rubocop_fixer() abort
+"   if !maxmellon#git#repo#is_inside() | return | endif
+"   let s:rootdir = maxmellon#cdgitroot#get()
+"   execute 'cd ' . s:rootdir
+"   if !filereadable('.rubocop.yml')
+"     call g:env.debug(s:err1 . ' ' . s:rootdir . '.rubocop.yml')
+"     return
+"   endif
+"
+"   if !executable('rubocop')
+"     call g:env.debug(s:err2)
+"   endif
+"
+"   let s:argv = ['bundle', 'exec', 'rubocop', '-a', expand('%')]
+"
+"   call async#job#start(s:argv, {
+"         \ 'on_exit': function('s:lint_fix_callback')
+"         \})
+" endfunction
+"
+" command! RubocopAutoFix call s:rubocop_fixer()
+" augroup Rubocop
+"   autocmd!
+"   autocmd BufLeave *.rb  RubocopAutoFix
+" augroup END

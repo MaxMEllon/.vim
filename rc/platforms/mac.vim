@@ -7,8 +7,10 @@ if isdirectory(s:pyenv) && !g:env.neo
   " let &pythondll = s:python2dll
   " let $PYTHONHOME = s:python2home
 
-  let s:python3home = $PYENV_ROOT . '/versions/3.6.2'
-  let s:python3dll  = $PYENV_ROOT . '/versions/3.6.2/lib/libpython3.6m.dylib'
-  let &pythonthreedll = s:python3dll
-  let $PYTHONHOME = s:python3home
+  if !g:env.gui
+    let s:python3home = $PYENV_ROOT . '/versions/3.6.2'
+    let s:python3dll  = $PYENV_ROOT . '/versions/3.6.2/lib/libpython3.6m.dylib'
+    let &pythonthreedll = s:python3dll
+    let $PYTHONHOME = s:python3home
+  endif
 endif

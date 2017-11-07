@@ -55,6 +55,8 @@ Abbr i REact React
 Abbr i ): );
 Abbr i initalize initialize
 Abbr c cdu Cdu
+Abbr c gn Gina
+Abbr c gina Gina
 Abbr c ggrep Ggrep
 Abbr c hgrep Hgrep
 Abbr c gist Gist
