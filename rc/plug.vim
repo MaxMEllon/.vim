@@ -1,3 +1,4 @@
+scriptencoding utf-8
 function! s:get_plugin_directory()
   return g:env.neo ? '~/.config/nvim/plugged' : '~/.vim/plugged'
 endfunction
@@ -162,15 +163,18 @@ command! -nargs=* -bar PlugBox call g:plug.load_plug_box(<args>)
 " }}}
 
 if g:plug.ready()
-  call plug#begin(g:plug.base)
+  call g:plug#begin(g:plug.base)
 
   " out {{{
 
+  " Plug 'AndrewRadev/switch.vim'
   " Plug 'LeafCage/foldCC.vim'
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
   " Plug 'MaxMEllon/vim-active-window'
+  " Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
   " Plug 'MaxMEllon/vim-hier'
+  " Plug 'Yggdroot/indentLine'
   " Plug 'cohama/vim-hier'
   " Plug 'easymotion/vim-easymotion'
   " Plug 'haya14busa/incsearch.vim'
@@ -192,14 +196,10 @@ if g:plug.ready()
   " Plug 'vim-scripts/surround.vim'
   " Plug 'w0ng/vim-hybrid'
   " Plug 'wakatime/vim-wakatime'
-
   " }}}
 
-  Plug 'AndrewRadev/switch.vim'
   Plug 'MaxMEllon/vim-dirvish'
-  Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
   Plug 'MaxMEllon/vim-fzy-rails'
-  Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
   Plug 'haya14busa/vim-asterisk'
@@ -221,10 +221,12 @@ if g:plug.ready()
   " for development
   " MyPlug 'vim-fzy-rails'
 
-  Plug 'fatih/vim-go', {'for' : 'go'}
+  Plug 'fwatih/vim-go', {'for' : 'go'}
   Plug 'rust-lang/rust.vim', {'for' : 'rust'}
+  Plug 'TomiLabo/vim-tmng'
 
   MyPlug 'vim-shiny'
+  MyPlug 'ramda.vim'
 
   PlugBox 'css'
   PlugBox 'vim'
@@ -238,7 +240,7 @@ if g:plug.ready()
   PlugBox 'textobj'
   PlugBox 'vital'
 
-  call plug#end()
+  call g:plug#end()
 
   let g:plug.plugs = get(g:, 'plugs', {})
 

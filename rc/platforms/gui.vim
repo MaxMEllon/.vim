@@ -13,7 +13,7 @@ set guioptions-=C
 set guioptions-=b
 set guioptions-=e
 " set imdisable
-set laststatus=2
+" set laststatus=2
 set cursorline
 
 if g:env.win

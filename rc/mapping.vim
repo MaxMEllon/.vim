@@ -4,12 +4,12 @@ nnoremap $  g$
 vnoremap j  gj
 vnoremap k  gk
 vnoremap $  g$
-" nnoremap gj j
-" nnoremap gk k
-" nnoremap g$ $
-" vnoremap gj j
-" vnoremap gk k
-" vnoremap g$ $
+nnoremap gj j
+nnoremap gk k
+nnoremap g$ $
+vnoremap gj j
+vnoremap gk k
+vnoremap g$ $
 nnoremap }  }zz
 nnoremap {  {zz
 
@@ -30,9 +30,6 @@ inoremap <S-Tab> <C-v><C-i>
 
 nnoremap <expr> 0
       \ col('.') ==# 1 ? '^' : '0'
-
-nnoremap <C-h> ^
-nnoremap <C-e> $
 
 nnoremap -     :<C-u>e %:h<CR>
 nnoremap <bar> :<C-u>vsp .<CR>
