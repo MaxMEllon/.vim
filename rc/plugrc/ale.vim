@@ -1,5 +1,5 @@
 let g:ale_linters = {
-      \   'javascript': ['prettier', 'eslint'],
+      \   'javascript': ['prettier'],
       \   'jsx': ['prettier', 'eslint'],
       \   'scss': [],
       \   'sass': [],

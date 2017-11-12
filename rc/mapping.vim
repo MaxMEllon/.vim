@@ -17,6 +17,7 @@ nnoremap <silent> gc   :<C-u>tablast <bar> tabnew<CR>
 nnoremap <silent> <F3> :<C-u>tabnext<CR>
 nnoremap <silent> <F2> :<C-u>tabprevious<CR>
 
+inoremap <silent> jj <Esc>`^
 inoremap <silent> <Esc> <Esc>`^
 inoremap <silent> <C-[> <Esc>`^
 inoremap <silent> <C-c> <Esc>`^
@@ -51,7 +52,7 @@ nnoremap <Space>m :<C-u>Mru<CR>
 nnoremap sub :%s/<C-r><C-w>//gc<Left><Left><Left>
 xnoremap s :<C-u>'<,'>s///gc<Left><Left><Left><Left><Left>
 
-nnoremap <silent><C-l> :<C-u>nohlsearch<CR><ESC>
+nnoremap <silent><C-l> :<C-u>nohlsearch<CR>:<C-u>redraw!<CR>
 
 nnoremap Y y$
 
@@ -72,6 +73,8 @@ cnoremap <C-d> <Del>
 cnoremap <C-k> <End><C-u>
 cnoremap <CR> <C-]><CR>
 cnoremap w!! w !sudo tee > /dev/null %<CR> :e!<CR>
+
+tnoremap <C-w> <C-w>
 
 let s:toggle_commands = []
 

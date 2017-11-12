@@ -30,16 +30,17 @@ let g:netrw_cursor       = 3
 " }}}
 
 let g:env = {}
-let g:env.neo    = g:maxmellon#vimtype#is_neo()
-let g:env.cui    = g:maxmellon#vimtype#is_cvim()
-let g:env.gui    = g:maxmellon#vimtype#is_gvim()
-let g:env.cygwin = g:maxmellon#os#is_cygwin()
-let g:env.win    = g:maxmellon#os#is_windows()
-let g:env.mac    = g:maxmellon#os#is_mac()
-let g:env.linux  = g:maxmellon#os#is_linux()
-let g:env.vim8   = has('patch-8.0.0039') && has('job') && has('lambda')
-let g:env.lua    = has('lua')
-let g:env.clpum  = has('clpum')
+let g:env.neo     = g:maxmellon#vimtype#is_neo()
+let g:env.cui     = g:maxmellon#vimtype#is_cvim()
+let g:env.gui     = g:maxmellon#vimtype#is_gvim()
+let g:env.cygwin  = g:maxmellon#os#is_cygwin()
+let g:env.win     = g:maxmellon#os#is_windows()
+let g:env.mac     = g:maxmellon#os#is_mac()
+let g:env.linux   = g:maxmellon#os#is_linux()
+let g:env.vim8    = has('patch-8.0.0039') && has('job') && has('lambda')
+let g:env.lua     = has('lua')
+let g:env.termgui = has('termguicolors')
+let g:env.clpum   = has('clpum')
 
 Source 'command'   " ~/.vim/rc/command.vim
 Source 'encode'    " ~/.vim/rc/encode.vim
@@ -48,6 +49,7 @@ Source 'mapping'   " ~/.vim/rc/mapping.vim
 Source 'platform'  " ~/.vim/rc/platform.vim
 Source 'plug'      " ~/.vim/rc/plug.vim
 Source 'event'     " ~/.vim/rc/event.vim
+
 
 Abbr i tihs this
 Abbr i adn and
@@ -102,7 +104,7 @@ BindFT vimspec  vimspec
 BindFT vue      html
 BindFT zsh      zsh
 
-ColorScheme 'hybrid_material'
+ColorScheme 'iceberg'
 
 filetype plugin indent on
 syntax on

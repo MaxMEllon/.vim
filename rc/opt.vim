@@ -3,14 +3,16 @@ set autoread
 set autowrite
 set background     =dark
 set backspace      =indent,eol,start
+set breakindent
+set breakindentopt =sbr
 set cmdheight      =1
 set cmdwinheight   =5
 set colorcolumn    =80,100
-set complete       =.,k,w,b,u,t,i
+set complete       =t,k,.,w,b,u,t,i
 set completeopt    =menuone,longest,noselect
 set cscopetag
 set display        =lastline
-set fillchars      =vert:\ ,fold:\ ,stlnc:\ ,diff:-
+set fillchars      =vert:\ ,fold:\ ,stl:\ ,stlnc:\ ,diff:-
 set foldcolumn     =0
 set helplang       =ja
 set history        =100
@@ -19,8 +21,6 @@ set incsearch
 set laststatus     =0
 set lazyredraw
 set linespace      =0
-set list
-set listchars      =eol:$,tab:~\ ,trail:_,precedes:<,extends:>,nbsp:%
 set matchpairs     =<:>,(:),[:],{:}
 set matchtime      =4
 set maxmem         =500000
@@ -38,6 +38,7 @@ set report         =1
 set ruler
 set runtimepath   +=~/.vim/help/vimdoc-ja
 set scrolloff      =5
+set showbreak=\\
 set showmatch
 set showtabline    =0
 set splitbelow
@@ -57,6 +58,10 @@ set backupdir      =~/.vim/_back
 set undolevels     =200
 set undodir        =~/.vim/_undo
 set undofile
+
+if g:env.termgui
+  set termguicolors
+endif
 
 " fold
 set foldenable
@@ -89,6 +94,14 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.sql
 
+" list
+set list
+if g:env.mac
+  set listchars      =eol:$,tab:\ ,trail:_,precedes:<,extends:>,nbsp:%
+else
+  set listchars      =eol:$,tab:\ ,trail:_,precedes:<,extends:>,nbsp:%
+endif
+
 if executable('hw')
   setglobal grepprg=hw\ --no-group\ --no-color
 elseif executable('jvgrep')
@@ -105,5 +118,5 @@ if !isdirectory(expand('~/.vim/_back'))
 endif
 
 if !isdirectory(expand('~/.vim/_undo'))
-  call mkdir(expand('~/.vim/_undo'), 'p')
+e call mkdir(expand('~/.vim/_undo'), 'p')
 endif

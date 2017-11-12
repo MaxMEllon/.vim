@@ -6,5 +6,5 @@ let g:operator#flashy#flash_time = 500
 
 augroup Flashy
   autocmd!
-  autocmd VimEnter * highlight MelonGlashy ctermbg=22
+  autocmd VimEnter * highlight MelonGlashy ctermbg=22 guibg=#33aa33
 augroup END

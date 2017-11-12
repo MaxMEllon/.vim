@@ -5,13 +5,13 @@ let s:false = maxmellon#bool#false()
 
 augroup TabSpace
   autocmd!
-  autocmd BufEnter * highlight default ZenkakuSpaces term=underline ctermbg=52
+  autocmd BufEnter * highlight default ZenkakuSpaces term=underline ctermbg=52 guibg=red
   autocmd BufEnter * call matchadd('ZenkakuSpaces', '　')
 
-  autocmd BufEnter * highlight default TabCharacter ctermfg=235
-  autocmd BufEnter * call matchadd('TabCharacter', '\t')
+  " autocmd BufEnter * highlight default TabCharacter ctermfg=235 guifg=#242940 guibg=#161821
+  " autocmd BufEnter * call matchadd('TabCharacter', '\t')
 
-  autocmd BufEnter * highlight default TailSpaceCharacter ctermbg=104
+  autocmd BufEnter * highlight default TailSpaceCharacter ctermbg=104 guibg=darkred
   autocmd BufEnter * call matchadd('TailSpaceCharacter', '\s\+$')
 augroup END
 
@@ -23,7 +23,6 @@ endif
 
 let g:maxmellon_define_my_color = s:true
 
-" flasshy
 highlight MyBrightest           ctermfg=11    cterm=bold        gui=underline
 
 " My highlight group
@@ -32,19 +31,16 @@ highlight StatusLineFileType    ctermfg=white ctermbg=19
 highlight StatusLineVimType     ctermfg=white ctermbg=52
 highlight TabLinePwd            ctermfg=gray  ctermbg=52
 
-highlight SpellBad              cterm=underline
-highlight SpellCap              cterm=underline
-highlight SpellLocal            cterm=underline
-highlight SpellRare             cterm=underline
-
-    highlight FlashyPaste ctermbg=22
-    highlight FlashyUndo ctermbg=88
+highlight SpellBad   cterm=underline gui=underline guifg=red
+highlight SpellCap   cterm=underline gui=underline guifg=blue
+highlight SpellLocal cterm=underline gui=underline guifg=green
+highlight SpellRare  cterm=underline gui=underline guifg=yellow
 
 let s:colors_name = get(g:, 'colors_name', 'default')
 
-if !maxmellon#vimtype#is_neo() &&  s:colors_name ==# 'default'
+if !maxmellon#vimtype#is_neo() && s:colors_name ==# 'default'
   " Overwrite default color scheme
-  if !maxmellon#vimtype#is_gvim()
+  if !maxmellon#vimtype#is_gvim() && !has('termguicolors')
     highlight ColorColumn                       ctermbg=17
     highlight Comment             ctermfg=244
     highlight FoldColumn          ctermfg=67    ctermbg=none

@@ -171,7 +171,6 @@ if g:plug.ready()
   " Plug 'LeafCage/foldCC.vim'
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
-  " Plug 'MaxMEllon/vim-active-window'
   " Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
   " Plug 'MaxMEllon/vim-hier'
   " Plug 'Yggdroot/indentLine'
@@ -179,6 +178,7 @@ if g:plug.ready()
   " Plug 'easymotion/vim-easymotion'
   " Plug 'haya14busa/incsearch.vim'
   " Plug 'itchyny/vim-highlighturl'
+  " Plug 'kristijanhusak/vim-hybrid-material'
   " Plug 'kshenoy/vim-signature'
   " Plug 'mattn/httpstatus-vim', {'on' : 'HttpStatus'}
   " Plug 'mattn/vim-fixedsearch' | Plug 'mattn/vim-prompter'
@@ -186,7 +186,6 @@ if g:plug.ready()
   " Plug 'mhinz/vim-startify'
   " Plug 'osyo-manga/unite-quickfix'
   " Plug 'pocke/vim-hier'
-  " Plug 'rhysd/clever-f.vim'
   " Plug 'rhysd/committia.vim'
   " Plug 't9md/vim-textmanip'
   " Plug 'terryma/vim-multiple-cursors'
@@ -196,19 +195,23 @@ if g:plug.ready()
   " Plug 'vim-scripts/surround.vim'
   " Plug 'w0ng/vim-hybrid'
   " Plug 'wakatime/vim-wakatime'
+
   " }}}
 
+  " Plug 'MaxMEllon/vim-fzy-rails'
+  Plug 'MaxMEllon/vim-active-window'
   Plug 'MaxMEllon/vim-dirvish'
-  Plug 'MaxMEllon/vim-fzy-rails'
+  Plug 'cocopon/iceberg.vim'
   Plug 'cohama/lexima.vim'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
   Plug 'haya14busa/vim-asterisk'
   Plug 'junegunn/vim-easy-align', {'on' : 'EasyAlign'}
-  Plug 'kristijanhusak/vim-hybrid-material'
   Plug 'lambdalisue/gina.vim', {'on' : 'Gina'}
   Plug 'mattn/emmet-vim'
+  Plug 'haya14busa/vim-open-googletranslate', {'on' : 'OpenGoogleTranslate'}
   Plug 'mattn/gist-vim', {'on' : 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'prabirshrestha/async.vim'
+  Plug 'rhysd/clever-f.vim'
   Plug 'thinca/vim-themis', {'for' : 'vimspec'}
   Plug 'tyru/caw.vim'
   Plug 'w0rp/ale'
@@ -218,22 +221,20 @@ if g:plug.ready()
   " PlugBox 'haskell'
   " PlugBox 'python'
 
-  " for development
-  " MyPlug 'vim-fzy-rails'
-
-  Plug 'fwatih/vim-go', {'for' : 'go'}
+  Plug 'fatih/vim-go', {'for' : 'go'}
   Plug 'rust-lang/rust.vim', {'for' : 'rust'}
   Plug 'TomiLabo/vim-tmng'
 
   MyPlug 'vim-shiny'
+  MyPlug 'vim-fzy-rails'
   MyPlug 'ramda.vim'
 
   PlugBox 'css'
-  PlugBox 'vim'
-  PlugBox 'ruby'
   PlugBox 'html'
   PlugBox 'javascript'
   PlugBox 'plantuml'
+  PlugBox 'ruby'
+  PlugBox 'vim'
 
   PlugBox 'completion'
   PlugBox 'operator'
@@ -245,8 +246,8 @@ if g:plug.ready()
   let g:plug.plugs = get(g:, 'plugs', {})
 
   PlugConfigAutoLoad
-  PlugConfigForce 'vim-fzy-commands'
   PlugConfigForce 'vim-easy-align'
+  PlugConfigForce 'vim-open-googletranslate'
   PlugConfigForce 'vim-shiny'
 
   finish

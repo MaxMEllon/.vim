@@ -1,7 +1,7 @@
-set mouse&
-set mousemodel=extend
-set mouse+=a
-set clipboard=unnamed
+" set mouse&
+" set mousemodel=extend
+" set mouse+=a
+" set clipboard=unnamed
 set guioptions-=r
 set guioptions-=R
 set guioptions-=l
