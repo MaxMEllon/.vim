@@ -198,17 +198,17 @@ if g:plug.ready()
 
   " }}}
 
-  " Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'MaxMEllon/vim-active-window'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'cocopon/iceberg.vim'
   Plug 'cohama/lexima.vim'
+  Plug 'drewtempelmeyer/palenight.vim'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
   Plug 'haya14busa/vim-asterisk'
+  Plug 'haya14busa/vim-open-googletranslate', {'on' : 'OpenGoogleTranslate'}
   Plug 'junegunn/vim-easy-align', {'on' : 'EasyAlign'}
   Plug 'lambdalisue/gina.vim', {'on' : 'Gina'}
   Plug 'mattn/emmet-vim'
-  Plug 'haya14busa/vim-open-googletranslate', {'on' : 'OpenGoogleTranslate'}
   Plug 'mattn/gist-vim', {'on' : 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/clever-f.vim'
@@ -223,11 +223,13 @@ if g:plug.ready()
 
   Plug 'fatih/vim-go', {'for' : 'go'}
   Plug 'rust-lang/rust.vim', {'for' : 'rust'}
+  Plug 'cespare/vim-toml'
   Plug 'TomiLabo/vim-tmng'
 
   MyPlug 'vim-shiny'
   MyPlug 'vim-fzy-rails'
   MyPlug 'ramda.vim'
+  " MyPlug 'iceberg.vim'
 
   PlugBox 'css'
   PlugBox 'html'
@@ -249,6 +251,7 @@ if g:plug.ready()
   PlugConfigForce 'vim-easy-align'
   PlugConfigForce 'vim-open-googletranslate'
   PlugConfigForce 'vim-shiny'
+  PlugConfigForce 'vim-go'
 
   finish
 endif

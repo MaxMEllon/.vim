@@ -1,6 +1,7 @@
 " generate boolean
 let g:false = g:maxmellon#bool#false()
 let g:true  = g:maxmellon#bool#true()
+let g:mapleader = ','
 
 command! -nargs=+ -bar Source call g:maxmellon#source#call(<args>)
 
@@ -42,14 +43,14 @@ let g:env.lua     = has('lua')
 let g:env.termgui = has('termguicolors')
 let g:env.clpum   = has('clpum')
 
-Source 'command'   " ~/.vim/rc/command.vim
-Source 'encode'    " ~/.vim/rc/encode.vim
-Source 'opt'       " ~/.vim/rc/opt.vim
-Source 'mapping'   " ~/.vim/rc/mapping.vim
-Source 'platform'  " ~/.vim/rc/platform.vim
-Source 'plug'      " ~/.vim/rc/plug.vim
-Source 'event'     " ~/.vim/rc/event.vim
-
+Source 'command'    " ~/.vim/rc/command.vim
+Source 'encode'     " ~/.vim/rc/encode.vim
+Source 'opt'        " ~/.vim/rc/opt.vim
+Source 'mapping'    " ~/.vim/rc/mapping.vim
+Source 'platform'   " ~/.vim/rc/platform.vim
+Source 'plug'       " ~/.vim/rc/plug.vim
+Source 'event'      " ~/.vim/rc/event.vim
+Source 'statusline' " ~/.vim/rc/statusline.vim
 
 Abbr i tihs this
 Abbr i adn and
@@ -81,6 +82,7 @@ Indent 2, 'coffee'
 Indent 2, 'slim'
 Indent 2, 'fish'
 Indent 4, 'haskell'
+Indent 4, 'go', {'tab': g:true}
 
 Suffix 'javascript', ['.jsx', '.json', '.sass', '.scss', '.css']
 Suffix 'vim', '.nvim'
@@ -104,7 +106,7 @@ BindFT vimspec  vimspec
 BindFT vue      html
 BindFT zsh      zsh
 
-ColorScheme 'iceberg'
+ColorScheme 'palenight'
 
 filetype plugin indent on
 syntax on

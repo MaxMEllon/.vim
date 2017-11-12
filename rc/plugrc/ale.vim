@@ -23,6 +23,9 @@ let g:ale_sign_warning = 'W'
 let g:ale_sign_style_warning = 'W'
 let g:ale_sign_info = 'I'
 
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_insert_leave = 1
+
 augroup ALE_Highlight
   autocmd!
   autocmd VimEnter * highlight ALEError ctermbg=61

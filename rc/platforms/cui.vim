@@ -31,9 +31,10 @@ set t_ku         =OA
 set t_kd         =OB
 set t_kr         =OC
 set t_kl         =OD
+
 " cursor
-let &t_SI .= "\e[6 q"
-let &t_EI .= "\e[2 q"
-let &t_ST .= "\e[4 q"
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+let &t_ST = "\e[4 q"
 
 set novisualbell

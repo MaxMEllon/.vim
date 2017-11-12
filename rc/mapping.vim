@@ -17,15 +17,16 @@ nnoremap <silent> gc   :<C-u>tablast <bar> tabnew<CR>
 nnoremap <silent> <F3> :<C-u>tabnext<CR>
 nnoremap <silent> <F2> :<C-u>tabprevious<CR>
 
-inoremap <silent> jj <Esc>`^
-inoremap <silent> <Esc> <Esc>`^
-inoremap <silent> <C-[> <Esc>`^
-inoremap <silent> <C-c> <Esc>`^
+" inoremap <silent> jj <Esc>`^
+imap <silent> <Esc> <Esc>`^
+imap <silent> <C-[> <Esc>`^
+imap <silent> <C-c> <Esc>`^
 
 inoremap .       <C-]>.
 inoremap <CR>    <C-]><CR>
 inoremap <Space> <C-]><Space>
 inoremap :       :<C-]>
+
 inoremap <C-Space> <C-X><C-O>
 inoremap <S-Tab> <C-v><C-i>
 
@@ -39,10 +40,14 @@ nnoremap _     :<C-u>sp .<CR>
 inoremap <silent> <expr> <CR> maxmellon#indent_braces()
 
 nnoremap ' ,
-nnoremap <silent> ,h :<C-u>help <C-r><C-w><CR>
-nnoremap <silent> ,x :<C-u>call maxmellon#remove_whitespace()<CR>
-nnoremap <silent> ,z :<C-u>%s/　/  /g<CR>
-nnoremap          ,p :ToggleOpt paste<CR>
+nnoremap <silent> <Leader>h :<C-u>help <C-r><C-w><CR>
+nnoremap <silent> <Leader>x :<C-u>call maxmellon#remove_whitespace()<CR>
+nnoremap <silent> <Leader>z :<C-u>%s/　/  /g<CR>
+nnoremap          <Leader>p :<C-u>ToggleOpt paste<CR>
+
+map <C-n> :<C-u>lnext<CR>
+map <C-p> :<C-u>lprevious<CR>
+nnoremap  <Leader>a :<C-u>lclose<CR>
 
 nnoremap <Space>f :<C-u>LsOpen<CR>
 nnoremap <Space>g :<C-u>GitLsFiles<CR>
@@ -59,8 +64,8 @@ nnoremap Y y$
 nnoremap Q  <Nop>
 nnoremap K  <Nop>
 vnoremap K  <Nop>
-nnoremap ZZ <Nop>
-nnoremap ZQ <Nop>
+" nnoremap ZZ <Nop>
+" nnoremap ZQ <Nop>
 " noremap <C-z> <Nop>
 nnoremap <F1> <Nop>
 
@@ -73,8 +78,6 @@ cnoremap <C-d> <Del>
 cnoremap <C-k> <End><C-u>
 cnoremap <CR> <C-]><CR>
 cnoremap w!! w !sudo tee > /dev/null %<CR> :e!<CR>
-
-tnoremap <C-w> <C-w>
 
 let s:toggle_commands = []
 

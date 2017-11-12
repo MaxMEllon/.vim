@@ -26,10 +26,10 @@ let g:maxmellon_define_my_color = s:true
 highlight MyBrightest           ctermfg=11    cterm=bold        gui=underline
 
 " My highlight group
-highlight StatusLineBranch      ctermfg=white ctermbg=23
-highlight StatusLineFileType    ctermfg=white ctermbg=19
-highlight StatusLineVimType     ctermfg=white ctermbg=52
-highlight TabLinePwd            ctermfg=gray  ctermbg=52
+highlight StatusLineBranch      ctermfg=white ctermbg=23 guibg=#005faf guifg=white
+highlight StatusLineFileType    ctermfg=white ctermbg=19 guibg=#00875f guifg=white
+highlight StatusLineVimType     ctermfg=white ctermbg=52 guibg=#87005f guifg=white
+highlight TabLinePwd            ctermfg=gray  ctermbg=52 guibg=#87005f guifg=gray
 
 highlight SpellBad   cterm=underline gui=underline guifg=red
 highlight SpellCap   cterm=underline gui=underline guifg=blue

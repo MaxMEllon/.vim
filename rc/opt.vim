@@ -9,7 +9,7 @@ set cmdheight      =1
 set cmdwinheight   =5
 set colorcolumn    =80,100
 set complete       =t,k,.,w,b,u,t,i
-set completeopt    =menuone,longest,noselect
+set completeopt    =menu,noinsert,noselect
 set cscopetag
 set display        =lastline
 set fillchars      =vert:\ ,fold:\ ,stl:\ ,stlnc:\ ,diff:-
@@ -18,7 +18,7 @@ set helplang       =ja
 set history        =100
 set hlsearch
 set incsearch
-set laststatus     =0
+set laststatus     =2
 set lazyredraw
 set linespace      =0
 set matchpairs     =<:>,(:),[:],{:}
@@ -99,7 +99,7 @@ set list
 if g:env.mac
   set listchars      =eol:$,tab:\ ,trail:_,precedes:<,extends:>,nbsp:%
 else
-  set listchars      =eol:$,tab:\ ,trail:_,precedes:<,extends:>,nbsp:%
+  set listchars      =eol:$,tab:~\ ,trail:_,precedes:<,extends:>,nbsp:%
 endif
 
 if executable('hw')
