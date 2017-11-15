@@ -19,8 +19,8 @@ set cursorline
 if g:env.win
   Autocmd VimEnter * let &guifont = 'Ricty_for_Powerline:h14'
 else
-  Autocmd VimEnter * let &guifont = 'Ubuntu Mono:h14'
-  Autocmd VimEnter * let &guifontwide = 'Ubuntu Mono:h14'
+  Autocmd VimEnter * let &guifont = 'Knack Nerd Font:h14'
+  Autocmd VimEnter * let &guifontwide = 'Knack Nerd Font:h14'
 endif
 
 Autocmd VimEnter * set lines=60 | set columns=120

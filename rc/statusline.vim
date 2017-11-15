@@ -11,8 +11,16 @@ function! s:StatusLine(mode)
   if a:mode ==# 'Enter'
     highlight StatusLine ctermfg=red ctermbg=yellow cterm=NONE guifg=white guibg=darkyellow
   else
-    highlight StatusLine ctermfg=white ctermbg=blue cterm=NONE guifg=white guibg=darkblue
+    highlight StatusLine ctermfg=white ctermbg=blue cterm=NONE guifg=white guibg=darkgray
   endif
+endfunction
+
+function! WrapedGoStatusLine()
+  try
+    return go#statusline#Show()
+  catch
+    return ''
+  endtry
 endfunction
 
 let s:slhlcmd = ''
@@ -29,17 +37,19 @@ let s:slhlcmd = ''
 "=============================================================================="
 
 " left
-set statusline       =\ "
-set statusline+=%n\ \|\ "
-set statusline+=%m\ \|\ "
-set statusline+=%t\ \|\ "
-set statusline+=%r\ \|\ "
-set statusline+=%{maxmellon#paste#statusline()}\ \|"
+set statusline =\ "
+" set statusline+=%n\ "
+set statusline+=%m\ "
+set statusline+=%t\ "
+set statusline+=%r\ "
+set statusline+=%{maxmellon#paste#statusline()}\ "
+
 " right
 set statusline+=%=
 set statusline+=%#StatusLineBranch#\ %{maxmellon#git#branch#get()}\ %#StatusLine#
 set statusline+=%#StatusLineFileType#\ %y\ "
 set statusline+=%#StatusLineVimType#\ %{maxmellon#vimtype#statusline()}\ "
-set statusline+=%#ErrorMsg#%{maxmellon#qf#statusline()}"
+set statusline+=%#StatusLineGoBuild#%{WrapedGoStatusLine()}"
+set statusline+=%#ErrorMsg#\ %{maxmellon#qf#statusline()}"
 
 let s:statusline = &statusline

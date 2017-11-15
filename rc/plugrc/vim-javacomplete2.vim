@@ -2,10 +2,10 @@ augroup vim-java-complete2
   autocmd FileType java setlocal omnifunc=javacomplete#Complete
 augroup END
 
-imap <F5> <Plug>(JavaComplete-Imports-AddSmart)
-nmap <F5> <Plug>(JavaComplete-Imports-AddSmart)
-nmap <F6> <Plug>(JavaComplete-Imports-RemoveUnused)
-imap <F6> <Plug>(JavaComplete-Imports-RemoveUnused)
+let g:JavaComplete_Home = $HOME . '/.vim/plugged/vim-javacomplete2'
+
+nmap <Leader>ji <Plug>(JavaComplete-Imports-AddSmart)
+nmap <Leader>jr <Plug>(JavaComplete-Imports-RemoveUnused)
 
 
 

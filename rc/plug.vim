@@ -216,12 +216,7 @@ if g:plug.ready()
   Plug 'tyru/caw.vim'
   Plug 'w0rp/ale'
 
-  " PlugBox 'c'
-  " PlugBox 'elixir'
-  " PlugBox 'haskell'
-  " PlugBox 'python'
-
-  Plug 'fatih/vim-go', {'for' : 'go'}
+  Plug 'fatih/vim-go'
   Plug 'rust-lang/rust.vim', {'for' : 'rust'}
   Plug 'cespare/vim-toml'
   Plug 'TomiLabo/vim-tmng'
@@ -229,7 +224,14 @@ if g:plug.ready()
   MyPlug 'vim-shiny'
   MyPlug 'vim-fzy-rails'
   MyPlug 'ramda.vim'
+  " MyPlug 'eclim'
   " MyPlug 'iceberg.vim'
+
+  " PlugBox 'c'
+  " PlugBox 'elixir'
+  " PlugBox 'haskell'
+  " PlugBox 'python'
+  PlugBox 'java'
 
   PlugBox 'css'
   PlugBox 'html'
@@ -251,7 +253,6 @@ if g:plug.ready()
   PlugConfigForce 'vim-easy-align'
   PlugConfigForce 'vim-open-googletranslate'
   PlugConfigForce 'vim-shiny'
-  PlugConfigForce 'vim-go'
 
   finish
 endif
