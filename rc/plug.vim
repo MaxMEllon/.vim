@@ -148,7 +148,11 @@ augroup PlugConfig
 augroup END
 
 function! g:plug.lazy(...)
-  execute 'autocmd PlugConfig FileType ' . a:1 . ' call maxmellon#lazy#' . a:1 . '#load()'
+  if a:0 is 1
+    execute 'autocmd PlugConfig FileType ' . a:1 . ' call maxmellon#lazy#' . a:1 . '#load()'
+  else
+    execute 'autocmd PlugConfig FileType ' . a:1 . ' call maxmellon#lazy#' . a:2 . '#load()'
+  endif
 endfunction
 
 command! -nargs=1 Lazy call g:plug.lazy(<args>)
@@ -215,6 +219,7 @@ if g:plug.ready()
   Plug 'thinca/vim-themis', {'for' : 'vimspec'}
   Plug 'tyru/caw.vim'
   Plug 'w0rp/ale'
+  Plug 'wakatime/vim-wakatime'
 
   Plug 'fatih/vim-go'
   Plug 'rust-lang/rust.vim', {'for' : 'rust'}
@@ -232,7 +237,6 @@ if g:plug.ready()
   " PlugBox 'haskell'
   " PlugBox 'python'
   PlugBox 'java'
-
   PlugBox 'css'
   PlugBox 'html'
   PlugBox 'javascript'

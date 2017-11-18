@@ -17,7 +17,7 @@ nnoremap <silent> gc   :<C-u>tablast <bar> tabnew<CR>
 nnoremap <silent> <F3> :<C-u>tabnext<CR>
 nnoremap <silent> <F2> :<C-u>tabprevious<CR>
 
-" inoremap <silent> jj <Esc>`^
+inoremap <silent> <C-j> <Esc>`^
 imap <silent> <Esc> <Esc>`^
 imap <silent> <C-[> <Esc>`^
 imap <silent> <C-c> <Esc>`^
