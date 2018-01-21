@@ -38,6 +38,7 @@ let g:env.cygwin  = g:maxmellon#os#is_cygwin()
 let g:env.win     = g:maxmellon#os#is_windows()
 let g:env.mac     = g:maxmellon#os#is_mac()
 let g:env.linux   = g:maxmellon#os#is_linux()
+let g:env.term    = has('terminal')
 let g:env.vim8    = has('patch-8.0.0039') && has('job') && has('lambda')
 let g:env.lua     = has('lua')
 let g:env.termgui = has('termguicolors') && empty($TMUX)
@@ -50,7 +51,13 @@ Source 'mapping'    " ~/.vim/rc/mapping.vim
 Source 'platform'   " ~/.vim/rc/platform.vim
 Source 'plug'       " ~/.vim/rc/plug.vim
 Source 'event'      " ~/.vim/rc/event.vim
-Source 'statusline' " ~/.vim/rc/statusline.vim
+" Source 'statusline' " ~/.vim/rc/statusline.vim
+
+if g:env.term
+  Source 'terminal' " ~/.vim/rc/terminal.vim
+  Abbr c terminal Terminal
+endif
+
 
 Abbr i tihs this
 Abbr i adn and
@@ -58,19 +65,19 @@ Abbr i REact React
 Abbr i ): );
 Abbr i initalize initialize
 Abbr c cdu Cdu
-Abbr c gn Gina
-Abbr c gina Gina
-Abbr c ggrep Ggrep
-Abbr c hgrep Hgrep
-Abbr c gist Gist
 Abbr c GGrep Ggrep
-Abbr c W w
 Abbr c Q q
 Abbr c Qa qa
-Abbr c WQ wq
+Abbr c W w
 Abbr c WA wa
-Abbr c Wq wq
+Abbr c WQ wq
 Abbr c Wa wa
+Abbr c Wq wq
+Abbr c ggrep Ggrep
+Abbr c gina Gina
+Abbr c gist Gist
+Abbr c gn Gina
+Abbr c hgrep Hgrep
 
 Indent 4, 'python'
 Indent 4, 'java'
@@ -87,24 +94,25 @@ Indent 4, 'go', {'tab': g:true}
 Suffix 'javascript', ['.jsx', '.json', '.sass', '.scss', '.css']
 Suffix 'vim', '.nvim'
 
-BindFT babelrc  json
-BindFT coffee   coffee
-BindFT cjsx     coffee
-BindFT es6      javascript
-BindFT eslintrc yaml
-BindFT ex       elixir
-BindFT exs      elixir
-BindFT fish     fish
-BindFT jsx      javascript
-BindFT less     less
-BindFT nvim     vim
-BindFT sass     sass
-BindFT scss     sass
-BindFT slim     slim
-BindFT toml     toml
-BindFT vimspec  vimspec
-BindFT vue      html
-BindFT zsh      zsh
+BindFT babelrc    json
+BindFT cjsx       coffee
+BindFT coffee     coffee
+BindFT es6        javascript
+BindFT eslintrc   yaml
+BindFT ex         elixir
+BindFT exs        elixir
+BindFT fish       fish
+BindFT jsx        javascript
+BindFT less       less
+BindFT nvim       vim
+BindFT sass       sass
+BindFT scss       sass
+BindFT slim       slim
+BindFT textlintrc json
+BindFT toml       toml
+BindFT vimspec    vimspec
+BindFT vue        html
+BindFT zsh        zsh
 
 ColorScheme 'palenight'
 

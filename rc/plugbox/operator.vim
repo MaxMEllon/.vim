@@ -1,5 +1,5 @@
-" MyPlug 'vim-edgemotion'
+Plug 'haya14busa/vim-edgemotion'
 Plug 'haya14busa/vim-operator-flashy'
 Plug 'kana/vim-niceblock'
 Plug 'kana/vim-operator-user'
-Plug 'rhysd/vim-operator-surround'
+" Plug 'rhysd/vim-operator-surround'

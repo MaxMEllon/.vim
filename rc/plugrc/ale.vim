@@ -3,7 +3,6 @@ let g:ale_linters = {
       \   'jsx': ['prettier', 'eslint'],
       \   'scss': [],
       \   'sass': [],
-      \   'tmng': ['onion'],
       \}
 let g:ale_fixers = {
       \   'javascript': [

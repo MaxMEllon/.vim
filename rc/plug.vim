@@ -166,12 +166,29 @@ endfunction
 command! -nargs=* -bar PlugBox call g:plug.load_plug_box(<args>)
 " }}}
 
+" {{{
+function! g:plug.mac_plug(repo)
+  if g:env.mac
+    call g:plug#(a:repo)
+  endif
+endfunction
+
+command! -nargs=1 MacPlug call g:plug.mac_plug(<args>)
+
+function! g:plug.neo_plug(repo)
+  if g:env.neo
+    call g:plug#(a:repo)
+  endif
+endfunction
+
+command! -nargs=1 NeoPlug call g:plug.neo_plug(<args>)
+" }}}
+
 if g:plug.ready()
   call g:plug#begin(g:plug.base)
 
   " out {{{
 
-  " Plug 'AndrewRadev/switch.vim'
   " Plug 'LeafCage/foldCC.vim'
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
@@ -190,18 +207,19 @@ if g:plug.ready()
   " Plug 'mhinz/vim-startify'
   " Plug 'osyo-manga/unite-quickfix'
   " Plug 'pocke/vim-hier'
+  " Plug 'reedes/vim-pencil'
   " Plug 'rhysd/committia.vim'
   " Plug 't9md/vim-textmanip'
   " Plug 'terryma/vim-multiple-cursors'
   " Plug 'tmhedberg/matchit'
   " Plug 'tpope/vim-dispatch'
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
-  " Plug 'vim-scripts/surround.vim'
   " Plug 'w0ng/vim-hybrid'
   " Plug 'wakatime/vim-wakatime'
 
   " }}}
 
+  Plug 'AndrewRadev/switch.vim'
   Plug 'MaxMEllon/vim-active-window'
   Plug 'MaxMEllon/vim-dirvish'
   Plug 'cocopon/iceberg.vim'
@@ -218,19 +236,27 @@ if g:plug.ready()
   Plug 'rhysd/clever-f.vim'
   Plug 'thinca/vim-themis', {'for' : 'vimspec'}
   Plug 'tyru/caw.vim'
+  Plug 'vim-scripts/surround.vim'
   Plug 'w0rp/ale'
-  Plug 'wakatime/vim-wakatime'
 
+  MacPlug 'wakatime/vim-wakatime'
+  NeoPlug 'dzhou121/gonvim-fuzzy'
+  NeoPlug 'equalsraf/neovim-gui-shim'
+
+  " MacPlug 'azadkuh/vim-cmus'
+
+  " Plug 'chrisbra/csv.vim'
+  " Plug 'rust-lang/rust.vim', {'for' : 'rust'}
+  " Plug 'cespare/vim-toml'
   Plug 'fatih/vim-go'
-  Plug 'rust-lang/rust.vim', {'for' : 'rust'}
-  Plug 'cespare/vim-toml'
+  Plug 'rhysd/vim-fixjson', {'for' : 'json'}
   Plug 'TomiLabo/vim-tmng'
 
-  MyPlug 'vim-shiny'
-  MyPlug 'vim-fzy-rails'
-  MyPlug 'ramda.vim'
+  " MyPlug 'vim-shiny'
+  " MyPlug 'ramda.vim'
   " MyPlug 'eclim'
   " MyPlug 'iceberg.vim'
+  MyPlug 'vim-fzy-rails'
 
   " PlugBox 'c'
   " PlugBox 'elixir'
@@ -247,7 +273,7 @@ if g:plug.ready()
   PlugBox 'completion'
   PlugBox 'operator'
   PlugBox 'textobj'
-  PlugBox 'vital'
+  " PlugBox 'vital'
 
   call g:plug#end()
 
@@ -256,7 +282,7 @@ if g:plug.ready()
   PlugConfigAutoLoad
   PlugConfigForce 'vim-easy-align'
   PlugConfigForce 'vim-open-googletranslate'
-  PlugConfigForce 'vim-shiny'
+  " PlugConfigForce 'vim-shiny'
 
   finish
 endif

@@ -44,10 +44,13 @@ nnoremap <silent> <Leader>h :<C-u>help <C-r><C-w><CR>
 nnoremap <silent> <Leader>x :<C-u>call maxmellon#remove_whitespace()<CR>
 nnoremap <silent> <Leader>z :<C-u>%s/　/  /g<CR>
 nnoremap          <Leader>p :<C-u>ToggleOpt paste<CR>
+if g:env.mac
+  nnoremap <silent> <Leader>? :!open dict://<cword><CR>
+endif
 
-map <C-n> :<C-u>lnext<CR>
-map <C-p> :<C-u>lprevious<CR>
-nnoremap  <Leader>a :<C-u>lclose<CR>
+" map <C-n> :<C-u>lnext<CR>
+" map <C-p> :<C-u>lprevious<CR>
+" nnoremap  <Leader>a :<C-u>lclose<CR>
 
 nnoremap <Space>f :<C-u>LsOpen<CR>
 nnoremap <Space>g :<C-u>GitLsFiles<CR>
@@ -68,6 +71,11 @@ vnoremap K  <Nop>
 " nnoremap ZQ <Nop>
 " noremap <C-z> <Nop>
 nnoremap <F1> <Nop>
+
+nnoremap <Up>    <C-w>+
+nnoremap <Down>  <C-w>-
+nnoremap <Left>  <C-w>>
+nnoremap <Right> <C-w><
 
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>

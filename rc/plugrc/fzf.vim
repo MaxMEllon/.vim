@@ -1,6 +1,6 @@
 let g:fzf_action = {
-      \ 'ctrl-t': 'tab split', 
-      \ 'ctrl-x': 'tab split', 
+      \ 'ctrl-t': 'tab split',
+      \ 'ctrl-x': 'tab split',
       \ 'ctrl-v': 'tab split' }
 
 let g:fzf_layout = { 'up' : '~40%',  'options': '--reverse' }

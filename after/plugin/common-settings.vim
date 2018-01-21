@@ -26,6 +26,7 @@ let g:maxmellon_define_my_color = s:true
 highlight MyBrightest           ctermfg=11    cterm=bold        gui=underline
 
 " My highlight group
+highlight StatusLine ctermbg=lightgray ctermbg=white
 highlight StatusLineGoBuild  ctermfg=black ctermbg=76 guibg=#5fd700 guifg=black
 highlight StatusLineBranch   ctermfg=white ctermbg=23 guibg=#005faf guifg=white
 highlight StatusLineFileType ctermfg=white ctermbg=19 guibg=#00875f guifg=white

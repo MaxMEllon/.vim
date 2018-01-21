@@ -8,17 +8,18 @@ set breakindentopt =sbr
 set cmdheight      =1
 set cmdwinheight   =5
 set colorcolumn    =80,100
-set complete       =t,k,.,w,b,u,t,i
+set complete       =t,k,.,kspell,w,b,u,t,i,s
 set completeopt    =menu,noinsert,noselect
 set cscopetag
 set display        =lastline
 set fillchars      =vert:\ ,fold:\ ,stl:\ ,stlnc:\ ,diff:-
 set foldcolumn     =0
 set helplang       =ja
+set spelllang      =en,cjk
 set history        =100
 set hlsearch
 set incsearch
-set laststatus     =2
+set laststatus     =0
 set lazyredraw
 set linespace      =0
 set matchpairs     =<:>,(:),[:],{:}
@@ -38,7 +39,7 @@ set report         =1
 set ruler
 set runtimepath   +=~/.vim/help/vimdoc-ja
 set scrolloff      =5
-set showbreak=\\
+set showbreak      =\\
 set showmatch
 set showtabline    =0
 set splitbelow
@@ -118,5 +119,5 @@ if !isdirectory(expand('~/.vim/_back'))
 endif
 
 if !isdirectory(expand('~/.vim/_undo'))
-e call mkdir(expand('~/.vim/_undo'), 'p')
+  call mkdir(expand('~/.vim/_undo'), 'p')
 endif
