@@ -114,7 +114,7 @@ BindFT vimspec    vimspec
 BindFT vue        html
 BindFT zsh        zsh
 
-ColorScheme 'palenight'
+ColorScheme 'onedark'
 
 filetype plugin indent on
 syntax on

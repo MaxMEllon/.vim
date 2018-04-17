@@ -211,6 +211,7 @@ if g:plug.ready()
   " Plug 'rhysd/committia.vim'
   " Plug 't9md/vim-textmanip'
   " Plug 'terryma/vim-multiple-cursors'
+  " Plug 'thinca/vim-themis', {'for' : 'vimspec'}
   " Plug 'tmhedberg/matchit'
   " Plug 'tpope/vim-dispatch'
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
@@ -234,10 +235,10 @@ if g:plug.ready()
   Plug 'mattn/gist-vim', {'on' : 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/clever-f.vim'
-  Plug 'thinca/vim-themis', {'for' : 'vimspec'}
   Plug 'tyru/caw.vim'
   Plug 'vim-scripts/surround.vim'
   Plug 'w0rp/ale'
+
 
   MacPlug 'wakatime/vim-wakatime'
   NeoPlug 'dzhou121/gonvim-fuzzy'
@@ -248,9 +249,12 @@ if g:plug.ready()
   " Plug 'chrisbra/csv.vim'
   " Plug 'rust-lang/rust.vim', {'for' : 'rust'}
   " Plug 'cespare/vim-toml'
+  " Plug 'TomiLabo/vim-tmng'
   Plug 'fatih/vim-go'
+  Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do':  'make fsautocomplete' }
+  Plug 'gutenye/json5.vim'
+  Plug 'joshdick/onedark.vim'
   Plug 'rhysd/vim-fixjson', {'for' : 'json'}
-  Plug 'TomiLabo/vim-tmng'
 
   " MyPlug 'vim-shiny'
   " MyPlug 'ramda.vim'

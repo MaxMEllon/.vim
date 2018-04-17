@@ -6,6 +6,8 @@ Plug 'pangloss/vim-javascript', {'for' : 'javascript' }
 " Plug 'mxw/vim-jsx'
 " Plug 'MaxMEllon/vim-jsx-pretty', {'for' : 'javascript' }
 MyPlug 'vim-jsx-pretty'
+" Plug 'alampros/vim-styled-jsx'
+" Plug 'styled-components/vim-styled-components',  { 'branch': 'rewrite' }
 " Plug 'flowtype/vim-flow', {'for' : 'javascript'}
 " Plug 'posva/vim-vue'
 " Plug 'tao12345666333/vim-vue'
@@ -35,5 +37,6 @@ Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
 " other
 " Plug 'rhysd/npm-debug-log.vim'
 " Plug 'elzr/vim-json', {'for' : 'json'}
+
 
 Lazy 'javascript'
