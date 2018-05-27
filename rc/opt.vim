@@ -15,7 +15,6 @@ set display        =lastline
 set fillchars      =vert:\ ,fold:\ ,stl:\ ,stlnc:\ ,diff:-
 set foldcolumn     =0
 set helplang       =ja
-set spelllang      =en,cjk
 set history        =100
 set hlsearch
 set incsearch
@@ -32,9 +31,11 @@ set modelines      =2
 set noequalalways
 set noshowcmd
 set nrformats      =alpha,hex
+set number
 set pastetoggle    =<F11>
 set pumheight      =10
 set redrawtime     =5000
+set relativenumber
 set report         =1
 set ruler
 set runtimepath   +=~/.vim/help/vimdoc-ja
@@ -42,6 +43,7 @@ set scrolloff      =5
 set showbreak      =\\
 set showmatch
 set showtabline    =0
+set spelllang      =en,cjk
 set splitbelow
 set splitright
 set switchbuf      =useopen

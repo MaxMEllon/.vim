@@ -1,4 +1,4 @@
-set termkey=<A-w>
+" set termkey=<A-w>
 tnoremap <Esc> <A-w><S-n>
 
 function! s:open(args) abort

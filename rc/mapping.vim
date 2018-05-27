@@ -18,6 +18,7 @@ nnoremap <silent> <F3> :<C-u>tabnext<CR>
 nnoremap <silent> <F2> :<C-u>tabprevious<CR>
 
 inoremap <silent> <C-j> <Esc>`^
+inoremap <silent> jj <Esc>`^
 imap <silent> <Esc> <Esc>`^
 imap <silent> <C-[> <Esc>`^
 imap <silent> <C-c> <Esc>`^

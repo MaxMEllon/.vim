@@ -195,12 +195,14 @@ if g:plug.ready()
   " Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
   " Plug 'MaxMEllon/vim-hier'
   " Plug 'Yggdroot/indentLine'
+  " Plug 'cocopon/iceberg.vim'
   " Plug 'cohama/vim-hier'
-  " Plug 'easymotion/vim-easymotion'
   " Plug 'haya14busa/incsearch.vim'
+  " Plug 'haya14busa/vim-open-googletranslate', {'on' : 'OpenGoogleTranslate'}
   " Plug 'itchyny/vim-highlighturl'
   " Plug 'kristijanhusak/vim-hybrid-material'
   " Plug 'kshenoy/vim-signature'
+  " Plug 'lambdalisue/gina.vim', {'on' : 'Gina'}
   " Plug 'mattn/httpstatus-vim', {'on' : 'HttpStatus'}
   " Plug 'mattn/vim-fixedsearch' | Plug 'mattn/vim-prompter'
   " Plug 'mhinz/vim-signify'
@@ -208,6 +210,7 @@ if g:plug.ready()
   " Plug 'osyo-manga/unite-quickfix'
   " Plug 'pocke/vim-hier'
   " Plug 'reedes/vim-pencil'
+  " Plug 'rhysd/clever-f.vim'
   " Plug 'rhysd/committia.vim'
   " Plug 't9md/vim-textmanip'
   " Plug 'terryma/vim-multiple-cursors'
@@ -216,6 +219,7 @@ if g:plug.ready()
   " Plug 'tpope/vim-dispatch'
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
   " Plug 'w0ng/vim-hybrid'
+  " Plug 'w0rp/ale'
   " Plug 'wakatime/vim-wakatime'
 
   " }}}
@@ -223,24 +227,20 @@ if g:plug.ready()
   Plug 'AndrewRadev/switch.vim'
   Plug 'MaxMEllon/vim-active-window'
   Plug 'MaxMEllon/vim-dirvish'
-  Plug 'cocopon/iceberg.vim'
+  Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'cohama/lexima.vim'
   Plug 'drewtempelmeyer/palenight.vim'
+  Plug 'easymotion/vim-easymotion'
   Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
   Plug 'haya14busa/vim-asterisk'
-  Plug 'haya14busa/vim-open-googletranslate', {'on' : 'OpenGoogleTranslate'}
   Plug 'junegunn/vim-easy-align', {'on' : 'EasyAlign'}
-  Plug 'lambdalisue/gina.vim', {'on' : 'Gina'}
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on' : 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'prabirshrestha/async.vim'
-  Plug 'rhysd/clever-f.vim'
   Plug 'tyru/caw.vim'
   Plug 'vim-scripts/surround.vim'
-  Plug 'w0rp/ale'
 
-
-  MacPlug 'wakatime/vim-wakatime'
+  " MacPlug 'wakatime/vim-wakatime'
   NeoPlug 'dzhou121/gonvim-fuzzy'
   NeoPlug 'equalsraf/neovim-gui-shim'
 
@@ -250,9 +250,9 @@ if g:plug.ready()
   " Plug 'rust-lang/rust.vim', {'for' : 'rust'}
   " Plug 'cespare/vim-toml'
   " Plug 'TomiLabo/vim-tmng'
-  Plug 'fatih/vim-go'
-  Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do':  'make fsautocomplete' }
-  Plug 'gutenye/json5.vim'
+  " Plug 'fatih/vim-go'
+  " Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do':  'make fsautocomplete' }
+  " Plug 'gutenye/json5.vim'
   Plug 'joshdick/onedark.vim'
   Plug 'rhysd/vim-fixjson', {'for' : 'json'}
 
@@ -260,7 +260,6 @@ if g:plug.ready()
   " MyPlug 'ramda.vim'
   " MyPlug 'eclim'
   " MyPlug 'iceberg.vim'
-  MyPlug 'vim-fzy-rails'
 
   " PlugBox 'c'
   " PlugBox 'elixir'

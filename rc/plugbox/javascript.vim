@@ -8,7 +8,8 @@ Plug 'pangloss/vim-javascript', {'for' : 'javascript' }
 MyPlug 'vim-jsx-pretty'
 " Plug 'alampros/vim-styled-jsx'
 " Plug 'styled-components/vim-styled-components',  { 'branch': 'rewrite' }
-" Plug 'flowtype/vim-flow', {'for' : 'javascript'}
+Plug 'flowtype/vim-flow'
+
 " Plug 'posva/vim-vue'
 " Plug 'tao12345666333/vim-vue'
 " if g:env.neo
