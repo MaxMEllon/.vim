@@ -18,7 +18,7 @@ set helplang       =ja
 set history        =100
 set hlsearch
 set incsearch
-set laststatus     =0
+set laststatus     =2
 set lazyredraw
 set linespace      =0
 set matchpairs     =<:>,(:),[:],{:}

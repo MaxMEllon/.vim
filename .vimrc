@@ -51,7 +51,7 @@ Source 'mapping'    " ~/.vim/rc/mapping.vim
 Source 'platform'   " ~/.vim/rc/platform.vim
 Source 'plug'       " ~/.vim/rc/plug.vim
 Source 'event'      " ~/.vim/rc/event.vim
-" Source 'statusline' " ~/.vim/rc/statusline.vim
+Source 'statusline' " ~/.vim/rc/statusline.vim
 
 if g:env.term
   Source 'terminal' " ~/.vim/rc/terminal.vim
