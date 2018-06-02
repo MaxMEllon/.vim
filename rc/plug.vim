@@ -194,9 +194,15 @@ if g:plug.ready()
   " Plug 'MaxMEllon/jobproc'
   " Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
   " Plug 'MaxMEllon/vim-hier'
+  " Plug 'TomiLabo/vim-tmng'
   " Plug 'Yggdroot/indentLine'
+  " Plug 'cespare/vim-toml'
+  " Plug 'chrisbra/csv.vim'
   " Plug 'cocopon/iceberg.vim'
   " Plug 'cohama/vim-hier'
+  " Plug 'fatih/vim-go'
+  " Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do':  'make fsautocomplete' }
+  " Plug 'gutenye/json5.vim'
   " Plug 'haya14busa/incsearch.vim'
   " Plug 'haya14busa/vim-open-googletranslate', {'on' : 'OpenGoogleTranslate'}
   " Plug 'itchyny/vim-highlighturl'
@@ -212,6 +218,7 @@ if g:plug.ready()
   " Plug 'reedes/vim-pencil'
   " Plug 'rhysd/clever-f.vim'
   " Plug 'rhysd/committia.vim'
+  " Plug 'rust-lang/rust.vim', {'for' : 'rust'}
   " Plug 't9md/vim-textmanip'
   " Plug 'terryma/vim-multiple-cursors'
   " Plug 'thinca/vim-themis', {'for' : 'vimspec'}
@@ -222,39 +229,10 @@ if g:plug.ready()
   " Plug 'w0rp/ale'
   " Plug 'wakatime/vim-wakatime'
 
-  " }}}
-
-  Plug 'AndrewRadev/switch.vim'
-  Plug 'MaxMEllon/vim-active-window'
-  Plug 'MaxMEllon/vim-dirvish'
-  Plug 'MaxMEllon/vim-fzy-rails'
-  Plug 'cohama/lexima.vim'
-  Plug 'drewtempelmeyer/palenight.vim'
-  Plug 'easymotion/vim-easymotion'
-  Plug 'gerw/vim-HiLinkTrace', {'on' : 'HLT'}
-  Plug 'haya14busa/vim-asterisk'
-  Plug 'junegunn/vim-easy-align', {'on' : 'EasyAlign'}
-  Plug 'mattn/emmet-vim'
-  Plug 'mattn/gist-vim', {'on' : 'Gist'} | Plug 'mattn/webapi-vim'
-  Plug 'prabirshrestha/async.vim'
-  Plug 'tyru/caw.vim'
-  Plug 'vim-scripts/surround.vim'
-
+  " NeoPlug 'dzhou121/gonvim-fuzzy'
+  " NeoPlug 'equalsraf/neovim-gui-shim'
   " MacPlug 'wakatime/vim-wakatime'
-  NeoPlug 'dzhou121/gonvim-fuzzy'
-  NeoPlug 'equalsraf/neovim-gui-shim'
-
   " MacPlug 'azadkuh/vim-cmus'
-
-  " Plug 'chrisbra/csv.vim'
-  " Plug 'rust-lang/rust.vim', {'for' : 'rust'}
-  " Plug 'cespare/vim-toml'
-  " Plug 'TomiLabo/vim-tmng'
-  " Plug 'fatih/vim-go'
-  " Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do':  'make fsautocomplete' }
-  " Plug 'gutenye/json5.vim'
-  Plug 'joshdick/onedark.vim'
-  Plug 'rhysd/vim-fixjson', {'for' : 'json'}
 
   " MyPlug 'vim-shiny'
   " MyPlug 'ramda.vim'
@@ -265,9 +243,29 @@ if g:plug.ready()
   " PlugBox 'elixir'
   " PlugBox 'haskell'
   " PlugBox 'python'
-  PlugBox 'java'
-  PlugBox 'css'
-  PlugBox 'html'
+  " PlugBox 'java'
+  " }}}
+
+  Plug 'AndrewRadev/switch.vim'
+  Plug 'MaxMEllon/vim-active-window'
+  Plug 'MaxMEllon/vim-dirvish'
+  Plug 'MaxMEllon/vim-fzy-rails'
+  Plug 'cohama/lexima.vim'
+  Plug 'drewtempelmeyer/palenight.vim'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
+  Plug 'haya14busa/vim-asterisk'
+  Plug 'joshdick/onedark.vim'
+  Plug 'junegunn/vim-easy-align', {'on': 'EasyAlign'}
+  Plug 'mattn/emmet-vim'
+  Plug 'mattn/gist-vim', {'on': 'Gist'} | Plug 'mattn/webapi-vim'
+  Plug 'prabirshrestha/async.vim'
+  Plug 'rhysd/vim-fixjson', {'for': 'json'}
+  Plug 'tyru/caw.vim'
+  Plug 'vim-scripts/surround.vim'
+
+  " PlugBox 'css'
+  " PlugBox 'html'
   PlugBox 'javascript'
   PlugBox 'plantuml'
   PlugBox 'ruby'
@@ -283,8 +281,9 @@ if g:plug.ready()
   let g:plug.plugs = get(g:, 'plugs', {})
 
   PlugConfigAutoLoad
+
   PlugConfigForce 'vim-easy-align'
-  PlugConfigForce 'vim-open-googletranslate'
+  " PlugConfigForce 'vim-open-googletranslate'
   " PlugConfigForce 'vim-shiny'
 
   finish
