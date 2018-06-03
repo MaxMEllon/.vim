@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "flow-bin": "^0.73.0"
+  },
+  "dependencies": {
+    "import-js": "^3.0.0"
+  }
+}

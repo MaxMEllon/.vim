@@ -1,18 +1,16 @@
 let g:ale_linters = {
-      \   'javascript': ['prettier'],
-      \   'jsx': ['prettier', 'eslint'],
+      \   'javascript': ['flow', 'eslint'],
+      \   'ruby': ['rubocop'],
       \   'scss': [],
       \   'sass': [],
+      \   'vim': [],
       \}
 let g:ale_fixers = {
-      \   'javascript': [
-      \       'prettier'
-      \   ],
+      \   'javascript': ['prettier_eslint'],
+      \   'ruby': [],
       \   'scss': [],
       \   'sass': [],
       \}
-
-let g:ale_javascript_prettier_options = '-c ~/.prettierrc.yml'
 
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
@@ -21,9 +19,11 @@ let g:ale_sign_style_error = 'X'
 let g:ale_sign_warning = 'W'
 let g:ale_sign_style_warning = 'W'
 let g:ale_sign_info = 'I'
-
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'normal'
-let g:ale_lint_on_insert_leave = 1
+let g:ale_lint_on_insert_leave = 0
 
 augroup ALE_Highlight
   autocmd!
@@ -33,13 +33,5 @@ augroup ALE_Highlight
   autocmd VimEnter * highlight ALEStyleWarning ctermbg=54
   autocmd VimEnter * highlight ALEInfo ctermbg=17
 augroup END
-
-function! s:ale_disable_autofix()
-  augroup ALE_Event
-    autocmd!
-  augroup END
-endfunction
-
-command! ALEDisableAutoFixJavaScript call s:ale_disable_autofix()
 
 call AddToggleCommand('ALEToggle')

@@ -226,7 +226,6 @@ if g:plug.ready()
   " Plug 'tpope/vim-dispatch'
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
   " Plug 'w0ng/vim-hybrid'
-  " Plug 'w0rp/ale'
   " Plug 'wakatime/vim-wakatime'
 
   " NeoPlug 'dzhou121/gonvim-fuzzy'
@@ -263,6 +262,7 @@ if g:plug.ready()
   Plug 'rhysd/vim-fixjson', {'for': 'json'}
   Plug 'tyru/caw.vim'
   Plug 'vim-scripts/surround.vim'
+  Plug 'w0rp/ale'
 
   " PlugBox 'css'
   " PlugBox 'html'
