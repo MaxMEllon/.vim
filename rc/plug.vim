@@ -252,6 +252,7 @@ if g:plug.ready()
   Plug 'cohama/lexima.vim'
   Plug 'drewtempelmeyer/palenight.vim'
   Plug 'easymotion/vim-easymotion'
+  Plug 'fatih/vim-go'
   Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
   Plug 'haya14busa/vim-asterisk'
   Plug 'joshdick/onedark.vim'
