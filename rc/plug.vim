@@ -192,6 +192,7 @@ if g:plug.ready()
   " Plug 'LeafCage/foldCC.vim'
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
+  " Plug 'MaxMEllon/vim-dirvish'
   " Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
   " Plug 'MaxMEllon/vim-hier'
   " Plug 'TomiLabo/vim-tmng'
@@ -244,10 +245,10 @@ if g:plug.ready()
   " PlugBox 'python'
   " PlugBox 'java'
   " }}}
+  "
 
   Plug 'AndrewRadev/switch.vim'
   Plug 'MaxMEllon/vim-active-window'
-  Plug 'MaxMEllon/vim-dirvish'
   Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'cohama/lexima.vim'
   Plug 'drewtempelmeyer/palenight.vim'
@@ -257,19 +258,21 @@ if g:plug.ready()
   Plug 'haya14busa/vim-asterisk'
   Plug 'joshdick/onedark.vim'
   Plug 'junegunn/vim-easy-align', {'on': 'EasyAlign'}
+  Plug 'justinmk/vim-dirvish' | Plug 'kristijanhusak/vim-dirvish-git'
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on': 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/vim-fixjson', {'for': 'json'}
   Plug 'tpope/vim-fugitive'
   Plug 'tyru/caw.vim'
+  Plug 'vim-jp/vimdoc-ja'
   Plug 'vim-scripts/surround.vim'
   Plug 'w0rp/ale'
 
   " PlugBox 'css'
   " PlugBox 'html'
   PlugBox 'javascript'
-  PlugBox 'plantuml'
+  " PlugBox 'plantuml'
   PlugBox 'ruby'
   PlugBox 'vim'
 
