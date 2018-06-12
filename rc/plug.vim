@@ -261,6 +261,7 @@ if g:plug.ready()
   Plug 'mattn/gist-vim', {'on': 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/vim-fixjson', {'for': 'json'}
+  Plug 'tpope/vim-fugitive'
   Plug 'tyru/caw.vim'
   Plug 'vim-scripts/surround.vim'
   Plug 'w0rp/ale'
