@@ -38,7 +38,6 @@ set redrawtime     =5000
 set relativenumber
 set report         =1
 set ruler
-set runtimepath   +=~/.vim/help/vimdoc-ja
 set scrolloff      =5
 set showbreak      =\\
 set showmatch

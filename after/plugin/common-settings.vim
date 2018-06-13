@@ -38,6 +38,8 @@ highlight SpellCap   cterm=underline gui=underline guifg=blue
 highlight SpellLocal cterm=underline gui=underline guifg=green
 highlight SpellRare  cterm=underline gui=underline guifg=yellow
 
+highlight MatchParen ctermfg=black ctermbg=76 guibg=#5fd700 guifg=black cterm=underline gui=underline
+
 let s:colors_name = get(g:, 'colors_name', 'default')
 
 if !maxmellon#vimtype#is_neo() && s:colors_name ==# 'default'
