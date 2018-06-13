@@ -52,11 +52,12 @@ Source 'platform'   " ~/.vim/rc/platform.vim
 Source 'plug'       " ~/.vim/rc/plug.vim
 Source 'event'      " ~/.vim/rc/event.vim
 Source 'statusline' " ~/.vim/rc/statusline.vim
+Source 'tabline'    " ~/.vim/rc/tabline.vim
 
-if g:env.term
-  Source 'terminal' " ~/.vim/rc/terminal.vim
-  Abbr c terminal Terminal
-endif
+" if g:env.term
+"   Source 'terminal' " ~/.vim/rc/terminal.vim
+"   Abbr c terminal Terminal
+" endif
 
 
 Abbr i tihs this

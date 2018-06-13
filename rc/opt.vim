@@ -18,7 +18,7 @@ set helplang       =ja
 set history        =100
 set hlsearch
 set incsearch
-set laststatus     =2
+set laststatus     =0
 set lazyredraw
 set linespace      =0
 set matchpairs     =<:>,(:),[:],{:}
@@ -42,7 +42,7 @@ set runtimepath   +=~/.vim/help/vimdoc-ja
 set scrolloff      =5
 set showbreak      =\\
 set showmatch
-set showtabline    =0
+set showtabline    =2
 set spelllang      =en,cjk
 set splitbelow
 set splitright
