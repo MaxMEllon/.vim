@@ -8,10 +8,11 @@ augroup InsertHook
 augroup END
 
 function! s:StatusLine(mode)
+  highlight StatusLineNC ctermfg=black ctermbg=240  cterm=NONE guifg=black guibg=black
   if a:mode ==# 'Enter'
-    highlight StatusLine ctermfg=red ctermbg=yellow cterm=NONE guifg=white guibg=darkyellow
+    highlight StatusLine ctermfg=white ctermbg=196 cterm=NONE guifg=white guibg=darkyellow
   else
-    highlight StatusLine ctermfg=white ctermbg=blue cterm=NONE guifg=white guibg=darkgray
+    highlight StatusLine ctermfg=27    ctermbg=123 cterm=NONE guifg=white guibg=darkgray
   endif
 endfunction
 
@@ -25,20 +26,9 @@ endfunction
 
 let s:slhlcmd = ''
 
-"=============================================================================="
-" ┌ buffer id                          separate                               "
-" ｜  ┌ is modify?                         :               Quickfix count ┐  "
-" ｜  ｜         ┌  filename               :            vim type ┐       ｜  "
-" ↓  ↓         ↓                         :                     ↓       ↓  "
-" 1 | [+] | statusline.vim | [RO] | PASTE | :   develop  [vim]  [clpum]  Qf: 1 "
-"                             ↑      ↑    :     ↑      ↑                   "
-"                  read only? ┘      ｜    :     ｜      └filetype           "
-"                          set paste? ┘    :     └  branch name              "
-"=============================================================================="
-
 " left
 set statusline =\ "
-" set statusline+=%n\ "
+set statusline+=%n\ "
 set statusline+=%m\ "
 set statusline+=%t\ "
 set statusline+=%r\ "
@@ -46,7 +36,7 @@ set statusline+=%{maxmellon#paste#statusline()}\ "
 
 " right
 set statusline+=%=
-" set statusline+=%#StatusLineBranch#\ %{maxmellon#git#branch#get()}\ %#StatusLine#
+set statusline+=%#StatusLineBranch#\ %{maxmellon#git#branch#get()}\ %#StatusLine#
 set statusline+=%#StatusLineFileType#\ %y\ "
 " set statusline+=%#StatusLineVimType#\ %{maxmellon#vimtype#statusline()}\ "
 " set statusline+=%#StatusLineGoBuild#%{WrapedGoStatusLine()}"

@@ -245,7 +245,6 @@ if g:plug.ready()
   " PlugBox 'python'
   " PlugBox 'java'
   " }}}
-  "
 
   Plug 'AndrewRadev/switch.vim'
   Plug 'MaxMEllon/vim-active-window'
@@ -280,6 +279,8 @@ if g:plug.ready()
   PlugBox 'operator'
   PlugBox 'textobj'
   " PlugBox 'vital'
+
+  MyPlug 'vim-fzy-quick-cmd'
 
   call g:plug#end()
 

@@ -25,13 +25,13 @@ let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 0
 
-augroup ALE_Highlight
-  autocmd!
-  autocmd VimEnter * highlight ALEError ctermbg=61
-  autocmd VimEnter * highlight ALEStyleError ctermbg=61
-  autocmd VimEnter * highlight ALEWarning ctermbg=54
-  autocmd VimEnter * highlight ALEStyleWarning ctermbg=54
-  autocmd VimEnter * highlight ALEInfo ctermbg=17
-augroup END
+" augroup ALE_Highlight
+"   autocmd!
+"   autocmd VimEnter * highlight ALEError ctermbg=61
+"   autocmd VimEnter * highlight ALEStyleError ctermbg=61
+"   autocmd VimEnter * highlight ALEWarning ctermbg=54
+"   autocmd VimEnter * highlight ALEStyleWarning ctermbg=54
+"   autocmd VimEnter * highlight ALEInfo ctermbg=17
+" augroup END
 
 call AddToggleCommand('ALEToggle')

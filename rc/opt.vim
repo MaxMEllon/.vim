@@ -11,14 +11,14 @@ set colorcolumn    =80,100
 set complete       =t,k,.,kspell,w,b,u,t,i,s
 set completeopt    =menu,noinsert,noselect
 set cscopetag
-set display        =lastline
+set display        =truncate
 set fillchars      =vert:\ ,fold:\ ,stl:\ ,stlnc:\ ,diff:-
 set foldcolumn     =0
 set helplang       =ja
 set history        =100
 set hlsearch
 set incsearch
-set laststatus     =0
+set laststatus     =2
 set lazyredraw
 set linespace      =0
 set matchpairs     =<:>,(:),[:],{:}
@@ -45,7 +45,7 @@ set showtabline    =2
 set spelllang      =en,cjk
 set splitbelow
 set splitright
-set switchbuf      =useopen
+set switchbuf      =newtab
 set synmaxcol      =200
 set textwidth      =0
 set virtualedit    =block
@@ -84,7 +84,7 @@ set smarttab
 " menu
 set wildmenu
 set wildmode=longest:full,full
-set wildignore=*.o,*.obj,*~
+" set wildignore=*.o,*.obj,*~
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
@@ -93,8 +93,8 @@ set wildignore+=vendor/cache/**
 set wildignore+=*.gem
 set wildignore+=log/**
 set wildignore+=tmp/**
-set wildignore+=*.png,*.jpg,*.gif
-set wildignore+=*.sql
+" set wildignore+=*.png,*.jpg,*.gif
+" set wildignore+=*.sql
 
 " list
 set list

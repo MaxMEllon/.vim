@@ -37,9 +37,9 @@ function! MakeTabLine()
   let splitted = split(pwd, '/')
   let len = len(splitted)
   if len > 3
-    let pwd = splitted[len - 3] . '/' . splitted[len - 2] . '/' . splitted[len - 1]
+    let pwd =  splitted[len - 3] . '/' . splitted[len - 2] . '/' . splitted[len - 1]
   endif
-  let info = '%#TabLinePwd#% ' . pwd .' %#TabLine#%'
+  let info = '%#TabLinePwd#%  ' . pwd .' %#TabLine#%'
   return tabpages . '%=' . info
 endfunction
 
