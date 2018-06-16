@@ -248,11 +248,12 @@ if g:plug.ready()
 
   Plug 'AndrewRadev/switch.vim'
   Plug 'MaxMEllon/vim-active-window'
+  Plug 'MaxMEllon/vim-fzy-quick-cmd'
   Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'cohama/lexima.vim'
   Plug 'drewtempelmeyer/palenight.vim'
   Plug 'easymotion/vim-easymotion'
-  Plug 'fatih/vim-go'
+  Plug 'fatih/vim-go', {'for': 'go'}
   Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
   Plug 'haya14busa/vim-asterisk'
   Plug 'joshdick/onedark.vim'
@@ -280,8 +281,6 @@ if g:plug.ready()
   PlugBox 'textobj'
   " PlugBox 'vital'
 
-  MyPlug 'vim-fzy-quick-cmd'
-
   call g:plug#end()
 
   let g:plug.plugs = get(g:, 'plugs', {})
@@ -289,6 +288,8 @@ if g:plug.ready()
   PlugConfigAutoLoad
 
   PlugConfigForce 'vim-easy-align'
+
+  Lazy 'go', 'go'
   " PlugConfigForce 'vim-open-googletranslate'
   " PlugConfigForce 'vim-shiny'
 
