@@ -61,9 +61,9 @@ set undolevels     =200
 set undodir        =~/.vim/_undo
 set undofile
 
-if g:env.termgui
-  set termguicolors
-endif
+" if g:env.termgui
+"   set termguicolors
+" endif
 
 " fold
 set foldenable

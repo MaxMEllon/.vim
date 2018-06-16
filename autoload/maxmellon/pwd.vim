@@ -1,6 +1,6 @@
 function! s:base()
   redir => l:dir
-  pwd
+  silent pwd
   redir END
   let l:dir = substitute(l:dir, '[\r|\n]', '', 'g')
   return l:dir

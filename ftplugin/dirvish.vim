@@ -16,9 +16,9 @@ nnoremap <buffer> mk :Mkdir<Space>
 nnoremap <buffer> cp :Cp <C-r><C-a> <C-r><C-a>
 nnoremap <buffer> cdu :Cdu<CR>
 
-try
-  lcd %:h
-catch
-endtry
+" try
+"   lcd %:h
+" catch
+" endtry
 
 let g:branch = ''

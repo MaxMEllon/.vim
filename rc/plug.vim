@@ -256,11 +256,14 @@ if g:plug.ready()
   Plug 'fatih/vim-go', {'for': 'go'}
   Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
   Plug 'haya14busa/vim-asterisk'
+  Plug 'itchyny/vim-cursorword'
+  Plug 'itchyny/vim-parenmatch'
   Plug 'joshdick/onedark.vim'
   Plug 'junegunn/vim-easy-align', {'on': 'EasyAlign'}
   Plug 'justinmk/vim-dirvish' | Plug 'kristijanhusak/vim-dirvish-git'
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on': 'Gist'} | Plug 'mattn/webapi-vim'
+  Plug 'mhinz/vim-signify'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/vim-fixjson', {'for': 'json'}
   Plug 'tpope/vim-fugitive'
@@ -280,6 +283,7 @@ if g:plug.ready()
   PlugBox 'operator'
   PlugBox 'textobj'
   " PlugBox 'vital'
+  " MyPlug 'vim-fzy-quick-cmd'
 
   call g:plug#end()
 
@@ -288,6 +292,7 @@ if g:plug.ready()
   PlugConfigAutoLoad
 
   PlugConfigForce 'vim-easy-align'
+  " PlugConfigForce 'vim-fzy-quick-cmd'
 
   Lazy 'go', 'go'
   " PlugConfigForce 'vim-open-googletranslate'

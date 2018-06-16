@@ -27,12 +27,14 @@ highlight MyBrightest           ctermfg=11    cterm=bold        gui=underline
 
 " My highlight group
 highlight StatusLine ctermbg=lightgray ctermbg=white
-highlight StatusLineGoBuild  ctermfg=black ctermbg=76 guibg=#5fd700 guifg=black
-highlight StatusLineBranch   ctermfg=white ctermbg=23 guibg=#005faf guifg=white
-highlight StatusLineFileType ctermfg=white ctermbg=19 guibg=#00875f guifg=white
-highlight StatusLineVimType  ctermfg=white ctermbg=52 guibg=#87005f guifg=white
-highlight TabLinePwd         ctermfg=gray  ctermbg=52 guibg=#87005f guifg=gray
-highlight TabLineSel            ctermfg=16    ctermbg=123 guibg=#87005f guifg=gray
+highlight StatusLineGoBuild  ctermfg=black ctermbg=76  guibg=#5fd700 guifg=black
+highlight StatusLineBranch   ctermfg=white ctermbg=23  guibg=#005faf guifg=white
+highlight StatusLineFileType ctermfg=white ctermbg=19  guibg=#00875f guifg=white
+highlight StatusLineVimType  ctermfg=white ctermbg=52  guibg=#87005f guifg=white
+highlight TabLinePwd         ctermfg=gray  ctermbg=52  guibg=#87005f guifg=gray
+highlight TabLineSel         ctermfg=16    ctermbg=123 guibg=#87005f guifg=gray
+highlight ParenMatch         ctermbg=8 term=underline cterm=underline gui=underline
+
 
 highlight SpellBad   cterm=underline gui=underline guifg=red
 highlight SpellCap   cterm=underline gui=underline guifg=blue
@@ -42,26 +44,3 @@ highlight SpellRare  cterm=underline gui=underline guifg=yellow
 highlight MatchParen ctermfg=black ctermbg=76 guibg=#5fd700 guifg=black cterm=underline gui=underline
 
 let s:colors_name = get(g:, 'colors_name', 'default')
-
-if !maxmellon#vimtype#is_neo() && s:colors_name ==# 'default'
-  " Overwrite default color scheme
-  if !maxmellon#vimtype#is_gvim() && !has('termguicolors')
-    highlight ColorColumn                       ctermbg=17
-    highlight Comment             ctermfg=244
-    highlight FoldColumn          ctermfg=67    ctermbg=none
-    highlight Folded              ctermfg=67    ctermbg=16
-    highlight LineNr                            ctermbg=none
-    highlight Normal                            ctermbg=236
-    highlight Search                            ctermbg=56
-    " Visual
-    highlight Visual                            ctermbg=22
-    highlight VisualNOS                         ctermbg=22
-
-    " listchars
-    highlight NonText             ctermfg=blue
-    highlight SpecialKey          ctermfg=27
-    highlight FlashyPaste ctermbg=22
-    highlight FlashyUndo ctermbg=88
-  endif
-endif
-
