@@ -45,7 +45,7 @@ set showtabline    =2
 set spelllang      =en,cjk
 set splitbelow
 set splitright
-set switchbuf      =newtab
+set switchbuf      =useopen
 set synmaxcol      =200
 set textwidth      =0
 set virtualedit    =block
