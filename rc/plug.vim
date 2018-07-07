@@ -189,6 +189,7 @@ if g:plug.ready()
 
   " out {{{
 
+
   " Plug 'LeafCage/foldCC.vim'
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
@@ -206,6 +207,7 @@ if g:plug.ready()
   " Plug 'gutenye/json5.vim'
   " Plug 'haya14busa/incsearch.vim'
   " Plug 'haya14busa/vim-open-googletranslate', {'on' : 'OpenGoogleTranslate'}
+  " Plug 'itchyny/vim-cursorword'
   " Plug 'itchyny/vim-highlighturl'
   " Plug 'kristijanhusak/vim-hybrid-material'
   " Plug 'kshenoy/vim-signature'
@@ -228,7 +230,6 @@ if g:plug.ready()
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
   " Plug 'w0ng/vim-hybrid'
   " Plug 'wakatime/vim-wakatime'
-
   " NeoPlug 'dzhou121/gonvim-fuzzy'
   " NeoPlug 'equalsraf/neovim-gui-shim'
   " MacPlug 'wakatime/vim-wakatime'
@@ -256,7 +257,6 @@ if g:plug.ready()
   Plug 'fatih/vim-go', {'for': 'go'}
   Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
   Plug 'haya14busa/vim-asterisk'
-  Plug 'itchyny/vim-cursorword'
   Plug 'itchyny/vim-parenmatch'
   Plug 'joshdick/onedark.vim'
   Plug 'junegunn/vim-easy-align', {'on': 'EasyAlign'}
