@@ -192,6 +192,7 @@ if g:plug.ready()
   " Plug 'LeafCage/foldCC.vim'
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
+  " Plug 'MaxMEllon/vim-active-window'
   " Plug 'MaxMEllon/vim-dirvish'
   " Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
   " Plug 'MaxMEllon/vim-hier'
@@ -249,7 +250,6 @@ if g:plug.ready()
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
-  Plug 'MaxMEllon/vim-active-window'
   Plug 'MaxMEllon/vim-fzy-quick-cmd'
   Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'cohama/lexima.vim'
