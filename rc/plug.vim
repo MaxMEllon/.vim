@@ -189,7 +189,6 @@ if g:plug.ready()
 
   " out {{{
 
-
   " Plug 'LeafCage/foldCC.vim'
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
@@ -202,6 +201,7 @@ if g:plug.ready()
   " Plug 'chrisbra/csv.vim'
   " Plug 'cocopon/iceberg.vim'
   " Plug 'cohama/vim-hier'
+  " Plug 'drewtempelmeyer/palenight.vim'
   " Plug 'fatih/vim-go'
   " Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do':  'make fsautocomplete' }
   " Plug 'gutenye/json5.vim'
@@ -230,6 +230,7 @@ if g:plug.ready()
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
   " Plug 'w0ng/vim-hybrid'
   " Plug 'wakatime/vim-wakatime'
+
   " NeoPlug 'dzhou121/gonvim-fuzzy'
   " NeoPlug 'equalsraf/neovim-gui-shim'
   " MacPlug 'wakatime/vim-wakatime'
@@ -252,7 +253,6 @@ if g:plug.ready()
   Plug 'MaxMEllon/vim-fzy-quick-cmd'
   Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'cohama/lexima.vim'
-  Plug 'drewtempelmeyer/palenight.vim'
   Plug 'easymotion/vim-easymotion'
   Plug 'fatih/vim-go', {'for': 'go'}
   Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
