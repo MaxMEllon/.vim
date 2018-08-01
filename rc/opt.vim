@@ -18,7 +18,7 @@ set helplang       =ja
 set history        =100
 set hlsearch
 set incsearch
-set laststatus     =2
+set laststatus     =0
 set lazyredraw
 set linespace      =0
 set matchpairs     =<:>,(:),[:],{:}
@@ -31,11 +31,11 @@ set modelines      =2
 set noequalalways
 set noshowcmd
 set nrformats      =alpha,hex
-set number
+set nonumber
 set pastetoggle    =<F11>
 set pumheight      =10
 set redrawtime     =5000
-set relativenumber
+set norelativenumber
 set report         =1
 set ruler
 set scrolloff      =5
@@ -45,7 +45,7 @@ set showtabline    =2
 set spelllang      =en,cjk
 set splitbelow
 set splitright
-set switchbuf      =useopen
+set switchbuf      =split
 set synmaxcol      =200
 set textwidth      =0
 set virtualedit    =block

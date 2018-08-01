@@ -79,7 +79,7 @@ endfunction
 " s:config_load()
 " @args {String} a:1, plugname, プラグイン名
 " @args {String} a:2, realpath, プラグインの設定の絶対パス
-" @atgs {Boolean(Number 0 or 1)} a:3, is_force, 強制的に読み込むかどうか
+" @args {Boolean(Number 0 or 1)} a:3, is_force, 強制的に読み込むかどうか
 function! s:config_load(...)
   let l:fuzzy_plugname = substitute(a:1, '\.vim$', '', 'g')
   let l:is_force = get(a:, '3', g:false)
@@ -192,8 +192,10 @@ if g:plug.ready()
   " Plug 'LeafCage/foldCC.vim'
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
+  " Plug 'MaxMEllon/vim-active-window'
   " Plug 'MaxMEllon/vim-dirvish'
   " Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
+  " Plug 'MaxMEllon/vim-fzy-rails'
   " Plug 'MaxMEllon/vim-hier'
   " Plug 'TomiLabo/vim-tmng'
   " Plug 'Yggdroot/indentLine'
@@ -202,13 +204,17 @@ if g:plug.ready()
   " Plug 'cocopon/iceberg.vim'
   " Plug 'cohama/vim-hier'
   " Plug 'drewtempelmeyer/palenight.vim'
+  " Plug 'easymotion/vim-easymotion'
   " Plug 'fatih/vim-go'
   " Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do':  'make fsautocomplete' }
   " Plug 'gutenye/json5.vim'
   " Plug 'haya14busa/incsearch.vim'
+  " Plug 'haya14busa/vim-asterisk'
   " Plug 'haya14busa/vim-open-googletranslate', {'on' : 'OpenGoogleTranslate'}
   " Plug 'itchyny/vim-cursorword'
   " Plug 'itchyny/vim-highlighturl'
+  " Plug 'itchyny/vim-parenmatch'
+  " Plug 'joshdick/onedark.vim'
   " Plug 'kristijanhusak/vim-hybrid-material'
   " Plug 'kshenoy/vim-signature'
   " Plug 'lambdalisue/gina.vim', {'on' : 'Gina'}
@@ -249,35 +255,28 @@ if g:plug.ready()
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
-  Plug 'MaxMEllon/vim-active-window'
   Plug 'MaxMEllon/vim-fzy-quick-cmd'
-  Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'cohama/lexima.vim'
-  Plug 'easymotion/vim-easymotion'
   Plug 'fatih/vim-go', {'for': 'go'}
   Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
-  Plug 'haya14busa/vim-asterisk'
-  Plug 'itchyny/vim-parenmatch'
-  Plug 'joshdick/onedark.vim'
   Plug 'junegunn/vim-easy-align', {'on': 'EasyAlign'}
-  Plug 'justinmk/vim-dirvish' | Plug 'kristijanhusak/vim-dirvish-git'
+  Plug 'justinmk/vim-dirvish' " | Plug 'kristijanhusak/vim-dirvish-git'
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on': 'Gist'} | Plug 'mattn/webapi-vim'
-  Plug 'mhinz/vim-signify'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/vim-fixjson', {'for': 'json'}
   Plug 'tpope/vim-fugitive'
   Plug 'tyru/caw.vim'
   Plug 'vim-jp/vimdoc-ja'
   Plug 'vim-scripts/surround.vim'
-  Plug 'w0rp/ale'
+  Plug 'w0rp/ale', {'on': ['ALEEnable', 'ALEEnableBuffer']}
 
-  " PlugBox 'css'
-  " PlugBox 'html'
   PlugBox 'javascript'
-  " PlugBox 'plantuml'
   PlugBox 'ruby'
   PlugBox 'vim'
+  " PlugBox 'css'
+  " PlugBox 'html'
+  " PlugBox 'plantuml'
 
   PlugBox 'completion'
   PlugBox 'operator'

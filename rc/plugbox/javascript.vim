@@ -8,8 +8,8 @@ Plug 'MaxMEllon/vim-jsx-pretty', {'for' : 'javascript' }
 " MyPlug 'vim-jsx-pretty'
 " Plug 'alampros/vim-styled-jsx'
 " Plug 'styled-components/vim-styled-components',  { 'branch': 'rewrite' }
-Plug 'flowtype/vim-flow'
-Plug 'Galooshi/vim-import-js'
+" Plug 'flowtype/vim-flow'
+" Plug 'Galooshi/vim-import-js'
 
 " Plug 'posva/vim-vue'
 " Plug 'tao12345666333/vim-vue'

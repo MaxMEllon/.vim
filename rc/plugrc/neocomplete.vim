@@ -23,7 +23,7 @@ let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 if !exists('g:neocomplete#sources#force_omni_input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
-let g:neocomplete#sources#omni#input_patterns.javascript = '\%(\h\w*\|[^. \t]\.\w*\)'
+let g:neocomplete#sources#omni#input_patterns.javascript = ''
 let g:neocomplete#sources#omni#input_patterns.markdown = ''
 let g:neocomplete#sources#omni#input_patterns.gitcommit = ''
 let g:neocomplete#sources#omni#input_patterns.cs = '[^.]\.\%(\u\{2,}\)\?'

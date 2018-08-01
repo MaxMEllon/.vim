@@ -1,4 +1,3 @@
-" generate boolean
 let g:false = g:maxmellon#bool#false()
 let g:true  = g:maxmellon#bool#true()
 let g:mapleader = ','
@@ -52,13 +51,12 @@ Source 'platform'   " ~/.vim/rc/platform.vim
 Source 'plug'       " ~/.vim/rc/plug.vim
 Source 'event'      " ~/.vim/rc/event.vim
 Source 'statusline' " ~/.vim/rc/statusline.vim
-Source 'tabline'    " ~/.vim/rc/tabline.vim
+" Source 'tabline'    " ~/.vim/rc/tabline.vim
 
 " if g:env.term
 "   Source 'terminal' " ~/.vim/rc/terminal.vim
 "   Abbr c terminal Terminal
 " endif
-
 
 Abbr i tihs this
 Abbr i adn and
@@ -115,7 +113,7 @@ BindFT vimspec    vimspec
 BindFT vue        html
 BindFT zsh        zsh
 
-ColorScheme 'onedark'
+ColorScheme 'delek'
 
 filetype plugin indent on
 syntax on

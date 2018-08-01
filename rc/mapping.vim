@@ -17,6 +17,9 @@ nnoremap <silent> gc   :<C-u>tablast <bar> tabnew<CR>
 nnoremap <silent> <F3> :<C-u>tabnext<CR>
 nnoremap <silent> <F2> :<C-u>tabprevious<CR>
 
+nnoremap * *``zz
+nnoremap # #``zz
+
 inoremap <silent> <C-j> <Esc>`^
 inoremap <silent> jj <Esc>`^
 imap <silent> <Esc> <Esc>`^
@@ -41,12 +44,13 @@ nnoremap _     :<C-u>sp .<CR>
 inoremap <silent> <expr> <CR> maxmellon#indent_braces()
 
 nnoremap ' ,
+nnoremap <Leader> ,
 nnoremap <silent> <Leader>h :<C-u>help <C-r><C-w><CR>
 nnoremap <silent> <Leader>x :<C-u>call maxmellon#remove_whitespace()<CR>
 nnoremap <silent> <Leader>z :<C-u>%s/　/  /g<CR>
 nnoremap          <Leader>p :<C-u>ToggleOpt paste<CR>
 if g:env.mac
-  nnoremap <silent> <Leader>? :!open dict://<cword><CR>
+  nnoremap <silent> <Leader>, :!open dict://<cword><CR>
 endif
 
 " map <C-n> :<C-u>lnext<CR>

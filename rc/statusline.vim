@@ -26,6 +26,8 @@ endfunction
 
 let s:slhlcmd = ''
 
+" finish
+
 " left
 set statusline =\ "
 set statusline+=%n\ "
