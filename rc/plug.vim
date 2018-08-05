@@ -190,6 +190,7 @@ if g:plug.ready()
   " out {{{
 
   " Plug 'LeafCage/foldCC.vim'
+
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
   " Plug 'MaxMEllon/vim-active-window'
@@ -199,6 +200,7 @@ if g:plug.ready()
   " Plug 'MaxMEllon/vim-hier'
   " Plug 'TomiLabo/vim-tmng'
   " Plug 'Yggdroot/indentLine'
+  " Plug 'andymass/vim-matchup'
   " Plug 'cespare/vim-toml'
   " Plug 'chrisbra/csv.vim'
   " Plug 'cocopon/iceberg.vim'
@@ -236,7 +238,6 @@ if g:plug.ready()
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
   " Plug 'w0ng/vim-hybrid'
   " Plug 'wakatime/vim-wakatime'
-
   " NeoPlug 'dzhou121/gonvim-fuzzy'
   " NeoPlug 'equalsraf/neovim-gui-shim'
   " MacPlug 'wakatime/vim-wakatime'
@@ -265,6 +266,7 @@ if g:plug.ready()
   Plug 'mattn/gist-vim', {'on': 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/vim-fixjson', {'for': 'json'}
+  Plug 'sgur/vim-hlparen'
   Plug 'tpope/vim-fugitive'
   Plug 'tyru/caw.vim'
   Plug 'vim-jp/vimdoc-ja'
