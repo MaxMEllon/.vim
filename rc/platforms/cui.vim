@@ -20,11 +20,11 @@ set ttyfast
 set ttyscroll    =2000000
 set t_Co         =256
 " italic
-set t_ZH         =[3m
-set t_ZR         =[23m
+" set t_ZH         =[3m
+" set t_ZR         =[23m
 " underline
-set t_us         =[4m
-set t_ue         =[m
+" set t_us         =[4m
+" set t_ue         =[m
 " beep
 set t_vb         =
 set t_ku         =OA
@@ -33,8 +33,8 @@ set t_kr         =OC
 set t_kl         =OD
 
 " cursor
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-let &t_ST = "\e[4 q"
+" let &t_SI = "\e[6 q"
+" let &t_EI = "\e[2 q"
+" let &t_ST = "\e[4 q"
 
 set novisualbell

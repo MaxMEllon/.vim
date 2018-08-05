@@ -5,7 +5,7 @@ let g:mapleader = ','
 command! -nargs=+ -bar Source call g:maxmellon#source#call(<args>)
 
 " built in plugin settings {{{
-let g:loaded_matchparen      = 1
+let g:loaded_matchparen      = 0
 let g:loaded_gzip            = 1
 let g:loaded_tar             = 1
 let g:loaded_tarPlugin       = 1
@@ -113,7 +113,7 @@ BindFT vimspec    vimspec
 BindFT vue        html
 BindFT zsh        zsh
 
-ColorScheme 'delek'
+ColorScheme 'melon'
 
 filetype plugin indent on
 syntax on

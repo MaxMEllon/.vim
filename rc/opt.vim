@@ -22,7 +22,7 @@ set laststatus     =0
 set lazyredraw
 set linespace      =0
 set matchpairs     =<:>,(:),[:],{:}
-set matchtime      =4
+set matchtime      =2
 set maxmem         =500000
 set maxmempattern  =500000
 set maxmemtot      =1000000
