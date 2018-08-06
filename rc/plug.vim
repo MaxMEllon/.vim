@@ -199,7 +199,6 @@ if g:plug.ready()
   " Plug 'MaxMEllon/vim-fzy-rails'
   " Plug 'MaxMEllon/vim-hier'
   " Plug 'TomiLabo/vim-tmng'
-  " Plug 'Yggdroot/indentLine'
   " Plug 'andymass/vim-matchup'
   " Plug 'cespare/vim-toml'
   " Plug 'chrisbra/csv.vim'
@@ -257,6 +256,7 @@ if g:plug.ready()
 
   Plug 'AndrewRadev/switch.vim'
   Plug 'MaxMEllon/vim-fzy-quick-cmd'
+  Plug 'Yggdroot/indentLine'
   Plug 'cohama/lexima.vim'
   Plug 'fatih/vim-go', {'for': 'go'}
   Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}

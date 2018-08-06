@@ -17,6 +17,8 @@ nnoremap <silent> gc   :<C-u>tablast <bar> tabnew<CR>
 nnoremap <silent> <F3> :<C-u>tabnext<CR>
 nnoremap <silent> <F2> :<C-u>tabprevious<CR>
 
+nnoremap n nzz
+nnoremap N Nzz
 nnoremap * *``zz
 nnoremap # #``zz
 
