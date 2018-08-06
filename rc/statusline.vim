@@ -38,10 +38,10 @@ set statusline+=%{maxmellon#paste#statusline()}\ "
 
 " right
 set statusline+=%=
-" set statusline+=%#StatusLineBranch#\ %{maxmellon#git#branch#get()}\ %#StatusLine#
+" set statusline+=%#SLBranch#\ %{maxmellon#git#branch#get()}\ %#StatusLine#
 set statusline+=%#StatusLineFileType#\ %y\ "
-" set statusline+=%#StatusLineVimType#\ %{maxmellon#vimtype#statusline()}\ "
-" set statusline+=%#StatusLineGoBuild#%{WrapedGoStatusLine()}"
+" set statusline+=%#SLVimType#\ %{maxmellon#vimtype#statusline()}\ "
+" set statusline+=%#SLGoBuild#%{WrapedGoStatusLine()}"
 set statusline+=%#ErrorMsg#\ %{maxmellon#qf#statusline()}"
 
 let s:statusline = &statusline
