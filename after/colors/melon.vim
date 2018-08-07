@@ -20,12 +20,12 @@ hi Folded                       ctermfg=DarkBlue           ctermbg=238
 hi Identifier   cterm=NONE      ctermfg=39
 hi IncSearch    cterm=NONE      ctermfg=Black              ctermbg=Yellow
 hi LineNr                       ctermfg=Brown
-hi MatchParen   cterm=inverse                              ctermbg=76
+hi MatchParen   cterm=inverse                              ctermbg=Cyan
 hi ModeMsg      cterm=bold      ctermfg=Yellow             ctermbg=58
 hi MoreMsg      cterm=bold      ctermfg=Yellow             ctermbg=58
 hi NonText                      ctermfg=27
 hi NonfText     cterm=bold      ctermfg=236
-hi Normal                                                  ctermbg=232
+hi Normal                                                  ctermbg=16
 hi ParenMatch                                              ctermbg=8
 hi Pmenu                                                   ctermbg=LightBlue
 hi PmenuSel                     ctermfg=White              ctermbg=DarkBlue
@@ -39,10 +39,11 @@ hi SpellCap     cterm=underline ctermbg=20
 hi SpellLocal   cterm=underline ctermbg=28
 hi SpellRare    cterm=underline ctermbg=58
 hi Statement    cterm=bold      ctermfg=Blue
-hi StatusLine   cterm=bold                                 ctermbg=blue
+hi StatusLine   cterm=bold                                 ctermbg=Blue
 hi StatusLineNC cterm=bold      ctermfg=Black              ctermbg=Blue
-hi TabLinePwd                   ctermfg=Gray               ctermbg=52
-hi TabLineSel                   ctermfg=16                 ctermbg=123
+hi TabLinePwd                   ctermfg=Gray               ctermbg=DarkRed
+hi TabLineSel                   ctermfg=Black              ctermbg=123
+hi TabLineFill                                             ctermbg=Black
 hi Title                        ctermfg=DarkMagenta
 hi Todo         cterm=bold      ctermbg=White              ctermfg=DarkRed
 hi Type	        cterm=NONE      ctermfg=Blue
@@ -53,7 +54,7 @@ hi WarningMsg                   ctermfg=DarkRed
 hi WildMenu                     ctermfg=Black              ctermbg=Yellow
 
 " sgur/vim-hlparen
-hi HlParenMatch cterm=bold,inverse,reverse ctermfg=51
+hi HlParenMatch cterm=bold,underline ctermfg=Cyan          ctermbg=DarkGray
 
 " my statusline
 hi SLBranch                     ctermfg=White              ctermbg=23
