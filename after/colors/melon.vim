@@ -31,7 +31,7 @@ hi Pmenu                                                   ctermbg=LightBlue
 hi PmenuSel                     ctermfg=White              ctermbg=DarkBlue
 hi PreProc      cterm=NONE      ctermfg=DarkMagenta
 hi Question                     ctermfg=DarkGreen
-hi Search       cterm=NONE      ctermfg=Yellow             ctermbg=Black
+hi Search       cterm=NONE      ctermfg=Yellow             ctermbg=20
 hi Special      cterm=NONE      ctermfg=LightRed
 hi SpecialKey   cterm=bold      ctermfg=236
 hi SpellBad     cterm=underline ctermbg=88
@@ -44,6 +44,7 @@ hi StatusLineNC cterm=bold      ctermfg=Black              ctermbg=Blue
 hi TabLinePwd                   ctermfg=Gray               ctermbg=52
 hi TabLineSel                   ctermfg=16                 ctermbg=123
 hi Title                        ctermfg=DarkMagenta
+hi Todo         cterm=bold      ctermbg=White              ctermfg=DarkRed
 hi Type	        cterm=NONE      ctermfg=Blue
 hi VertSplit    cterm=reverse
 hi Visual       cterm=reverse                              ctermbg=NONE
