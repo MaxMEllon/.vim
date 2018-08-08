@@ -34,6 +34,7 @@ hi PmenuSbar                                               ctermbg=60
 hi PmenuThumb                                              ctermbg=Gray
 hi PreProc      cterm=NONE      ctermfg=DarkMagenta
 hi Question                     ctermfg=DarkGreen
+hi SignColumn                                              ctermbg=Black
 hi Search       cterm=NONE      ctermfg=Yellow             ctermbg=20
 hi Special      cterm=NONE      ctermfg=LightRed
 hi SpecialKey   cterm=NONE      ctermfg=18
