@@ -99,7 +99,7 @@ set wildignore+=tmp/**
 " list
 set list
 if g:env.mac
-  set listchars      =eol:$,tab:\ ,trail:█,precedes:<,extends:>,nbsp:%,space:.
+  set listchars      =eol:$,tab:\ ,trail:█,precedes:<,extends:>,nbsp:%
 else
   set listchars      =eol:$,tab:~\ ,trail:_,precedes:<,extends:>,nbsp:%
 endif
