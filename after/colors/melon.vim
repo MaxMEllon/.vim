@@ -14,10 +14,10 @@ hi DiffAdd      cterm=bold      ctermfg=10                 ctermbg=22
 hi DiffChange   cterm=bold      ctermfg=10                 ctermbg=17
 hi DiffDelete   cterm=bold      ctermfg=10                 ctermbg=52
 hi DiffText     cterm=bold      ctermfg=10                 ctermbg=21
-hi Directory                    ctermfg=DarkBlue
+hi Directory                    ctermfg=DarkGreen
 hi ErrorMsg                     ctermfg=White              ctermbg=DarkRed
 hi FoldColumn                                              ctermbg=DarkGray
-hi Folded                       ctermfg=DarkBlue           ctermbg=238
+hi Folded                       ctermfg=DarkGreen           ctermbg=238
 hi Identifier   cterm=NONE      ctermfg=39
 hi IncSearch    cterm=NONE      ctermfg=Black              ctermbg=Yellow
 hi LineNr                       ctermfg=Brown
@@ -42,14 +42,14 @@ hi SpellBad     cterm=underline ctermbg=88
 hi SpellCap     cterm=underline ctermbg=20
 hi SpellLocal   cterm=underline ctermbg=28
 hi SpellRare    cterm=underline ctermbg=58
-hi Statement    cterm=bold      ctermfg=Blue
-hi StatusLine   cterm=bold                                 ctermbg=Blue
-hi StatusLineNC cterm=bold      ctermfg=Black              ctermbg=Blue
+hi Statement    cterm=bold      ctermfg=Green
+hi StatusLine   cterm=bold                                 ctermbg=Green
+hi StatusLineNC cterm=bold      ctermfg=Black              ctermbg=Green
 hi TabLineSel                   ctermfg=Black              ctermbg=123
 hi TabLineFill                                             ctermbg=Black
 hi Title                        ctermfg=DarkMagenta
 hi Todo         cterm=bold      ctermbg=White              ctermfg=DarkRed
-hi Type         cterm=NONE      ctermfg=Blue
+hi Type         cterm=NONE      ctermfg=Green
 hi VertSplit    cterm=reverse
 hi Visual       cterm=reverse                              ctermbg=NONE
 hi VisualNOS    cterm=reverse
