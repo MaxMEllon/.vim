@@ -51,7 +51,7 @@ set textwidth      =0
 set virtualedit    =block
 set whichwrap      =b,s,h,l,<,>,[,]
 
-set noswapfile
+set swapfile
 set directory      =~/.vim/_swap
 
 set backup
