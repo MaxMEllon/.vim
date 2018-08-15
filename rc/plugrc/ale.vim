@@ -6,24 +6,15 @@ let g:ale_linters = {
       \   'vim': [],
       \}
 let g:ale_fixers = {
-      \   'javascript': ['prettier_eslint'],
+      \   'javascript': ['prettier'],
       \   'ruby': [],
       \   'scss': [],
       \   'sass': [],
       \}
 
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_sign_error = 'E'
-let g:ale_sign_style_error = 'X'
-let g:ale_sign_warning = 'W'
-let g:ale_sign_style_warning = 'W'
-let g:ale_sign_info = 'I'
-let g:ale_fix_on_save = 1
+let g:ale_set_loclist = 1
+let g:ale_set_quickfix = 0
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_text_changed = 'normal'
-let g:ale_lint_on_insert_leave = 0
 
 " augroup ALE_Highlight
 "   autocmd!

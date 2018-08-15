@@ -271,7 +271,7 @@ if g:plug.ready()
   Plug 'tyru/caw.vim'
   Plug 'vim-jp/vimdoc-ja'
   Plug 'vim-scripts/surround.vim'
-  Plug 'w0rp/ale', {'on': ['ALEEnable', 'ALEEnableBuffer']}
+  Plug 'w0rp/ale'
 
   PlugBox 'javascript'
   PlugBox 'ruby'
