@@ -15,6 +15,7 @@ hi DiffChange   cterm=bold      ctermfg=10                 ctermbg=17
 hi DiffDelete   cterm=bold      ctermfg=10                 ctermbg=52
 hi DiffText     cterm=bold      ctermfg=10                 ctermbg=21
 hi Directory                    ctermfg=DarkGreen
+hi Function     cterm=bold      ctermfg=Cyan
 hi ErrorMsg                     ctermfg=White              ctermbg=DarkRed
 hi FoldColumn                                              ctermbg=DarkGray
 hi Folded                       ctermfg=DarkGreen           ctermbg=238
@@ -29,13 +30,14 @@ hi NonfText     cterm=bold      ctermfg=236
 hi Normal                                                  ctermbg=16
 hi ParenMatch                                              ctermbg=8
 hi Pmenu                                                   ctermbg=LightCyan
-hi PmenuSel                     ctermfg=White              ctermbg=24
 hi PmenuSbar                                               ctermbg=60
+hi PmenuSel                     ctermfg=White              ctermbg=24
 hi PmenuThumb                                              ctermbg=Gray
 hi PreProc      cterm=NONE      ctermfg=DarkMagenta
 hi Question                     ctermfg=DarkGreen
-hi SignColumn                                              ctermbg=Black
+hi QuickFixLine cterm=bold      ctermfg=White              ctermbg=DarkBlue
 hi Search       cterm=NONE      ctermfg=Yellow             ctermbg=20
+hi SignColumn                                              ctermbg=Black
 hi Special      cterm=NONE      ctermfg=LightRed
 hi SpecialKey   cterm=NONE      ctermfg=18
 hi SpellBad     cterm=underline ctermbg=88

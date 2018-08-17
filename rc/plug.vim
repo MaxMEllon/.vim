@@ -261,7 +261,7 @@ if g:plug.ready()
   Plug 'fatih/vim-go', {'for': 'go'}
   Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
   Plug 'junegunn/vim-easy-align', {'on': 'EasyAlign'}
-  Plug 'justinmk/vim-dirvish' " | Plug 'kristijanhusak/vim-dirvish-git'
+  Plug 'justinmk/vim-dirvish' | Plug 'kristijanhusak/vim-dirvish-git'
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on': 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'prabirshrestha/async.vim'
