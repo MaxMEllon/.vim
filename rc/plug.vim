@@ -190,7 +190,6 @@ if g:plug.ready()
   " out {{{
 
   " Plug 'LeafCage/foldCC.vim'
-
   " Plug 'LeafCage/yankround.vim'
   " Plug 'MaxMEllon/jobproc'
   " Plug 'MaxMEllon/vim-active-window'
@@ -237,6 +236,7 @@ if g:plug.ready()
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
   " Plug 'w0ng/vim-hybrid'
   " Plug 'wakatime/vim-wakatime'
+
   " NeoPlug 'dzhou121/gonvim-fuzzy'
   " NeoPlug 'equalsraf/neovim-gui-shim'
   " MacPlug 'wakatime/vim-wakatime'
