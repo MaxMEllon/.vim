@@ -113,6 +113,7 @@ BindFT toml       toml
 BindFT vimspec    vimspec
 BindFT vue        html
 BindFT zsh        zsh
+BindFT mdx        markdown.javascript.mdx
 
 ColorScheme 'melon'
 
