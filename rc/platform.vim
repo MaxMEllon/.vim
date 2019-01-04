@@ -7,6 +7,3 @@ endif
 if g:env.gui
   Source 'platforms/gui'
 endif
-if g:env.neo
-  Source 'platforms/neo'
-endif

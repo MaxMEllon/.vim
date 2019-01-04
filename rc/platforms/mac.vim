@@ -1,5 +1,5 @@
 let s:pyenv = expand('~/.pyenv')
-if isdirectory(s:pyenv) && !g:env.neo
+if isdirectory(s:pyenv)
   let $PYENV_ROOT = empty($PYENV_ROOT) ? s:pyenv : $PYENV_ROOT
 
   " let s:python2home = $PYENV_ROOT . '/versions/2.7.11'

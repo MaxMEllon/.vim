@@ -1,18 +1,17 @@
-if g:env.neo
-  function! DoRemote(arg)
-    UpdateRemotePlugins
-  endfunction
-  Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-  let g:python3_host_prog = '/Users/maxmellon/.pyenv/shims/python3'
-  let g:deoplete#enable_at_startup = 1
+if $ASYNC ==# 'true'
+  " Depend on async.vim
+  Plug 'prabirshrestha/asyncomplete.vim'
+  Plug 'prabirshrestha/asyncomplete-buffer.vim'
+  Plug 'prabirshrestha/asyncomplete-file.vim'
+  Plug 'prabirshrestha/asyncomplete-flow.vim'
+  " Plug 'prabirshrestha/vim-lsp'
+  " Plug 'prabirshrestha/asyncomplete-lsp.vim'
+elseif $YCM ==# 'true' && (has('python') || has('python3'))
+  Plug 'Valloric/YouCompleteMe'
+elseif g:env.vim8 && (has('python') || has('python3'))
+  Plug 'maralla/completor.vim'
+elseif g:env.lua
+  Plug 'Shougo/neocomplete.vim'
 else
-  if $YCM ==# 'true' && (has('python') || has('python3'))
-    Plug 'Valloric/YouCompleteMe'
-  elseif g:env.vim8 && (has('python') || has('python3'))
-    Plug 'maralla/completor.vim'
-  elseif g:env.lua
-    Plug 'Shougo/neocomplete.vim'
-  else
-    Plug 'Shougo/neocomplecache.vim'
-  endif
+  Plug 'Shougo/neocomplecache.vim'
 endif

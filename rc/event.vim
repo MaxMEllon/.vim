@@ -15,13 +15,7 @@ Autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
 
 Autocmd QuickFixCmdPost make,*grep* cwindow
 
-if g:env.neo
-  Autocmd BufRead,BufEnter * if &buftype ==# 'terminal'
-        \| setlocal nolist | startinsert | endif
-endif
-
-" for tern and vim-clang
-Autocmd VimEnter * set completeopt-=preview
+" Autocmd VimEnter * set completeopt-=preview
 
 Autocmd BufRead,BufEnter * let g:branch = ''
 
