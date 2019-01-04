@@ -41,7 +41,8 @@ let g:env.linux   = g:maxmellon#os#is_linux()
 let g:env.term    = has('terminal')
 let g:env.vim8    = has('patch-8.0.0039') && has('job') && has('lambda')
 let g:env.lua     = has('lua')
-let g:env.termgui = has('termguicolors') && empty($TMUX)
+let g:env.termgui = has('termguicolors') "&& empty($TMUX)
+let g:env.tmux    = !empty($TMUX)
 let g:env.clpum   = has('clpum')
 
 Source 'command'    " ~/.vim/rc/command.vim

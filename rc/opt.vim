@@ -18,7 +18,7 @@ set helplang       =ja
 set history        =100
 set hlsearch
 set incsearch
-set laststatus     =0
+set laststatus     =2
 set lazyredraw
 set linespace      =0
 set matchpairs     =<:>,(:),[:],{:}
@@ -61,9 +61,9 @@ set undolevels     =200
 set undodir        =~/.vim/_undo
 set undofile
 
-" if g:env.termgui
-"   set termguicolors
-" endif
+if g:env.termgui
+  " set termguicolors
+endif
 
 " fold
 set foldenable

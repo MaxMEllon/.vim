@@ -257,6 +257,7 @@ if g:plug.ready()
   Plug 'AndrewRadev/switch.vim'
   Plug 'MaxMEllon/vim-fzy-quick-cmd'
   Plug 'Yggdroot/indentLine'
+  Plug 'chr4/nginx.vim'
   Plug 'cohama/lexima.vim'
   Plug 'fatih/vim-go', {'for': 'go'}
   Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}

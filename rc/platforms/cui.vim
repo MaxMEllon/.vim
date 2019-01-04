@@ -31,6 +31,10 @@ set t_ku         =OA
 set t_kd         =OB
 set t_kr         =OC
 set t_kl         =OD
+if g:env.tmux
+  " set t_8f="\e[[38;2;%lu;%lu;%lum"
+  " set t_8b="\e[[48;2;%lu;%lu;%lum"
+endif
 
 " cursor
 " let &t_SI = "\e[6 q"
