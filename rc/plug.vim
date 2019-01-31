@@ -255,7 +255,8 @@ if g:plug.ready()
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
-  Plug 'MaxMEllon/vim-fzy-quick-cmd'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
   Plug 'Yggdroot/indentLine'
   Plug 'chr4/nginx.vim'
   Plug 'cohama/lexima.vim'
@@ -263,6 +264,7 @@ if g:plug.ready()
   Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
   Plug 'junegunn/vim-easy-align', {'on': 'EasyAlign'}
   Plug 'justinmk/vim-dirvish' | Plug 'kristijanhusak/vim-dirvish-git'
+  Plug 'markonm/traces.vim'
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on': 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'prabirshrestha/async.vim'
@@ -275,11 +277,11 @@ if g:plug.ready()
   Plug 'w0rp/ale'
 
   PlugBox 'javascript'
-  PlugBox 'ruby'
+  " PlugBox 'ruby'
   PlugBox 'vim'
   " PlugBox 'css'
   " PlugBox 'html'
-  " PlugBox 'plantuml'
+  PlugBox 'plantuml'
 
   PlugBox 'completion'
   PlugBox 'operator'
