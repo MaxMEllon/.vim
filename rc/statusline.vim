@@ -8,11 +8,11 @@ augroup InsertHook
 augroup END
 
 function! s:StatusLine(mode)
-  highlight StatusLineNC ctermfg=black ctermbg=240  cterm=NONE guifg=black guibg=black
+  highlight StatusLineNC ctermfg=black ctermbg=240  cterm=NONE guifg=#a2a2a2 guibg=black
   if a:mode ==# 'Enter'
-    highlight StatusLine ctermfg=white ctermbg=196 cterm=NONE guifg=white guibg=darkyellow
+    highlight StatusLine ctermfg=white ctermbg=196  cterm=NONE guifg=#ffff00 guibg=black
   else
-    highlight StatusLine ctermfg=27    ctermbg=123 cterm=NONE guifg=white guibg=darkgray
+    highlight StatusLine ctermfg=27    ctermbg=123  cterm=NONE guifg=#00ffff guibg=black
   endif
 endfunction
 

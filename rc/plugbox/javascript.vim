@@ -5,6 +5,9 @@ Plug 'pangloss/vim-javascript', {'for' : 'javascript' }
 " Plug 'othree/javascript-libraries-syntax.vim'
 " Plug 'mxw/vim-jsx'
 Plug 'MaxMEllon/vim-jsx-pretty', {'for' : 'javascript' }
+if !g:env.neo
+  Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
+endif
 " MyPlug 'vim-jsx-pretty'
 " Plug 'alampros/vim-styled-jsx'
 " Plug 'styled-components/vim-styled-components',  { 'branch': 'rewrite' }

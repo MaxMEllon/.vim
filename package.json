@@ -3,6 +3,7 @@
     "flow-bin": "^0.73.0"
   },
   "dependencies": {
+    "fixjson": "^1.1.0",
     "import-js": "^3.0.0"
   }
 }

@@ -74,11 +74,6 @@ Abbr c WA wa
 Abbr c WQ wq
 Abbr c Wa wa
 Abbr c Wq wq
-Abbr c ggrep Ggrep
-Abbr c gina Gina
-Abbr c gist Gist
-Abbr c gn Gina
-Abbr c hgrep Hgrep
 
 Indent 4, 'python'
 Indent 4, 'java'
@@ -92,8 +87,9 @@ Indent 2, 'fish'
 Indent 4, 'haskell'
 Indent 4, 'go', {'tab': g:true}
 
-Suffix 'javascript', ['.jsx', '.json', '.sass', '.scss', '.css']
+Suffix 'javascript', ['.js', '.jsx', '.json', '.sass', '.scss', '.css']
 Suffix 'vim', '.nvim'
+Suffix 'typescript', ['.ts', '.tsx']
 
 BindFT babelrc    json
 BindFT cjsx       coffee
@@ -105,18 +101,19 @@ BindFT exs        elixir
 BindFT fish       fish
 BindFT jsx        javascript
 BindFT less       less
+BindFT mdx        markdown.javascript.mdx
 BindFT nvim       vim
 BindFT sass       sass
 BindFT scss       sass
 BindFT slim       slim
 BindFT textlintrc json
 BindFT toml       toml
+BindFT tsx        typescript.tsx
 BindFT vimspec    vimspec
 BindFT vue        html
 BindFT zsh        zsh
-BindFT mdx        markdown.javascript.mdx
 
-ColorScheme 'melon'
+" ColorScheme 'iceberg'
 
 filetype plugin indent on
 syntax on

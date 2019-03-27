@@ -15,6 +15,7 @@ let g:ale_fixers = {
 let g:ale_set_loclist = 1
 let g:ale_set_quickfix = 0
 let g:ale_lint_on_text_changed = 'never'
+let g:ale_virtualtext_cursor = 1
 
 " augroup ALE_Highlight
 "   autocmd!

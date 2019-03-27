@@ -1,0 +1,69 @@
+function! s:resolve_coc_dependencies() 
+  CocInstall coc-prettier
+  CocInstall coc-json
+  CocInstall coc-tsserver
+  CocInstall coc-html
+  CocInstall coc-css
+  " CocInstall coc-vetur " Vue
+  CocInstall coc-java
+  CocInstall coc-rls " Rust
+  CocInstall coc-yaml
+  CocInstall coc-highlight
+  CocInstall coc-emmet
+endfunction
+
+command! -nargs=0 CocResolveDependencies call s:resolve_coc_dependencies()
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+set updatetime=100
+
+inoremap <silent><expr><TAB>   pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : coc#refresh()
+inoremap         <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr>    <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr>   <C-K> pumvisible() ? "\<C-y>" : "\<C-k>"
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Show all diagnostics
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" Show commands
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+
+augroup CoC
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  autocmd VimEnter * highlight! CocError ctermbg=88 guibg=#550000 gui=NONE term=NONE
+  autocmd VimEnter * highlight! default link CocErrorHighlight CocError
+  " Update signature help on jump placeholder
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end

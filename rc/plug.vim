@@ -167,6 +167,12 @@ command! -nargs=* -bar PlugBox call g:plug.load_plug_box(<args>)
 " }}}
 
 " {{{
+function! g:plug.vim_plug(repo)
+  if !g:env.neo
+    call g:plug#(a:repo)
+  endif
+endfunction
+
 function! g:plug.mac_plug(repo)
   if g:env.mac
     call g:plug#(a:repo)
@@ -182,6 +188,8 @@ function! g:plug.neo_plug(repo)
 endfunction
 
 command! -nargs=1 NeoPlug call g:plug.neo_plug(<args>)
+command! -nargs=1 VimPlug call g:plug.vim_plug(<args>)
+
 " }}}
 
 if g:plug.ready()
@@ -255,19 +263,20 @@ if g:plug.ready()
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
-  Plug 'Yggdroot/indentLine'
   Plug 'chr4/nginx.vim'
+  Plug 'cocopon/iceberg.vim'
   Plug 'cohama/lexima.vim'
   Plug 'fatih/vim-go', {'for': 'go'}
   Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
   Plug 'junegunn/vim-easy-align', {'on': 'EasyAlign'}
-  Plug 'justinmk/vim-dirvish' | Plug 'kristijanhusak/vim-dirvish-git'
+  Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
   Plug 'markonm/traces.vim'
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on': 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'prabirshrestha/async.vim'
+  Plug 'rhysd/git-messenger.vim'
   Plug 'rhysd/vim-fixjson', {'for': 'json'}
   Plug 'sgur/vim-hlparen'
   Plug 'tpope/vim-fugitive'
@@ -275,6 +284,9 @@ if g:plug.ready()
   Plug 'vim-jp/vimdoc-ja'
   Plug 'vim-scripts/surround.vim'
   Plug 'w0rp/ale'
+
+  " Plug 'scrooloose/nerdtree'
+  Plug 'justinmk/vim-dirvish'
 
   PlugBox 'javascript'
   " PlugBox 'ruby'

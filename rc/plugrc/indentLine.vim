@@ -7,6 +7,6 @@ let g:indentLine_char = "│"
 let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 2
 
-Autocmd BufEnter * IndentLinesReset
+" Autocmd BufEnter * IndentLinesReset
 
 call AddToggleCommand('IndentLinesToggle')

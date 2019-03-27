@@ -27,7 +27,7 @@ hi ModeMsg      cterm=bold              ctermfg=Yellow             ctermbg=58
 hi MoreMsg      cterm=bold              ctermfg=Yellow             ctermbg=58
 hi NonText                              ctermfg=27
 hi NonfText     cterm=bold              ctermfg=236
-hi Normal                                                          ctermbg=16
+hi Normal                                                          ctermbg=235
 hi ParenMatch                                                      ctermbg=8
 hi Pmenu                                                           ctermbg=LightCyan
 hi PmenuSbar                                                       ctermbg=60
@@ -72,5 +72,12 @@ hi SLBranch                             ctermfg=White              ctermbg=23
 hi SLFileType                           ctermfg=White              ctermbg=19
 hi SLGoBuild                            ctermfg=Black              ctermbg=76
 hi SLVimType                            ctermfg=White              ctermbg=52
+
+" git-messenger
+hi gitmessengerHeader      term=None guifg=#88b8f6 ctermfg=111
+hi gitmessengerHash        term=None guifg=#f0eaaa ctermfg=229
+hi gitmessengerHistory     term=None guifg=#fd8489 ctermfg=210
+hi gitmessengerPopupNormal term=None guifg=#eeeeee guibg=#630033 ctermfg=255 ctermbg=234
+hi gitmessengerEndOfBuffer term=None guifg=#333333 guibg=#630033 ctermfg=234 ctermbg=234
 
 " vim: sw=2

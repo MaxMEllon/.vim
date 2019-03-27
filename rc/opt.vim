@@ -23,9 +23,11 @@ set lazyredraw
 set linespace      =0
 set matchpairs     =<:>,(:),[:],{:}
 set matchtime      =3
-set maxmem         =500000
-set maxmempattern  =500000
-set maxmemtot      =1000000
+if !g:env.neo
+  set maxmem         =500000
+  set maxmempattern  =500000
+  set maxmemtot      =1000000
+endif
 set modeline
 set modelines      =2
 set noequalalways
@@ -62,7 +64,7 @@ set undodir        =~/.vim/_undo
 set undofile
 
 if g:env.termgui
-  " set termguicolors
+  set termguicolors
 endif
 
 " fold
@@ -84,6 +86,9 @@ set smarttab
 " menu
 set wildmenu
 set wildmode=longest:full,full
+if g:env.neo
+  set wildoptions+=pum
+endif
 " set wildignore=*.o,*.obj,*~
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*

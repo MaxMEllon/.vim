@@ -6,6 +6,8 @@ if $ASYNC ==# 'true'
   Plug 'prabirshrestha/asyncomplete-flow.vim'
   " Plug 'prabirshrestha/vim-lsp'
   " Plug 'prabirshrestha/asyncomplete-lsp.vim'
+elseif g:env.neo
+  Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
 elseif $YCM ==# 'true' && (has('python') || has('python3'))
   Plug 'Valloric/YouCompleteMe'
 elseif g:env.vim8 && (has('python') || has('python3'))
