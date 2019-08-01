@@ -1,2 +1,2 @@
 " Plug 'maxmellon/vim-slumlord'
-" Plug 'aklt/plantuml-syntax'
+Plug 'aklt/plantuml-syntax'

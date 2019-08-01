@@ -59,7 +59,6 @@ Source 'tabline'    " ~/.vim/rc/tabline.vim
 "   Source 'terminal' " ~/.vim/rc/terminal.vim
 "   Abbr c terminal Terminal
 " endif
-
 Abbr i tihs this
 Abbr i adn and
 Abbr i REact React
@@ -113,7 +112,7 @@ BindFT vimspec    vimspec
 BindFT vue        html
 BindFT zsh        zsh
 
-" ColorScheme 'iceberg'
+ColorScheme 'onedark'
 
 filetype plugin indent on
 syntax on

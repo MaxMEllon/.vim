@@ -215,6 +215,7 @@ if g:plug.ready()
   " Plug 'easymotion/vim-easymotion'
   " Plug 'fatih/vim-go'
   " Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do':  'make fsautocomplete' }
+  " Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
   " Plug 'gutenye/json5.vim'
   " Plug 'haya14busa/incsearch.vim'
   " Plug 'haya14busa/vim-asterisk'
@@ -243,6 +244,7 @@ if g:plug.ready()
   " Plug 'tpope/vim-dispatch'
   " Plug 'tyru/capture.vim', {'on' : 'Capture'}
   " Plug 'w0ng/vim-hybrid'
+  " Plug 'w0rp/ale'
   " Plug 'wakatime/vim-wakatime'
 
   " NeoPlug 'dzhou121/gonvim-fuzzy'
@@ -263,19 +265,20 @@ if g:plug.ready()
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
+  Plug 'MaxMEllon/vim-shiny'
   Plug 'chr4/nginx.vim'
-  Plug 'cocopon/iceberg.vim'
   Plug 'cohama/lexima.vim'
   Plug 'fatih/vim-go', {'for': 'go'}
-  Plug 'gerw/vim-HiLinkTrace', {'on': 'HLT'}
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  Plug 'junegunn/vim-easy-align', {'on': 'EasyAlign'}
   Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
+  Plug 'junegunn/vim-easy-align', {'on': 'EasyAlign'}
+  Plug 'justinmk/vim-dirvish'
   Plug 'markonm/traces.vim'
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on': 'Gist'} | Plug 'mattn/webapi-vim'
   Plug 'prabirshrestha/async.vim'
+  Plug 'rhysd/clever-f.vim'
   Plug 'rhysd/git-messenger.vim'
   Plug 'rhysd/vim-fixjson', {'for': 'json'}
   Plug 'sgur/vim-hlparen'
@@ -283,23 +286,23 @@ if g:plug.ready()
   Plug 'tyru/caw.vim'
   Plug 'vim-jp/vimdoc-ja'
   Plug 'vim-scripts/surround.vim'
-  Plug 'w0rp/ale'
 
-  " Plug 'scrooloose/nerdtree'
-  Plug 'justinmk/vim-dirvish'
+  """ color schemes
+  " Plug 'cocopon/iceberg.vim'
+  Plug 'joshdick/onedark.vim'
 
-  PlugBox 'javascript'
-  " PlugBox 'ruby'
-  PlugBox 'vim'
   " PlugBox 'css'
   " PlugBox 'html'
+  " PlugBox 'ruby'
+  PlugBox 'javascript'
   PlugBox 'plantuml'
+  PlugBox 'vim'
 
+  " MyPlug 'vim-fzy-quick-cmd'
+  " PlugBox 'vital'
   PlugBox 'completion'
   PlugBox 'operator'
   PlugBox 'textobj'
-  " PlugBox 'vital'
-  " MyPlug 'vim-fzy-quick-cmd'
 
   call g:plug#end()
 
