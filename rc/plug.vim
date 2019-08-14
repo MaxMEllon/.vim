@@ -291,6 +291,8 @@ if g:plug.ready()
   " Plug 'cocopon/iceberg.vim'
   Plug 'joshdick/onedark.vim'
 
+  Plug 'tokorom/vim-review'
+
   " PlugBox 'css'
   " PlugBox 'html'
   " PlugBox 'ruby'
