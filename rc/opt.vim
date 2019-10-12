@@ -48,7 +48,7 @@ set spelllang      =en,cjk
 set splitbelow
 set splitright
 set switchbuf      =split
-set synmaxcol      =200
+set synmaxcol      =500
 set textwidth      =0
 set virtualedit    =block
 set whichwrap      =b,s,h,l,<,>,[,]
@@ -104,7 +104,7 @@ set wildignore+=tmp/**
 " list
 set list
 if g:env.mac
-  set listchars      =eol:$,tab:\ ,trail:█,precedes:<,extends:>,nbsp:%
+  set listchars      =eol:$,tab:~\ ,trail:█,precedes:<,extends:>,nbsp:%
 else
   set listchars      =eol:$,tab:~\ ,trail:_,precedes:<,extends:>,nbsp:%
 endif
