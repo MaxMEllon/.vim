@@ -18,7 +18,7 @@ set helplang       =ja
 set history        =100
 set hlsearch
 set incsearch
-set laststatus     =2
+set laststatus     =0
 set lazyredraw
 set linespace      =0
 set matchpairs     =<:>,(:),[:],{:}
@@ -40,10 +40,10 @@ set redrawtime     =5000
 set norelativenumber
 set report         =1
 set ruler
-set scrolloff      =5
+set scrolloff      =8
 set showbreak      =\\
 set showmatch
-set showtabline    =2
+set showtabline    =1
 set spelllang      =en,cjk
 set splitbelow
 set splitright
@@ -86,9 +86,7 @@ set smarttab
 " menu
 set wildmenu
 set wildmode=longest:full,full
-if g:env.neo
-  set wildoptions+=pum
-endif
+
 " set wildignore=*.o,*.obj,*~
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
