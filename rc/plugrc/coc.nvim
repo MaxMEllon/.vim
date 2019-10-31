@@ -6,7 +6,7 @@ function! s:resolve_coc_dependencies()
   CocInstall coc-css
   " CocInstall coc-vetur " Vue
   CocInstall coc-java
-  CocInstall coc-rls " Rust
+  " CocInstall coc-rls " Rust
   CocInstall coc-yaml
   CocInstall coc-highlight
   CocInstall coc-emmet
@@ -14,6 +14,8 @@ endfunction
 
 command! -nargs=0 CocResolveDependencies call s:resolve_coc_dependencies()
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+Autocmd BufWritePost *.js,*.ts,*.tsx Prettier
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
