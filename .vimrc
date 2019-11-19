@@ -98,7 +98,7 @@ BindFT eslintrc   yaml
 BindFT ex         elixir
 BindFT exs        elixir
 BindFT fish       fish
-BindFT jsx        javascript
+BindFT jsx        javascriptreact
 BindFT less       less
 BindFT mdx        markdown.javascript.mdx
 BindFT nvim       vim
@@ -107,7 +107,7 @@ BindFT scss       sass
 BindFT slim       slim
 BindFT textlintrc json
 BindFT toml       toml
-BindFT tsx        typescript.tsx
+BindFT tsx        typescriptreact
 BindFT vimspec    vimspec
 BindFT vue        html
 BindFT zsh        zsh
