@@ -1,24 +1,25 @@
 let g:lightline = {
+      \   'colorscheme': 'one',
       \   'mode_map': {
-      \     'n' : 'N',
-      \     'i' : 'I',
-      \     'R' : 'R',
-      \     'v' : 'V',
-      \     'V' : 'V-L',
+      \     'n' : 'Normal',
+      \     'i' : 'Insert',
+      \     'R' : 'Replace',
+      \     'v' : 'Virtual',
+      \     'V' : 'V-Line',
       \     'c' : 'COMMAND',
-      \     "\<C-v>": 'V-B',
+      \     "\<C-v>": 'V-Block',
       \     's' : 'SELECT',
-      \     'S' : 'S-L',
-      \     "\<C-s>": 'S-B',
+      \     'S' : 'S-Line',
+      \     "\<C-s>": 'S-Block',
       \   },
+      \   'tabline': {'left': [['buffers']], 'right': [['close']]},
       \   'component': {
       \     'readonly': '[RO]',
       \   },
-      \   'separator': { 'left': "|", 'right': "|" },
-      \   'subseparator': { 'left': ":", 'right': ":" },
+      \   'separator': { 'left': "", 'right': "" },
+      \   'subseparator': { 'left': "", 'right': "" },
       \   'active': {
       \     'left':  [ [ 'mode', 'paste', 'capstatus'  ],
-      \                [ 'anzu', 'fugitive', 'neomake' ],
       \                [ 'filename' ] ],
       \     'right': [ [ 'qfstatusline' ],
       \                [ 'filetype' ],
@@ -27,21 +28,29 @@ let g:lightline = {
       \   },
       \   'component_expand': {
       \     'syntastic': 'SyntasticStatuslineFlag',
-      \     'qfstatusline' : 'qfstatusline#Update'
+      \     'qfstatusline' : 'qfstatusline#Update',
+      \     'buffers': 'lightline#bufferline#buffers'
       \   },
       \   'component_type': {
       \     'syntastic': 'error',
       \     'qfstatusline': 'error',
+      \     'buffers': 'tabsel'
       \   },
       \   'component_function': {
-      \     'anzu' : 'anzu#search_status',
       \     'fugitive' : 'MyFugitive',
-      \     'neomake' : 'MyNeomake',
       \     'mode' : 'MyMode'
       \   }
       \ }
 
+let g:lightline#bufferline#show_number  = 1
+let g:lightline#bufferline#shorten_path = 0
+let g:lightline#bufferline#unnamed      = '[No Name]'
+
 let g:Qfstatusline#UpdateCmd = function('lightline#update')
+
+Autocmd BufEnter * hi LightlineMiddle_active term=None guifg=#333333 guibg=#034373 ctermfg=234 ctermbg=21
+Autocmd BufEnter * hi LightlineMiddle_inactive term=None guifg=#333333 guibg=#737373 ctermfg=234 ctermbg=247
+Autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
 
 " gitbranch名
 function! MyFugitive()
@@ -66,27 +75,4 @@ function! MyMode()
         \ winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
-function! MyNeomake()
-  if !exists('*neomake#statusline#LoclistCounts')
-    return ''
-  endif
-
-  " Count all the errors, warnings
-  let total = 0
-
-  for s:v in values(neomake#statusline#LoclistCounts())
-    let total += v
-  endfor
-
-  for s:v in items(neomake#statusline#QflistCounts())
-    let total += s:v
-  endfor
-
-  if total == 0
-    return ''
-  endif
-
-  unlet v
-
-  return 'Errors : ' . total
-endfunction
+set noshowmode

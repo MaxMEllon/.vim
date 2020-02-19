@@ -86,9 +86,7 @@ function! s:config_load(...)
   if l:is_force == g:true
     let l:loaded = g:true
   else
-    let l:loaded = g:env.win
-          \ ? g:plug.is_installed(a:1) || g:plug.is_installed(l:fuzzy_plugname)
-          \ : g:plug.is_loaded(a:1) || g:plug.is_loaded(l:fuzzy_plugname)
+    let l:loaded = g:plug.is_installed(a:1) || g:plug.is_installed(l:fuzzy_plugname)
   endif
   if l:loaded == g:true
     execute 'source ' . a:2
@@ -269,9 +267,11 @@ if g:plug.ready()
   Plug 'chr4/nginx.vim'
   Plug 'cohama/lexima.vim'
   Plug 'fatih/vim-go', {'for': 'go'}
+  Plug 'itchyny/lightline.vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
+  Plug 'mengelbrecht/lightline-bufferline'
   Plug 'junegunn/vim-easy-align', {'on': 'EasyAlign'}
   Plug 'justinmk/vim-dirvish'
   Plug 'markonm/traces.vim'
