@@ -10,6 +10,7 @@ function! s:resolve_coc_dependencies()
   CocInstall coc-yaml
   CocInstall coc-highlight
   CocInstall coc-emmet
+  CocInstall coc-vimlsp
 endfunction
 
 command! -nargs=0 CocResolveDependencies call s:resolve_coc_dependencies()
@@ -54,9 +55,9 @@ nnoremap <silent> ,kk :<C-u>CocPrev<CR>
 nnoremap <silent> ,kp :<C-u>CocListResume<CR>
 
 " Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
+nmap <C-]> <Plug>(coc-definition)
+nmap gy <Plug>(coc-type-definition)
+nmap gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 

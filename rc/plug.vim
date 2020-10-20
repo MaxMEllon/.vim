@@ -237,6 +237,7 @@ if g:plug.ready()
   " Plug 'rust-lang/rust.vim', {'for' : 'rust'}
   " Plug 't9md/vim-textmanip'
   " Plug 'terryma/vim-multiple-cursors'
+  " Plug 'MaxMEllon/vim-shiny'
   " Plug 'thinca/vim-themis', {'for' : 'vimspec'}
   " Plug 'tmhedberg/matchit'
   " Plug 'tpope/vim-dispatch'
@@ -263,7 +264,6 @@ if g:plug.ready()
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
-  Plug 'MaxMEllon/vim-shiny'
   Plug 'chr4/nginx.vim'
   Plug 'cohama/lexima.vim'
   Plug 'fatih/vim-go', {'for': 'go'}
@@ -271,12 +271,12 @@ if g:plug.ready()
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
-  Plug 'mengelbrecht/lightline-bufferline'
   Plug 'junegunn/vim-easy-align', {'on': 'EasyAlign'}
   Plug 'justinmk/vim-dirvish'
   Plug 'markonm/traces.vim'
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on': 'Gist'} | Plug 'mattn/webapi-vim'
+  Plug 'mengelbrecht/lightline-bufferline'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/clever-f.vim'
   Plug 'rhysd/git-messenger.vim'

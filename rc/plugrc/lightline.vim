@@ -43,8 +43,9 @@ let g:lightline = {
       \ }
 
 let g:lightline#bufferline#show_number  = 1
-let g:lightline#bufferline#shorten_path = 0
-let g:lightline#bufferline#unnamed      = '[No Name]'
+let g:lightline#bufferline#shorten_path = 1
+let g:lightline#bufferline#filename_modifier = ':t'
+let g:lightline#bufferline#unnamed      = '[X]'
 
 let g:Qfstatusline#UpdateCmd = function('lightline#update')
 
