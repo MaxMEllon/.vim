@@ -1,7 +1,9 @@
-function! maxmellon#bool#true()
-  return !0
-endfunction
+vim9script
 
-function! maxmellon#bool#false()
-  return 0
-endfunction
+def maxmellon#bool#truthy(): bool
+  return !0
+enddef
+
+def maxmellon#bool#falsy(): bool
+  return !!0
+enddef

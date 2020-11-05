@@ -1,7 +1,7 @@
 scriptencoding utf-8
 
-let s:true = maxmellon#bool#true()
-let s:false = maxmellon#bool#false()
+let s:true = maxmellon#bool#truthy()
+let s:false = maxmellon#bool#falsy()
 
 augroup TabSpace
   autocmd!

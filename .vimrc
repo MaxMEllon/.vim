@@ -1,5 +1,5 @@
-let g:false = maxmellon#bool#false()
-let g:true  = maxmellon#bool#true()
+let g:false = maxmellon#bool#falsy()
+let g:true  = maxmellon#bool#truthy()
 let g:mapleader = ','
 
 command! -nargs=+ -bar Source call maxmellon#source#call(<args>)
