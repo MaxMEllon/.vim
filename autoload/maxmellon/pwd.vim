@@ -1,15 +1,16 @@
-function! s:base()
-  redir => l:dir
+vim9script
+
+def s:base(): string
+  redir => dir
   silent pwd
   redir END
-  let l:dir = substitute(l:dir, '[\r|\n]', '', 'g')
-  return l:dir
-endfunction
+  return substitute(dir, '[\r|\n]', '', 'g')
+enddef
 
-function! maxmellon#pwd#get()
+def maxmellon#pwd#get(): string
   return s:base()
-endfunction
+enddef
 
-function! maxmellon#pwd#show()
+def maxmellon#pwd#show(): void
   echo s:base()
-endfunction
+enddef
