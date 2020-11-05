@@ -1,8 +1,8 @@
-let g:false = g:maxmellon#bool#false()
-let g:true  = g:maxmellon#bool#true()
+let g:false = maxmellon#bool#false()
+let g:true  = maxmellon#bool#true()
 let g:mapleader = ','
 
-command! -nargs=+ -bar Source call g:maxmellon#source#call(<args>)
+command! -nargs=+ -bar Source call maxmellon#source#call(<args>)
 
 " built in plugin settings {{{
 let g:loaded_matchparen        = 1
@@ -31,13 +31,13 @@ let g:loaded_netrwFileHandlers = 1
 " }}}
 
 let g:env = {}
-let g:env.neo     = g:maxmellon#vimtype#is_neo()
-let g:env.cui     = g:maxmellon#vimtype#is_cvim()
-let g:env.gui     = g:maxmellon#vimtype#is_gvim()
-let g:env.cygwin  = g:maxmellon#os#is_cygwin()
-let g:env.win     = g:maxmellon#os#is_windows()
-let g:env.mac     = g:maxmellon#os#is_mac()
-let g:env.linux   = g:maxmellon#os#is_linux()
+let g:env.neo     = maxmellon#vimtype#is_neo()
+let g:env.cui     = maxmellon#vimtype#is_cvim()
+let g:env.gui     = maxmellon#vimtype#is_gvim()
+let g:env.cygwin  = maxmellon#os#is_cygwin()
+let g:env.win     = maxmellon#os#is_windows()
+let g:env.mac     = maxmellon#os#is_mac()
+let g:env.linux   = maxmellon#os#is_linux()
 let g:env.term    = has('terminal')
 let g:env.vim8    = has('patch-8.0.0039') && has('job') && has('lambda')
 let g:env.lua     = has('lua')

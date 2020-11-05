@@ -4,12 +4,12 @@
 " Plug 'othree/es.next.syntax.vim', {'for' : 'javascript' }
 " Plug 'othree/javascript-libraries-syntax.vim'
 " Plug 'mxw/vim-jsx'
-Plug 'yuezk/vim-js'
-Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'yuezk/vim-js'
+" Plug 'HerringtonDarkholme/yats.vim'
 Plug 'MaxMEllon/vim-jsx-pretty', {'for' : 'javascript' }
-if !g:env.neo
-  Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
-endif
+" if !g:env.neo
+"   Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
+" endif
 " MyPlug 'vim-jsx-pretty'
 " Plug 'alampros/vim-styled-jsx'
 " Plug 'styled-components/vim-styled-components',  { 'branch': 'rewrite' }

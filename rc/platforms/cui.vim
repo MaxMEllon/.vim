@@ -1,4 +1,8 @@
-if !g:env.vim8 && has('vim_starting') && has('vertsplit')
+if g:env.vim8
+  finish
+endif
+
+if has('vim_starting') && has('vertsplit')
   function! s:enable_vsplit_mode()
     " enable origin mode and left/right margins
     let &t_CS = "y"

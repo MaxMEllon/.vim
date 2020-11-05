@@ -201,7 +201,6 @@ if g:plug.ready()
   " Plug 'MaxMEllon/vim-active-window'
   " Plug 'MaxMEllon/vim-dirvish'
   " Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
-  " Plug 'MaxMEllon/vim-fzy-rails'
   " Plug 'MaxMEllon/vim-hier'
   " Plug 'TomiLabo/vim-tmng'
   " Plug 'andymass/vim-matchup'
@@ -264,6 +263,7 @@ if g:plug.ready()
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
+  Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'chr4/nginx.vim'
   Plug 'cohama/lexima.vim'
   Plug 'fatih/vim-go', {'for': 'go'}
@@ -290,6 +290,7 @@ if g:plug.ready()
   """ color schemes
   " Plug 'cocopon/iceberg.vim'
   Plug 'joshdick/onedark.vim'
+  " Plug 'haishanh/night-owl.vim'
 
   " PlugBox 'css'
   " PlugBox 'html'
