@@ -1,3 +1,5 @@
+vim9script
+
 Autocmd VimEnter COMMIT_EDITMSG if getline(1) == ''
       \ | execute 1
       \ | startinsert
@@ -15,9 +17,7 @@ Autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
 
 Autocmd QuickFixCmdPost make,*grep* cwindow
 
-" Autocmd VimEnter * set completeopt-=preview
-
-Autocmd BufRead,BufEnter * let g:branch = ''
+# Autocmd BufRead,BufEnter * let g:branch = ''
 
 Autocmd BufRead,BufEnter *.json set conceallevel=0
 

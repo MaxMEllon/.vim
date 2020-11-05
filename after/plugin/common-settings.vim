@@ -1,7 +1,6 @@
-scriptencoding utf-8
+vim9script
 
-let s:true = maxmellon#bool#truthy()
-let s:false = maxmellon#bool#falsy()
+scriptencoding utf-8
 
 augroup TabSpace
   autocmd!

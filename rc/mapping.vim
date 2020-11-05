@@ -1,3 +1,5 @@
+vim9script
+
 nnoremap j  gj
 nnoremap k  gk
 nnoremap $  g$
@@ -36,8 +38,7 @@ inoremap :       :<C-]>
 inoremap <C-Space> <C-X><C-O>
 inoremap <S-Tab> <C-v><C-i>
 
-nnoremap <expr> 0
-      \ col('.') ==# 1 ? '^' : '0'
+nnoremap <expr> 0 col('.') ==# 1 ? '^' : '0'
 
 nnoremap -     :<C-u>e %:h<CR>
 nnoremap <bar> :<C-u>vsp .<CR>
@@ -55,10 +56,6 @@ if g:env.mac
   nnoremap <silent> <Leader>, :!open dict://<cword><CR>
 endif
 
-" map <C-n> :<C-u>lnext<CR>
-" map <C-p> :<C-u>lprevious<CR>
-" nnoremap  <Leader>a :<C-u>lclose<CR>
-
 nnoremap <Space>f :<C-u>LsOpen<CR>
 nnoremap <Space>g :<C-u>GitLsFiles<CR>
 nnoremap <Space>b :<C-u>BufferList<CR>
@@ -74,9 +71,6 @@ nnoremap Y y$
 nnoremap Q  <Nop>
 nnoremap K  <Nop>
 vnoremap K  <Nop>
-" nnoremap ZZ <Nop>
-" nnoremap ZQ <Nop>
-" noremap <C-z> <Nop>
 nnoremap <F1> <Nop>
 
 nnoremap <Up>    <C-w>+
@@ -93,22 +87,3 @@ cnoremap <C-d> <Del>
 cnoremap <C-k> <End><C-u>
 cnoremap <CR> <C-]><CR>
 cnoremap w!! w !sudo tee > /dev/null %<CR> :e!<CR>
-
-let s:toggle_commands = []
-
-function! AddToggleCommand(command)
-  call add(s:toggle_commands, a:command)
-endfunction
-
-function! s:toggle_options()
-  for s:command in s:toggle_commands
-    execute s:command
-  endfor
-endfunction
-
-call AddToggleCommand('setlocal list!')
-call AddToggleCommand('setlocal foldenable!')
-
-command! MyToggle call s:toggle_options()
-
-nnoremap <silent> <F9> :MyToggle<CR>

@@ -1,3 +1,5 @@
+vim9script
+
 set ambiwidth      =single
 set autoread
 set autowrite
@@ -35,11 +37,9 @@ set modelines      =2
 set noequalalways
 set noshowcmd
 set nrformats      =alpha,hex
-" set number
 set pastetoggle    =<F11>
 set pumheight      =10
 set redrawtime     =5000
-" set relativenumber
 set report         =1
 set ruler
 set scrolloff      =8
@@ -69,13 +69,11 @@ if g:env.termgui
   set termguicolors
 endif
 
-" fold
 set foldenable
 set foldmethod     =marker
 set foldcolumn     =0
 set foldlevel      =0
 
-" tab
 set expandtab
 set shiftwidth     =2
 set tabstop        =2
@@ -85,11 +83,9 @@ set smartindent
 set cindent
 set smarttab
 
-" menu
 set wildmenu
 set wildmode=longest:full,full
 
-" set wildignore=*.o,*.obj,*~
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
@@ -98,10 +94,7 @@ set wildignore+=vendor/cache/**
 set wildignore+=*.gem
 set wildignore+=log/**
 set wildignore+=tmp/**
-" set wildignore+=*.png,*.jpg,*.gif
-" set wildignore+=*.sql
 
-" list
 set list
 if g:env.mac
   set listchars      =eol:$,tab:~\ ,trail:█,precedes:<,extends:>,nbsp:%

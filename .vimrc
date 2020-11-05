@@ -4,6 +4,13 @@ let g:mapleader = ','
 
 command! -nargs=+ -bar Source call maxmellon#source#call(<args>)
 
+augroup MyVimrc
+ autocmd!
+augroup END
+
+command! -nargs=* Autocmd autocmd MyVimrc <args>
+command! -nargs=* AutocmdFT autocmd MyVimrc FileType <args>
+
 " built in plugin settings {{{
 let g:loaded_matchparen        = 1
 let g:loaded_gzip              = 1
