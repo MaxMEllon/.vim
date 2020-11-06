@@ -1,28 +1,29 @@
-function s:base()
-  let l:gitroot = system('git rev-parse --show-toplevel')
-  let l:gitroot = substitute(l:gitroot, '[\r|\n]', '', 'g')
-  return expand(l:gitroot)
-endfunction
+vim9script
 
-function! maxmellon#cdgitroot#force_exec()
-  let l:gitroot = s:base()
-  execute 'cd ' . l:gitroot
-endfunction
+def Base(): string
+  var gitroot = system('git rev-parse --show-toplevel')
+  return expand(substitute(gitroot, '[\r|\n]', '', 'g'))
+enddef
 
-function! maxmellon#cdgitroot#exec()
+def maxmellon#cdgitroot#force_exec(): void
+  var gitroot = Base()
+  execute('cd ' .. gitroot)
+enddef
+
+def maxmellon#cdgitroot#exec(): void
   if maxmellon#git#repo#is_inside()
-    let l:gitroot = s:base()
-    execute 'cd ' . l:gitroot
+    var gitroot = Base()
+    execute('cd ' .. gitroot)
   else
     echo 'Current directory is not git repository.'
   endif
-endfunction
+enddef
 
-function! maxmellon#cdgitroot#get()
+def maxmellon#cdgitroot#get(): string
   if maxmellon#git#repo#is_inside()
-    let l:gitroot = s:base()
-    return l:gitroot
+    var gitroot = Base()
+    return gitroot
   else
     return ''
   endif
-endfunction
+enddef

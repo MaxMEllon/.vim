@@ -1,3 +1,5 @@
+vim9script
+
 command! -nargs=? ToggleOpt call maxmellon#toggle#option(g:false, <q-args>)
 command! -nargs=? ToggleOptGlobal call maxmellon#toggle#option(g:true, <q-args>)
 
@@ -30,16 +32,6 @@ command! Gdiff      call maxmellon#git#diff#open()
 command! LsOpen     call maxmellon#fzy#lsopen()
 command! BufferList call maxmellon#fzy#buffer()
 command! GitLsFiles call maxmellon#fzy#git_ls_files()
-
-command! -bar Invert :let &background = (&background == 'light' ? 'dark' : 'light')
-
-augroup MyVimrc
- autocmd!
-augroup END
-
-" autocmd wrapper
-command! -nargs=* Autocmd autocmd MyVimrc <args>
-command! -nargs=* AutocmdFT autocmd MyVimrc FileType <args>
 
 command! -bar -nargs=1 TabIndent
       \ call maxmellon#indent#set_tab_width(<args>, g:false)

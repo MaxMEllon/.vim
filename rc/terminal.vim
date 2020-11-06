@@ -1,14 +1,8 @@
-" set termkey=<A-w>
-tnoremap <Esc> <A-w><S-n>
+set termwinkey=<C-w>
+tnoremap <F3> <C-w>gt
+tnoremap <F2> <C-w>gT
+tnoremap <Esc> <C-w>N
 
-function! s:open(args) abort
-  if empty(term_list())
-    execute "terminal" a:args
-  else
-    let bufnr = term_list()[0]
-    execute term_getsize(bufnr)[0] . "new"
-    execute "buffer + " bufnr
-  endif
-endfunction
+Autocmd TerminalOpen * if &buftype == 'terminal' | setlocal bufhidden=hide | endif
 
-command! -nargs=* Terminal call s:open(<q-args>)
+command! Terminal bo terminal! ++close ++rows=13

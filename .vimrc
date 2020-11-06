@@ -1,8 +1,15 @@
-let g:false = maxmellon#bool#false()
-let g:true  = maxmellon#bool#true()
+let g:false = maxmellon#bool#falsy()
+let g:true  = maxmellon#bool#truthy()
 let g:mapleader = ','
 
 command! -nargs=+ -bar Source call maxmellon#source#call(<args>)
+
+augroup MyVimrc
+ autocmd!
+augroup END
+
+command! -nargs=* Autocmd autocmd MyVimrc <args>
+command! -nargs=* AutocmdFT autocmd MyVimrc FileType <args>
 
 " built in plugin settings {{{
 let g:loaded_matchparen        = 1
@@ -55,10 +62,11 @@ Source 'event'      " ~/.vim/rc/event.vim
 " Source 'statusline' " ~/.vim/rc/statusline.vim
 " Source 'tabline'    " ~/.vim/rc/tabline.vim
 
-" if g:env.term
-"   Source 'terminal' " ~/.vim/rc/terminal.vim
-"   Abbr c terminal Terminal
-" endif
+if g:env.term
+  Source 'terminal' " ~/.vim/rc/terminal.vim
+  Abbr c terminal Terminal
+endif
+
 Abbr i tihs this
 Abbr i adn and
 Abbr i REact React

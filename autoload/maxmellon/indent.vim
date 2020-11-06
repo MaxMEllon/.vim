@@ -11,7 +11,7 @@ function! maxmellon#indent#set_tab_width(width, is_expand)
     IndentLinesReset
   endif
 
-  if a:is_expand == maxmellon#bool#true()
+  if a:is_expand
     setlocal expandtab
   else
     setlocal noexpandtab
@@ -25,7 +25,7 @@ function! maxmellon#indent#set(...)
     let l:opt = {}
   endif
 
-  let l:tab = !get(l:opt, 'tab', maxmellon#bool#false())
+  let l:tab = !get(l:opt, 'tab', v:false)
   execute 'autocmd MyIndent FileType '.a:2.' call maxmellon#indent#set_tab_width('.a:1.','.l:tab.')'
 endfunction
 
