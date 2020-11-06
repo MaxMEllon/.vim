@@ -46,5 +46,4 @@ Plug 'heavenshell/vim-jsdoc', {'for' : 'javascript', 'on' : 'JsDoc'}
 " Plug 'rhysd/npm-debug-log.vim'
 " Plug 'elzr/vim-json', {'for' : 'json'}
 
-
-Lazy 'javascript'
+" Lazy 'javascript'
