@@ -1,3 +1,5 @@
-function! maxmellon#abbrev#func(...)
-  execute a:1 . 'abbrev ' . a:2 . ' ' . a:3
-endfunction
+vim9script
+
+def maxmellon#abbrev#func(mode: string, before: string, after: string): void
+  execute(mode .. 'abbrev ' .. before .. ' ' .. after)
+enddef

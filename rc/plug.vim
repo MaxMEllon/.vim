@@ -201,7 +201,9 @@ if g:plug.ready()
   " Plug 'MaxMEllon/vim-active-window'
   " Plug 'MaxMEllon/vim-dirvish'
   " Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
+  " Plug 'MaxMEllon/vim-fzy-rails'
   " Plug 'MaxMEllon/vim-hier'
+  " Plug 'MaxMEllon/vim-shiny'
   " Plug 'TomiLabo/vim-tmng'
   " Plug 'andymass/vim-matchup'
   " Plug 'cespare/vim-toml'
@@ -236,7 +238,6 @@ if g:plug.ready()
   " Plug 'rust-lang/rust.vim', {'for' : 'rust'}
   " Plug 't9md/vim-textmanip'
   " Plug 'terryma/vim-multiple-cursors'
-  " Plug 'MaxMEllon/vim-shiny'
   " Plug 'thinca/vim-themis', {'for' : 'vimspec'}
   " Plug 'tmhedberg/matchit'
   " Plug 'tpope/vim-dispatch'
@@ -263,11 +264,11 @@ if g:plug.ready()
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
-  Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'chr4/nginx.vim'
   Plug 'cohama/lexima.vim'
   Plug 'fatih/vim-go', {'for': 'go'}
   Plug 'itchyny/lightline.vim'
+  Plug 'itchyny/vim-parenmatch'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
@@ -281,7 +282,6 @@ if g:plug.ready()
   Plug 'rhysd/clever-f.vim'
   Plug 'rhysd/git-messenger.vim'
   Plug 'rhysd/vim-fixjson', {'for': 'json'}
-  Plug 'sgur/vim-hlparen'
   Plug 'tpope/vim-fugitive'
   Plug 'tyru/caw.vim'
   Plug 'vim-jp/vimdoc-ja'

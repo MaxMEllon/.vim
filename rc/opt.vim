@@ -11,7 +11,8 @@ set cmdheight      =1
 set cmdwinheight   =5
 set colorcolumn    =120
 set complete       =t,k,.,kspell,w,b,u,t,i,s
-set completeopt    =menu,noinsert,noselect
+set completeopt    =popup,menu,noinsert,noselect
+set completepopup  =height:10,width:60,highlight:InfoPopup
 set cscopetag
 set display        =truncate
 set emoji
@@ -27,7 +28,7 @@ set lazyredraw
 set linespace      =0
 set matchpairs     =<:>,(:),[:],{:}
 set matchtime      =3
-if !g:env.neo
+if !g:env.neo && get(g:env, 'mem_custom', v:false)
   set maxmem         =500000
   set maxmempattern  =500000
   set maxmemtot      =1000000
@@ -35,11 +36,12 @@ endif
 set modeline
 set modelines      =2
 set noequalalways
-set noshowcmd
+set showcmd
 set nrformats      =alpha,hex
 set pastetoggle    =<F11>
 set pumheight      =10
-set redrawtime     =5000
+set pumwidth       =30
+set redrawtime     =1000
 set report         =1
 set ruler
 set scrolloff      =8
