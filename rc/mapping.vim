@@ -52,6 +52,7 @@ nnoremap <silent> <Leader>h :<C-u>help <C-r><C-w><CR>
 nnoremap <silent> <Leader>x :<C-u>call maxmellon#remove_whitespace()<CR>
 nnoremap <silent> <Leader>z :<C-u>%s/　/  /g<CR>
 nnoremap          <Leader>p :<C-u>ToggleOpt paste<CR>
+
 if g:env.mac
   nnoremap <silent> <Leader>, :!open dict://<cword><CR>
 endif

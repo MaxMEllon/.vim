@@ -1,25 +1,21 @@
-let s:is_windows = has('win32') || has('win64')
-    " \ || has('win16') win16 deplecated Engrave history here
-let s:is_cygwin = has('win32unix')
-let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
-      \ && $HOME !=# expand('~' . $USER)
-      \ && $HOME ==# expand('~' . $SUDO_USER)
+vim9script
 
-function! maxmellon#os#is_mac()
-  return !s:is_windows && !s:is_cygwin
-        \ && (has('mac') || has('macunix') || has('gui_macvim') ||
-        \   (!executable('xdg-open') &&
-        \     system('uname') =~? '^darwin'))
-endfunction
+const is_windows: bool = has('win32') || has('win64')
+const is_cygwin: bool = has('win32unix')
+const has_any_mac: bool = has('mac') || has('macunix') || has('gui_macvim')
 
-function! maxmellon#os#is_linux()
-  return system('uname') =~? 'Linux'
-endfunction
+def maxmellon#os#is_mac(): bool
+  return !is_windows && !is_cygwin && has_any_mac
+enddef
 
-function! maxmellon#os#is_windows()
-  return s:is_windows
-endfunction
+def maxmellon#os#is_linux(): bool
+  return !(is_windows || is_cygwin || has_any_mac)
+enddef
 
-function! maxmellon#os#is_cygwin()
-  return s:is_cygwin
-endfunction
+def maxmellon#os#is_windows(): bool
+  return is_windows
+enddef
+
+def maxmellon#os#is_cygwin(): bool
+  return is_cygwin
+enddef
