@@ -9,6 +9,7 @@ nnoremap <Space>b :<C-u>Buffers<CR>
 nnoremap <Space>g :<C-u>GFiles<CR>
 nnoremap <Space>f :<C-u>Filetypes<CR>
 nnoremap <Space>w :<C-u>Windows<CR>
+nnoremap <Space>m :<C-u>History<CR>
 nnoremap <Space><Space> :<C-u>Commands<CR>
 
 command! LsOpen call maxmellon#fzf#ls_open_file_fzf()

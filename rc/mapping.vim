@@ -56,10 +56,10 @@ if g:env.mac
   nnoremap <silent> <Leader>, :!open dict://<cword><CR>
 endif
 
-nnoremap <Space>f :<C-u>LsOpen<CR>
-nnoremap <Space>g :<C-u>GitLsFiles<CR>
-nnoremap <Space>b :<C-u>BufferList<CR>
-nnoremap <Space>m :<C-u>Mru<CR>
+# nnoremap <Space>f :<C-u>LsOpen<CR>
+# nnoremap <Space>g :<C-u>GitLsFiles<CR>
+# nnoremap <Space>b :<C-u>BufferList<CR>
+# nnoremap <Space>m :<C-u>Mru<CR>
 
 nnoremap sub :%s/<C-r><C-w>//gc<Left><Left><Left>
 xnoremap s :<C-u>'<,'>s///gc<Left><Left><Left><Left><Left>
