@@ -1,6 +1,8 @@
-function! maxmellon#source#call(...) abort
-  let l:filepath = expand('~/.vim/rc') . '/' . a:1 . '.vim'
-  if filereadable(l:filepath)
-    execute 'source ' . l:filepath
+vim9script
+
+def maxmellon#source#call(path: string): void
+  var filepath: string = expand('~/.vim/rc') .. '/' .. path .. '.vim'
+  if filereadable(filepath)
+    execute('source ' .. filepath)
   endif
-endfunction
+enddef
