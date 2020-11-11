@@ -14,7 +14,7 @@ command! -nargs=* AutocmdFT autocmd MyVimrc FileType <args>
 " built in plugin settings {{{
 let g:loaded_matchparen        = 1
 let g:loaded_gzip              = 1
-let g:loaded_matchit           = 1
+" let g:loaded_matchit           = 1
 let g:loaded_tar               = 1
 let g:loaded_tarPlugin         = 1
 let g:loaded_zip               = 1
@@ -56,9 +56,9 @@ Source 'command'    " ~/.vim/rc/command.vim
 Source 'encode'     " ~/.vim/rc/encode.vim
 Source 'opt'        " ~/.vim/rc/opt.vim
 Source 'mapping'    " ~/.vim/rc/mapping.vim
-" Source 'platform'   " ~/.vim/rc/platform.vim
 Source 'plug'       " ~/.vim/rc/plug.vim
 Source 'event'      " ~/.vim/rc/event.vim
+" Source 'platform'   " ~/.vim/rc/platform.vim
 " Source 'statusline' " ~/.vim/rc/statusline.vim
 " Source 'tabline'    " ~/.vim/rc/tabline.vim
 

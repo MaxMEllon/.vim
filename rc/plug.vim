@@ -1,4 +1,5 @@
 scriptencoding utf-8
+
 function! s:get_plugin_directory()
   return g:env.neo ? '~/.config/nvim/plugged' : '~/.vim/plugged'
 endfunction
@@ -164,32 +165,6 @@ endfunction
 command! -nargs=* -bar PlugBox call g:plug.load_plug_box(<args>)
 " }}}
 
-" {{{
-function! g:plug.vim_plug(repo)
-  if !g:env.neo
-    call g:plug#(a:repo)
-  endif
-endfunction
-
-function! g:plug.mac_plug(repo)
-  if g:env.mac
-    call g:plug#(a:repo)
-  endif
-endfunction
-
-command! -nargs=1 MacPlug call g:plug.mac_plug(<args>)
-
-function! g:plug.neo_plug(repo)
-  if g:env.neo
-    call g:plug#(a:repo)
-  endif
-endfunction
-
-command! -nargs=1 NeoPlug call g:plug.neo_plug(<args>)
-command! -nargs=1 VimPlug call g:plug.vim_plug(<args>)
-
-" }}}
-
 if g:plug.ready()
   call g:plug#begin(g:plug.base)
 
@@ -207,6 +182,7 @@ if g:plug.ready()
   " Plug 'TomiLabo/vim-tmng'
   " Plug 'andymass/vim-matchup'
   " Plug 'cespare/vim-toml'
+  " Plug 'chr4/nginx.vim'
   " Plug 'chrisbra/csv.vim'
   " Plug 'cocopon/iceberg.vim'
   " Plug 'cohama/vim-hier'
@@ -264,7 +240,6 @@ if g:plug.ready()
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
-  Plug 'chr4/nginx.vim'
   Plug 'cohama/lexima.vim'
   Plug 'fatih/vim-go', {'for': 'go'}
   Plug 'itchyny/lightline.vim'
