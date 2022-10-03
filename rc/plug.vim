@@ -201,7 +201,9 @@ if g:plug.ready()
   " Plug 'MaxMEllon/vim-active-window'
   " Plug 'MaxMEllon/vim-dirvish'
   " Plug 'MaxMEllon/vim-fzy-commands', {'on' : ['FzyCommand', 'FzyCommandHelp']}
+  " Plug 'MaxMEllon/vim-fzy-rails'
   " Plug 'MaxMEllon/vim-hier'
+  " Plug 'MaxMEllon/vim-shiny'
   " Plug 'TomiLabo/vim-tmng'
   " Plug 'andymass/vim-matchup'
   " Plug 'cespare/vim-toml'
@@ -236,7 +238,6 @@ if g:plug.ready()
   " Plug 'rust-lang/rust.vim', {'for' : 'rust'}
   " Plug 't9md/vim-textmanip'
   " Plug 'terryma/vim-multiple-cursors'
-  " Plug 'MaxMEllon/vim-shiny'
   " Plug 'thinca/vim-themis', {'for' : 'vimspec'}
   " Plug 'tmhedberg/matchit'
   " Plug 'tpope/vim-dispatch'
@@ -263,9 +264,9 @@ if g:plug.ready()
   " }}}
 
   Plug 'AndrewRadev/switch.vim'
-  Plug 'MaxMEllon/vim-fzy-rails'
   Plug 'chr4/nginx.vim'
   Plug 'cohama/lexima.vim'
+  Plug 'editorconfig/editorconfig-vim'
   Plug 'fatih/vim-go', {'for': 'go'}
   Plug 'itchyny/lightline.vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -276,6 +277,7 @@ if g:plug.ready()
   Plug 'markonm/traces.vim'
   Plug 'mattn/emmet-vim'
   Plug 'mattn/gist-vim', {'on': 'Gist'} | Plug 'mattn/webapi-vim'
+  Plug 'mattn/vim-molder'
   Plug 'mengelbrecht/lightline-bufferline'
   Plug 'prabirshrestha/async.vim'
   Plug 'rhysd/clever-f.vim'
