@@ -6,14 +6,6 @@ function! s:on_lsp_buffer_enabled() abort
   inoremap <expr> <cr> pumvisible() ? "\<c-y>\<cr>" : "\<cr>"
 endfunction
 
-augroup lsp_install
-  au!
-  autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-  autocmd VimEnter highlight link LspErrorHighlight DiffDelete
-  autocmd VimEnter highlight link LspWarningHighlight DiffText
-  autocmd VimEnter highlight link LspInformationHighlight WildMenu
-  autocmd VimEnter highlight link LspHintHighlight DiffAdd
-augroup END
 command! LspDebug let lsp_log_verbose=1 | let lsp_log_file = expand('~/lsp.log')
 
 let g:lsp_diagnostics_enabled = 1

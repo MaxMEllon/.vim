@@ -65,9 +65,7 @@ set undolevels     =200
 set undodir        =~/.vim/_undo
 set undofile
 
-" if g:env.termgui
-"   set termguicolors
-" endif
+set termguicolors
 
 " fold
 set foldenable
@@ -88,6 +86,9 @@ set smarttab
 " menu
 set wildmenu
 set wildmode=longest:full,full
+if g:env.vim9
+  set wildoptions=pum
+endif
 
 " set wildignore=*.o,*.obj,*~
 set wildignore+=*vim/backups*
