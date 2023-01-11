@@ -3,8 +3,6 @@ set autoread
 set autowrite
 set background     =dark
 set backspace      =indent,eol,start
-set breakindent
-set breakindentopt =sbr
 set cmdheight      =1
 set cmdwinheight   =5
 set colorcolumn    =120
@@ -35,11 +33,11 @@ set modelines      =2
 set noequalalways
 set noshowcmd
 set nrformats      =alpha,hex
-" set number
+set number
 set pastetoggle    =<F11>
 set pumheight      =10
 set redrawtime     =2000
-" set relativenumber
+set relativenumber
 set report         =1
 set ruler
 set scrolloff      =12
@@ -65,7 +63,24 @@ set undolevels     =200
 set undodir        =~/.vim/_undo
 set undofile
 
-set termguicolors
+" vim-8 features
+if g:env.vim8
+  set termguicolors
+  set belloff=all
+  set fixendofline
+  set breakindent
+  set breakindentopt=sbr
+  set signcolumn=yes
+endif
+
+" vim-9 features
+if g:env.vim9
+  set autoshelldir
+  set cdhome
+  set spelloptions=camel
+  set xtermcodes
+  set wildoptions=pum
+endif
 
 " fold
 set foldenable
@@ -86,9 +101,6 @@ set smarttab
 " menu
 set wildmenu
 set wildmode=longest:full,full
-if g:env.vim9
-  set wildoptions=pum
-endif
 
 " set wildignore=*.o,*.obj,*~
 set wildignore+=*vim/backups*
@@ -121,6 +133,7 @@ endif
 if !isdirectory(expand('~/.vim/_swap'))
   call mkdir(expand('~/.vim/_swap'), 'p')
 endif
+
 if !isdirectory(expand('~/.vim/_back'))
   call mkdir(expand('~/.vim/_back'), 'p')
 endif

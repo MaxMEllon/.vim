@@ -24,3 +24,10 @@ Autocmd BufRead,BufEnter *.json set conceallevel=0
 Autocmd FileType ruby let b:match_words =
       \ '\<\(module\|class\|def\|begin\|do\|if\|unless\|case\)\>:' .
       \ '\<\(elsif\|when\|rescue\)\>:\<\(else\|ensure\)\>:\<end\>'
+
+Autocmd VimEnter,ColorScheme * highlight SignColumn guibg=#181C24
+
+Autocmd ColorScheme * highlight NormalNC guifg=#404040 guibg=#181C24
+Autocmd WinEnter,BufWinEnter * setlocal wincolor=
+Autocmd WinLeave * setlocal wincolor=NormalNC
+

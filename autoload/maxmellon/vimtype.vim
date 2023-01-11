@@ -9,8 +9,6 @@ function! s:base()
     let s:type = 'neo'
   elseif has('gui_running')
     let s:type = 'gui'
-  elseif has('clpum')
-    let s:type = 'clpum'
   else
     let s:type = 'cui'
   endif

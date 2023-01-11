@@ -40,11 +40,9 @@ let g:env.mac     = maxmellon#os#is_mac()
 let g:env.linux   = maxmellon#os#is_linux()
 let g:env.term    = has('terminal')
 let g:env.vim8    = has('patch-8.0.0039') && has('job') && has('lambda')
-let g:env.vim9    = has('patch-9.0.0000') && has('vim9script')
+let g:env.vim9    = has('patch-9.0.0185') && has('vim9script')
 let g:env.lua     = has('lua')
-let g:env.termgui = has('termguicolors') "&& empty($TMUX)
 let g:env.tmux    = !empty($TMUX)
-let g:env.clpum   = has('clpum')
 
 Source 'command'    " ~/.vim/rc/command.vim
 Source 'encode'     " ~/.vim/rc/encode.vim
