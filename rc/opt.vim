@@ -9,7 +9,7 @@ set cmdheight      =1
 set cmdwinheight   =5
 set colorcolumn    =120
 set complete       =t,k,.,kspell,w,b,u,t,i,s
-set completeopt    =menu,noinsert,noselect
+set completeopt    =menuone,noinsert,noselect,preview
 set cscopetag
 set display        =truncate
 set emoji

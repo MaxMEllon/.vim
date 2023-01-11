@@ -9,6 +9,10 @@ endfunction
 augroup lsp_install
   au!
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+  autocmd VimEnter highlight link LspErrorHighlight DiffDelete
+  autocmd VimEnter highlight link LspWarningHighlight DiffText
+  autocmd VimEnter highlight link LspInformationHighlight WildMenu
+  autocmd VimEnter highlight link LspHintHighlight DiffAdd
 augroup END
 command! LspDebug let lsp_log_verbose=1 | let lsp_log_file = expand('~/lsp.log')
 
@@ -17,4 +21,6 @@ let g:lsp_diagnostics_echo_cursor = 1
 let g:asyncomplete_auto_popup = 1
 let g:asyncomplete_auto_completeopt = 0
 let g:asyncomplete_popup_delay = 200
+let g:lsp_diagnostics_virtual_text_align = "right"
 let g:lsp_text_edit_enabled = 1
+
