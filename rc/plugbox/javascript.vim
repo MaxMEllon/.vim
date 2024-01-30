@@ -36,7 +36,7 @@ Plug 'heavenshell/vim-jsdoc', {'for' : 'javascript', 'on' : 'JsDoc'}
 " Plug 'ternjs/tern_for_vim', {'do' : 'npm i', 'for' : 'javascript'}
 
 " altjs
-" Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
+Plug 'leafgarland/typescript-vim', {'for' : 'typescript'}
 " Plug 'HerringtonDarkholme/yats.vim', {'for' : 'typescript'}
 " Plug 'clausreinke/typescript-tools.vim', {'do': 'npm install -g', 'for': 'typescript'}
 " Plug 'kchmck/vim-coffee-script'

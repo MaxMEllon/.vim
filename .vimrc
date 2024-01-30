@@ -45,7 +45,7 @@ let g:env.lua     = has('lua')
 let g:env.tmux    = !empty($TMUX)
 
 Source 'command'    " ~/.vim/rc/command.vim
-Source 'encode'     " ~/.vim/rc/encode.vim
+" Source 'encode'     " ~/.vim/rc/encode.vim
 Source 'opt'        " ~/.vim/rc/opt.vim
 Source 'mapping'    " ~/.vim/rc/mapping.vim
 Source 'platform'   " ~/.vim/rc/platform.vim

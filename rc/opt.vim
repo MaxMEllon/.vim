@@ -33,11 +33,11 @@ set modelines      =2
 set noequalalways
 set noshowcmd
 set nrformats      =alpha,hex
-set number
+" set number
 set pastetoggle    =<F11>
 set pumheight      =10
 set redrawtime     =2000
-set relativenumber
+" set relativenumber
 set report         =1
 set ruler
 set scrolloff      =12
@@ -70,7 +70,7 @@ if g:env.vim8
   set fixendofline
   set breakindent
   set breakindentopt=sbr
-  set signcolumn=yes
+  set signcolumn=no
 endif
 
 " vim-9 features
